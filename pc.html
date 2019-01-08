@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="土井　翔平" />
+
+
+<title>自由のためのPC環境</title>
+
+<script src="pc_files/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="pc_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="pc_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="pc_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="pc_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="pc_files/navigation-1.1/tabsets.js"></script>
+<link href="pc_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="pc_files/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="assets/css/paper-kit.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<nav class="navbar navbar-expand-lg fixed-top bg-primary">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right burger-menu" type="button" data-toggle="collapse" data-target="#navbar-primary" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-bar"></span>
+          <span class="navbar-toggler-bar"></span>
+          <span class="navbar-toggler-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Shohei Doi</a>
+    <div class="collapse navbar-collapse" id="navbar-primary">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#research"><i class="nc-icon nc-hat-3" aria-hidden="true"></i>Research</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#teaching"><i class="nc-icon nc-ruler-pencil" aria-hidden="true"></i>Teaching</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#notes"><i class="nc-icon nc-paper" aria-hidden="true"></i>Notes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#links"><i class="nc-icon nc-world-2" aria-hidden="true"></i>Links</a>
+        </li>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" href="#pk" role="button" aria-haspopup="true" aria-expanded="false"><i class="nc-icon nc-single-02" aria-hidden="true"></i>More</a>
+          <ul class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="dropdownMenuButton">
+            <li class="dropdown-header">Other Profile Sites</li>
+            <a class="dropdown-item" href="https://scholar.google.co.jp/citations?user=l9zxa_gAAAAJ" target="_blank">Google Scholar</a>
+            <a class="dropdown-item" href="https://researchmap.jp/doishohei" target="_blank">Researchmap</a>
+            <div class="dropdown-divider"></div>
+              <li class="dropdown-header">Social Networks</li>
+            <a class="dropdown-item" href="https://www.facebook.com/shohei.doi" target="_blank">Facebook</a>
+            <a class="dropdown-item" href="https://twitter.com/sdoi0504" target="_blank">Twitter</a>
+            <a class="dropdown-item" href="https://ask.fm/sdoi0504" target="_blank">Ask.fm</a>
+          </ul>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">自由のためのPC環境</h1>
+<h4 class="author"><em>土井　翔平</em></h4>
+<h4 class="date"><em>2018年2月10日</em></h4>
+
+</div>
+
+
+<p>このページでは備忘録としてUbuntuのデュアルブート及び仮想マシンの方法を残しています。 環境はASUS Zenbook 3 UX390UAでUbuntu GNOME 16.04.3 LTSです。</p>
+<div id="linux" class="section level1">
+<h1>Linuxを使う</h1>
+<p>Windowsに不満を持っていない人、量的テキスト分析をする予定がない人はWindowsでいいかと思います。 Macが好きな人、嫌いではないしお金にも余裕がある人はMacでいいでしょう。 そのどちらでもない人、すなわちWindowsには不満を抱いているが、Macも好きではない人はLinuxを使うべきです。</p>
+<p>より現実的な問題としてLinuxをどうやって使うのかというものがあります。 まず、OSの選択ですが、LinuxのおすすめOSを調べて気に入ったものを使うのが一番でしょう。 しかし、上でも触れたように、初心者で研究目的に使用するだけであれば<a href="https://www.ubuntu.com/">Ubuntu</a>を使うのが無難でしょう。 Ubuntuはやや癖のあるユーザーインターフェイスを用いているので、よりWindows風なOSが良ければ<a href="https://www.linuxmint.com/">Linux Mint</a>も広く人気があります。 Windows風な<a href="https://zorinos.com/">Zorin</a>もUbuntuベースでおしゃれなので人気があると思います。</p>
+<p>Ubuntuベースの良い点は</p>
+<ol style="list-style-type: decimal">
+<li>インストールが（他のLinux系OSに比べて）簡単</li>
+<li>操作も（他のLinux系OSに比べて）簡単</li>
+<li>ソフトウェアのインストールも（他のLinux系OSに比べて）簡単</li>
+<li>ユーザーが多いのでネット上に情報が（他のLinux系OSに比べて）多い</li>
+</ol>
+<p>といったあたりでしょうか。</p>
+<p>Ubuntuで注意しなければならないのはバージョンでしょう。 Ubuntuは開発が活発なので短期間に新しいバージョンが出てきます。 半年に一度OSを入れ直すような人は問題ないでしょうが、普通はそうではないでしょう。 したがって、5年間の保証があるLTS版をインストールすべきです。</p>
+<p>次の問題はどのマシンを使うかです。 ごく一部の例外を除いてLinuxをOSとして搭載している製品はないかと思いますし、どのようなマシンを使うかは自由に決めたいと思います。 また、現実問題として全くWindowsやOffice製品を使わずに生きていくのは困難であると思いますので、取りうる選択肢は</p>
+<ol style="list-style-type: decimal">
+<li>仮想マシン</li>
+<li>デュアルブート</li>
+</ol>
+<p>になるのではないでしょうか。</p>
+<p>いずれの方法にせよ、使いたいOSのisoファイルをダウンロードしておいてください。</p>
+<div class="section level2">
+<h2>仮想マシン</h2>
+<p>仮想マシンとは、大雑把に言えば、専用のソフトウェアを用いてWindows上でLinuxを用いることです。 最大の利点は普段、Windowsでソフトを使っているように安全かつ簡単にLinuxを使える点です。 また、Linuxと同時にWindowsのソフトを使うこともできます。 逆に、問題はWindowsとLinuxを同時に用いるのでマシンのスペックを最大限活用することはできません。 したがって、Windowsと同時に使いたい人、Linuxはテキスト分析程度でメインには使わない人、PCを弄るのが怖い人は仮想マシンを使うべきでしょう。</p>
+<p>具体的には<a href="http://www.oracle.com/technetwork/server-storage/virtualbox/overview/index.html">VirtualBox</a>や<a href="https://www.vmware.com/jp.html">VMware</a>などを用いることになります。 仮想マシンのソフトウェアの説明は割愛しますが、インストール方法はデュアルブートの場合と同じになります。</p>
+</div>
+<div class="section level2">
+<h2>デュアルブート</h2>
+<p>デュアルブートとはWindowsとLInuxを別々にPCにインストールして、起動時にどちらを使用するかを選択する方法です。 メリットとデメリットは仮想マシンの場合と逆で、マシンのフルパワーを発揮できますし、（個人的体感として）Windowsに比べて電力消費が少なく、アプリケーションがさくさく動く気がします。 一方、PCの根幹部分を弄ることになるので、致命的な問題が生じないとも言えず、自己責任で行わざるを得ません。 また、タッチパッドが動かない、音量調整ができないなどハードウェアが正常に作動しない不具合が生じることもあります。 よって、スペックを最大限活用したい人、自己責任でPCをいじくれる（いじくりたい）人、可能な限りWindowsを触れたくない人はデュアルブートをおすすめしますが自己責任です。</p>
+</div>
+<div id="ubuntuos" class="section level2">
+<h2>Ubuntu系OSのインストール</h2>
+<div id="usb" class="section level3">
+<h3>USBブートローダーの作成</h3>
+<p>まず、デュアルブートをする場合に必要な設定を行います。</p>
+<ol style="list-style-type: decimal">
+<li>4GB以上の容量のUSBメモリを用意し、フォーマットします。</li>
+<li><a href="https://ja.osdn.net/projects/sfnet_unetbootin/">UNetbootin</a>や<a href="https://universal-usb-installer.jp.uptodown.com/windows">Universal USB Installer</a>などでダウンロードしたisoファイルをUSBメモリに書き込みます。</li>
+<li>コントロールパネルで高速スタートアップの機能を停止します。</li>
+<li>ディスクの管理でWindowsが入っているCドライブのボリュームを削除することでLinux用のパーティションを作成します。
+<ul>
+<li>どの程度の容量を確保すべきかは悩ましい点ですが、Linuxをメインマシンとする点、あとからパーティションを拡張するのは難しい点から、Windows側に十分な容量を確保して、残りはすべてLinux用に使うべきでしょう。</li>
+</ul></li>
+<li>一度、PCをシャットダウンしてBIOSを起動します。</li>
+<li>BIOS画面でUSBメモリからブートします。
+<ul>
+<li>BIOSの起動方法や操作方法はメーカーや製品によって異なるので一概には言えません。</li>
+</ul></li>
+</ol>
+</div>
+<div id="os" class="section level3">
+<h3>OSのインストール</h3>
+<p>ここからは仮想マシンも同様の手順になります。</p>
+<ol style="list-style-type: decimal">
+<li>4つほど選択肢が出てきますが、一番上の“Try [OS名]”のようなものを選びます。</li>
+<li>OSの体験版のようなものが起動されるので、操作感を確認します。
+<ul>
+<li>特にデュアルブートの場合はハードウェアの致命的不具合がないかを確認します。</li>
+</ul></li>
+<li>問題がなさそうであればデスクトップ上もしくはランチャーにある“Install [OS名]”のようなアイコンをクリックします。</li>
+<li>まず、言語を選択しますが、個人的には以下の理由より英語をおすすめします。
+<ul>
+<li>日本語でインストールした場合、ディレクトリ名が日本語になるので、パスの不具合が生じることがないとは言えない。
+<ul>
+<li>どうしても日本語で使いたい場合は、まず英語でインストールしてあとから日本語に変更し、その際にディレクトリ名を変更しないでおくといいでしょう。</li>
+<li>Linuxではターミナルと呼ばれるものでコマンドベースに操作することがありますが、その際に日本語があるとダサい。</li>
+<li>また、Linuxではエラーに遭遇しないことがないと言っても過言ではないが、その際に日本語のエラーメッセージだと検索しても対処法が見つからない可能性が高いです。</li>
+<li>さらに、すべてのアプリがローカライズされているとは限らず、ローカライズされていても完全に日本語化していることは少ないので、中途半端に日本語にするなら全部英語にしたほうが見栄えがいいでしょう。</li>
+</ul></li>
+</ul></li>
+<li>インストール中にアップデートするか、サードパーティのソフトをインストールするかを決めますが、どちらでもいいでしょう。</li>
+<li>次に、OSのインストール方法を選びますが、一番上の“Install alongside with Windows”のようなものを選んでおけば（おそらく）問題はありません。
+<ul>
+<li>“Erase Windows”を選ぶとWindowsが消えますので、決別する場合以外は絶対に選ばないでください。</li>
+<li>その他を選択すると自分でswap領域を決めることができます。</li>
+</ul></li>
+<li>あとは画面に従っていき、インストールが完了し、再起動すれば終了です。</li>
+</ol>
+<p>これで、自由なLinuxライフが始まるわけですが、この時点では日本語入力ができないと思います。 1. <code>Ctrl+alt+T</code>を押してターミナルを起動します。 - Windowsボタンを押して“terminal”と入力してもいいですが、ターミナルは頻繁に使うのでこのショートカットは覚えておくべきでしょう。 1. ターミナルで次のコマンドを入力します。</p>
+<pre><code>sudo apt update
+sudo apt upgrade</code></pre>
+<ul>
+<li>これはOSやソフトウェアを更新するおまじないなので、定期的にしておきましょう。</li>
+<li><code>sudo</code>はスーパーユーザーとして次のコマンドを実行するという意味です。 重要なコマンドを実行する際のおまじないです。
+<ul>
+<li>sudoをつけると最初はパスワードの入力を求められるので、インストール時に設定したパスワードを入力しましょう。 キーボードを叩いてもなにも表示されませんが大丈夫なので、入力してエンターを叩きましょう。</li>
+</ul></li>
+<li>もし<code>upgrade</code>するソフトがある場合、更新していいのか尋ねられるので<code>y</code>を入力してエンターしましょう。 面倒な場合は<code>sudo apt upgrade -y</code>とすると自動で更新します。</li>
+<li><code>apt</code>コマンドはUbuntuでソフトウェアを管理する際のコマンドで頻繁に用います。</li>
+<li>また、ターミナルにコマンドをペーストする際は<code>Ctrl+Shift+V</code>、コピーする際は<code>Ctrl+Shift+C</code>になりますので、注意してください。</li>
+</ul>
+</div>
+</div>
+<div id="ubuntu" class="section level2">
+<h2>Ubuntuの初期設定</h2>
+<p>おそらく、インストールしたOSやマシンに応じていくつか問題が生じていると思います。 また、パソコンを遣いやすくするためにいくつかの設定をしておきます。 まずは、不自由なくインターネットとメールを使えるようになります。</p>
+<p>ちなみに、Ubuntuの各バージョンやLinux mint、Zorinを一通り触った結果、Ubuntu GNOME 16.04 LTSにした理由は</p>
+<ul>
+<li>UbuntuのAdaptaテーマとPaperアイコンがかっこいい。</li>
+<li>16.04でないとDisplaylinkを使ったUSB-HDMI接続ができなかった。</li>
+<li>GNOMEだとウィンドウズの挙動に近い。</li>
+</ul>
+<p>などです。</p>
+<div class="section level3">
+<h3>設定</h3>
+<p>まず、<code>settings</code>をいじっていきます。</p>
+<ul>
+<li><code>Online Acount</code>でGoogleとMicrosoftのアカウントと同期する。</li>
+<li><code>Region &amp; Language</code>で<code>Format</code>を<code>Canada</code>にする。
+<ul>
+<li>日本だとダサく、日にち表示や温度表示が一番日本に近い英語圏がカナダなので。</li>
+</ul></li>
+<li><code>Power</code>で<code>Automatic Suspend</code>を有効にする。</li>
+</ul>
+<p>次に、<code>Tweak Tool</code>をいじります。</p>
+<ul>
+<li><code>Extensions</code>で<code>Alternate Tab</code>, <code>Application menu</code>, <code>Place Status Indicator</code>, <code>Removable drive menu</code>, <code>User Theme</code>を有効にする。</li>
+<li><a href="https://extensions.gnome.org/extension/615/appindicator-support/">ここ</a>で<code>AppIndicator Support</code>を有効にする。</li>
+<li><a href="https://extensions.gnome.org/extension/307/dash-to-dock/">ここ</a>で<code>Dash to dock</code>を有効にする。</li>
+<li><a href="https://extensions.gnome.org/extension/885/dynamic-top-bar/">ここ</a>で<code>Dynamic top bar</code>を有効にする。</li>
+<li><a href="https://extensions.gnome.org/extension/906/sound-output-device-chooser/">ここ</a>で<code>Sound input &amp; output device chooser</code>を有効にする。</li>
+<li><a href="https://extensions.gnome.org/extension/1031/topicons/">ここ</a>で<code>Topicons plus</code>を有効にする。</li>
+<li><code>Top Bar</code>で<code>Show Date</code>を有効にする。</li>
+<li><code>Windows</code>で<code>Titlebar Buttons</code>の<code>Maximize</code>と<code>Minimize</code>を有効にする。</li>
+</ul>
+<p>最後に、<code>file</code>を開きます。</p>
+<ul>
+<li>トップバーの<code>Files</code>の中の<code>Preferences</code>で<code>Sort folders before files</code>、<code>Show hidden and backup files</code>を有効にする。</li>
+<li><code>View new folders using</code>を<code>List View</code>に、<code>Arrange items</code>を<code>By Type</code>に変更する。</li>
+</ul>
+</div>
+<div class="section level3">
+<h3>タッチパッド</h3>
+<p>タッチパッドをナチュラルスクロールとタップクリックに対応させるために以下のコマンドをターミナルで実行します。</p>
+<pre><code>gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll true
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true</code></pre>
+</div>
+<div class="section level3">
+<h3>日本語入力</h3>
+<p>日本語入力を可能にするために次のコマンドで<code>fcitx-mozc</code>をインストールします。</p>
+<pre><code>sudo apt install fcitx-mozc</code></pre>
+<p>インストールができたら、Windowsボタンを押して<code>input method</code>を検索し、fcitxを有効にします。 一度、ログアウトもしくは再起動し、タスクバーに表示されているキーボードのアイコンを左クリックします。 <code>Configure Current Input Method</code>をクリックし、一覧に出ているものをすべて<code>-</code>ボタンで一度消します。 次に、<code>+</code>ボタンを押して新しく表示されたウインドウで<code>Only Show Current Language</code>のチェックを外し、検索欄で“Mozc”と入力して有効にします。 これで、日本語入力も可能になるはずです。</p>
+</div>
+<div id="bluetooth" class="section level3">
+<h3>Bluetoothイヤホン</h3>
+<p>何もしなくてもBluttoothでイヤホンを接続することはできると思いますが、音がこもったように聞こえます。 どうやら、A2DP接続をしないといけないらしく、<a href="https://askubuntu.com/questions/775523/after-updating-to-16-04-bluetooth-audio-a2dp-mode-stopped-working">こちら</a>を参考に設定します。</p>
+<p>次のコマンドで開いたファイルにその次のコードをコピペします。 エディタは何を使ってもいいのですが、ここでは後でインストールするAtomを使っているとします。 もし、Atomをまだ入れていない場合、<code>atom</code>のかわりに<code>gedit</code>にしましょう。</p>
+<pre><code>sudo atom /etc/bluetooth/audio.conf</code></pre>
+<pre><code># Configuration file for the audio service
+# This section contains options which are not specific to any
+# particular interface
+[General]
+Enable=Gateway,Source
+
+# Switch to master role for incoming connections (defaults to true)
+Master=true
+
+# If we want to disable support for specific services
+# Defaults to supporting all implemented services
+#Disable=Gateway,Source,Socket
+Disable=Socket
+
+# SCO routing. Either PCM or HCI (in which case audio is routed to/from ALSA)
+# Defaults to HCI
+#SCORouting=HCI
+
+# Automatically connect both A2DP and HFP/HSP profiles for incoming
+# connections. Some headsets that support both profiles will only connect the
+# other one automatically so the default setting of true is usually a good
+# idea.
+AutoConnect=true
+
+# Headset interface specific options (i.e. options which affect how the audio
+# service interacts with remote headset devices)
+[Headset]
+
+# Set to true to support HFP, false means only HSP is supported
+# Defaults to true
+HFP=true
+
+# Maximum number of connected HSP/HFP devices per adapter. Defaults to 1
+MaxConnected=2
+
+# Set to true to enable use of fast connectable mode (faster page scanning)
+# for HFP when incoming call starts. Default settings are restored after
+# call is answered or rejected. Page scan interval is much shorter and page
+# scan type changed to interlaced. Such allows faster connection initiated
+# by a headset.
+FastConnectable=true
+
+# Just an example of potential config options for the other interfaces
+#[A2DP]
+#SBCSources=1
+#MPEG12Sources=0</code></pre>
+<p>次に、以下のコマンドで開いたファイルの<code>load-module module-bluetooth-discover</code>の前に’#’を加えてコメントアウトします。</p>
+<pre><code>sudo atom /etc/pulse/default.pa</code></pre>
+<p>また、以下のコマンドでファイルを開き</p>
+<pre><code>sudo atom /usr/bin/start-pulseaudio-x11</code></pre>
+<pre><code>if [ x&quot;$SESSION_MANAGER&quot; != x ] ; then
+    /usr/bin/pactl load-module module-x11-xsmp &quot;display=$DISPLAY session_manager=$SESSION_MANAGER&quot; &gt; /dev/null
+fi</code></pre>
+<p>の箇所を</p>
+<pre><code>if [ x&quot;$SESSION_MANAGER&quot; != x ] ; then
+    /usr/bin/pactl load-module module-x11-xsmp &quot;display=$DISPLAY session_manager=$SESSION_MANAGER&quot; &gt; /dev/null
+    /usr/bin/pactl load-module module-bluetooth-discover
+fi</code></pre>
+<p>とします。</p>
+<p>最後に、再起動し、Settingの中のSoundでBluetooth接続したイヤホンを選び、ProfiloをA2DP Sinkに変更すれば完了です。</p>
+</div>
+<div class="section level3">
+<h3>時刻の調整</h3>
+<p>デュアルブートをした場合、Windows側の時刻が9時間ずれていることがあります。 原因はどうやらLinuxはグローバルな時刻を、Windowsはローカルな時刻を参照してるからのようです。 したがって、解決策は次の3つになります。</p>
+<ol style="list-style-type: decimal">
+<li>Linux側の時計をローカルにする。 まず、次のコマンドを入力し、グローバル時間であることを確認します。 <code>no</code>と出ていればローカルではありません。</li>
+</ol>
+<pre><code>timedatectl status | grep local</code></pre>
+<p>ローカル時間にするために次のコマンドを入力します。</p>
+<pre><code>timedatectl set-local-rtc true</code></pre>
+<p>グローバル時間に戻すには上記コメンドの<code>true</code>を<code>false</code>にします。 ただし、<a href="http://d.hatena.ne.jp/gin135/20140304/1393943319">こちら</a>や<a href="https://ameblo.jp/miyou55mane/entry-12178518055.html">こちら</a>によると、ローカル時間の場合サマータイムの際などに不具合が生じるらしいです。 1. Windowsをグローバル時間にする。 まず、前述の方法でLinuxがグローバル時間であることを確認します。 タスクバーのWindowsマークを右クリックし、PowerShellを管理者として起動し、次のコマンドを入力します。</p>
+<pre><code>reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1</code></pre>
+<p>しかし、<a href="http://zorinos.seesaa.net/article/438912573.html">こちら</a>によると、Windowsはローカル時間前提なのでいじらないほうがいいらしいです。 1. というわけで、時間の調整を諦める、というのも選択肢かと思います。 基本的に、Windowsの時間がずれていても大きな問題はないはずですし、気づいたら直っている時もあります。 ただし、<a href="https://www.rarul.com/mt/log/2015/06/windowslinux.html">このような問題</a>もあるらしいです。</p>
+</div>
+<div class="section level3">
+<h3>ウェブブラウザ&amp;メール</h3>
+<p>基本的にウェブブラウザはこれまで使ってきたものでいいかと思いますが、Windwosで標準だったInternet ExplorerやEdgeは使えません。 もし新しいブラウザを使うのだとしたらLinuxでもWindowsでもAndroidでも使えるFirefoxやGoogle Chromeがいいでしょう。</p>
+<p>Firefoxの場合は次のコマンドでインストールできます。 多くの場合、プリインストールされています。</p>
+<pre><code>sudo apt install firefox</code></pre>
+<p>メールの場合、ブラウザで行うことが多いですが、オフラインでも使いたい場合や複数のアカウントを一括管理したい場合などはThunderbirdがいいでしょう。 多くの場合、プリインストールされています。</p>
+<pre><code>sudo apt install thunderbird</code></pre>
+</div>
+<div class="section level3">
+<h3>テーマとアイコンの変更</h3>
+<p>Linuxではテーマやアイコンを自由に選択することが可能です。 詳しくはググってほしいですが、以下では個人的な好み（マテリアルデザインかつダークテーマ）に応じたテーマとアイコンをインストールします。</p>
+<p>まず、<a href="https://github.com/adapta-project/adapta-gtk-theme">Adapta</a>というテーマをインストールします。</p>
+<pre><code>sudo apt-add-repository ppa:tista/adapta -y  
+sudo apt update  
+sudo apt install adapta-gtk-theme</code></pre>
+<p>次に<a href="https://snwh.org/paper">Paper</a>というアイコンをインストールします。</p>
+<pre><code>sudo apt-add-repository ppa:snwh/pulp -y
+sudo apt update
+sudo apt install paper-icon-theme paper-cursor-theme paper-gtk-theme</code></pre>
+<p>最後に、<code>Tweak Tool</code>の<code>Appearance</code>から<code>Theme</code>と<code>Gnome Shell Theme</code>を<code>Adapta-Nokto-Eta</code>、<code>Icon</code>を<code>Paper</code>に設定します。</p>
+</div>
+<div id="displaylink" class="section level3">
+<h3>Displaylink</h3>
+<p>ノートパソコンの場合、普通は外部出力は1つしかないので、デュアルディスプレイが限界ですが、USB-HDMI接続をすれば、更に外部ディスプレイを増やすことができます。 そのためには、Displaylinkのソフトをインストールして、対応する機器を使う必要があります。</p>
+<p><a href="https://github.com/AdnanHodzic/displaylink-debian">ここ</a>からファイルを<code>Downloads</code>というフォルダにダウントードした場合は、以下のコマンドでインストールできます。</p>
+<pre><code>cd ~/Downloads
+sudo displaylink-debian-master/displaylink-debian.sh</code></pre>
+</div>
+</div>
+<div id="office" class="section level2">
+<h2>それでもOfficeを使いたい</h2>
+<p>これから、Office製品と決別し、Microsoftによる支配から脱却していきます。 しかし、word, excel, power pointファイルは世界中の至るところに存在し、これらのすべてを避けて通ることは不可能に近いでしょう。 どうしてもOffice製品のファイルで作業しなければならない場合、我々には次の選択肢があります。</p>
+<ol style="list-style-type: decimal">
+<li>Ubuntuに標準搭載されている無料のLibreOfficeを用いる。</li>
+<li>OneDriveもしくはDropbox上のファイルであれば、Office Onlineをブラウザ上で用いる。</li>
+</ol>
+<ul>
+<li>これらの選択肢で多くのことはできますが、Officeの機能のすべてを代替することはできません。</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>仮想マシンの場合：Linuxの「外」でOfficeを使う。</li>
+<li>デュアルブートの場合：一度、Linuxを終了し、Windowsを起動する。</li>
+</ol>
+</div>
+</div>
+<div class="section level1">
+<h1>論文とスライドを作成する</h1>
+<p>論文の執筆とプレゼンテーション用のスライドの作成はLaTeXで行います。 LaTeXは数式に強いため自然科学や経済学でも用いられていますが、きれいな体裁で文書やスライドを作成できるという利点もあります。 また、<code>beamer</code>パッケージでスライド作成、<code>Tikz</code>パッケージでグラフ描画もできます。 ただ、コマンドで体裁を設定するなどやや特殊な操作なので、イニシャルコストは高いかもしれません。 それでも使い方を学ぶ価値があるとは思いますが、他にも使い道があるのでとりあえずインストールしておきましょう。</p>
+<div id="texlive" class="section level2">
+<h2>TeXLive</h2>
+<p>LaTeXは一つのソフトウェアというよりは様々なコードの集合体なので、今ひとつよく分からないですが、とりあえず使うだけであればTeXLiveをインストールすればいいと思います。</p>
+<p><a href="http://xartaky.hatenablog.jp/entry/2016-12-27-texlive-on-ubuntu">こちら</a>を参考にしました。 なお、途中の<code>yy</code>, <code>mm</code>, <code>dd</code>はインストールするTeXLiveのバージョンによって違います。</p>
+<pre><code>cd ~/Downloads
+wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+tar xvf install-tl-unx.tar.gz
+cd install-tl-20yymmdd
+sudo ./install-tl --repository http://mirror.ctan.org/systems/texlive/tlnet/
+sudo /usr/local/texlive/20yy/bin/x86_64-linux/tlmgr path add</code></pre>
+<p>かなり時間がかかりますし、途中で何故かストップして、再開しても最初からインストールしたりしますが根気よくトライしましょう。</p>
+<p>次のコマンド（<code>tlmgr</code>によるTeXLiveのアップデート）を入力して何も問題がなければ成功です。</p>
+<pre><code>sudo tlmgr option repository http://mirror.ctan.org/systems/texlive/tlnet
+sudo tlmgr update --self --all</code></pre>
+<p>なお、一行目のコマンドは一回実行すれば以後はする必要はありません。</p>
+</div>
+<div id="texstudio" class="section level2">
+<h2>TeXStudio</h2>
+<p>LaTeXは文書作成というよりは作成した文書をpdfなどに変換するプログラムのようなものです。 なので、適当なエディタで文章を書けばいいのですが、どうせなら専用のエディタを使ったほうがスムーズです。 例えば、<a href="https://www.tug.org/texworks/">TeXworks</a>はシンプルなエディタとして人気です。 ここでは、もう少し機能の多い<a href="http://www.texstudio.org/">TeXstudio</a>を使います。</p>
+<pre><code>sudo apt install TeXstudio</code></pre>
+<p><code>uplatex</code>でコンパイルする場合は次のように設定します。</p>
+<ul>
+<li>コマンドの<code>latex</code>を<code>uplatex</code>、<code>bibtex</code>を<code>upbibtex</code>、<code>dvipdf</code>を<code>dvipdfmx</code>に書き直します。</li>
+<li>ビルドで<code>DVI -&gt; PDFチェーン</code>を選択し、コンパイラを<code>LaTeX</code>にします。</li>
+</ul>
+<div class="section level3">
+<h3>どのエンジンを使うか？</h3>
+<p>LaTeXと言っても実はいろいろな派生があります。 日本語の文章を作成する場合は<code>uplatex+dvipdfmx</code>を使うのがオーソドックスな気がしますが、最近は<code>xelatex</code>や<code>lualatex</code>といった次世代LaTeX日本語が出力できるそうです。 ということで、この3つを比べてみます（もう少し詳しい歴史の話は<a href="http://qiita.com/yyu/items/6404656f822ce14db935">こちら</a>）。</p>
+<p>まず、<code>uplatex</code>は日本語（というかユニコード）に特化した仕様ですがdviを経由してpdfを出力するのに対して、<code>xelatex</code>と<code>lualatex</code>は直接pdfを出力しますが日本語に特化しているわけではなさそうです。 <code>lualatex</code>はLaTeXにLuaコードを組み込めるらしく拡張性が高いようで、今後の発展が見込めるそうですが、現在のところ<code>xelatex</code>の方が早いらしいです。 ということで、暫定的結論は新しい<code>xelatex</code>を使いつつ、問題があれば<code>uplatex</code>を使うが、<code>lualatex</code>の進化を注視しておく、といったところでしょうか。</p>
+</div>
+<div id="latex" class="section level3">
+<h3>LaTeXを使う</h3>
+<p>プリンストン大学政治学部の<a href="http://q-aps.princeton.edu/book/lat\ex-installation-help-sessions-and-workshops">LaTeX Workshop</a>が公開しているサンプルを使ってLaTeXが実際に動くかどうかを確認します。 とりあえず、<code>SampleArticle.tex</code>と<code>sample.bib</code>をダウンロードし、TeXStudioで開きます。 画像ファイルはないので、当該箇所でエラーしないために以下の箇所を削除もしくはコメントアウトします。</p>
+<pre><code>  \section{Figure}
+  \label{sec:fig}
+  \begin{figure}[h]
+   \begin{center}
+    \includegraphics[scale=.7]{evdfunctions.pdf}
+    \caption{The Density and Distribution Functions of Type I Extreme
+    Value Distribution} \label{fig:evd}
+   \end{center}
+  \end{figure}</code></pre>
+<p>右の画面に論文らしきものが出力されれば成功です。</p>
+<p>以下では日本語を出力できるようにします。</p>
+<p><strong>uplatexの場合</strong></p>
+<ol style="list-style-type: decimal">
+<li>まず、texファイルの冒頭を次のように書き換えます。</li>
+</ol>
+<pre><code>\documentclass[12pt, uplatex, dvipdfmx]{article}</code></pre>
+<ol style="list-style-type: decimal">
+<li>次に、TeXStudioの<code>Options &gt; Configure TeXStudio</code>を開き、 <code>commands</code>の中を次のように変更します。
+<ul>
+<li>LaTeX: uplatex -synctex=1 -interaction=nonstopmode %.tex</li>
+<li>DviPdf: dvipdfmx %.dvi</li>
+<li>BibTex: upbibtex %.aux</li>
+</ul></li>
+<li>続いて、<code>Build</code>を次のように変更します。
+<ul>
+<li>Build&amp;View: DVI-&gt;PDF Chain</li>
+<li>Default Compiler: LaTeX</li>
+</ul></li>
+</ol>
+<p><strong>xelatexの場合</strong></p>
+<ol style="list-style-type: decimal">
+<li>まず、texファイルの冒頭を次のように書き換えます。</li>
+</ol>
+<pre><code>\documentclass[12pt]{article}
+\usepackage{fontspec}
+\usepackage{zxjatype}
+\setjamainfont{ipam.ttf}
+\setjasansfont{ipag.ttf}
+\setjamonofont{ipag.ttf}
+\usepackage{xltxtra}</code></pre>
+<ol style="list-style-type: decimal">
+<li>また、<code>\usepackage[pdftex, bookmarksopen=true, bookmarksnumbered=true,...</code>の<code>pdfte,</code>を削除します。</li>
+<li>続いて、<code>Build</code>を次のように変更します。
+<ul>
+<li>Build&amp;View: Compile&amp;View</li>
+<li>Default Compiler: XeLaTeX</li>
+</ul></li>
+</ol>
+<p>設定を終了後、コンパイルできれば成功です。 また、<code>Beamer_Sample.tex</code>を同様に設定し、コンパイルできればスライドを作成することもできます。 Beamerの外見に関しては<a href="https://hartwork.org/beamer-theme-matrix/">ここ</a>や<a href="http://deic.uab.es/~iblanes/beamer_gallery/">ここ</a>を参考にしてください。</p>
+</div>
+</div>
+<div id="tex" class="section level2">
+<h2>オンラインのTeX</h2>
+<p>TeXLiveをインストールせずに、オンライン上でLaTeXを使えるサービスもあります。 たとえば、<a href="https://ja.sharelatex.com/">Share LaTeX</a>などがありますし、<a href="https://www.latextemplates.com/">LaTeX Template</a>というサイトでは<a href="https://www.overleaf.com/">Overleaf</a>を使っています。 ただし、常にインターネットにアクセスできるとは限らないですし、あとで<code>pandoc</code>を使うためにTeXLiveはインストールしておいたほうがいいと思います。</p>
+</div>
+</div>
+<div class="section level1">
+<h1>文献を管理する</h1>
+<div id="mendeley" class="section level2">
+<h2>Mendeley</h2>
+</div>
+<div id="jabref" class="section level2">
+<h2>JabRef</h2>
+</div>
+</div>
+<div class="section level1">
+<h1>データを分析する</h1>
+<p>おそらく、統計分析をする際にRを使うのがデファクト・スタンダードになりつつあるのではないでしょうか。 Rは無料であるだけでなく、様々なパッケージが日々作られており、とりあえずRならだいたいのことができると言っても過言ではないと思います。 ただし、本格的なテキスト分析や機械学習であればPythonを用いる方がいいように思いますので、そちらも導入します。</p>
+<div id="r" class="section level2">
+<h2>R</h2>
+<p>まず、<a href="http://qiita.com/JeJeNeNo/items/43fc95c4710c668e86a2">こちら</a>を参考にRをインストールします。 次のコマンドでUbuntuのバージョンを確認します。</p>
+<pre><code>lsb_release -cs</code></pre>
+<p>次に、以下のコマンドでRstudioのミラーサイトを使うように設定します。</p>
+<pre><code>echo -e &quot;\n## For R package&quot;  | sudo tee -a /etc/apt/sources.list
+echo &quot;deb https://cran.rstudio.com/bin/linux/ubuntu $(lsb_release -cs)/&quot; | sudo tee -a /etc/apt/sources.list</code></pre>
+<p>あとは、以下のコマンドを入力するとRがインストールされます。</p>
+<pre><code>gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
+gpg -a --export E084DAB9 | sudo apt-key add -
+sudo apt update
+sudo apt install r-base</code></pre>
+</div>
+<div id="rstudio" class="section level2">
+<h2>RStudio</h2>
+<p>Rはターミナルから実行することができますが、RStudioで実行する人がほとんどだと思います。 <a href="https://www.rstudio.com/products/rstudio/download/">公式サイト</a>からOSに合ったファイルをダウンロードするとSoftwareが自動でインストールしてくれます。</p>
+<p>ただし、GNOMEの場合は次の作業を先に行います（<a href="https://stackoverflow.com/questions/40124580/installation-of-rstudio-x64-fails-on-ubuntu-gnome-16-10-dependency-problems">参考</a>：解決した模様？）。</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://packages.debian.org/jessie/amd64/libgstreamer0.10-0/download">これ</a>をダウンロード&amp;インストール</li>
+<li><a href="https://packages.debian.org/jessie/amd64/libgstreamer-plugins-base0.10-0/download">これ</a>もダウンロード&amp;インストール</li>
+<li>次のコマンドを実行</li>
+</ol>
+<pre><code>sudo apt install libjpeg62 libedit2</code></pre>
+<p>RやRStudioの詳細は割愛しますが、ほとんどの場合、パッケージをインストールして使用します。 しかし、R3.4.1からパッケージの保管先を決める必要ができましたので（解決した模様？）、</p>
+<pre><code>sudo atom /etc/R/Renviron</code></pre>
+<p>を編集します。 具体的には43行目でライブラリのパスを指定します。 よくわからないので、44行目の<code>#</code>をはずしておくという応急処置もありかと思います。</p>
+<p>この他に、いくつか役に立つ汎用性の高いパッケージを紹介します。</p>
+<div id="tidyverse" class="section level3">
+<h3>tidyverse</h3>
+<p>思想信条にもよるかと思いますが、僕は<a href="https://www.tidyverse.org/">tidyverse</a>が好きです。 パイプ関数は便利ですし<code>ggplot2</code>はきれいだと思います。 Ubuntuで<code>tidyverse</code>をインストールする前に次のコマンドを実行してください。</p>
+<pre><code>sudo apt install gfortran libcurl4-openssl-dev libssl-dev libxml2-dev</code></pre>
+</div>
+<div id="rstan" class="section level3">
+<h3>rstan</h3>
+<p><a href="https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started-(Japanese)">rstan</a>はRでベイズ推定をする際によく使われるパッケージです。</p>
+<pre><code>install.packages(&#39;rstan&#39;, repos=&#39;https://cloud.r-project.org/&#39;, dependencies=TRUE)</code></pre>
+<p>もし、<code>lapack</code>や<code>blas</code>が見つからないというエラーが出る場合は、以下のコマンドをターミナルで実行してからインストールしてみてください（<a href="http://auewe.hatenablog.com/entry/2013/05/04/075717">ここ</a>を参考）。</p>
+<pre><code>sudo apt-get install libblas-dev liblapack-dev libatlas-base-dev</code></pre>
+<p>もし、うまくインストールできなければR上で、以下のコマンドを実行してからインストールしてみてください（<a href="https://github.com/stan-dev/rstan/issues/447">ここ</a>を参考）。</p>
+<pre><code>dotR &lt;- file.path(Sys.getenv(&quot;HOME&quot;), &quot;.R&quot;)
+if (!file.exists(dotR)) dir.create(dotR)
+M &lt;- file.path(dotR, &quot;Makevars&quot;)
+if (!file.exists(M)) file.create(M)
+cat(&quot;\nCXXFLAGS=-O3 -mtune=native -march=native -Wno-unused-variable -Wno-unused-function -DBOOST_PHOENIX_NO_VARIADIC_EXPRESSION&quot;, file = M, sep = &quot;\n&quot;, append = TRUE)</code></pre>
+<p>なお、<code>rstan</code>で簡単に回帰分析などができる<code>brms</code>や<code>rstanarm</code>などもインストールするといいでしょう。</p>
+</div>
+<div id="quanteda" class="section level3">
+<h3>quanteda</h3>
+<p><a href="https://github.com/koheiw/IJTA/">quanteda</a>はRで自然言語処理を行うパッケージです。 まず、<code>devtools</code>パッケージをインストールします。 続いて、R上で次のコマンドを実行します。</p>
+<pre><code>devtools::install_github(&quot;kbenoit/quanteda&quot;)</code></pre>
+<p>ついでに、（後述する<code>mecab</code>のインストール後に）<code>RMeCab</code>をインストールするのもいいでしょう。</p>
+<pre><code>install.packages(&quot;RMeCab&quot;, repos = &quot;http://rmecab.jp/R&quot;)</code></pre>
+</div>
+</div>
+<div id="microsoft-r-open" class="section level2">
+<h2>Microsoft R Open</h2>
+<p><a href="https://mran.microsoft.com/open/">Microsoft R Open</a>はRを高速化するツールです。 まず、<a href="https://mran.microsoft.com/download/">ここ</a>からMROをダウンロードします。 現在使っているRのバージョンと対応しているかどうかに注意してください。</p>
+<pre><code>cd ~/Downloads
+tar -xf microsoft-r-open-3.4.1.tar.gz
+cd microsoft-r-open/
+sudo ./install.sh</code></pre>
+<p>インストール中にライセンスが出てきますが、<code>q</code>を押してライセンスを読み終わり、<code>y</code>で同意となります。</p>
+</div>
+<div id="python-anaconda" class="section level2">
+<h2>Python (Anaconda)</h2>
+<p>基本的なデータ分析はRでカバーできると思いますが、機械学習やテキスト分析ではPythonが使われている印象です。 Ubuntu系OSではPythonは2.x系も3.x系もプリインストールされていますが、コマンドラインで操作するのは面倒なので、<a href="https://www.continuum.io/downloads#linux">Anaconda</a>というパッケージを導入します。</p>
+<p>Pyhotnには3.x系と2.x系があるので必要な方（わからない場合はとりあえず3.x系）をダウンロードします。 <code>Downloads</code>フォルダにダウンロードした場合は次のコマンドでインストールできます。</p>
+<pre><code>cd ~/Downloads
+bash Anaconda3-4.4.0-Linux-x86_64.sh</code></pre>
+<p>とりあえずひたすら<code>Enter</code>を押し、<code>yes</code>を押し、再び<code>Enter</code>と<code>yes</code>を押せば大丈夫です。</p>
+<p>一度、ターミナルを閉じて、新しく開いて、次のコマンドを実行してバージョンを確認します。</p>
+<pre><code>conda -V</code></pre>
+<p>PythonではRにおけるRStudioほど確固たる専用エディタはないような印象ですが、Jupyter Notebookがよく使用されている気はします。 ソフトウェアとしては登録されていないので、コマンドラインに<code>jupyter notebook</code>と実行したら起動します。 他にも、RStudio風なインターフェースのSpyderを<code>spyder</code>と実行したらできます。 <a href="http://www.jetbrains.com/pycharm/download/#section=linux">PyCharm</a>というのも人気があるそうです。</p>
+<div id="mecab" class="section level3">
+<h3>mecab</h3>
+<p>日本語のテキスト分析をする際には単語の形態素解析が必要となりますが、そのために<code>mecab</code>をインストールする必要があります。 <a href="http://qiita.com/ekzemplaro/items/c98c7f6698f130b55d53">ここ</a>を参考にしました。</p>
+<p>まず、<code>mecab</code>をインストールします</p>
+<pre><code>sudo apt install mecab
+sudo apt install libmecab-dev
+sudo apt install mecab-ipadic-utf8</code></pre>
+<p>次に、<code>neologd</code>辞書をインストールします（<code>curl</code>がないと言われたのでついでに入れます）。</p>
+<pre><code>sudo apt install curl
+cd ~/Downloads
+git clone https://github.com/neologd/mecab-ipadic-neologd.git
+cd mecab-ipadic-neologd
+sudo bin/install-mecab-ipadic-neologd</code></pre>
+<p>例えば、以下のようにして<code>/etc/mecabrc</code>を開き、</p>
+<pre><code>sudo atom /etc/mecabrc</code></pre>
+<p><code>dicdir</code>を次のように書き換えます。</p>
+<pre><code>dicdir = /usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd</code></pre>
+<p>最後に、<code>mecab</code>を<code>python3</code>でも使えるようにします（<a href="http://blueskydb.blog.jp/archives/67055421.html">ここも</a>参考）。</p>
+<pre><code>pip install --upgrade pip
+pip install mecab-python3
+conda install libgcc</code></pre>
+</div>
+</div>
+</div>
+<div class="section level1">
+<h1>バージョンを管理する</h1>
+<p>バージョン管理とはファイルの更新を記録することで、Gitと呼ばれるものを使います。 ファイルを修正していると<code>ファイル</code>、<code>ファイル修正</code>、<code>ファイル再修正</code>、<code>ファイル再修正201707</code>のようなファイルが増殖していくという悲劇に見舞われます。 Gitを使うことでよりスマートなバージョン管理を行います。</p>
+<div id="git" class="section level2">
+<h2>Git</h2>
+<p>Gitのインストール方法は<a href="https://okuzawats.com/install-git-on-ubuntu-20150615/">こちら</a>を参考にします。 ユーザー名とメールアドレスは自由に決めて構いません。 最後のコマンドは日本語名のファイルの文字化けを回避します。</p>
+<pre><code>sudo apt install git
+git config --global user.name &quot;User Name&quot;
+git config --global user.email &quot;hoge@hoge.com&quot;
+git config --global core.quotepath false</code></pre>
+<p>Gitの使い方はまだ勉強中ですが、とりあえず<a href="http://www.webopixel.net/develop/651.html">こちら</a>を参考に一人で論文のバージョン管理をできるようになります。 後述するAtomを使えばもう少し簡単にできますが、いずれにせよコマンドラインの操作を覚えていたほうがわかりやすいと思います。</p>
+<div class="section level3">
+<h3>フォルダの登録</h3>
+<p>Gitを使うフォルダに対して初回のみ以下の手順で登録を行います。</p>
+<ol style="list-style-type: decimal">
+<li>必要なファイルを保存するフォルダを作ります。</li>
+<li>ターミナルからそのフォルダに移動するか、そのフォルダをターミナルで開きます。</li>
+<li><code>git init</code>を実行し、そのフォルダでGitの環境を作ります。</li>
+</ol>
+</div>
+<div id="addcommit" class="section level3">
+<h3>Add&amp;commit</h3>
+<p>当該フォルダに新しいファイルができた場合、次のコマンドで状況を確認できます。</p>
+<pre><code>git status</code></pre>
+<p>次のコマンドでインデックスにaddします。</p>
+<pre><code>git add file-name</code></pre>
+<p>再び、<code>git status</code>を実行するとaddされたことが分かると思います。</p>
+<p>インデックスにあるファイルは次のコマンドでcommitされます。</p>
+<pre><code>git commit -m &#39;comment&#39;</code></pre>
+<p><code>'comment'</code>の中には変更内容が分かるような任意のコメントを入力します。</p>
+<p>再び、<code>git status</code>を実行すると（最新版をcommitしたので）変更が何もないことがわかります。</p>
+<p>commitと同時にaddする場合は次のコマンドで十分です。</p>
+<pre><code>git commit -a -m &#39;comment&#39;</code></pre>
+<p>もし、commitが記録に残す程のないものであれば、次のコマンドで十分です。</p>
+<pre><code>git commit --amend</code></pre>
+<p>次のようにもできます。</p>
+<pre><code>git commit -a --amend</code></pre>
+</div>
+<div class="section level3">
+<h3>履歴の確認</h3>
+<p>ファイルを編集し、<code>git status</code>を実行すると再び変更が記録されていないと表示されますので、addしてcommitします。 続いて、次のコマンドを実行すると履歴が表示されます。</p>
+<pre><code>git log</code></pre>
+<p>履歴を縮小して表示する場合は、次のコマンドです。</p>
+<pre><code>git log --oneline</code></pre>
+</div>
+<div class="section level3">
+<h3>変更の確認</h3>
+<p>履歴から変更箇所を確認できます（<a href="http://qiita.com/shibukk/items/8c9362a5bd399b9c56be">参考</a>）。 ファイルを変更し、addする前に前回commitしたものと比較したい場合は次のコマンドです。</p>
+<pre><code>git diff</code></pre>
+<p>addしたあとであれば、次のコマンドです。</p>
+<pre><code>git diff --caches</code></pre>
+<p>commitしたあとであれば、次のコマンドです。</p>
+<pre><code>git diff HEAD^</code></pre>
+</div>
+<div class="section level3">
+<h3>復元</h3>
+<p>過去のcommitを復元することができます。 最新のcommitに戻す場合は次のコマンドです。</p>
+<pre><code>git reset --hard HEAD</code></pre>
+<p>1つ前のcommitの場合は次のコマンドです。</p>
+<pre><code>git reset --hard HEAD~</code></pre>
+<p>2つ前のcommitの場合は次のコマンドです。</p>
+<pre><code>git reset --hard HEAD~2</code></pre>
+<p>特定のファイルだけを復元する場合は次のコマンドです。</p>
+<pre><code>git checkout HEAD file-name</code></pre>
+<p><code>reset</code>も<code>checkout</code>も履歴に表示されるIDで指定することもできます。</p>
+</div>
+</div>
+</div>
+<div class="section level1">
+<h1>ウェブサイトを作成する</h1>
+<p>ウェブサイトを持っている研究者は多くはないと思いますが、これから需要が高まっていく気もします。 普通はどこかのレンタルサーバを借りて、Word Pressなどで編集するかもしれませんが、ここではHTMLとCSSを自分で編集しGithub上で無料で公開する方法を紹介します。</p>
+<p>まず、HTMLとCSSのエディタはAtomとします。 僕自身はSublime Textを使っていたのですが、どちらも無料でシンプルかつ拡張性が高く、人気のエディタだとは思います（vimとかemacsとかガチ勢は知りません）。 しかし、次の理由からSublime TextではなくAtomをおすすめします。</p>
+<ul>
+<li>日本語入力が簡単</li>
+<li>gitとgithubとの連怪がある（というかgithubが開発している）</li>
+<li>Sublime Textはときどき寄付を催促してくる（催促してくるだけ）</li>
+</ul>
+<div id="atom" class="section level2">
+<h2>Atom</h2>
+<p>Atomのインストールは<a href="https://github.com/atom/atom">公式github</a>を参考にします。 まず、<a href="https://atom.io/">公式サイト</a>から<code>atom-amd64.deb</code>を<code>Downloads</code>フォルダにダウンロードして、次のコマンドを入力します。</p>
+<pre><code>cd ~/Downloads
+sudo dpkg --install atom-amd64.deb</code></pre>
+<p>一行が長いと横スクロールしないといけなくなるので、<code>Edit &gt; Preferences &gt; Editor</code>で<code>Soft Wrap</code>を有効にしましょう。</p>
+<p>Atomではパッケージやテーマをインストールしてカスタマイズすることができます。 もちろん、いくつかのパッケージとテーマはプリインストールされています。 Linuxであれば<code>Edit &gt; Preferences</code>の中に<code>Install</code>があります。</p>
+<div class="section level3">
+<h3>テーマのインストール</h3>
+<p>試しに、マテリアルデザインのテーマをインストールしようと思います。 <code>Install</code>の検索欄に“material”と入力すると色々とテーマが出てくると思うので、<code>material-ui</code>と<code>atom-material-syntax</code>のところの<code>Install</code>を押します。 続いて、<code>Theme</code>を選択して、インストールしたテーマを選択すると完了です。</p>
+</div>
+<div class="section level3">
+<h3>パッケージのインストール</h3>
+<p>パッケージも<code>Install</code>で検索して、インストールできます。 <code>Packages</code>でアンインストールや無効化、設定など管理ができます。 ここでは、いくつか便利なパッケージを紹介します。</p>
+<ul>
+<li><a href="https://atom.io/packages/autocomplete-paths">autocomplete-paths</a>：パスの入力補助</li>
+<li><a href="https://atom.io/packages/file-icons">file-icons</a>：ファイルのアイコンをカラフルにする。</li>
+<li><a href="https://atom.io/packages/atom-beautify">atom-beautify</a>：コードの体裁を整えてくれる。</li>
+<li><a href="https://atom.io/packages/project-manager">project-manager</a>：プロジェクト管理</li>
+<li><a href="https://atom.io/packages/tag">tag</a>：タグを閉じてくれる。</li>
+</ul>
+<p>また、Atomパッケージはコマンドラインからインストールすることもできます。</p>
+<pre><code>apm install autocomplete-paths file-icons atom-beautify project-manager tag</code></pre>
+<p>ほかにもいろいろあるので調べてみると楽しいです。</p>
+</div>
+<div id="git-1" class="section level3">
+<h3>Git</h3>
+<p>Atomはgithubが作っており、Gitと連携できます（そのうちgithubとも連携するらしいです）。 add&amp;commitは右側にカーソルを近づけると飛び出してくる半円のマークをクリックすると出てくるパネルで直感的に操作できます。 さらに、次のパッケージをインストールすると履歴の確認や変更の復元なども可能です。</p>
+<ul>
+<li><a href="https://atom.io/packages/git-plus">git-plus</a></li>
+</ul>
+<pre><code>apm install git-plus</code></pre>
+</div>
+</div>
+<div id="bootstrap" class="section level2">
+<h2>Bootstrap</h2>
+<p>ウェブサイトを作ろうとするとHTML, CSS, JavaScirpt, PHPなどの知識が必要になりますが、最低限のHTMLとCSSの知識さえあれば、<a href="http://getbootstrap.com/">Bootstrap</a>のようなフレームワークを使って簡単にウェブサイトを構築することができます。 その際には次のようなパッケージが有用です。</p>
+<ul>
+<li><a href="https://atom.io/packages/atom-html-preview">atom-html-preview</a>：HTMLファイルのプレビュー</li>
+<li><a href="https://atom.io/packages/atom-bootstrap3">atom-bootstrap3</a>：Bootstrap3用便利機能</li>
+</ul>
+<pre><code>apm install atom-html-preview atom-bootstrap3</code></pre>
+</div>
+<div id="github" class="section level2">
+<h2>github</h2>
+<p>githubで無料でウェブサイトを作ることができます。 容量もおそらく無制限ですが、ソースコードはすべて公開されます（といっても基本的にHTMLやCSSはどこでも公開されてます）。 <a href="http://tomoprog.hatenablog.com/entry/2016/02/08/110417">こちら</a>を参考にしました。</p>
+<p>まず、<a href="https://github.com/">公式サイト</a>でアカウントを作りましょう。 次に、ウェブサイトのURLを作るわけですが、<code>Start Project</code>を押し、<code>Repository Name</code>は<code>user-name.github.io</code>にしてください。 例えば、僕のgithub idは<code>shohei-doi</code>なので、このサイトのドメインは<code>shohei-doi.github.io</code>になっているはずです。</p>
+<p>続いて、SSH公開鍵を次のコマンドで取得します。</p>
+<pre><code>ssh-keygen</code></pre>
+<p>ホームディレクトリの中に<code>.ssh</code>という隠しフォルダができるので、その中の<code>id_rsa.pub</code>の中身をコピーします。 githubのページに戻り、右上のアイコンをの中に<code>Settings</code>があるので、さらにその中の<code>SSH and GPG keys</code>を選択肢、<code>SSH keys</code>にコピーしたものをペーストします。</p>
+<p>今度は、リポジトリのファルダを自分のPCに作ります。 たとえば、<code>Documents</code>フォルダに作るのであれば、次のようにコマンドを入力します。</p>
+<pre><code>cd ~/Documents
+git clone https://github.com/user-name/user-name.github.io</code></pre>
+<p>なお、クローンするのはリポジトリのURLであって、ウェブサイトのURL<code>https://user-name.github.io/</code>ではないことに注意しましょう。</p>
+<p>ウェブサイトの更新は、当該フォルダにHTMLファイルやCSSファイルを保存し、add&amp;committします。 最後に、当該フォルダ上でターミナルを開き、</p>
+<pre><code>git push -u origin master</code></pre>
+<p>を実行すれば終わりです。</p>
+</div>
+</div>
+<div id="atom" class="section level1">
+<h1>Atomにまとめる</h1>
+<p>ひとまずここまでで、論文を書き、スライドを作り、データ分析を行い、ウェブサイトを公開するおとができるようになりました。 しかし、さらなる自由を求めてAtomでこれらの作業をすべて行いたいと思います。 その利点としては - AtomのGit機能を使える - Atomのプロジェクト機能を使える などがあります。 また、個人的経験上、LaTeXやRを異なるフロントエンドから実行できる環境を整えておくのはリスクヘッジの観点からも好ましいと思います。</p>
+<p>ともあれ、以下ではAtomのパッケージを活用してAtom上でLaTeX, R, Pythonを動かせるようにします。 また、LaTeXよりも簡単に文書やスライドを作成できるRmarkdownについても説明します。</p>
+<div id="latex-1" class="section level2">
+<h2>LaTeX</h2>
+<p>まず、AtomからLaTeXをコンパイルできるようにするために、以下のパッケージをインストールします。</p>
+<ul>
+<li><a href="https://atom.io/packages/latex">latex</a>：AtomからLaTeXをコンパイル</li>
+<li><a href="https://atom.io/packages/language-latex">language-latex</a>：LaTeX用のシンタックスハイライト</li>
+<li><a href="https://atom.io/packages/latexer">latexer</a>：LaTeX用の自動補完</li>
+<li><a href="https://atom.io/packages/pdf-view">pdf-view</a>：Atom内でpdfファイルの表示</li>
+</ul>
+<pre><code>apm install latex language-latex latexer pdf-view</code></pre>
+<div id="latexmkrc" class="section level3">
+<h3>.latexmkrcの編集</h3>
+<p>次に、Atomで新しいファイルを作り、以下の内容をコピペします（<a href="https://texwiki.texjp.org/?Latexmk#ke005cd5">参考</a>）。</p>
+<pre><code>#!/usr/bin/env perl
+if ($^O eq &#39;MSWin32&#39;) {
+  $latex = &#39;uplatex %O -kanji=utf8 -no-guess-input-enc -synctex=1 -interaction=nonstopmode %S&#39;;
+  $pdflatex = &#39;pdflatex %O -synctex=1 -interaction=nonstopmode %S&#39;;
+  $lualatex = &#39;lualatex -cmdx %O -synctex=1 -interaction=nonstopmode %S&#39;;
+  $xelatex = &#39;xelatex %O -synctex=1 -interaction=nonstopmode %S&#39;;
+  $biber = &#39;biber %O --bblencoding=utf8 -u -U --output_safechars %B&#39;;
+  $bibtex = &#39;upbibtex %O %B&#39;;
+  $makeindex = &#39;upmendex %O -o %D %S&#39;;
+  $dvipdf = &#39;dvipdfmx %O -o %D %S&#39;;
+  $dvips = &#39;dvips %O -z -f %S | convbkmk -u &gt; %D&#39;;
+  $ps2pdf = &#39;ps2pdf.exe %O %S %D&#39;;
+  $pdf_mode = 3;
+  if (-f &#39;C:/Program Files/SumatraPDF/SumatraPDF.exe&#39;) {
+    $pdf_previewer = &#39;&quot;C:/Program Files/SumatraPDF/SumatraPDF.exe&quot; -reuse-instance&#39;;
+  } elsif (-f &#39;C:/Program Files (x86)/SumatraPDF/SumatraPDF.exe&#39;) {
+    $pdf_previewer = &#39;&quot;C:/Program Files (x86)/SumatraPDF/SumatraPDF.exe&quot; -reuse-instance&#39;;
+  } else {
+    $pdf_previewer = &#39;texworks&#39;;
+  }
+} else {
+  $latex = &#39;uplatex %O -synctex=1 -interaction=nonstopmode %S&#39;;
+  $pdflatex = &#39;pdflatex %O -synctex=1 -interaction=nonstopmode %S&#39;;
+  $lualatex = &#39;lualatex %O -synctex=1 -interaction=nonstopmode %S&#39;;
+  $xelatex = &#39;xelatex %O -synctex=1 -interaction=nonstopmode %S&#39;;
+  $biber = &#39;biber %O --bblencoding=utf8 -u -U --output_safechars %B&#39;;
+  $bibtex = &#39;upbibtex %O %B&#39;;
+  $makeindex = &#39;upmendex %O -o %D %S&#39;;
+  $dvipdf = &#39;dvipdfmx %O -o %D %S&#39;;
+  $dvips = &#39;dvips %O -z -f %S | convbkmk -u &gt; %D&#39;;
+  $ps2pdf = &#39;ps2pdf %O %S %D&#39;;
+  $pdf_mode = 3;
+  if ($^O eq &#39;darwin&#39;) {
+    $pvc_view_file_via_temporary = 0;
+    $pdf_previewer = &#39;open -ga /Applications/Skim.app&#39;;
+  } else {
+    $pdf_previewer = &#39;xdg-open&#39;;
+  }
+}</code></pre>
+<p>これを、ホームディレクトリに<code>.latexmkrc</code>という名前で保存します（文頭のピリオドに注意）。</p>
+</div>
+<div class="section level3">
+<h3>キーバインディングの変更</h3>
+<p><code>latex</code>パッケージのビルドのショートカットキーは<code>ctrl+alt+b</code>なのですが、僕の環境ではデジタルキーボードとかぶっていますので、TeXStudioのビルドのショートカットキーである<code>f1</code>に次の手順で変更します。</p>
+<ol style="list-style-type: decimal">
+<li><code>Settings</code>の<code>Keybindings</code>を開く。</li>
+<li>検索欄に<code>ctrl alt b</code>を入力する。</li>
+<li>一覧の中に<code>latex:build</code>とあるので、その左のコピーマークを押す。</li>
+<li>上の方の<code>your keymap file</code>というリンクを押し、ペーストする。</li>
+<li><code>keymap.conf</code>を保存し、Atomを再起動する。</li>
+</ol>
+</div>
+<div id="latex" class="section level3">
+<h3>latexの設定</h3>
+<p>LaTeXのセクションで紹介したプリアンブルの修正に加えて、Atomの<code>latex</code>パッケージの設定を<a href="https://texwiki.texjp.org/?Atom#l8d4ce3a">こちら</a>を参考に次のように変えます。</p>
+<ol style="list-style-type: decimal">
+<li><code>Engine</code>を<code>uplatex</code>にする。
+<ul>
+<li>今のところ、僕の環境では<code>xelatex</code>がうまくできません。</li>
+</ul></li>
+<li><code>Enable SyncTeX</code>を有効にする。</li>
+<li><code>Output Format</code>を<code>pdf</code>にする。</li>
+<li><code>PDF Producer</code>を<code>dvipdfmx</code>にする。</li>
+<li>Atom内で出力されたpdfファイルを見る場合は<code>Opener</code>を<code>pdf-view</code>にする。
+<ul>
+<li>pdfファイルをクリックするとソースファイルが該当箇所にジャンプします。</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="markdown" class="section level2">
+<h2>markdown</h2>
+<p>LaTeXは一度、自分なりのスタイルが決まると使いやすいのですが、しばしば謎のエラーに遭遇したりします。 簡単なレジュメやレポート程度であればわざわざLaTeXを使う必要もないでしょう。</p>
+<p>そこで、markdownと呼ばれる記法で文書を作成できるようにします。 markdownとはhtmlを簡単に書くための記法ですが、pdfファイルなども出力することができます。 次のパッケージをインストールすることでmarkdownファイルをpdfファイルに変換できます。</p>
+<ul>
+<li><a href="https://atom.io/packages/markdown-pdf">markdown-pdf</a>：pdfに変換</li>
+<li><a href="https://atom.io/packages/markdown-toc">markdown-toc</a>：目次の挿入</li>
+</ul>
+<p>pandocは様々な文書ファイル変換プログラムで、markdownからpdfやword, html, beamerなどが出力できます。</p>
+<ul>
+<li><a href="https://atom.io/packages/markdown-preview-enhanced">markdown-preview-enhanced</a>：pandocの使用</li>
+</ul>
+<pre class="()"><code>apm install markdown-pdf markdown-toc markdown-preview-enhanced</code></pre>
+</div>
+<div id="rmarkdown" class="section level2">
+<h2>Rmarkdown</h2>
+<p>RmarkdownはRコードを実行できるmarkdownですが、謎の進化を遂げてLaTeXのようなこともできるようになっています。 残念なことに、UbuntuのRStudioは日本語環境があまり良くないので、Atomで編集し、RStudioでコンパイルするのがいいと思います。 必要なRパッケージはRStudioで最初にコンパイルするときに自動でインストールされます。</p>
+</div>
+<div id="jupyter-notebook" class="section level2">
+<h2>Jupyter Notebook</h2>
+<p>Jupyter Notebookは基本的にはPython用ですがRを動かすこともでき、AtomではJupyter Notebookを経由してRを動かします（<a href="http://can.hatenadiary.com/entry/2016/12/15/000000">参考</a>）。 特に、Ubuntu版RStudioは日本語入力が不便なので、日本語をRで使う場合はAtomで動かしたほうがいいと思います。 しかし、ノートブック形式なので、若干RStudioとは操作感が異なります。</p>
+<p>まず、RStudioで以下のコマンドを実行します。</p>
+<pre><code>install.packages{c(&#39;repr&#39;, &#39;IRdisplay&#39;, &#39;evaluate&#39;, &#39;crayon&#39;, &#39;pbdZMQ&#39;, &#39;devtools&#39;, &#39;uuid&#39;, &#39;digest&#39;})
+devtools::install_github(&#39;IRkernel/IRkernel&#39;)</code></pre>
+<p>次に、ターミナルでRを開き、次のコマンドを実行します。</p>
+<pre><code>IRkernel::installspec</code></pre>
+<p>ターミナル上で<code>jupyter notebook</code>を実行し、右上の<code>new</code>を押して<code>R</code>スクリプトが対応していることを確認します。</p>
+<p>次に、Atomで次のパッケージをインストールします。</p>
+<ul>
+<li><a href="https://atom.io/packages/language-r">language-r</a>：R用シンタックスハイライト</li>
+<li><a href="https://atom.io/packages/autocomplete-R">autocomplete-r</a>：R用自動補完</li>
+<li><a href="https://atom.io/packages/hydrogen">Hydrogen</a>：Atom上でJupyter Kernelを使う。</li>
+</ul>
+<pre><code>apm language-r autocomplete-r hydrogen</code></pre>
+<p>最後に、ターミナルで<code>jupyter kernelspec list --json</code>を実行して出てきた{}で閉じられた文字列を{}を含めて「すべて」コピーし、<code>Hydrogen</code>の<code>settings</code>の<code>Kernel Spec</code>にペーストします。</p>
+<p>使い方自体は実行したいコードで<code>ctrl+enter</code>を押すだけですが、RStudioと異なり、コンソールは出てきません。 なお、pythonやR以外の言語にも<a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">Jupyter Notebook</a>は対応しているので<a href="https://nteract.gitbooks.io/hydrogen/docs/Installation.html">Hydrogen</a>でも実行できると思われます。</p>
+</div>
+</div>
+<div class="section level1">
+<h1>クラウドストレージ</h1>
+<p>複数のPCを利用している人はクラウドストレージを用いてデータを同期させていることが多いと思います。 特にLinuxとWindowsの両刀使いをする場合、LinuxとWindowsの間でデータを同期させたいのは当然でしょう。</p>
+<p>ところで、LinuxとWindowsの間でデータを共有したい時、必ずしもクラウドストレージを使う必要はありません。</p>
+<ul>
+<li>仮想マシンの場合：仮想マシンのソフトウェアにデータ共有フォルダを作成する機能があれば、そこに共有したいデータを保存する。</li>
+<li>デュアルブートの場合：Windows側のストレージを外部ストレージとしてマウントしてアクセスする。</li>
+</ul>
+<p>Linux側からWindows側のデータにアクセスできるので両方にクラウドストレージを導入して同じデータを2ヶ所で保存するのはSSD/HDDの容量が大きくない限りもったいないです。</p>
+<p>しかし、後者の場合はリアルタイムの同期ができなかったり、パスが長くなってしまって面倒くさくなったりします。 したがって、どうしてもLinuxで同期したいデータがある場合はクラウドストレージを使うのもひとつの手だと思います。</p>
+<p>具体的には、おなじみのDropbox,Google Drive, OneDriveに加え、MegaとownCloudを検討します。 ただし、後で説明するようにGoogle DriveとOneDriveはあまりおすすめしません。</p>
+<div id="dropbox" class="section level2">
+<h2>Dropbox</h2>
+<p><a href="https://www.dropbox.com">Dropbox</a>はLinuxにも対応しているので、Softwareから検索してダウンロードするだけで使うことができます。 Dropboxは同期の速度も早く、Office OnlineやAcrobat Readerとの連携もいいのでおすすめです。 最大の問題は無料で使える容量が2GBと少なく、有料版だと1TBと多すぎる点です。 しかし、有料版を使うことにためらいを感じないのであれば最もいい選択肢だと思います。</p>
+</div>
+<div id="mega" class="section level2">
+<h2>MEGA</h2>
+<p><a href="https://mega.nz">MEGA</a>はややマイナーですが、最大の特徴は無料で50GBまで使える上に、Linuxに対応している点です。 同期の速度も操作の快適性にも特に問題は感じません。 唯一の懸念はマイナーであることで、トラブルが生じた時にネット上に情報が少ない可能性や、サービスを突然終了してしまう可能性が高いかもしれません。 といっても、サービスの終了はどのクラウドでもありうる話で、重要なデータはローカルに保存しておけば問題はないかと思います。</p>
+<p>基本的にPC起動時に自動で同期をしてくれるはずですが、どうもMEGAが自動で起動しないようでしたら次のように設定します。 まず、Windowsボタンを押して<code>Startup Applications</code>を検索します。 一覧にMEGASyncがあるはずなので、それを選択してEditします。 <code>command</code>の欄に<code>megasync</code>があるはずなので、それを<code>megasync -p 15</code>とします。 これで、起動後（やや時間が経ってから）MEGAが同期を自動で始めるはずです。</p>
+</div>
+<div id="google-drive" class="section level2">
+<h2>Google Drive</h2>
+<p><a href="https://tools.google.com/dlpage/drive">Google Drive</a>は同期や操作が快適な上に無料で15GB使えるので魅力的ですが、そのままではLinuxでは使えません。 また、以下の方法で同期した場合もデータの読み込みがとても遅いので、あまり実用的ではないと判断しました。</p>
+<p>Google DriveをLinuxで使用する方法は<a href="http://mogi2fruits.net/blog/os-software/linux/ubuntu/4263/">こちら</a>のようにいろいろとあるそうです。 ここではひとつ目に紹介されている方法を残しておきます。</p>
+<p>Google Driveの同期に必要なソフトウェアをインストールします。</p>
+<pre><code>sudo add-apt-repository ppa:alessandro-strada/ppa
+sudo apt update
+sudo apt install google-drive-ocamlfuse
+google-drive-ocamlfuse</code></pre>
+<p>ブラウザ上でGoogleアカウントとパスワードを求められます。</p>
+<p>次に、ホームディレクトリの下にGoogleDriveというフォルダを作り、そこにデータを同期させます。</p>
+<pre><code>mkdir ~/GoogleDrive
+google-drive-ocamlfuse ~/GoogleDrive</code></pre>
+<p>最後に、<code>Startup Applications</code>では以下のように設定してGoogle DriveをLinux起動時に自動マウントします。</p>
+<pre><code>gnome-session-properties</code></pre>
+<ul>
+<li>name:google-drive-ocamlfuse</li>
+<li>command:google-drive-ocamlfuse /home/ユーザ名/GoogleDrive</li>
+</ul>
+</div>
+<div id="onedrive" class="section level2">
+<h2>OneDrive</h2>
+<p><a href="https://onedrive.live.com/about">OneDrive</a>も無料で15GB使え、Office製品との連携が強力ですが、やはりLinuxではそのまま使えません。 また、OneDrive本来の問題として同期が遅い点、AndroidアプリでpdfをAcrobat Readerなどで開けない点、Officeアップロードセンターの謎のエラーが面倒な点などがあります。 加えて、以下の方法で同期した場合、（僕の環境では）ファイルそのものを編集するのではなく、コピーをして新しいファイルとしてアップロードしているという問題もありました。 したがって、OneDriveをLinuxで利用するのは非現実的であると感じます。</p>
+<p>OneDriveをLinuxで使用する方法は<a href="http://qiita.com/afj/items/61ca815aa37d87bd391d">こちら</a>を参考にさせていただきました。</p>
+<p>OneDriveの同期に必要なソフトウェアをインストールします。</p>
+<pre><code>sudo apt install libcurl4-openssl-dev libsqlite3-dev gdebi</code></pre>
+<p>次にDコンパイラ(Digital Mars D Compiler)を<a href="https://dlang.org/download.html#dmd">こちら</a>からダウンロードします。</p>
+<p>ホームディレクトリの下にOneDriveというフォルダを作り、いろいろ準備します。</p>
+<pre><code>mkdir ~/OneDrive
+cd ~/OneDrive
+git clone git@github.com:skilion/onedrive.git
+cd onedrive
+make
+sudo make install
+mkdir -p ~/.config/onedrive
+cp ./config ~/.config/onedrive/config
+systemctl --user enable onedrive
+systemctl --user start onedrive
+onedrive</code></pre>
+<p>ターミナルにURLが出てくるのでそれをブラウザで開き、Microsoftアカウントとパスワードを入力します。 真っ白な画面が現れたらそのURLをターミナルにコピペします。</p>
+<p>最後に、<code>Startup Applications</code>では以下のように設定してOneDriveをLinux起動時に自動マウントします。</p>
+<ul>
+<li>name:onedrive</li>
+<li>command:onedrive -m</li>
+</ul>
+</div>
+<div id="owncloud" class="section level2">
+<h2>ownCloud</h2>
+<p>ownCloudは一般的なクラウドサービスと異なり、自分でサーバーを用意します。 したがって、自分でサーバーを用意して管理する費用さえ払えば、その他は無料で容量を気にすることなく運用できます。 また、サーバー管理はLinuxでしかできないので、Linuxを使うメリットであるとも言えます。 ただし、現在勉強中です。</p>
+</div>
+</div>
+
+<footer class="footer section-dark">
+  <div class="container">
+    <div class="row">
+      <div class="credits ml-auto">
+        <span class="copyright">
+          © <script>document.write(new Date().getFullYear())</script>, Shohei Doi | Kyoto University | Template builfor <a href="https://getbootstrap.com/" target="_blank">Botstrap</a> and <a href="http://demos.creative-tim.com/paper-kit-2/index.html" target="_blank">Paper Kit 2</a> by <a href="https://www.creative-tim.com/" target="_blank">Creative Tim</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

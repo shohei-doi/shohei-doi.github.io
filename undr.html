@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="土井　翔平" />
+
+
+<title>AtomでMarkdownから国連決議案を書く</title>
+
+<script src="undr_files/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="undr_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="undr_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="undr_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="undr_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="undr_files/navigation-1.1/tabsets.js"></script>
+<link href="undr_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="undr_files/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="assets/css/paper-kit.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<nav class="navbar navbar-expand-lg fixed-top bg-primary">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right burger-menu" type="button" data-toggle="collapse" data-target="#navbar-primary" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-bar"></span>
+          <span class="navbar-toggler-bar"></span>
+          <span class="navbar-toggler-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Shohei Doi</a>
+    <div class="collapse navbar-collapse" id="navbar-primary">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#research"><i class="nc-icon nc-hat-3" aria-hidden="true"></i>Research</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#teaching"><i class="nc-icon nc-ruler-pencil" aria-hidden="true"></i>Teaching</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#notes"><i class="nc-icon nc-paper" aria-hidden="true"></i>Notes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#links"><i class="nc-icon nc-world-2" aria-hidden="true"></i>Links</a>
+        </li>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" href="#pk" role="button" aria-haspopup="true" aria-expanded="false"><i class="nc-icon nc-single-02" aria-hidden="true"></i>More</a>
+          <ul class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="dropdownMenuButton">
+            <li class="dropdown-header">Other Profile Sites</li>
+            <a class="dropdown-item" href="https://scholar.google.co.jp/citations?user=l9zxa_gAAAAJ" target="_blank">Google Scholar</a>
+            <a class="dropdown-item" href="https://researchmap.jp/doishohei" target="_blank">Researchmap</a>
+            <div class="dropdown-divider"></div>
+              <li class="dropdown-header">Social Networks</li>
+            <a class="dropdown-item" href="https://www.facebook.com/shohei.doi" target="_blank">Facebook</a>
+            <a class="dropdown-item" href="https://twitter.com/sdoi0504" target="_blank">Twitter</a>
+            <a class="dropdown-item" href="https://ask.fm/sdoi0504" target="_blank">Ask.fm</a>
+          </ul>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">AtomでMarkdownから国連決議案を書く</h1>
+<h4 class="author"><em>土井　翔平</em></h4>
+<h4 class="date"><em>ver 0.2（2018年2月11日）</em></h4>
+
+</div>
+
+
+<ul>
+<li>2017/12/13：リンクの貼り方を追加しました。</li>
+<li>2017/7/3：html出力機能を搭載したver 0.2を公開しました。</li>
+<li>2017/7/2：pdf出力機能を搭載したver 0.1を公開しました。</li>
+</ul>
+<div class="section level2">
+<h2>はじめに</h2>
+<p>このページではAtomというテキストエディタからMarkdownと呼ばれる形式のファイルを編集し、国連決議を作成する方法を紹介します。 そうすることによって、模擬国連会議においてよくある悲劇のいくつかを回避しようと思います。</p>
+<div class="section level3">
+<h3>よくある悲劇</h3>
+<p>Wordで決議案を作成、編集していると次のような悲劇に遭遇しました。</p>
+<ul>
+<li>謎の行間、インデントが生じる。</li>
+<li>主文の番号がずれる。</li>
+<li>コメントで溢れかえってファイルが重くなる。</li>
+<li>「US案」、「US案_途上国コメント」、「US案rev」、「US案_途上国コメントv2」……のようなファイルが増殖する。</li>
+</ul>
+<p>などなど。</p>
+</div>
+<div class="section level3">
+<h3>どうやって解決するのか</h3>
+<p>以上の悲劇を次のような方法で解決します。</p>
+<ul>
+<li>Markdownで書くことで体裁を自動化する。</li>
+<li>交渉用のhtmlファイルと提出用のpdfファイルを区別することで交渉を容易にする。</li>
+<li>gitとgithubでバージョン管理と文書共有を行う（予定）。</li>
+</ul>
+<p>百聞は一見にしかずなので、次のセクションを見てください。</p>
+</div>
+<div class="section level3">
+<h3>サンプル</h3>
+<p>第71会期国連総会第1委員会の核兵器禁止条約に関する決議案<a href="./items/undr/L41.pdf">A/C.1/71/L.41</a>を作成したいと思います。 当該決議案の内容を記した<a href="./items/undr/undr_sample.md">markdownファイル</a>を用意します。 Atomでごにょごにょすると提出用決議案の<a href="./items/undr/undr_sample.pdf">pdfファイル</a>と交渉用決議案の<a href="./items/undr/undr_sample.md.html">htmlファイル</a>ができます。</p>
+<p>詳しいmarkdownファイルの書き方は次に述べますが、おそらくぱっと見てもなんとなく内容は分かるかと思います。 重要な点は内容（文字）さえ書けばよく、体裁は勝手に整えてくれるということです。</p>
+</div>
+</div>
+<div class="section level2">
+<h2>準備</h2>
+<p>Atomを導入し、各種設定を行います。 Windows前提の説明ですが、MacやLinuxでも似たような方法でできます。</p>
+<div id="atom" class="section level3">
+<h3>Atomの導入</h3>
+<p>まず、<a href="https://atom.io/">Atom</a>と呼ばれるエディタをダウンロード&amp;インストールしてください。 もしAtomがインストールしたのにデスクトップやアプリ一覧に出てこない場合、Windowsの場合は<code>C:\Users\（ユーザー名）\AppData\Local\atom\app-（バージョン番号）</code>に<code>atom.exe</code>というファイrがあるはずなので、それを右クリックしてスタート画面に追加しておいてください。</p>
+</div>
+<div class="section level3">
+<h3>パッケージの導入</h3>
+<p>Atomでは各種パッケージをインストールして機能の拡充を行います。 まず、<code>File &gt; Setting</code>で設定画面を開きます。 設定画面の中で、パッケージのインストールであれば<code>Install</code>、パッケージの管理であれば<code>Packages</code>を選択します。 それぞれ、検索欄に単語を入力するとパッケージ一覧が出てきます。</p>
+<div id="markdown-preview" class="section level4">
+<h4>markdown-preview</h4>
+<p>Markdownファイルをhtmlで表示するパッケージです。 プリインストールされているはずですが、もしされていなければインストールしてください。</p>
+<p>次に、まず、<a href="./items/undr/undr_v0.2.zip">このzipファイル</a>をダウンロード、解凍して、適当なフォルダに置きます。 そして、’Setting &gt; Themes’の上の方に’your stylesheet’とあるので、それをクリックします。 最後に、Atomから<code>undr_html_v0.x.less</code>というファイルを開き、その内容を先ほど開いたファイルにコピペして保存すれば設定は完了です。</p>
+<ul>
+<li><code>v0.x</code>の<code>x</code>にはバージョンに対応した数字が入ります。バージョン0.1であれば<code>v0.1</code>となっています。</li>
+</ul>
+</div>
+<div id="markdown-themeable-pdf" class="section level4">
+<h4>markdown-themeable-pdf</h4>
+<p>Markdownファイルからpdfファイルを出力するパッケージです。 次に、このパッケージでは設定をする必要があるので、インストール後に<code>Packages</code>で<code>markdown</code>で検索し、<code>markdown-themeable-pdf</code>の<code>settings</code>を押します。</p>
+<ol style="list-style-type: decimal">
+<li><code>Export File Type</code>を<code>pdf</code>にします。</li>
+<li><code>Papersize Format</code>を<code>Letter</code>にします。</li>
+<li><code>Enable HTML tags in markdown source</code>をチェックします。</li>
+<li>作成した決議案のpdfファイルをAtomで表示する場合は、<code>Open Pdf in Atom Workspace</code>をチェックします。</li>
+</ol>
+<p>最後に、<code>Setting &gt; Open Config Folder</code>を選択すると新しいAtomのウィンドウが開くので、左側のフォルダ一覧から<code>markdown-themeable-pdf</code>の中にあるファイルを以下のように編集すると設定は酋長です。</p>
+<ul>
+<li><code>style.css</code>に<code>undr_pdf_v0.x.css</code>の内容をコピペする。</li>
+<li><code>header.js</code>に<code>undr_header_v0.x.js</code>の内容をコピペする。</li>
+<li><code>footer.js</code>に<code>undr_footer_v0.x.js</code>の内容をコピペする。</li>
+</ul>
+</div>
+<div id="language-markdown" class="section level4">
+<h4>language-markdown（任意）</h4>
+<p>Markdownファイルをカラフルに見やすくしてくれます。</p>
+</div>
+<div id="pdf-view" class="section level4">
+<h4>pdf-view（任意）</h4>
+<p>Atomでpdfファイルを見ることができます。 Markdownから作成した決議案のpdfファイルをAtomで見るために使うことができます。</p>
+</div>
+</div>
+</div>
+<div id="markdown" class="section level2">
+<h2>Markdownの編集</h2>
+<p>Markdownの書き方を先ほどのサンプルを用いながら説明します。 まず、ちゃんと決議案をpdfで出力できるかどうかを確認するために、サンプルファイルをAtomで開き、<code>Ctrl+Shift+E</code>を押します。 Markdownファイルがあるフォルダにpdfファイルが出力されていれば成功です。</p>
+<ul>
+<li><code>pdf-view</code>を有効にしている場合、出力されたpdfファイルがAtomに表示されます。画面を左右分割にすると見やすいです。</li>
+</ul>
+<p>次に、決議案をhtml表示できるかを確認するために、サンプルファイルをAtomで開き、<code>Ctrl+Shift+M</code>を押します。 画面の右側に決議の内容らしきものが表示されていれば成功です。</p>
+<div class="section level3">
+<h3>ヘッダー</h3>
+<p>国連決議の最初のページの全文までのもろもろを便宜上ヘッダーと呼ぶことにします。 Markdownファイルの中ではタグ<code>&lt;div id=&quot;header&quot;&gt;~~&lt;/div&gt;</code>で囲まれた次の部分がヘッダーになります。</p>
+<pre><code>&lt;div id=&quot;header&quot;&gt;
+  &lt;div id=&quot;header_top&quot;&gt;
+    &lt;div id=&quot;organization&quot;&gt;
+      United Nations
+    &lt;/div&gt;
+    &lt;div id=&quot;doc_no&quot;&gt;
+      A/C.1/71/L.41
+    &lt;/div&gt;
+  &lt;/div&gt;
+  （省略）
+&lt;/div&gt;</code></pre>
+<p>基本的にそれぞれに対応する箇所を書き換えればいいので特に説明は必要ないかと思います。</p>
+<ul>
+<li>表示したくない情報がある場合、<code>class=&quot;hidden&quot;</code>を加えればいいです。例えば、シグナトリーを消したい場合は、<code>&lt;div id=&quot;title&quot;&gt;~~&lt;/div&gt;</code>を<code>&lt;div id=&quot;title&quot; class=&quot;hidden&quot;&gt;~~&lt;/div&gt;</code>と変えます。</li>
+<li>注意点としては、タグおよびタグのオプションを消さないことです。例えば、<code>&lt;div&gt;~~&lt;/div&gt;</code>を<code>&lt;div~~&lt;/div&gt;</code>とするとうまく表示されません。</li>
+<li>Markdownファイルの中でヘッダーが邪魔な場合、1行目の番号の右の矢印を押すと省略されます。</li>
+</ul>
+</div>
+<div class="section level3">
+<h3>前文と主文</h3>
+<p>前文は半角のハイフンと半角のスペース<code>-</code>を文頭に入れます。 例えば、前文aは</p>
+<pre><code>- *Recalling* its resolutions 67/56 of 3 December 2012, 68/46 of 5 December 2013, 69/41 of 2 December 2014 and 70/33 of 7 December 2015 on taking forward multilateral nuclear disarmament negotiations for the achievement and maintenance of a world without nuclear weapons,</code></pre>
+<p>と入力すれば表示されます。</p>
+<p>主文は半角数字とピリオド、半角のスペース<code>1.</code>を文頭に入れます。 例えば、主文1は</p>
+<pre><code>1. *Notes with satisfaction* that the Open-ended Working Group taking forward multilateral nuclear disarmament negotiations, established by the General Assembly by its resolution 70/33, which met in Geneva during 2016, engaged in structured and substantive discussions in a comprehensive, inclusive, interactive and constructive manner;</code></pre>
+<p>と入力すれば表示されます。</p>
+<ul>
+<li>主語と前文の間、前文と主文の間には<strong>2行以上</strong>の改行を入れてください。</li>
+<li>主文の番号は何でも構いません。つまり、全部<code>1.</code>としても、デタラメに番号を入力しても、順番に番号は割り振られます。</li>
+<li>前文や主文の文頭をイタリック体にする場合は前後にアスタリスク<code>*</code>を入れます。</li>
+</ul>
+<p>なお、決議末尾の罫線は<code>---</code>で入力します。</p>
+</div>
+<div class="section level3">
+<h3>メモとコメント</h3>
+<p>交渉用決議案のhtmlファイルでは前文aのようにメモとコメントをつけることが可能です。 まず、メモは<code>+改行+内容+改行+</code>で入力できます。</p>
+<ul>
+<li><em>Recalling</em> its resolutions 67/56 of 3 December 2012, 68/46 of 5 December 2013, 69/41 of 2 December 2014 and 70/33 of 7 December 2015 on taking forward multilateral nuclear disarmament negotiations for the achievement and maintenance of a world without nuclear weapons,</li>
+</ul>
+<pre><code>メモ</code></pre>
+<p>次に、コメントは<code>&gt;+半角スペース</code>で入力できます。</p>
+<ul>
+<li><em>Recalling</em> its resolutions 67/56 of 3 December 2012, 68/46 of 5 December 2013, 69/41 of 2 December 2014 and 70/33 of 7 December 2015 on taking forward multilateral nuclear disarmament negotiations for the achievement and maintenance of a world without nuclear weapons,</li>
+</ul>
+<blockquote>
+<p>コメント</p>
+</blockquote>
+<p>コメントは複数つけることができますが、その際は間に一行空白のコメントを入れてください。 つまり、</p>
+<pre><code>&gt; コメント1
+&gt;
+&gt; コメント2</code></pre>
+<p>とすると、</p>
+<blockquote>
+<p>コメント1</p>
+<p>コメント2</p>
+</blockquote>
+<p>と表示されますが、</p>
+<pre><code>&gt; コメント1
+&gt; コメント2</code></pre>
+<p>とすると、</p>
+<blockquote>
+<p>コメント1 コメント2</p>
+</blockquote>
+<p>となります。</p>
+<p>また、コメントは<code>&gt;</code>の数を増やすとコメントに対してコメントができます。 つまり、</p>
+<pre><code>&gt; コメント1
+&gt;
+&gt;&gt; コメント2</code></pre>
+<p>とすると、</p>
+<blockquote>
+<p>コメント1</p>
+<blockquote>
+<p>コメント2</p>
+</blockquote>
+</blockquote>
+<p>と表示されます。</p>
+<ul>
+<li>必ず、メモはコメントの前に入れてください。逆にすると前文や主文の番号がリセットされます。</li>
+<li>また、前文と前文、主文と主文の間には<strong>1行だけ</strong>入れることができます。2行以上入れると番号がリセットされます。</li>
+</ul>
+<p>また、<code>**</code>で囲むと文字は太字になり、<code>~~</code>で囲むと横線が引かれます。</p>
+<pre><code>**太字**とか、~~打ち消し~~とかもできる。</code></pre>
+<p><strong>太字</strong>とか、<del>打ち消し</del>とかもできる。</p>
+<ul>
+<li>コメントの中ではMarkdown記法（イタリック、太字、打ち消し、コメント）は使えますが、メモの中では使えません。</li>
+</ul>
+<p>これらの記法を駆使すると次のように書くことができます。</p>
+<ul>
+<li><em>Recalling</em> its resolutions 67/56 of 3 December 2012, 68/46 of 5 December 2013, 69/41 of 2 December 2014 and 70/33 of 7 December 2015 on taking forward multilateral nuclear disarmament negotiations for the achievement and maintenance of a world without nuclear weapons,</li>
+</ul>
+<pre><code>メモ</code></pre>
+<blockquote>
+<p>アメリカ：コメント</p>
+<p>イギリス：<del>コメント</del></p>
+<blockquote>
+<p>ロシア：コメント</p>
+<pre><code>メモ</code></pre>
+<p>中国：コメント</p>
+<blockquote>
+<p>日本：コメント</p>
+</blockquote>
+</blockquote>
+<p>フランス：<strong>コメント</strong></p>
+</blockquote>
+</div>
+<div class="section level3">
+<h3>リンク</h3>
+<p><code>[リンク名](URL)</code>でリンクを貼ることができます。</p>
+</div>
+<div class="section level3">
+<h3>折りたたみ</h3>
+<pre><code>&lt;details&gt;
+  メモ
+&lt;/details&gt;</code></pre>
+<p>のように<code>&lt;details&gt;</code>タグで囲むとメモを折りたたむことができます。</p>
+<details>
+メモ
+</details>
+<pre><code>&lt;details&gt;
+  &lt;summary&gt;
+    折りたたみ
+  &lt;/summary&gt;
+  メモ
+&lt;/details&gt;</code></pre>
+<p>のように<code>&lt;details&gt;</code>タグの中で<code>&lt;summary&gt;</code>タグで囲むとメモを折りたたんだときのタイトルを設定することができます。</p>
+<details>
+<summary> 折りたたみ </summary> メモ
+</details>
+</div>
+<div class="section level3">
+<h3>チェックボックス</h3>
+<pre><code>&gt; - [ ] 賛成
+&gt; - [ ] 反対</code></pre>
+<p>のようにコメントの中で<code>- [ ]</code>を入力するとチェックボックスを入れることができます（このウェブサイト上ではチェックボックスが表示されていないかもしれません）。</p>
+<blockquote>
+<ul>
+<li>[ ] 賛成</li>
+<li>[x] 反対</li>
+</ul>
+</blockquote>
+<ul>
+<li>チェックボックスの内容はhtml側では保存されないので、Markdown側で<code>[x]</code>のように書く必要があります。</li>
+<li>コメントの中で書かないと前文や主文の番号がリセットされます。</li>
+</ul>
+</div>
+</div>
+<div class="section level2">
+<h2>バージョン管理と文書の共有</h2>
+<p>（作業中）</p>
+</div>
+<div class="section level2">
+<h2>バグと今後の予定</h2>
+<ul>
+<li>現在、次のようなバグがあるので、出来る限り直します。
+<ul>
+<li>文書番号の最初のスラッシュも大きくなる。</li>
+<li>主文番号の後ろの余白が小さい。</li>
+<li>文字などのサイズがおかしくなる時がある。
+<ul>
+<li>とりあえず、ディスプレイの倍率を100%にしてみてください。</li>
+<li>それでもおかしい場合はメールしてください。</li>
+</ul></li>
+<li>htmlで表示した場合に主語 (e.g. The General Assembly) の前にa.がつく。</li>
+</ul></li>
+<li>リンク機能の搭載</li>
+<li>脚注の搭載</li>
+<li>サブタイトルの搭載</li>
+<li>主文中の箇条書きの搭載</li>
+<li>自動イタリック化の搭載</li>
+<li>自動カンマ、セミコロン、ピリオドの搭載</li>
+<li>最初のページ外のヘッダーとフッターの処理</li>
+<li>研究会ロゴの搭載</li>
+<li>gitとgithubの解説</li>
+</ul>
+</div>
+<div class="section level2">
+<h2>連絡先</h2>
+<p>なにか改善点、要望などがありましたら<a href="mailto:shohei.doi0504@gmail.com">メール</a>してください。 より詳しいことを知りたい人はAtomやMarkdownでググッてみてください。</p>
+</div>
+
+<footer class="footer section-dark">
+  <div class="container">
+    <div class="row">
+      <div class="credits ml-auto">
+        <span class="copyright">
+          © <script>document.write(new Date().getFullYear())</script>, Shohei Doi | Kyoto University | Template builfor <a href="https://getbootstrap.com/" target="_blank">Botstrap</a> and <a href="http://demos.creative-tim.com/paper-kit-2/index.html" target="_blank">Paper Kit 2</a> by <a href="https://www.creative-tim.com/" target="_blank">Creative Tim</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
