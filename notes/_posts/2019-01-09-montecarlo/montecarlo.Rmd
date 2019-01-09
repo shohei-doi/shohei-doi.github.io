@@ -5,7 +5,7 @@ description: |
 author:
   - name: 土井翔平
     affiliation: 国立情報学研究所<br>早稲田大学
-date: "`r Sys.Date()`"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output:
   radix::radix_article:
     self_contained: false
