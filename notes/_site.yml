@@ -1,0 +1,10 @@
+name: "notes"
+title: "Notes"
+description: |
+  備忘録
+output_dir: "."
+navbar:
+  left:
+    - text: "Shohei Doi"
+      href: ../index.html
+output: radix::radix_article

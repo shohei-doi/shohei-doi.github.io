@@ -1,0 +1,17 @@
+[
+  {
+    "path": "posts/2019-01-09-montecarlo/",
+    "title": "モンテカルロ法",
+    "description": "モンテカルロ法の解説",
+    "author": [
+      {
+        "name": "土井翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-01-09",
+    "categories": [],
+    "preview": "posts/2019-01-09-montecarlo/montecarlo_files/figure-html5/unnamed-chunk-1-1.png",
+    "last_modified": "2019-01-09T22:29:43+09:00"
+  }
+]

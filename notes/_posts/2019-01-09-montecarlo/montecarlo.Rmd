@@ -1,0 +1,21 @@
+---
+title: "モンテカルロ法"
+description: |
+  モンテカルロ法の解説
+author:
+  - name: 土井翔平
+    affiliation: 国立情報学研究所<br>早稲田大学
+date: "`r Sys.Date()`"
+output:
+  radix::radix_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+hist(rnorm(100, 0, 1))
+```
+
