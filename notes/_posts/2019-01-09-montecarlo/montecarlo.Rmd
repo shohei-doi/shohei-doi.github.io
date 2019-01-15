@@ -19,3 +19,6 @@ knitr::opts_chunk$set(echo = FALSE)
 hist(rnorm(100, 0, 1))
 ```
 
+$$
+y＄ \sim f(x)
+$$
