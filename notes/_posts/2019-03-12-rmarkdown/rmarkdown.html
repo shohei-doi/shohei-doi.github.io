@@ -966,21 +966,13 @@
 <h2 id="rmarkdown">RMarkdownの基本</h2>
 <p>RMarkdownとはRによる分析とその報告（レポートやスライド）作成を容易に行うものです。</p>
 <h5>以下、読み飛ばしても構いません。</h5>
-<blockquote>
 <p>普段、慣れ親しんでいるOffice Wordは<a href="https://ja.wikipedia.org/wiki/WYSIWYG">WYSIWYG</a> (what you see is what you get) と呼ばれるものです。 その名の通り、画面に映っているものがそのまま成果物として得ることができます。 そして直接その成果物をいじることができます。</p>
-</blockquote>
-<blockquote>
 <p>一方で、<a href="https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E8%A8%80%E8%AA%9E">マークアップ言語</a>では文章の内容と文章の見た目、構造を区別した上で、すべてテキストで指定します。 代表的なマークアップ言語にはHTMLやLaTeXがあります。</p>
-</blockquote>
-<blockquote>
 <p>例えば、LaTeXにおいて節のタイトルは<code>\section{hoge}</code>と記述します。 この<code>\section{}</code>が節のタイトルという構造を明示的に示しています。 マークアップ言語の場合、作業しているファイルから何かしら一手間加えて成果物を作ります。</p>
-</blockquote>
 <aside>
 HTMLの場合はブラウザを通じてウェブサイトを可視化しますし、LaTeXの場合は組版することでpdfなどに変換します。
 </aside>
-<blockquote>
 <p>そして、Markdownとは簡単にマークアップするための書き方で、そこにRを実行する機能を加えたものがRMarkdownになります。</p>
-</blockquote>
 <aside>
 ちなみにRMarkdownはバックグラウンドでpandocと呼ばれるソフトウェアを通じてドキュメントを生成しています。
 </aside>
@@ -1010,17 +1002,11 @@ tinytex::install_tinytex()</code></pre>
 <h3>日本語の使用</h3>
 <p>LaTeXにおいて日本語を使用する場合は一手間かかります。</p>
 <h5 id="-1">以下、読み飛ばしても構いません。</h5>
-<blockquote>
 <p>LaTeXでは組版エンジンがいくつかに派生しており、日本語を使用する場合に簡単なのは[u]pLaTeXを使うことです。</p>
-</blockquote>
-<blockquote>
 <p>しかし、[u]pLaTeXはモダンなLaTeXエンジンとは言えません。 例えばRMarkdownでつかえるのはpdfLaTeX, XeLaTeX, LuaLaTeXの3つで、OverleafではこれにLaTeXを加えた4つだけです。</p>
-</blockquote>
-<blockquote>
 <p>このうち、日本語を使用できるのはXeLaTeXとLuaLaTeXで、XeLaTeXの方が組版速度が早い（らしい）のでここではXeLaTeXを使います。</p>
-</blockquote>
-<p>まずはじめに日本語フォントをインストールします。</p>
-<p>次に<code>yaml</code>ヘッダーを編集します。</p>
+<h4>フォントのインストール</h4>
+<h4 id="yaml"><code>yaml</code>ヘッダーの編集</h4>
 <h3 id="beamer">Beamer</h3>
 <p>LaTeXではBeamerと呼ばれるドキュメントクラスによってスライドを作成することができます。</p>
 <!--radix_placeholder_article_footer-->
