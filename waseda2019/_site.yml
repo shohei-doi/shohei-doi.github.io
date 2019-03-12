@@ -1,7 +1,7 @@
-name: "notes"
-title: "備忘録"
+name: "waseda2019"
+title: "国際政治経済学演習"
 description: |
-  備忘録
+  国際政治経済学演習
 output_dir: "."
 navbar:
   right:

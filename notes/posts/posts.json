@@ -1,17 +1,39 @@
 [
   {
-    "path": "posts/2019-01-09-montecarlo/",
-    "title": "モンテカルロ法",
-    "description": "モンテカルロ法の解説",
+    "path": "posts/2019-03-12-r/",
+    "title": "RとRStudioの導入",
+    "description": "RとRStudioの導入に関する説明です。",
     "author": [
       {
-        "name": "土井翔平",
+        "name": "土井　翔平",
         "url": {}
       }
     ],
-    "date": "2019-01-10",
-    "categories": [],
-    "preview": "posts/2019-01-09-montecarlo/montecarlo_files/figure-html5/unnamed-chunk-1-1.png",
-    "last_modified": "2019-01-15T11:15:56+09:00"
+    "date": "2019-03-12",
+    "categories": [
+      "software",
+      "R"
+    ],
+    "preview": {},
+    "last_modified": "2019-03-12T14:28:12+09:00"
+  },
+  {
+    "path": "posts/2019-03-12-rmarkdown/",
+    "title": "RMarkdownとLaTeXの導入",
+    "description": "RMarkdonwとLaTeXの導入とレポートやスライド作成に関する説明です。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-03-12",
+    "categories": [
+      "software",
+      "R",
+      "LaTeX"
+    ],
+    "preview": {},
+    "last_modified": "2019-03-12T15:15:17+09:00"
   }
 ]

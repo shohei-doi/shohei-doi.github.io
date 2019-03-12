@@ -1,0 +1,50 @@
+---
+title: "RとRStudioの導入"
+description: |
+  RとRStudioの導入に関する説明です。
+author:
+  - name: 土井　翔平
+    affiliation: 国立情報学研究所
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    self_contained: false
+categories:
+  - software
+  - R
+---
+
+## Rのインストール
+
+Rとは統計用プログラミング言語です。
+パッケージの豊富さから政治学ではよく用いられています。
+
+<aside>
+  統計用ソフトウェアとしてはStataも人気です。
+</aside>
+
+他に機械学習に強いPythonや計算速度が早いJuliaなどもあります。
+
+<aside>
+  Pythonは環境構築が面倒くさい、Juliaは日が浅いので情報が少なかったり仕様が不安定だったりします。
+</aside>
+
+### Windowsの場合
+
+[統計数研究所のCRANのミラーサイト](https://cran.ism.ac.jp/)から自分のコンピュータのOSに対応したRをダウンロードします。
+
+<aside>
+  ミラーサイトは好きな国のものを選んでも構いません。
+</aside>
+
+## RStudioのインストール
+
+RStudioとはR用の統合開発環境 (IDE) で事実上のスタンダードとなっています。
+
+<aside>
+  ちなみに、`{reticulate}`パッケージを使うとPythonも動かせます。
+</aside>
+
+### Windowsの場合
+
+## 動作確認

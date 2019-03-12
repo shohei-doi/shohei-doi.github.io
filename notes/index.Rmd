@@ -1,5 +1,5 @@
 ---
-title: ""
-site: radix::radix_website
+title: "備忘録"
+site: distill::distill_website
 listing: posts
 ---
