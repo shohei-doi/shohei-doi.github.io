@@ -20,7 +20,7 @@
   {
     "path": "posts/2019-03-12-rmarkdown/",
     "title": "RMarkdownとLaTeXの導入",
-    "description": "RMarkdonwとLaTeXの導入とレポートやスライド作成に関する説明です。",
+    "description": "RMarkdownとLaTeXの導入とレポートやスライド作成に関する説明です。",
     "author": [
       {
         "name": "土井　翔平",
@@ -34,6 +34,6 @@
       "LaTeX"
     ],
     "preview": {},
-    "last_modified": "2019-03-12T15:23:00+09:00"
+    "last_modified": "2019-03-13T18:15:50+09:00"
   }
 ]

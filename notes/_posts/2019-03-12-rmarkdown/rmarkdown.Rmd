@@ -1,7 +1,7 @@
 ---
 title: "RMarkdownとLaTeXの導入"
 description: |
-  RMarkdonwとLaTeXの導入とレポートやスライド作成に関する説明です。
+  RMarkdownとLaTeXの導入とレポートやスライド作成に関する説明です。
 author:
   - name: 土井　翔平
     affiliation: 国立情報学研究所

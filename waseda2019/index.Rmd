@@ -9,7 +9,7 @@ author:
 site: distill::distill_website
 ---
 
-## 授業目標
+## 講義内容
 
 講師は主に[シラバス](https://www.wsl.waseda.jp/syllabus/JAA104.php?pKey=110300Q614012019110300Q61411&pLng=jp)で掲げられている授業目標のうちのデータ入手・精製能力とデータ分析・報告能力に関するRとRStudioの使い方について主に担当します。
 
@@ -90,8 +90,12 @@ site: distill::distill_website
   データ分析を本格的に行う場合はMacもしくはLinuxを使用したほうがよいでしょう。
 </aside>
 
-ただし、講師はLinux (Ubuntu) とWindowsしか使える環境にいないので、講義資料はLinuxとWIndowsを念頭に作成します。
+ただし、講師はLinux (Ubuntu) とWindowsしか使えない環境にいるので、講義資料はLinuxとWIndowsを念頭に作成します。
 また、Macにおけるトラブルには対応できない可能性があります。
+
+<aside>
+  誰かMacを（貸して）ください……
+</aside>
 
 ### 使用する言語について
 
