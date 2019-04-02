@@ -44,7 +44,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories"]}},"value":[{"type":"character","attributes":{},"value":["RとRStudioの導入"]},{"type":"character","attributes":{},"value":["RとRStudioの導入に関する説明です。\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-3-11"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["software","R"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories"]}},"value":[{"type":"character","attributes":{},"value":["RとRStudioの導入"]},{"type":"character","attributes":{},"value":["RとRStudioの導入に関する説明です。\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-3-11"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["R"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -963,7 +963,7 @@
 </div>
 
 <div class="d-article">
-<h2 id="r">Rのインストール</h2>
+<h2>はじめに</h2>
 <p>Rとは統計用プログラミング言語です。 パッケージの豊富さから政治学ではよく用いられています。</p>
 <aside>
 統計用ソフトウェアとしてはStataも人気です。
@@ -972,18 +972,156 @@
 <aside>
 Pythonは環境構築が面倒くさい、Juliaは日が浅いので情報が少なかったり仕様が不安定だったりします。
 </aside>
+<p>ここではRおよびその統合開発環境のRStudioのインストールならびに基本的なRの操作について説明します。</p>
+<h2 id="r">Rのインストール</h2>
 <h3 id="windows">Windowsの場合</h3>
 <p><a href="https://cran.ism.ac.jp/">統計数研究所のCRANのミラーサイト</a>から自分のコンピュータのOSに対応したRをダウンロードします。</p>
 <aside>
 ミラーサイトは好きな国のものを選んでも構いません。
+</aside>
+<p>基本的に表示されるままにインストールすれば良いですが、Message Translatorのチェックボックスを外しておきましょう。</p>
+<aside>
+エラーメッセージなどを日本語で表示させないためです。
 </aside>
 <h2 id="rstudio">RStudioのインストール</h2>
 <p>RStudioとはR用の統合開発環境 (IDE) で事実上のスタンダードとなっています。</p>
 <aside>
 ちなみに、<code>{reticulate}</code>パッケージを使うとPythonも動かせます。
 </aside>
-<h3 id="windows-1">Windowsの場合</h3>
-<h2>動作確認</h2>
+<p><a href="https://www.rstudio.com/products/rstudio/download/#download">RStudioのダウンロードサイト</a>から自分のOSに対応したRStudio Desktopをダウンロードします。</p>
+<aside>
+RStudio Severではない。
+</aside>
+<p>最新版（安定版ではない）を使いたい！という人は<a href="https://www.rstudio.com/products/rstudio/download/preview/">RStudio Preview</a>をダウンロードしましょう。</p>
+<p>オンラインであれば<a href="https://rstudio.cloud/">RStudio Cloud</a>を使えばRもRStudioもインストールせずに使用できます。</p>
+<h2 id="rstudio">RStudioの画面</h2>
+<h2 id="rstudio">RStudioの基本的操作</h2>
+<p>まずは“Hello, World.”ですね。</p>
+<aside>
+コードをコンソールにコピペして、<code>Enter</code>キーをクリックして実行してください。
+</aside>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+print(&quot;Hello, World.&quot;)</code></pre>
+<pre><code>
+[1] &quot;Hello, World.&quot;</code></pre>
+</div>
+<p>四則演算はこのようにします。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+4+3</code></pre>
+<pre><code>
+[1] 7</code></pre>
+<pre class="r"><code>
+4-3</code></pre>
+<pre><code>
+[1] 1</code></pre>
+<pre class="r"><code>
+4*3</code></pre>
+<pre><code>
+[1] 12</code></pre>
+<pre class="r"><code>
+4/3</code></pre>
+<pre><code>
+[1] 1.333333</code></pre>
+</div>
+<p>とりあえずRの基本的操作を理解する上で重要な概念は次の3つになります。</p>
+<ol type="1">
+<li>オブジェクト</li>
+<li>関数</li>
+<li>パッケージ</li>
+</ol>
+<h3>オブジェクト</h3>
+<p>Rでは<code>&lt;-</code>によってオブジェクトに代入します。</p>
+<p>例えば、</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+a &lt;- 2</code></pre>
+</div>
+<p>は<code>2</code>という数値を<code>a</code>というオブジェクトに代入することを意味します。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+a</code></pre>
+<pre><code>
+[1] 2</code></pre>
+</div>
+<p>オブジェクトに操作を加えることもできます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+a*3</code></pre>
+<pre><code>
+[1] 6</code></pre>
+</div>
+<h3>関数</h3>
+<p>Rでは関数には<code>()</code>が後ろについており、この中にオブジェクトを入力すると適当な処理をしてオブジェクトを出力します。</p>
+<p>例えば、<code>c()</code>という関数はベクトルを作成します。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+c(1, 2, 3, 4, 5)</code></pre>
+<pre><code>
+[1] 1 2 3 4 5</code></pre>
+</div>
+<p>このベクトルを<code>x</code>というオブジェクトに代入して、<code>sum()</code>によって合計を求めることができます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+x &lt;- c(1, 2, 3, 4, 5)
+sum(x)</code></pre>
+<pre><code>
+[1] 15</code></pre>
+</div>
+<p>Rではこのようにオブジェクトを作成し、関数によって処理を加えて行くことで分析を行います。</p>
+<h3>パッケージ</h3>
+<p>Rの強みの一つは世界中の研究者やエンジニアが便利な関数を作成し、公開している点です。</p>
+<aside>
+もちろん、PythonやJuliaでも同湯の営みは行われています。
+</aside>
+<p>いくつかの関数を集めたものをパッケージ（ライブラリ）として公開されており、インストールすることで使用することができます。</p>
+<h4>インストール</h4>
+<p>例として、非常に有名な<code>{tidyverse}</code>というパッケージをインストールします。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+install.packages(&quot;tidyverse&quot;)</code></pre>
+</div>
+<p>パッケージのインストールは一度だけで大丈夫です。</p>
+<h4>読み込み</h4>
+<p>使うときには<code>library()</code>で読み込みます。</p>
+<div class="layout-chunk" data-layout="l-body-outset">
+<pre class="r"><code>
+library(tidyverse)</code></pre>
+<pre><code>
+── Attaching packages ──────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+<pre><code>
+✔ ggplot2 3.1.0       ✔ purrr   0.3.2  
+✔ tibble  2.1.1       ✔ dplyr   0.8.0.1
+✔ tidyr   0.8.3       ✔ stringr 1.4.0  
+✔ readr   1.3.1       ✔ forcats 0.4.0  </code></pre>
+<pre><code>
+── Conflicts ─────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+<p>これは分析の度に必要です。</p>
+<h4>アップデート</h4>
+<p>パッケージは日々更新されてるので、時折アップデートしたほうが良いでしょう。</p>
+<aside>
+中には更新されないものもありますが……
+</aside>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+update.packages(&quot;tidyverse&quot;)</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+summary(iris)</code></pre>
+<pre><code>
+  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width          Species  
+ Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100   setosa    :50  
+ 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300   versicolor:50  
+ Median :5.800   Median :3.000   Median :4.350   Median :1.300   virginica :50  
+ Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199                  
+ 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800                  
+ Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500                  </code></pre>
+</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

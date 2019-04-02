@@ -1,23 +1,5 @@
 [
   {
-    "path": "posts/2019-03-12-r/",
-    "title": "RとRStudioの導入",
-    "description": "RとRStudioの導入に関する説明です。",
-    "author": [
-      {
-        "name": "土井　翔平",
-        "url": {}
-      }
-    ],
-    "date": "2019-03-11",
-    "categories": [
-      "software",
-      "R"
-    ],
-    "preview": {},
-    "last_modified": "2019-03-12T15:18:47+09:00"
-  },
-  {
     "path": "posts/2019-03-12-rmarkdown/",
     "title": "RMarkdownとLaTeXの導入",
     "description": "RMarkdownとLaTeXの導入とレポートやスライド作成に関する説明です。",
@@ -35,5 +17,22 @@
     ],
     "preview": {},
     "last_modified": "2019-03-13T18:15:50+09:00"
+  },
+  {
+    "path": "posts/2019-03-12-r/",
+    "title": "RとRStudioの導入",
+    "description": "RとRStudioの導入に関する説明です。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-03-11",
+    "categories": [
+      "R"
+    ],
+    "preview": {},
+    "last_modified": "2019-03-26T19:11:51+09:00"
   }
 ]
