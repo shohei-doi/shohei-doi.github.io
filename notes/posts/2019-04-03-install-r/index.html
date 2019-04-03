@@ -1319,6 +1319,12 @@ document.addEventListener('DOMContentLoaded', function() {
 </aside>
 <p>また、RStudioはRを便利に使うための統合開発環境 (IDE) です。 RStudio以外にもあるもののデファクトスタンダードになっている感はあります。</p>
 <p>RStudioはあくまでRを使いやすくするためのもので、R本体ではありません。 なので、まずはRをインストールしてからRStudioをインストールします。</p>
+<p>なお、執筆時点では</p>
+<ul>
+<li>Rのバージョンは3.5.3</li>
+<li>RStudioのバージョンは1.1.463</li>
+</ul>
+<p>です。</p>
 <h2 id="r">R</h2>
 <h3>ダウンロード</h3>
 <p>まずはRの<a href="https://www.r-project.org/">公式サイト</a>へ行き（右クリックで新しいタブで開くことができます）、<code>download R</code>をクリックします。</p>
@@ -1395,6 +1401,15 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="../../items/Rstudio6.jpg" /><!-- --></p>
 </div>
+<p>日本語がしばしば文字化けすることがあります。 なぜならWindowsではShift-JIS、LinuxとMacではUTF-8と呼ばれるエンコーディング（平たく言うとPCが文字を表示する方法）形式だからです。 UTF-8が世界的に使われているので、<code>Code &gt; Saving &gt; Default text encoding</code>を<code>UTF-8</code>にしておきます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="../../items/Rstudio7.jpg" /><!-- --></p>
+</div>
+<p>もし、日本語を含むファイルをRStudioで開いたときに文字化けしている場合、Windowsを使っている人はUTF-8のファイルをShift-JISで開いたということなので、<code>File &gt; Reopen with Encoding</code>で<code>UTF-8</code>を選択します。</p>
+<p>逆にMacの場合はShift-JISのファイルをUTF-8で開いているので同様に<code>Shift-JIS</code>で開きます。</p>
+<ul>
+<li>Windowsの人はUTF-8をデフォルトのエンコーディングにしてしまうといいでしょう。</li>
+</ul>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
