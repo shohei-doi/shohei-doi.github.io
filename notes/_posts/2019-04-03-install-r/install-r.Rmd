@@ -1,0 +1,142 @@
+---
+title: "RとRStudio導入"
+description: |
+  RとRStudioのダウンロードとインストールを説明します。
+author:
+  - name: 土井　翔平
+    affiliation: 国立情報学研究所
+date: 04-03-2019
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+## はじめに
+
+Rは統計用のプログラミング言語です。
+他に、特に機械学習の分野ではPythonやJuliaも人気です。
+
+<aside>
+  政治学や経済学ではStataという統計ソフトも人気ですが有料という難点があります。
+</aside>
+
+また、RStudioはRを便利に使うための統合開発環境 (IDE) です。
+RStudio以外にもあるもののデファクトスタンダードになっている感はあります。
+
+RStudioはあくまでRを使いやすくするためのもので、R本体ではありません。
+なので、まずはRをインストールしてからRStudioをインストールします。
+
+## R
+
+### ダウンロード
+
+まずはRの[公式サイト](https://www.r-project.org/)へ行き（右クリックで新しいタブで開くことができます）、`download R`をクリックします。
+
+```{r}
+knitr::include_graphics("../../items/R1.jpg")
+```
+
+次にダウンロードする際のミラーサイトを選びます。
+好きな国のものを選んでいいですが、ここでは日本の統計数理研究所のものを選んでおきます。
+
+```{r}
+knitr::include_graphics("../../items/R2.jpg")
+```
+
+自分のPCのOSに応じたものを選択します。
+
+```{r}
+knitr::include_graphics("../../items/R3.jpg")
+```
+
+`install R for the first time`を選択します。
+
+```{r}
+knitr::include_graphics("../../items/R4.jpg")
+```
+
+`Downlosd R X.X.X for YYY`を選択してダウンロードします。
+
+```{r}
+knitr::include_graphics("../../items/R5.jpg")
+```
+
+分かりやすいようにダウンロードフォルダにダウンロードしておきます。
+
+<aside>
+  どのフォルダにダウンロードするのか選択できない場合はブラウザの設定で選択できるようにしておきましょう。
+</aside>
+
+### インストール
+
+Rをダウンロードしたフォルダを開き、ファイルをクリックします。
+
+<aside>
+　ファイル名はOSによって異なります。
+</aside>
+
+その後は表示されるままに進めていけばよいですが、`Message Translations`のインストールにチェックが入っている場合は外しておきましょう。
+
+```{r}
+knitr::include_graphics("../../items/R6.jpg")
+```
+
+こうすることによってエラーメッセージなどが日本語化するのを防ぎます。
+
+<aside>
+  英語のエラーメッセージで検索したほうが解決策が見つけやすくなります。
+</aside>
+
+## RStudio
+
+### ダウンロード
+
+RStudioの[公式サイト](https://www.rstudio.com/)からRStudioのダウンロードサイトへ行きます。
+
+```{r}
+knitr::include_graphics("../../items/Rstudio1.jpg")
+```
+
+下の方にインストーラーをダウンロードするリンクがあるのでOSに応じたものを選択します。
+
+```{r}
+knitr::include_graphics("../../items/Rstudio2.jpg")
+```
+
+- 安定版ではないけれど最新のRStudioを使いたい人は[RStudio Preview](https://www.rstudio.com/products/rstudio/download/preview/)をインストールしてください。
+- また、RやRStudioをインストールせずにオンラインで使用できる[RStudio Cloud](https://rstudio.cloud/)というものもあります。
+
+### インストール
+
+あとはダウンロードしたフォルダに移り、インストーラーを起動して表示されるがままに進めていきます。
+
+## RStudioの設定
+
+RStudioを初めて起動すると次のような表示になるとはずです。
+左側の大きなパネルで`R`が表示されていればインストールの成功です。
+
+```{r}
+knitr::include_graphics("../../items/Rstudio3４.jpg")
+```
+
+##### 以下は必要ではない設定です。
+
+`Tools > Global Options`を開き、`Genral`の中で以下のチェックを外します。
+
+```{r}
+knitr::include_graphics("../../items/Rstudio4.jpg")
+```
+
+- 平たく言うとRStudioを起動したときに前回の続きが残っていない真っさらな状態にしておきます。
+
+また、`Appearance`ではフォントや背景・ハイライトの色を変えることができます。
+
+```{r}
+knitr::include_graphics("../../items/Rstudio5.jpg")
+```
+
+ダークな背景を選択するとRStudio全体もダークテーマになります。
+
+```{r}
+knitr::include_graphics("../../items/Rstudio6.jpg")
+```
