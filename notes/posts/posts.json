@@ -13,10 +13,8 @@
     "categories": [
       "R"
     ],
-    "preview": "posts/2019-04-04-stas-r/../../items/Rlogo.png",
-    "last_modified": "2019-04-04T15:34:20+09:00",
-    "preview_width": 724,
-    "preview_height": 561
+    "preview": {},
+    "last_modified": "2019-04-04T15:42:38+09:00"
   },
   {
     "path": "posts/2019-04-04-intro-r/",
@@ -32,10 +30,8 @@
     "categories": [
       "R"
     ],
-    "preview": "posts/2019-04-04-intro-r/../../items/Rlogo.png",
-    "last_modified": "2019-04-04T14:48:28+09:00",
-    "preview_width": 724,
-    "preview_height": 561
+    "preview": {},
+    "last_modified": "2019-04-04T15:42:41+09:00"
   },
   {
     "path": "posts/2019-04-03-install-r/",
@@ -51,9 +47,7 @@
     "categories": [
       "R"
     ],
-    "preview": "posts/2019-04-03-install-r/../../items/Rlogo.png",
-    "last_modified": "2019-04-04T15:32:29+09:00",
-    "preview_width": 724,
-    "preview_height": 561
+    "preview": {},
+    "last_modified": "2019-04-04T15:42:43+09:00"
   }
 ]

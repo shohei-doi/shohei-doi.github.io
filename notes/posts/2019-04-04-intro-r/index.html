@@ -35,27 +35,21 @@
 <meta property="og:type" content="article"/>
 <meta property="og:description" content="Rの基本的な操作や概念について説明します。"/>
 <meta property="og:url" content="https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r/"/>
-<meta property="og:image" content="https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r/../../items/Rlogo.png"/>
-<meta property="og:image:width" content="724"/>
-<meta property="og:image:height" content="561"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="備忘録"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
-<meta property="twitter:card" content="summary_large_image"/>
+<meta property="twitter:card" content="summary"/>
 <meta property="twitter:title" content="備忘録: R操作の基本"/>
 <meta property="twitter:description" content="Rの基本的な操作や概念について説明します。"/>
 <meta property="twitter:url" content="https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r/"/>
-<meta property="twitter:image" content="https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r/../../items/Rlogo.png"/>
-<meta property="twitter:image:width" content="724"/>
-<meta property="twitter:image:height" content="561"/>
 <meta property="twitter:creator" content="@sdoi0504"/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","preview","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["R操作の基本"]},{"type":"character","attributes":{},"value":["Rの基本的な操作や概念について説明します。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["04-04-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["../../items/Rlogo.png"]},{"type":"character","attributes":{},"value":["R"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["R操作の基本"]},{"type":"character","attributes":{},"value":["Rの基本的な操作や概念について説明します。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["04-04-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["R"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1518,7 +1512,7 @@ head(iris)</code></pre>
 5          5.0         3.6          1.4         0.2  setosa
 6          5.4         3.9          1.7         0.4  setosa</code></pre>
 </div>
-<p>データフレームでは基本的に横方向（行方向）に観察単位（ここではひとつひとつのアヤメ）があり、縦方向（列方向）に変数（ここではおしべとめしべの長さと幅および品種）が並んでいます。</p>
+<p>データフレームでは基本的に横方向（行方向）に観察単位（ここではひとつひとつのアヤメ）があり、縦方向（列方向）に変数（ここではがく片と花弁の長さと幅および品種）が並んでいます。</p>
 <p>各変数の記述統計を見たい場合は<code>summary()</code>を使います。</p>
 <aside>
 <code>summary()</code>は総称関数と呼ばれるもので入力するオブジェクトの種類によって挙動が変わります。
