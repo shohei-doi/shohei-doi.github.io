@@ -1,7 +1,7 @@
 [
   {
     "path": "posts/2019-04-03-install-r/",
-    "title": "RとRStudio導入",
+    "title": "RとRStudioの導入",
     "description": "RとRStudioのダウンロードとインストールを説明します。",
     "author": [
       {
@@ -10,8 +10,12 @@
       }
     ],
     "date": "2019-04-03",
-    "categories": [],
-    "preview": {},
-    "last_modified": "2019-04-03T21:59:12+09:00"
+    "categories": [
+      "R"
+    ],
+    "preview": "posts/2019-04-03-install-r/../../items/Rlogo.png",
+    "last_modified": "2019-04-04T11:47:06+09:00",
+    "preview_width": 724,
+    "preview_height": 561
   }
 ]

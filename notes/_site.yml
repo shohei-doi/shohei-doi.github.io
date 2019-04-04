@@ -3,8 +3,17 @@ title: "備忘録"
 description: |
   備忘録
 output_dir: "."
+base_url: https://shohei-doi.github.io/notes/
 navbar:
   right:
     - text: "Shohei Doi"
       href: ../index.html
+    - icon: fa fa-rss
+      href: index.xml
+collections:
+  posts:
+    disqus: reproducible-finance-with-r
+    share: [twitter, linkedin]
+    citations: false
+    subscribe: _subscribe.html
 output: distill::distill_article
