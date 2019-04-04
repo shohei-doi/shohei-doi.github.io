@@ -12,8 +12,8 @@ navbar:
       href: index.xml
 collections:
   posts:
-    disqus: 備忘録（土井翔平）
-    share: [twitter, linkedin]
+    disqus: notes-shohei-doi
+    share: [twitter, facebook, linkedin]
     citations: false
     subscribe: _subscribe.html
 output: distill::distill_article

@@ -19,7 +19,7 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-  <title>RとRStudioの導入</title>
+  <title>Rの導入</title>
   
   <meta property="description" itemprop="description" content="RとRStudioのダウンロードとインストールを説明します。"/>
   
@@ -30,14 +30,14 @@
   <meta name="article:author" content="土井　翔平"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="RとRStudioの導入"/>
+  <meta property="og:title" content="Rの導入"/>
   <meta property="og:type" content="article"/>
   <meta property="og:description" content="RとRStudioのダウンロードとインストールを説明します。"/>
   <meta property="og:locale" content="en_US"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="RとRStudioの導入"/>
+  <meta property="twitter:title" content="Rの導入"/>
   <meta property="twitter:description" content="RとRStudioのダウンロードとインストールを説明します。"/>
   <meta property="twitter:creator" content="@sdoi0504"/>
   
@@ -45,7 +45,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","preview","categories","twitter"]}},"value":[{"type":"character","attributes":{},"value":["RとRStudioの導入"]},{"type":"character","attributes":{},"value":["RとRStudioのダウンロードとインストールを説明します。\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["04-03-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["../../items/Rlogo.png"]},{"type":"character","attributes":{},"value":["R"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","preview","categories","twitter"]}},"value":[{"type":"character","attributes":{},"value":["Rの導入"]},{"type":"character","attributes":{},"value":["RとRStudioのダウンロードとインストールを説明します。\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["04-03-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["../../items/Rlogo.png"]},{"type":"character","attributes":{},"value":["R"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -943,7 +943,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"RとRStudioの導入","description":"RとRStudioのダウンロードとインストールを説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-04-03T00:00:00.000+09:00","citationText":"翔平, 2019"}
+{"title":"Rの導入","description":"RとRStudioのダウンロードとインストールを説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-04-03T00:00:00.000+09:00","citationText":"翔平, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -953,7 +953,7 @@
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>RとRStudioの導入</h1>
+<h1>Rの導入</h1>
 <p>RとRStudioのダウンロードとインストールを説明します。</p>
 </div>
 
@@ -967,14 +967,14 @@
 <h3 class="d-toc-header">Table of Contents</h3>
 <nav class="d-toc" id="TOC">
 <ul>
-<li><a>はじめに</a></li>
-<li><a href="#r">Rの導入</a></li>
-<li><a href="#rstudio">RStudioの導入</a></li>
-<li><a href="#rstudio">RStudioの設定</a></li>
+<li><a href="#Intro">はじめに</a></li>
+<li><a href="#Install-R">Rの導入</a></li>
+<li><a href="#Install-RStudio">RStudioの導入</a></li>
+<li><a href="#Setup">RStudioの設定</a></li>
 </ul>
 </nav>
 <hr class="d-toc-separator"/>
-<h2>はじめに</h2>
+<h2 id="Intro">はじめに</h2>
 <p>Rは統計用のプログラミング言語です。 他に、特に機械学習の分野ではPythonやJuliaも人気です。</p>
 <aside>
 政治学や経済学ではStataという統計ソフトも人気ですが有料という難点があります。
@@ -992,7 +992,7 @@
 <li>高知工科大学の矢内勇生先生の<a href="http://yukiyanai.github.io/jp/classes/econometrics1/contents/">計量経済学（2018年度）</a>と<a href="http://yukiyanai.github.io/jp/classes/econometrics2/contents/">計量経済学応用（2018年度）</a>の講義ページ</li>
 <li>拓殖大学の浅野正彦先生の<a href="https://www.asanoucla.com/%E8%AC%9B%E7%BE%A9%E4%B8%80%E8%A6%A7/keiryo2017/">計量政治学01（2018年度）</a>の講義ページ</li>
 </ul>
-<h2 id="r">Rの導入</h2>
+<h2 id="Install-R">Rの導入</h2>
 <h3>ダウンロード</h3>
 <p>まずはRの<a href="https://www.r-project.org/">公式サイト</a>へ行き（右クリックで新しいタブで開くことができます）、<code>download R</code>をクリックします。</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1031,7 +1031,7 @@
 <aside>
 英語のエラーメッセージで検索したほうが解決策が見つけやすくなります。
 </aside>
-<h2 id="rstudio">RStudioの導入</h2>
+<h2 id="Install-RStudio">RStudioの導入</h2>
 <h3 id="-1">ダウンロード</h3>
 <p>RStudioの<a href="https://www.rstudio.com/">公式サイト</a>からRStudioのダウンロードサイトへ行きます。</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1047,7 +1047,7 @@
 </ul>
 <h3 id="-1">インストール</h3>
 <p>あとはダウンロードしたフォルダに移り、インストーラーを起動して表示されるがままに進めていきます。</p>
-<h2 id="rstudio">RStudioの設定</h2>
+<h2 id="Setup">RStudioの設定</h2>
 <p>RStudioを初めて起動すると次のような表示になるとはずです。 左側の大きなパネルで<code>R</code>が表示されていればインストールの成功です。</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="../../items/Rstudio3.jpg" /><!-- --></p>

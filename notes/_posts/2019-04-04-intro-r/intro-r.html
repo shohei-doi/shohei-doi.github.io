@@ -968,8 +968,9 @@
 <nav class="d-toc" id="TOC">
 <ul>
 <li><a>はじめに</a></li>
-<li><a>重要な概念</a></li>
-<li><a>データフレーム</a></li>
+<li><a href="#Basic">重要な概念</a></li>
+<li><a href="#DataFrame">データフレーム</a></li>
+<li><a href="#Appendix">おまけ</a></li>
 </ul>
 </nav>
 <hr class="d-toc-separator"/>
@@ -1005,7 +1006,7 @@ print(&quot;Hello, World!&quot;)</code></pre>
 <pre><code>
 [1] 9</code></pre>
 </div>
-<h2>重要な概念</h2>
+<h2 id="Basic">重要な概念</h2>
 <p>Rを使う上で重要な概念は</p>
 <ol type="1">
 <li>オブジェクト</li>
@@ -1119,7 +1120,7 @@ install.packages(&quot;devtools&quot;)</code></pre>
 library(devtools)</code></pre>
 </div>
 <p>インストールには<code>install_github()</code>を使いますが、入力はパッケージ名ではなく<code>ユーザー名/レポジトリ名</code>となる点に注意してください。</p>
-<h2>データフレーム</h2>
+<h2 id="DataFrame">データフレーム</h2>
 <p>Rで統計分析を行う場合、データフレームと呼ばれるオブジェクトを扱うことになります。 基本的には外部からデータを読み込むのですが、まずはデモデータで練習します。</p>
 <p>Rやパッケージにはデモデータが含まれています。 <code>data()</code>を実行すると一覧が表示されます。 ここでは、有名なフィッシャーのアヤメのデータを使います。</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1379,6 +1380,28 @@ head(iris[iris$Species == &quot;versicolor&quot;,])</code></pre>
 55           65         2.8          4.6         1.5 versicolor               6.90
 56           57         2.8          4.5         1.3 versicolor               5.85</code></pre>
 </div>
+<h2 id="Appendix">おまけ</h2>
+<p>Rで困ったときにすることは、まずググることです。 特に英語でググるといいでしょう。 エラーメッセージが出たときはそれをそのままコピペして検索します。</p>
+<p>他に、Rの情報を知りたいけど余計な情報が混ざっているときは<a href="http://seekr.jp/">seekR</a>で検索します。</p>
+<p><a href="https://stackoverflow.com/">Stack Overflow</a>はRに限らずPCやプログラミングについて質問する掲示板です。</p>
+<p><a href="https://github.com/tokyor/r-wakalang">r-wakalang</a>というSlackもあるそうです。</p>
+<p><a href="https://qiita.com/">Qiita</a>は様々なプログラミングに関する情報を共有するサイトです。</p>
+<p>関数の使い方が分からないときはヘルプを見ましょう。 例えば<code>mean()</code>のヘルプを見たいときは</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+?mean</code></pre>
+</div>
+<p>もしくは</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+help(mean)</code></pre>
+</div>
+<p>でヘルプを表示させることができます。</p>
+<p>同じものは<a href="https://cran.r-project.org/">CRAN</a>にあるパッケージのドキュメントにもあります。</p>
+<p>パッケージを作成した研究者はしばしば<a href="https://www.jstatsoft.org/index">Journal of Statistical Software</a>に使い方に関するペーパーを載せているのでそれも参考になります。</p>
+<aside>
+JCRによれば2017年のJSSのIFは22.7らしいです。
+</aside>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

@@ -19,23 +19,23 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-<title>備忘録: R操作の基本</title>
+<title>備忘録: Rで統計分析</title>
 
-<meta property="description" itemprop="description" content="Rの基本的な操作や概念について説明します。"/>
+<meta property="description" itemprop="description" content="Rによる初歩的な統計分析の方法について説明します。"/>
 
-<link rel="canonical" href="https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r/"/>
+<link rel="canonical" href="https://shohei-doi.github.io/notes/posts/2019-04-04-stas-r/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2019-04-04"/>
-<meta property="article:created" itemprop="dateCreated" content="2019-04-04"/>
+<meta property="article:published" itemprop="datePublished" content="2019-04-05"/>
+<meta property="article:created" itemprop="dateCreated" content="2019-04-05"/>
 <meta name="article:author" content="土井　翔平"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="備忘録: R操作の基本"/>
+<meta property="og:title" content="備忘録: Rで統計分析"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="Rの基本的な操作や概念について説明します。"/>
-<meta property="og:url" content="https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r/"/>
-<meta property="og:image" content="https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r/../../items/Rlogo.png"/>
+<meta property="og:description" content="Rによる初歩的な統計分析の方法について説明します。"/>
+<meta property="og:url" content="https://shohei-doi.github.io/notes/posts/2019-04-04-stas-r/"/>
+<meta property="og:image" content="https://shohei-doi.github.io/notes/posts/2019-04-04-stas-r/../../items/Rlogo.png"/>
 <meta property="og:image:width" content="724"/>
 <meta property="og:image:height" content="561"/>
 <meta property="og:locale" content="en_US"/>
@@ -43,10 +43,10 @@
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:title" content="備忘録: R操作の基本"/>
-<meta property="twitter:description" content="Rの基本的な操作や概念について説明します。"/>
-<meta property="twitter:url" content="https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r/"/>
-<meta property="twitter:image" content="https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r/../../items/Rlogo.png"/>
+<meta property="twitter:title" content="備忘録: Rで統計分析"/>
+<meta property="twitter:description" content="Rによる初歩的な統計分析の方法について説明します。"/>
+<meta property="twitter:url" content="https://shohei-doi.github.io/notes/posts/2019-04-04-stas-r/"/>
+<meta property="twitter:image" content="https://shohei-doi.github.io/notes/posts/2019-04-04-stas-r/../../items/Rlogo.png"/>
 <meta property="twitter:image:width" content="724"/>
 <meta property="twitter:image:height" content="561"/>
 <meta property="twitter:creator" content="@sdoi0504"/>
@@ -55,12 +55,12 @@
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","preview","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["R操作の基本"]},{"type":"character","attributes":{},"value":["Rの基本的な操作や概念について説明します。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["04-04-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["../../items/Rlogo.png"]},{"type":"character","attributes":{},"value":["R"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","preview","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Rで統計分析"]},{"type":"character","attributes":{},"value":["Rによる初歩的な統計分析の方法について説明します。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["04-05-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["../../items/Rlogo.png"]},{"type":"character","attributes":{},"value":["R"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-04-04-stas-r/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["intro-r_files/bowser-1.9.3/bowser.min.js","intro-r_files/distill-2.2.21/template.v2.js","intro-r_files/jquery-1.11.3/jquery.min.js","intro-r_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["stas-r_files/bowser-1.9.3/bowser.min.js","stas-r_files/distill-2.2.21/template.v2.js","stas-r_files/jquery-1.11.3/jquery.min.js","stas-r_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 
@@ -1290,7 +1290,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"R操作の基本","description":"Rの基本的な操作や概念について説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-04-04T00:00:00.000+09:00","citationText":"翔平, 2019"}
+{"title":"Rで統計分析","description":"Rによる初歩的な統計分析の方法について説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-04-05T00:00:00.000+09:00","citationText":"翔平, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1314,472 +1314,298 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>R操作の基本</h1>
-<p>Rの基本的な操作や概念について説明します。</p>
+<h1>Rで統計分析</h1>
+<p>Rによる初歩的な統計分析の方法について説明します。</p>
 </div>
 
 <div class="d-byline">
   土井　翔平  (国立情報学研究所)
   
-<br/>04-04-2019
+<br/>04-05-2019
 </div>
 
 <div class="d-article">
 <h3 class="d-toc-header">Table of Contents</h3>
 <nav class="d-toc" id="TOC">
 <ul>
-<li><a>はじめに</a></li>
-<li><a href="#Basic">重要な概念</a></li>
-<li><a href="#DataFrame">データフレーム</a></li>
-<li><a href="#Appendix">おまけ</a></li>
+<li><a href="#Intro">はじめに</a></li>
+<li><a href="#t-test">t検定</a></li>
+<li><a href="#ANOVA">分散分析</a></li>
+<li><a href="#OLS">最小二乗法</a></li>
+<li><a href="#Logit">ロジスティック回帰</a></li>
 </ul>
 </nav>
 <hr class="d-toc-separator"/>
-<h2>はじめに</h2>
-<p>Rのコンソールでの操作方法を学びます。 コンソールの<code>&gt;</code>の右側にコマンドを打ち込み、<code>Enter</code>を押すことで実行することができます。</p>
-<p>まず、初めてのプログラミング言語に触るときは<code>Hello, World!</code>を出力するのが流儀なので、以下のように実行します。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-print(&quot;Hello, World!&quot;)</code></pre>
-<pre><code>
-[1] &quot;Hello, World!&quot;</code></pre>
-</div>
-<p>四則演算や冪乗は以下の通りに実行できます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-3+2</code></pre>
-<pre><code>
-[1] 5</code></pre>
-<pre class="r"><code>
-3-2</code></pre>
-<pre><code>
-[1] 1</code></pre>
-<pre class="r"><code>
-3*2</code></pre>
-<pre><code>
-[1] 6</code></pre>
-<pre class="r"><code>
-3/2</code></pre>
-<pre><code>
-[1] 1.5</code></pre>
-<pre class="r"><code>
-3^2</code></pre>
-<pre><code>
-[1] 9</code></pre>
-</div>
-<h2 id="Basic">重要な概念</h2>
-<p>Rを使う上で重要な概念は</p>
+<h2 id="Intro">はじめに</h2>
+<p>統計分析の方法にはいろいろありますが、ここでは</p>
 <ol type="1">
-<li>オブジェクト</li>
-<li>関数</li>
-<li>パッケージ</li>
+<li>t検定</li>
+<li>分散分析 (ANOVA)</li>
+<li>最小二乗法</li>
+<li>ロジスティック回帰</li>
 </ol>
-<p>になるので、それぞれ説明していきます。</p>
-<h3>オブジェクト</h3>
-<p>Rでは名前をつけてオブジェクトとして保存することができます。 例えば、</p>
+<p>について解説します。</p>
+<h3>参考になるサイト</h3>
+<ul>
+<li>高知工科大学の矢内勇生先生の<a href="http://yukiyanai.github.io/jp/classes/econometrics1/contents/">計量経済学（2018年度）</a>と<a href="http://yukiyanai.github.io/jp/classes/econometrics2/contents/">計量経済学応用（2018年度）</a>の講義ページ</li>
+<li>拓殖大学の浅野正彦先生の<a href="https://www.asanoucla.com/%E8%AC%9B%E7%BE%A9%E4%B8%80%E8%A6%A7/keiryo2017/">計量政治学01（2018年度）</a>の講義ページ</li>
+<li><a href="https://seeing-theory.brown.edu/">Seeing Theory</a></li>
+</ul>
+<h2 id="t-test">t検定</h2>
+<p>t検定は2つのグループにおける平均値の違いについて分析するときに使われることが多いです。</p>
+<p><code>R t検定</code>のように検索すると<code>t.test()</code>でt検定ができるという情報が出てくるはずです。 そこで、この関数のヘルプを見てみましょう。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-a &lt;- 2</code></pre>
+?t.test</code></pre>
 </div>
-<p>は<code>2</code>という数値を<code>a</code>という名前のオブジェクトととして生成しています。 実際に、</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-a</code></pre>
+<p>そうすると<code>Usage</code>に</p>
 <pre><code>
-[1] 2</code></pre>
-</div>
-<p><code>a</code>の中に<code>2</code>が入っていることが分かります、</p>
-<p>Rでは<code>&lt;-</code>を代入記号として用いますが、<code>=</code>を使うこともできます。</p>
-<p>生成されたオブジェクトを使って計算することもできます。</p>
+## Default S3 method:
+t.test(x, y = NULL,
+       alternative = c(&quot;two.sided&quot;, &quot;less&quot;, &quot;greater&quot;),
+       mu = 0, paired = FALSE, var.equal = FALSE,
+       conf.level = 0.95, ...)</code></pre>
+<p>と書いてあるのがわかります。</p>
+<p>続いて、<code>Examples</code>にあるコードを実行して、ちゃんと関数が動くことを確認します。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-a*3</code></pre>
+t.test(1:10, y = c(7:20))</code></pre>
 <pre><code>
-[1] 6</code></pre>
+    Welch Two Sample t-test
+
+data:  1:10 and c(7:20)
+t = -5.4349, df = 21.982, p-value = 1.855e-05
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -11.052802  -4.947198
+sample estimates:
+mean of x mean of y 
+      5.5      13.5 </code></pre>
 </div>
-<p>RStudioの場合、右上の<code>Environment</code>パネルに生成されたオブジェクトが表示されます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="../../items/intro_r1.jpg" /><!-- --></p>
-</div>
-<p>基本的にRではオブジェクトを作成し、それを加工していく形で分析を行っていきます。</p>
-<h3>関数</h3>
-<p>関数とは大雑把に言ってしまうと、何かを入力すると特定の処理を行って何かを出力するものです。 Rでは関数は<code>関数名()</code>という形で<code>()</code>の中に何かを入力します。</p>
-<p>実はさっきの<code>print(&quot;Hello, World!&quot;)</code>も<code>&quot;Hello, World!&quot;</code>という文字列を<code>print()</code>という関数に入力し、文字列を表示させていたのです。</p>
-<p>関数は様々にあるので、ここでは簡単なものでイメージを掴んでおきます。</p>
-<p>まず、<code>c()</code>は複数の要素（ベクトルなど）を一つのオブジェクトとして作成する関数です。 例えば、<code>1, 3, 5</code>を要素に持つ<code>x</code>というベクトルを作ってみます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-x &lt;- c(1, 3, 5)
-x</code></pre>
-<pre><code>
-[1] 1 3 5</code></pre>
-</div>
-<p>これを<code>sum()</code>という関数に入力すると総和が出力されます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-sum(x)</code></pre>
-<pre><code>
-[1] 9</code></pre>
-</div>
-<p>平均を求めるときには<code>mean()</code>を使います。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-mean(x)</code></pre>
-<pre><code>
-[1] 3</code></pre>
-</div>
-<p>このように、Rではオブジェクトを関数に入力して処理を行っていきます。</p>
-<h3>パッケージ</h3>
-<p>Rには標準でもいろいろな関数がありますが、世界中で様々な人が関数を作成し、それをまとめたものをパッケージ（ライブラリ）としてCRANやGitHubで公開しています。</p>
-<p>これらは全て無料でダウンロードすることができます。 最近では、新しい分析手法を考案した研究者はRやPythonでパッケージを公開することが多いです。 これがRの魅力の一つだと言えます。</p>
-<p>パッケージを使うにはインストールと読み込みの2つの手順が必要になります。</p>
-<h4 id="cran">CRANからのインストール</h4>
-<p>まず、パッケージをインストールするにはCRANのパッケージであれば<code>install.packages()</code>を使うか、RStudioであれば右下の<code>Packages</code>パネルから行います。</p>
-<p><code>Install</code>をクリックし、</p>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="../../items/intro_r2.jpg" /><!-- --></p>
-</div>
-<p>インストールしたいパッケージ名を入力して、</p>
 <aside>
-基本的に<code>Install dependencies</code>にはチェックを入れておきます。
+<code>m:n</code>は<code>m</code>から<code>n</code>まで1刻みに増える数列を作成します。
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+  1:5</code></pre>
+<pre><code>
+[1] 1 2 3 4 5</code></pre>
+</div>
 </aside>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="../../items/intro_r3.jpg" /><!-- --></p>
-</div>
-<p><code>Install</code>を選択します。</p>
-<p>試しに、<code>tidyverse</code>と呼ばれる便利なパッケージをインストールしてみてください。 コマンドで行う場合は、次のようにします。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-install.packages(&quot;tidyverse&quot;)</code></pre>
-</div>
-<p>なお、パッケージのアップデートはRStudioであれば<code>Packages &gt; Update</code>、コマンドであれば再インストールによって行えます。</p>
-<h4>パッケージの読み込み</h4>
-<p>パッケージは一度インストールすると再度インストールする必要はありません。 しかし、パッケージを使う場合は最初に<code>library()</code>によって読み込む必要があります。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-library(tidyverse)</code></pre>
+<p>さらに、<code>Arguments</code>とは関数に入力するもの（入力引数）ですが、</p>
 <pre><code>
-── Attaching packages ───────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+x      a (non-empty) numeric vector of data values.
+y      an optional (non-empty) numeric vector of data values.</code></pre>
+<p>とあります。 ここらへんから数値ベクトル<code>x</code>と<code>y</code>に入れるとt検定をするのだなとあたりをつけます。</p>
+<p>ここでは練習として<code>iris</code>データを使ってアヤメの品種が違うと<code>Sepal.Length</code>が異なるのかを調べます。 例えば、<code>setosa</code>と<code>versicolor</code>を比較する場合は</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+t.test(x = iris[iris$Species == &quot;setosa&quot;,]$Sepal.Length, 
+       y = iris[iris$Species == &quot;versicolor&quot;,]$Sepal.Length)</code></pre>
 <pre><code>
-✔ ggplot2 3.1.0       ✔ purrr   0.3.2  
-✔ tibble  2.1.1       ✔ dplyr   0.8.0.1
-✔ tidyr   0.8.3       ✔ stringr 1.4.0  
-✔ readr   1.3.1       ✔ forcats 0.4.0  </code></pre>
-<pre><code>
-── Conflicts ──────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()</code></pre>
+    Welch Two Sample t-test
+
+data:  iris[iris$Species == &quot;setosa&quot;, ]$Sepal.Length and iris[iris$Species == &quot;versicolor&quot;, ]$Sepal.Length
+t = -10.521, df = 86.538, p-value &lt; 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -1.1057074 -0.7542926
+sample estimates:
+mean of x mean of y 
+    5.006     5.936 </code></pre>
 </div>
-<h4 id="github">GitHubからのインストール*</h4>
-<p>GitHub上のパッケージをインストールする場合は<code>devtools</code>というパッケージを使うので、まずはインストールと読み込みを行います。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-install.packages(&quot;devtools&quot;)</code></pre>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-library(devtools)</code></pre>
-</div>
-<p>インストールには<code>install_github()</code>を使いますが、入力はパッケージ名ではなく<code>ユーザー名/レポジトリ名</code>となる点に注意してください。</p>
-<h2 id="DataFrame">データフレーム</h2>
-<p>Rで統計分析を行う場合、データフレームと呼ばれるオブジェクトを扱うことになります。 基本的には外部からデータを読み込むのですが、まずはデモデータで練習します。</p>
-<p>Rやパッケージにはデモデータが含まれています。 <code>data()</code>を実行すると一覧が表示されます。 ここでは、有名なフィッシャーのアヤメのデータを使います。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-data(iris)</code></pre>
-</div>
-<p><code>Environment</code>パネルに<code>iris</code>が表示されたかと思います。</p>
+<p>とします。</p>
 <aside>
-ちなみにデモデータは<code>data()</code>で呼び出さなくても、存在するものとして利用することもできます。
+<code>e-16</code>とは<span class="math inline">\(10^{-16}\)</span>のことです。
 </aside>
-<h3>データの概観</h3>
-<p>データをインポートした際にはどのようなデータなのかをチェックすることが大事です。 <code>Environment</code>パネルの<code>Data</code>の欄のオブジェクト名（ここでは<code>iris</code>）をクリックするとデータの中身を見ることができます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="../../items/intro_r4.jpg" /><!-- --></p>
-</div>
-<p>同様のことは次のコマンドでも可能です。</p>
-<aside>
-頭文字が大文字である点に注意してください。
-</aside>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-View(iris)</code></pre>
-</div>
-<p>必ずしも全てのデータを見る必要はない場合、<code>head()</code>によって冒頭の5つまでを見ることができます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-head(iris)</code></pre>
+<h3 id="formula"><code>formula</code></h3>
+<p>ところで、<code>t.test()</code>のヘルプを見ると</p>
 <pre><code>
-  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-1          5.1         3.5          1.4         0.2  setosa
-2          4.9         3.0          1.4         0.2  setosa
-3          4.7         3.2          1.3         0.2  setosa
-4          4.6         3.1          1.5         0.2  setosa
-5          5.0         3.6          1.4         0.2  setosa
-6          5.4         3.9          1.7         0.4  setosa</code></pre>
-</div>
-<p>データフレームでは基本的に横方向（行方向）に観察単位（ここではひとつひとつのアヤメ）があり、縦方向（列方向）に変数（ここではおしべとめしべの長さと幅および品種）が並んでいます。</p>
-<p>各変数の記述統計を見たい場合は<code>summary()</code>を使います。</p>
-<aside>
-<code>summary()</code>は総称関数と呼ばれるもので入力するオブジェクトの種類によって挙動が変わります。
-</aside>
+## S3 method for class &#39;formula&#39;
+t.test(formula, data, subset, na.action, ...)</code></pre>
+<p>という記述もあります。 これは<code>formula</code>を使ってt検定も行うことができるという意味です。 <code>formula</code>の説明は後述するとして、まずは<code>formula</code>を使ったt検定の方法を解説します。</p>
+<p>t検定は2群間の比較なので、<code>iris</code>から<code>virginica</code>のサンプルを除外した新しいデータ<code>iris2</code>を作成します。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-summary(iris)</code></pre>
+iris2 &lt;- iris[iris$Species != &quot;virginica&quot;,]</code></pre>
+</div>
+<aside>
+<code>!=</code>は不一致を判定する記号です。
+</aside>
+<p>念の為、確認すると<code>virginica</code>がないことがわかります。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+summary(iris2)</code></pre>
 <pre><code>
   Sepal.Length    Sepal.Width     Petal.Length    Petal.Width          Species  
  Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100   setosa    :50  
- 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300   versicolor:50  
- Median :5.800   Median :3.000   Median :4.350   Median :1.300   virginica :50  
- Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199                  
- 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800                  
- Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500                  </code></pre>
+ 1st Qu.:5.000   1st Qu.:2.800   1st Qu.:1.500   1st Qu.:0.200   versicolor:50  
+ Median :5.400   Median :3.050   Median :2.450   Median :0.800   virginica : 0  
+ Mean   :5.471   Mean   :3.099   Mean   :2.861   Mean   :0.786                  
+ 3rd Qu.:5.900   3rd Qu.:3.400   3rd Qu.:4.325   3rd Qu.:1.300                  
+ Max.   :7.000   Max.   :4.400   Max.   :5.100   Max.   :1.800                  </code></pre>
 </div>
-<p>数値データについては最小値、25%分位点、中央値、平均値、75%分位点、最大値が表示され、カテゴリカル変数についてはそれぞれの値の観察数が表示されます。</p>
-<p><code>str()</code>によって観察数（サンプルサイズ）、変数の数、変数の種類を確認することもできます。</p>
+<p><code>formula</code>を使ってt検定をする場合には<code>Examples</code>の最後の行にあるように<code>~</code>を使います。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-str(iris)</code></pre>
+t.test(Sepal.Length ~ Species, data = iris2)</code></pre>
 <pre><code>
-&#39;data.frame&#39;:   150 obs. of  5 variables:
- $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
- $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
- $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
- $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
- $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+    Welch Two Sample t-test
+
+data:  Sepal.Length by Species
+t = -10.521, df = 86.538, p-value &lt; 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -1.1057074 -0.7542926
+sample estimates:
+    mean in group setosa mean in group versicolor 
+                   5.006                    5.936 </code></pre>
 </div>
-<p>同様のことは、<code>Environment &gt; Data</code>のオブジェクト名の左の青い丸ボタンを押してもできます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="../../items/intro_r5.jpg" /><!-- --></p>
-</div>
-<h3>データの要素へのアクセス</h3>
-<p>データを加工するためにはデータの要素へアクセスする必要があります。</p>
-<h4>変数へのアクセス</h4>
-<p>変数にアクセスする場合、<code>オブジェクト名$変数名</code>のように<code>$</code>を使います。</p>
+<p>先ほどを同じ結果であることがわかります。</p>
+<h2 id="ANOVA">分散分析</h2>
+<p>t検定は2群間の比較ですが、（<code>iris</code>のように）3群以上の場合、t検定を繰り返すこと（多重比較）は問題があると言われており、分散分析を代わりに使います。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-iris$Species</code></pre>
+anova(aov(Sepal.Length ~ Species, data = iris))</code></pre>
 <pre><code>
-  [1] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
-  [9] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [17] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [25] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [33] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [41] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [49] setosa     setosa     versicolor versicolor versicolor versicolor versicolor versicolor
- [57] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [65] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [73] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [81] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [89] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [97] versicolor versicolor versicolor versicolor virginica  virginica  virginica  virginica 
-[105] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[113] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[121] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[129] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[137] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[145] virginica  virginica  virginica  virginica  virginica  virginica 
-Levels: setosa versicolor virginica</code></pre>
+Analysis of Variance Table
+
+Response: Sepal.Length
+           Df Sum Sq Mean Sq F value    Pr(&gt;F)    
+Species     2 63.212  31.606  119.26 &lt; 2.2e-16 ***
+Residuals 147 38.956   0.265                      
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 </div>
-<p>ほぼ同じことが<code>iris[&quot;Species&quot;]</code>でもできます。</p>
+<h2 id="OLS">最小二乗法</h2>
+<p>ところで、分散分析の結果はグループのダミー変数を使った回帰分析の結果と一致します。 最小二乗法を行うには<code>lm()</code>（linear modelの略？）を使います。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+summary(lm(Sepal.Length ~ Species, data = iris))</code></pre>
+<pre><code>
+Call:
+lm(formula = Sepal.Length ~ Species, data = iris)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.6880 -0.3285 -0.0060  0.3120  1.3120 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)         5.0060     0.0728  68.762  &lt; 2e-16 ***
+Speciesversicolor   0.9300     0.1030   9.033 8.77e-16 ***
+Speciesvirginica    1.5820     0.1030  15.366  &lt; 2e-16 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 0.5148 on 147 degrees of freedom
+Multiple R-squared:  0.6187,    Adjusted R-squared:  0.6135 
+F-statistic: 119.3 on 2 and 147 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<p>F値を見ると同じであることが分かります。</p>
+<p>ここまで来ると<code>formula</code>の実態が分かるかと思います。 つまり、<code>formula</code>は<code>~</code>の左辺に従属変数、右辺に独立変数を指定しています。</p>
+<h2 id="Logit">ロジスティック回帰</h2>
+<p>分析対象が（品種のように）カテゴリーである場合、最小二乗法ではなく一般化線形モデルのうちのロジスティック回帰などを使うほうがよいと信じられています。 ここでは<code>setosa</code>と<code>versicolor</code>を分類するロジスティック回帰を行ってみます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+summary(glm(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris2))</code></pre>
+<pre><code>
+Warning in Ops.factor(y, mu): &#39;-&#39; not meaningful for factors</code></pre>
+<pre><code>
+Warning in Ops.factor(eta, offset): &#39;-&#39; not meaningful for factors</code></pre>
+<pre><code>
+Warning in Ops.factor(y, mu): &#39;-&#39; not meaningful for factors</code></pre>
+<pre><code>
+Error in glm.fit(x = structure(c(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, : NA/NaN/Inf in &#39;y&#39;</code></pre>
+</div>
 <aside>
-前者の場合はベクトル、後者の場合はデータフレームとして抜き出しています。
+ちなみに、独立変数は<code>+</code>で追加することができます。
 </aside>
-<p>変数名ではなく列番号でも指定できます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-iris[,5]</code></pre>
-<pre><code>
-  [1] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
-  [9] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [17] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [25] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [33] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [41] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [49] setosa     setosa     versicolor versicolor versicolor versicolor versicolor versicolor
- [57] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [65] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [73] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [81] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [89] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [97] versicolor versicolor versicolor versicolor virginica  virginica  virginica  virginica 
-[105] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[113] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[121] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[129] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[137] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[145] virginica  virginica  virginica  virginica  virginica  virginica 
-Levels: setosa versicolor virginica</code></pre>
-</div>
-<p>列番号なので、カンマの右側で指定している点に注意してください。</p>
-<p>マイナスを使うと、それ以外を指定します。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-head(iris[,-5])</code></pre>
-<pre><code>
-  Sepal.Length Sepal.Width Petal.Length Petal.Width
-1          5.1         3.5          1.4         0.2
-2          4.9         3.0          1.4         0.2
-3          4.7         3.2          1.3         0.2
-4          4.6         3.1          1.5         0.2
-5          5.0         3.6          1.4         0.2
-6          5.4         3.9          1.7         0.4</code></pre>
-</div>
-<p>ベクトルで複数の変数を指定することもできます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-head(iris[,c(1,3)])</code></pre>
-<pre><code>
-  Sepal.Length Petal.Length
-1          5.1          1.4
-2          4.9          1.4
-3          4.7          1.3
-4          4.6          1.5
-5          5.0          1.4
-6          5.4          1.7</code></pre>
-</div>
-<h4>観察へのアクセス</h4>
-<p>特定の観察にのみアクセスすることもできます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-iris[1,]</code></pre>
-<pre><code>
-  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-1          5.1         3.5          1.4         0.2  setosa</code></pre>
-</div>
-<p>これは1番目の観察にアクセスしていますが、行番号で指定しているので、カンマの左側にあります。</p>
-<p>あまり意味はないですが、行と列を同時に指定することもできます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-iris[1,1]</code></pre>
-<pre><code>
-[1] 5.1</code></pre>
-</div>
-<p>実際には特定の条件に合致した観察のみを抜き出すことが多いです。 例えば、<code>Species</code>が<code>versicolor</code>であるものだけを抜き出す場合には</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-head(iris[iris$Species == &quot;versicolor&quot;,])</code></pre>
-<pre><code>
-   Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
-51          7.0         3.2          4.7         1.4 versicolor
-52          6.4         3.2          4.5         1.5 versicolor
-53          6.9         3.1          4.9         1.5 versicolor
-54          5.5         2.3          4.0         1.3 versicolor
-55          6.5         2.8          4.6         1.5 versicolor
-56          5.7         2.8          4.5         1.3 versicolor</code></pre>
-</div>
-<p>とします。</p>
-<p>これは何をしているのでしょうか？</p>
-<p>行を選択しているのは<code>iris$Species == &quot;versicolor&quot;</code>ですが、左辺は先程見たように品種を抜き出しています。 そして、<code>==</code>は右辺と左辺が一致しているかどうかを判定する記号になります。 実際に、これだけを実行してみると</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-iris$Species == &quot;versicolor&quot;</code></pre>
-<pre><code>
-  [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
- [16] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
- [31] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
- [46] FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
- [61]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
- [76]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
- [91]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE
-[106] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-[121] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-[136] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</code></pre>
-</div>
-<p>となります。 つまり、<code>iris$Species == &quot;versicolor&quot;</code>は<code>iris</code>データの<code>Species</code>のなかで<code>versicolor</code>と一致するものを<code>TURE</code>、一致しないものを<code>FALSE</code>としており、<code>TRUE</code>だけの列を指定することで特定の観察だけにアクセスしてるということになります。</p>
-<h3>データの加工</h3>
-<p>アクセスした要素を上書きすることでデータを加工することができます。 例えば、<code>Sepal.Length</code>を10倍にするには以下のように行います。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-iris$Sepal.Length &lt;- 10*iris$Sepal.Length
-head(iris)</code></pre>
-<pre><code>
-  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-1           51         3.5          1.4         0.2  setosa
-2           49         3.0          1.4         0.2  setosa
-3           47         3.2          1.3         0.2  setosa
-4           46         3.1          1.5         0.2  setosa
-5           50         3.6          1.4         0.2  setosa
-6           54         3.9          1.7         0.4  setosa</code></pre>
-</div>
-<p><code>$</code>以降を新しい変数名とすることで変数を新たに加えることができます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-iris$Petal.LengthXWidth &lt;- iris$Petal.Length * iris$Petal.Width
-head(iris)</code></pre>
-<pre><code>
-  Sepal.Length Sepal.Width Petal.Length Petal.Width Species Petal.LengthXWidth
-1           51         3.5          1.4         0.2  setosa               0.28
-2           49         3.0          1.4         0.2  setosa               0.28
-3           47         3.2          1.3         0.2  setosa               0.26
-4           46         3.1          1.5         0.2  setosa               0.30
-5           50         3.6          1.4         0.2  setosa               0.28
-6           54         3.9          1.7         0.4  setosa               0.68</code></pre>
-</div>
-<p>もちろん、列を指定することで特定の条件に合致したサンプルの変数だけを加工することもできます。 例えば、<code>stosa</code>の<code>Sepal.Length</code>だけをもとに戻します。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-iris[iris$Species == &quot;setosa&quot;,]$Sepal.Length &lt;- 
-  iris[iris$Species == &quot;setosa&quot;,]$Sepal.Length/10
-head(iris[iris$Species == &quot;setosa&quot;,])</code></pre>
-<pre><code>
-  Sepal.Length Sepal.Width Petal.Length Petal.Width Species Petal.LengthXWidth
-1          5.1         3.5          1.4         0.2  setosa               0.28
-2          4.9         3.0          1.4         0.2  setosa               0.28
-3          4.7         3.2          1.3         0.2  setosa               0.26
-4          4.6         3.1          1.5         0.2  setosa               0.30
-5          5.0         3.6          1.4         0.2  setosa               0.28
-6          5.4         3.9          1.7         0.4  setosa               0.68</code></pre>
-<pre class="r"><code>
-head(iris[iris$Species == &quot;versicolor&quot;,])</code></pre>
-<pre><code>
-   Sepal.Length Sepal.Width Petal.Length Petal.Width    Species Petal.LengthXWidth
-51           70         3.2          4.7         1.4 versicolor               6.58
-52           64         3.2          4.5         1.5 versicolor               6.75
-53           69         3.1          4.9         1.5 versicolor               7.35
-54           55         2.3          4.0         1.3 versicolor               5.20
-55           65         2.8          4.6         1.5 versicolor               6.90
-56           57         2.8          4.5         1.3 versicolor               5.85</code></pre>
-</div>
-<h2 id="Appendix">おまけ</h2>
-<p>Rで困ったときにすることは、まずググることです。 特に英語でググるといいでしょう。 エラーメッセージが出たときはそれをそのままコピペして検索します。</p>
-<p>他に、Rの情報を知りたいけど余計な情報が混ざっているときは<a href="http://seekr.jp/">seekR</a>で検索します。</p>
-<p><a href="https://stackoverflow.com/">Stack Overflow</a>はRに限らずPCやプログラミングについて質問する掲示板です。</p>
-<p><a href="https://github.com/tokyor/r-wakalang">r-wakalang</a>というSlackもあるそうです。</p>
-<p><a href="https://qiita.com/">Qiita</a>は様々なプログラミングに関する情報を共有するサイトです。</p>
-<p>関数の使い方が分からないときはヘルプを見ましょう。 例えば<code>mean()</code>のヘルプを見たいときは</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-?mean</code></pre>
-</div>
-<p>もしくは</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-help(mean)</code></pre>
-</div>
-<p>でヘルプを表示させることができます。</p>
-<p>同じものは<a href="https://cran.r-project.org/">CRAN</a>にあるパッケージのドキュメントにもあります。</p>
-<p>パッケージを作成した研究者はしばしば<a href="https://www.jstatsoft.org/index">Journal of Statistical Software</a>に使い方に関するペーパーを載せているのでそれも参考になります。</p>
+<p>するとエラーが表示されます。 何を言っているのかよくわかりませんが、<code>y</code>と<code>factor</code>が諸悪の根源のように見えます。</p>
+<p>そこで、ロジスティック回帰は従属変数が0と1で表現されるのだからもしかするとファクターではなく数値でないといけないのでは、と思い<code>as.numeric()</code>で数値データに変換したところ、うまく行きました。</p>
 <aside>
-JCRによれば2017年のJSSのIFは22.7らしいです。
+ここらへんは経験していくうちに相場観が養われていきます。
 </aside>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+summary(glm(as.numeric(Species) ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris2))</code></pre>
+<pre><code>
+Call:
+glm(formula = as.numeric(Species) ~ Sepal.Length + Sepal.Width + 
+    Petal.Length + Petal.Width, data = iris2)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-0.24116  -0.06200  -0.00448   0.05334   0.27006  
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   1.36970    0.12551  10.913  &lt; 2e-16 ***
+Sepal.Length -0.02849    0.03368  -0.846  0.39974    
+Sepal.Width  -0.16820    0.03318  -5.070 1.96e-06 ***
+Petal.Length  0.20313    0.04096   4.960 3.09e-06 ***
+Petal.Width   0.28785    0.08798   3.272  0.00149 ** 
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+(Dispersion parameter for gaussian family taken to be 0.00962711)
+
+    Null deviance: 25.00000  on 99  degrees of freedom
+Residual deviance:  0.91458  on 95  degrees of freedom
+AIC: -173.66
+
+Number of Fisher Scoring iterations: 2</code></pre>
+</div>
+<p>ただし、これだと<code>setosa</code>と<code>versicolor</code>のどっちを予測しているのかわからないので、数値に置き換えたほうがいいでしょう。 新たに<code>species</code>という変数を作り全て<code>0</code>とした上で、<code>versicolor</code>だけ<code>1</code>に置き換えて、ロジスティック回帰を行います。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+iris2$species &lt;- 0
+iris2[iris2$Species == &quot;versicolor&quot;,]$species &lt;- 1
+summary(glm(species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris2))</code></pre>
+<pre><code>
+Call:
+glm(formula = species ~ Sepal.Length + Sepal.Width + Petal.Length + 
+    Petal.Width, data = iris2)
+
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-0.24116  -0.06200  -0.00448   0.05334   0.27006  
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   0.36970    0.12551   2.946  0.00405 ** 
+Sepal.Length -0.02849    0.03368  -0.846  0.39974    
+Sepal.Width  -0.16820    0.03318  -5.070 1.96e-06 ***
+Petal.Length  0.20313    0.04096   4.960 3.09e-06 ***
+Petal.Width   0.28785    0.08798   3.272  0.00149 ** 
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+(Dispersion parameter for gaussian family taken to be 0.00962711)
+
+    Null deviance: 25.00000  on 99  degrees of freedom
+Residual deviance:  0.91458  on 95  degrees of freedom
+AIC: -173.66
+
+Number of Fisher Scoring iterations: 2</code></pre>
+</div>
+<p>結果自体は変わっていないことが分かります。</p>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">
     <span class="disqus-comments">
       <i class="fas fa-comments"></i>
       &nbsp;
-      <span class="disqus-comment-count" data-disqus-identifier="posts/2019-04-04-intro-r/">Comment on this article</span>
+      <span class="disqus-comment-count" data-disqus-identifier="posts/2019-04-04-stas-r/">Comment on this article</span>
     </span>
     <span class="article-sharing">
       Share: &nbsp;
-      <a href="https://twitter.com/share?text=R%E6%93%8D%E4%BD%9C%E3%81%AE%E5%9F%BA%E6%9C%AC&amp;url=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-04-04-intro-r%2F">
+      <a href="https://twitter.com/share?text=R%E3%81%A7%E7%B5%B1%E8%A8%88%E5%88%86%E6%9E%90&amp;url=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-04-04-stas-r%2F">
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-04-04-intro-r%2F">
+      <a href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-04-04-stas-r%2F">
         <i class="fab fa-facebook"></i>
       </a>
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-04-04-intro-r%2F&amp;title=R%E6%93%8D%E4%BD%9C%E3%81%AE%E5%9F%BA%E6%9C%AC">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-04-04-stas-r%2F&amp;title=R%E3%81%A7%E7%B5%B1%E8%A8%88%E5%88%86%E6%9E%90">
         <i class="fab fa-linkedin"></i>
       </a>
     </span>
@@ -1788,8 +1614,8 @@ JCRによれば2017年のJSSのIFは22.7らしいです。
   <div id="disqus_thread" class="hidden"></div>
   <script>
 var disqus_config = function () {
-  this.page.url = 'https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r/';
-  this.page.identifier = 'posts/2019-04-04-intro-r/';
+  this.page.url = 'https://shohei-doi.github.io/notes/posts/2019-04-04-stas-r/';
+  this.page.identifier = 'posts/2019-04-04-stas-r/';
 };
 (function() {
   var d = document, s = d.createElement('script');
@@ -1816,6 +1642,15 @@ var disqus_config = function () {
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
