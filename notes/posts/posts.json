@@ -1,5 +1,24 @@
 [
   {
+    "path": "posts/2019-04-04-intro-r/",
+    "title": "R操作の基本",
+    "description": "Rの基本的な操作や概念について説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-04",
+    "categories": [
+      "R"
+    ],
+    "preview": "posts/2019-04-04-intro-r/../../items/Rlogo.png",
+    "last_modified": "2019-04-04T14:21:47+09:00",
+    "preview_width": 724,
+    "preview_height": 561
+  },
+  {
     "path": "posts/2019-04-03-install-r/",
     "title": "RとRStudioの導入",
     "description": "RとRStudioのダウンロードとインストールを説明します。",
@@ -14,7 +33,7 @@
       "R"
     ],
     "preview": "posts/2019-04-03-install-r/../../items/Rlogo.png",
-    "last_modified": "2019-04-04T11:47:06+09:00",
+    "last_modified": "2019-04-04T12:50:46+09:00",
     "preview_width": 724,
     "preview_height": 561
   }

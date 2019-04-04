@@ -12,7 +12,7 @@ navbar:
       href: index.xml
 collections:
   posts:
-    disqus: reproducible-finance-with-r
+    disqus: 備忘録（土井翔平）
     share: [twitter, linkedin]
     citations: false
     subscribe: _subscribe.html

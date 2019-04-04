@@ -9,6 +9,15 @@
     <generator>Distill</generator>
     <lastBuildDate>Wed, 03 Apr 2019 00:00:00 +0000</lastBuildDate>
     <item>
+      <title>R操作の基本</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r</link>
+      <description>Rの基本的な操作や概念について説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r</guid>
+      <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r/../../items/Rlogo.png" medium="image" type="image/png" width="724" height="561"/>
+    </item>
+    <item>
       <title>RとRStudioの導入</title>
       <dc:creator>土井　翔平</dc:creator>
       <link>https://shohei-doi.github.io/notes/posts/2019-04-03-install-r</link>
