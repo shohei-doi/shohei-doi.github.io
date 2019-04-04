@@ -1,6 +1,6 @@
 [
   {
-    "path": "posts/2019-04-04-stas-r/",
+    "path": "posts/2019-04-04-stats-r/",
     "title": "Rで統計分析",
     "description": "Rによる初歩的な統計分析の方法について説明します。",
     "author": [
@@ -48,6 +48,6 @@
       "R"
     ],
     "preview": {},
-    "last_modified": "2019-04-04T15:42:43+09:00"
+    "last_modified": "2019-04-04T15:48:16+09:00"
   }
 ]
