@@ -25,14 +25,6 @@
       <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Rの基本的な分析環境</title>
-      <dc:creator>土井　翔平</dc:creator>
-      <link>https://shohei-doi.github.io/notes/posts/2019-04-05-workspace</link>
-      <description>Rで統計分析をする際の環境について説明します。</description>
-      <guid>https://shohei-doi.github.io/notes/posts/2019-04-05-workspace</guid>
-      <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>R操作の基本</title>
       <dc:creator>土井　翔平</dc:creator>
       <link>https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r</link>

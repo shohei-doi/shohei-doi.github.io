@@ -34,23 +34,6 @@
     "last_modified": "2019-04-05T16:03:03+09:00"
   },
   {
-    "path": "posts/2019-04-05-workspace/",
-    "title": "Rの基本的な分析環境",
-    "description": "Rで統計分析をする際の環境について説明します。",
-    "author": [
-      {
-        "name": "土井　翔平",
-        "url": {}
-      }
-    ],
-    "date": "2019-04-05",
-    "categories": [
-      "R"
-    ],
-    "preview": {},
-    "last_modified": "2019-04-05T15:51:29+09:00"
-  },
-  {
     "path": "posts/2019-04-04-intro-r/",
     "title": "R操作の基本",
     "description": "Rの基本的な操作や概念について説明します。",
