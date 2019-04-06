@@ -1382,7 +1382,7 @@ a</code></pre>
 <pre><code>
 [1] 2</code></pre>
 </div>
-<p><code>a</code>の中に<code>2</code>が入っていることが分かります、</p>
+<p><code>a</code>の中に<code>2</code>が入っていることが分かります。</p>
 <p>Rでは<code>&lt;-</code>を代入記号として用いますが、<code>=</code>を使うこともできます。</p>
 <p>生成されたオブジェクトを使って計算することもできます。</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1550,6 +1550,9 @@ str(iris)</code></pre>
 <p>データを加工するためにはデータの要素へアクセスする必要があります。</p>
 <h4>変数へのアクセス</h4>
 <p>変数にアクセスする場合、<code>オブジェクト名$変数名</code>のように<code>$</code>を使います。</p>
+<aside>
+<code>$</code>で要素にアクセスするのはS3クラスと呼ばれるオブジェクトで、S4クラスの場合は<code>@</code>を使います。 現在はS3クラスが主流ですが次第にS4クラスが主流になると思われます。
+</aside>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 iris$Species</code></pre>
