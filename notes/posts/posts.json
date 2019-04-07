@@ -1,5 +1,73 @@
 [
   {
+    "path": "posts/2019-04-08-reshape-panel/",
+    "title": "データの整形：パネルデータ",
+    "description": "Rでパネルデータを作成する際にワイド形式からロング形式に変換する方法を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-08",
+    "categories": [
+      "R"
+    ],
+    "preview": {},
+    "last_modified": "2019-04-07T16:33:42+09:00"
+  },
+  {
+    "path": "posts/2019-04-07-create-var/",
+    "title": "変数の作成",
+    "description": "Rでデータセットに新しい変数を作成する方法を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-07",
+    "categories": [
+      "R"
+    ],
+    "preview": {},
+    "last_modified": "2019-04-07T16:40:29+09:00"
+  },
+  {
+    "path": "posts/2019-04-07-select-obs/",
+    "title": "観察の選択",
+    "description": "Rでデータセットの中から特定の条件を満たす観察を取り出す方法を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-07",
+    "categories": [
+      "R"
+    ],
+    "preview": {},
+    "last_modified": "2019-04-07T16:17:51+09:00"
+  },
+  {
+    "path": "posts/2019-04-07-select-var/",
+    "title": "変数の選択",
+    "description": "Rでデータセットの中から特定の変数を取り出す方法と変数名を変える方法を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-07",
+    "categories": [
+      "R"
+    ],
+    "preview": {},
+    "last_modified": "2019-04-07T16:19:06+09:00"
+  },
+  {
     "path": "posts/2019-04-06-data-import/",
     "title": "データの読み込み",
     "description": "Rでデータを読み込む方法について説明します。",
@@ -14,7 +82,7 @@
       "R"
     ],
     "preview": {},
-    "last_modified": "2019-04-07T12:58:44+09:00"
+    "last_modified": "2019-04-07T13:03:42+09:00"
   },
   {
     "path": "posts/2019-04-04-stats-r/",
@@ -28,10 +96,11 @@
     ],
     "date": "2019-04-05",
     "categories": [
-      "R"
+      "R",
+      "data analysis"
     ],
     "preview": {},
-    "last_modified": "2019-04-06T18:18:44+09:00"
+    "last_modified": "2019-04-07T16:35:15+09:00"
   },
   {
     "path": "posts/2019-04-05-workflow/",
@@ -65,7 +134,7 @@
       "R"
     ],
     "preview": {},
-    "last_modified": "2019-04-06T18:18:42+09:00"
+    "last_modified": "2019-04-07T14:29:57+09:00"
   },
   {
     "path": "posts/2019-04-03-install-r/",

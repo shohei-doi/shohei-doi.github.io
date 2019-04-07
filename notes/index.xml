@@ -7,7 +7,39 @@
     <description>備忘録
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 06 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>データの整形：パネルデータ</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-08-reshape-panel</link>
+      <description>Rでパネルデータを作成する際にワイド形式からロング形式に変換する方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-08-reshape-panel</guid>
+      <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>変数の作成</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-07-create-var</link>
+      <description>Rでデータセットに新しい変数を作成する方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-07-create-var</guid>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>観察の選択</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-07-select-obs</link>
+      <description>Rでデータセットの中から特定の条件を満たす観察を取り出す方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-07-select-obs</guid>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>変数の選択</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-07-select-var</link>
+      <description>Rでデータセットの中から特定の変数を取り出す方法と変数名を変える方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-07-select-var</guid>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>データの読み込み</title>
       <dc:creator>土井　翔平</dc:creator>

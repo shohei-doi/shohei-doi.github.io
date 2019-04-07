@@ -1,0 +1,83 @@
+---
+title: "データの整形：パネルデータ"
+description: |
+  Rでパネルデータを作成する際にワイド形式からロング形式に変換する方法を説明します。
+author:
+  - name: 土井　翔平
+    affiliation: 国立情報学研究所
+date: 04-08-2019
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 2
+categories:
+  - R
+twitter:
+  creator: "@sdoi0504"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = TRUE,
+  message = TRUE,
+  R.options = list(width = 100)
+)
+```
+
+## はじめに {#Intro}
+
+[データの読み込み](../2019-04-06-data-import/index.html#CSV)で世界銀行の[一人あたりGDPのデータ](data/wb_gdp_pc.csv)を読み込んだ際に、ワイド形式なのでロング形式にしないといけないと書きました。
+
+ここではワイド形式からロング形式にする方法について、
+
+1. ループ処理を使う方法
+1. `tidyverse`の中の`tidyr`の関数を使う方法
+
+を説明しますが、その前になぜそうしなければいけないのかについて簡単に説明します。
+
+### パネルデータ
+
+ある一時点のいくつかのユニットのデータをクロスセクションあるいは横断データと呼びます。
+例えば、2019年の各国の一人あたりGDPデータはクロスセクションデータと言えます。
+
+逆にあるユニットの複数時点のデータを時系列データと呼びます。
+例えば、日本の1950年から2019年までの一人あたりGDPデータは時系列データと言えます。
+
+パネルデータ、縦断データあるいはTSCS (Time-Series Cross-Section) データと呼ばれるものは複数のユニットの複数時点のデータになります。
+今回扱うデータはパネルデータになります。
+
+### ワイド形式
+
+再び、世界銀行のデータを読み込みます。
+
+```{r}
+library(tidyverse)
+gdp_pc <- read_csv("data/wb_gdp_pc.csv", skip = 4)
+```
+
+```{r, echo = FALSE, layout="l-body-outset"}
+rmarkdown::paged_table(gdp_pc)
+```
+
+中身を見てみると各行はユニット（この場合は国家）で各列がそれぞれの年の一人あたりGDPになっていることがわかります。
+このように時間が進むに連れて横に増えていくデータをワイド形式と呼びます。
+
+### ロング形式
+
+結論を先取りしていうと、パネルデータ分析をする際にはデータはロング形式である必要があります。
+
+```{r, echo = FALSE}
+gdp_pc %>% 
+  select(-"Country Code", -"Indicator Name", -"Indicator Code") %>% 
+  gather(key = year, value = "gdp_pc", -"Country Name") %>% 
+  rmarkdown::paged_table()
+```
+
+ロング形式では各行はユニットかつ時点となっており、それぞれのユニットの特定の時点の変数の値（今回の場合は`gdp_pc`）が格納されています。
+
+<aside>
+  整然 (tidy) データについては[こちら](https://www.jstage.jst.go.jp/article/jkg/67/9/67_448/_article/-char/ja/)を参照。
+</aside>
+

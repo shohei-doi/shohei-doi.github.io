@@ -13,6 +13,7 @@ output:
     toc_depth: 2
 categories:
   - R
+  - data analysisだ
 twitter:
   creator: "@sdoi0504"
 ---
