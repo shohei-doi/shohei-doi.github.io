@@ -7,7 +7,15 @@
     <description>備忘録
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 05 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>データの読み込み</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-06-data-import</link>
+      <description>Rでデータを読み込む方法について説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-06-data-import</guid>
+      <pubDate>Sat, 06 Apr 2019 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Rで統計分析</title>
       <dc:creator>土井　翔平</dc:creator>

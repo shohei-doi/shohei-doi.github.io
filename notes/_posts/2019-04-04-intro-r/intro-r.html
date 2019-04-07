@@ -50,7 +50,7 @@
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["intro-r_files/bowser-1.9.3/bowser.min.js","intro-r_files/distill-2.2.21/template.v2.js","intro-r_files/jquery-1.11.3/jquery.min.js","intro-r_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["figures/intro_r1.jpg","figures/intro_r2.jpg","figures/intro_r3.jpg","figures/intro_r4.jpg","figures/intro_r5.jpg","intro-r_files/bowser-1.9.3/bowser.min.js","intro-r_files/distill-2.2.21/template.v2.js","intro-r_files/jquery-1.11.3/jquery.min.js","intro-r_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -967,14 +967,14 @@
 <h3 class="d-toc-header">Table of Contents</h3>
 <nav class="d-toc" id="TOC">
 <ul>
-<li><a>はじめに</a></li>
+<li><a href="#Intro">はじめに</a></li>
 <li><a href="#Basic">重要な概念</a></li>
 <li><a href="#DataFrame">データフレーム</a></li>
 <li><a href="#Appendix">おまけ</a></li>
 </ul>
 </nav>
 <hr class="d-toc-separator"/>
-<h2>はじめに</h2>
+<h2 id="Intro">はじめに</h2>
 <p>Rのコンソールでの操作方法を学びます。 コンソールの<code>&gt;</code>の右側にコマンドを打ち込み、<code>Enter</code>を押すことで実行することができます。</p>
 <p>まず、初めてのプログラミング言語に触るときは<code>Hello, World!</code>を出力するのが流儀なので、以下のように実行します。</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1038,7 +1038,7 @@ a*3</code></pre>
 </div>
 <p>RStudioの場合、右上の<code>Environment</code>パネルに生成されたオブジェクトが表示されます。</p>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="../../items/intro_r1.jpg" /><!-- --></p>
+<p><img src="figures/intro_r1.jpg" /><!-- --></p>
 </div>
 <p>基本的にRではオブジェクトを作成し、それを加工していく形で分析を行っていきます。</p>
 <h3>関数</h3>
@@ -1076,14 +1076,14 @@ mean(x)</code></pre>
 <p>まず、パッケージをインストールするにはCRANのパッケージであれば<code>install.packages()</code>を使うか、RStudioであれば右下の<code>Packages</code>パネルから行います。</p>
 <p><code>Install</code>をクリックし、</p>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="../../items/intro_r2.jpg" /><!-- --></p>
+<p><img src="figures/intro_r2.jpg" /><!-- --></p>
 </div>
 <p>インストールしたいパッケージ名を入力して、</p>
 <aside>
 基本的に<code>Install dependencies</code>にはチェックを入れておきます。
 </aside>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="../../items/intro_r3.jpg" /><!-- --></p>
+<p><img src="figures/intro_r3.jpg" /><!-- --></p>
 </div>
 <p><code>Install</code>を選択します。</p>
 <p>試しに、<code>tidyverse</code>と呼ばれる便利なパッケージをインストールしてみてください。 コマンドで行う場合は、次のようにします。</p>
@@ -1134,7 +1134,7 @@ data(iris)</code></pre>
 <h3>データの概観</h3>
 <p>データをインポートした際にはどのようなデータなのかをチェックすることが大事です。 <code>Environment</code>パネルの<code>Data</code>の欄のオブジェクト名（ここでは<code>iris</code>）をクリックするとデータの中身を見ることができます。</p>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="../../items/intro_r4.jpg" /><!-- --></p>
+<p><img src="figures/intro_r4.jpg" /><!-- --></p>
 </div>
 <p>同様のことは次のコマンドでも可能です。</p>
 <aside>
@@ -1189,7 +1189,7 @@ str(iris)</code></pre>
 </div>
 <p>同様のことは、<code>Environment &gt; Data</code>のオブジェクト名の左の青い丸ボタンを押してもできます。</p>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="../../items/intro_r5.jpg" /><!-- --></p>
+<p><img src="figures/intro_r5.jpg" /><!-- --></p>
 </div>
 <h3>データの要素へのアクセス</h3>
 <p>データを加工するためにはデータの要素へアクセスする必要があります。</p>
