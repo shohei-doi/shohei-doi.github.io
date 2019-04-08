@@ -14,7 +14,6 @@ output:
 categories:
   - R
   - data handling
-  - teaching materials
 twitter:
   creator: "@sdoi0504"
 ---
@@ -127,3 +126,22 @@ data <- mutate(data,
                if_else(dependa < demautb, dependa, dependb))
 ```
 
+### ラグ変数*
+
+パネルデータの場合、ラグ変数（前の時点の変数）を作成することがあります。
+`tidyverse`の`dplyr`にある`group_by()`というグループ化する関数を使うとラグ変数を作成できます。
+例えば、`smldep`のラグ変数を`lag_smldep`として作成するとします。
+
+このデータセットでは分析単位はダイアッドなので、`cstatea`と`stateb`でグループ化して変数を作ります。
+`lag()`によって変数のラグを取ることができ、`order_by`でどの変数に関してラグを取るかを決めることができます。
+
+```{r}
+data <- data %>% 
+  group_by(statea, stateb) %>% 
+  mutate(lag_smldep = lag(smldep, order_by = year))
+data %>% 
+  select(statea, stateb, year, smldep, lag_smldep) %>% 
+  paged_table()
+```
+
+- `lead()`によってリードを取ることもできます。

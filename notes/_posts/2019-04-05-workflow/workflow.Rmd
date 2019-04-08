@@ -13,7 +13,6 @@ output:
     toc_depth: 2
 categories:
   - R
-  - teaching materials
 twitter:
   creator: "@sdoi0504"
 ---

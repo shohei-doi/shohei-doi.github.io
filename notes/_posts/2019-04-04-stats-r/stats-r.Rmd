@@ -14,7 +14,6 @@ output:
 categories:
   - R
   - data analysis
-  - teaching materials
 twitter:
   creator: "@sdoi0504"
 ---
