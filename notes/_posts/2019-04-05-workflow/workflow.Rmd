@@ -13,6 +13,7 @@ output:
     toc_depth: 2
 categories:
   - R
+  - teaching materials
 twitter:
   creator: "@sdoi0504"
 ---
@@ -204,6 +205,13 @@ knitr::include_graphics("figures/workflow6.jpg")
 ```{r, echo = FALSE}
 knitr::include_graphics("figures/workflow7.jpg")
 ```
+
+ちなみに、Rスクリプト中で`#`以降はコメントとして実行されなくなります。
+
+```{r}
+1+2 #ここは無視されます
+```
+
 
 ## まとめ {#Conclぢ}
 

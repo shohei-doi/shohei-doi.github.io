@@ -7,12 +7,21 @@
     <description>備忘録
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 08 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>データの整形：Qualtrics</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-09-reshape-qualtrics</link>
+      <description>ワイド形式とロング形式の変換方法を応用してQualtricsのデータを整形する方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-09-reshape-qualtrics</guid>
+      <pubDate>Tue, 09 Apr 2019 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>データの整形：パネルデータ</title>
       <dc:creator>土井　翔平</dc:creator>
       <link>https://shohei-doi.github.io/notes/posts/2019-04-08-reshape-panel</link>
-      <description>Rでパネルデータを作成する際にワイド形式からロング形式に変換する方法を説明します。</description>
+      <description>Rでパネルデータを作成する際にワイド形式からロング形式に変換する方法を説明します。
+ついでにforループとパイプについても説明します。</description>
       <guid>https://shohei-doi.github.io/notes/posts/2019-04-08-reshape-panel</guid>
       <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
     </item>

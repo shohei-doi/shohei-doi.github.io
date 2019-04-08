@@ -19,38 +19,38 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-  <title>変数の作成</title>
+  <title>データの整形：Qualtrics</title>
   
-  <meta property="description" itemprop="description" content="Rでデータセットに新しい変数を作成する方法を説明します。"/>
+  <meta property="description" itemprop="description" content="ワイド形式とロング形式の変換方法を応用してQualtricsのデータを整形する方法を説明します。"/>
   
   
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2019-04-07"/>
-  <meta property="article:created" itemprop="dateCreated" content="2019-04-07"/>
+  <meta property="article:published" itemprop="datePublished" content="2019-04-09"/>
+  <meta property="article:created" itemprop="dateCreated" content="2019-04-09"/>
   <meta name="article:author" content="土井　翔平"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="変数の作成"/>
+  <meta property="og:title" content="データの整形：Qualtrics"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Rでデータセットに新しい変数を作成する方法を説明します。"/>
+  <meta property="og:description" content="ワイド形式とロング形式の変換方法を応用してQualtricsのデータを整形する方法を説明します。"/>
   <meta property="og:locale" content="en_US"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="変数の作成"/>
-  <meta property="twitter:description" content="Rでデータセットに新しい変数を作成する方法を説明します。"/>
+  <meta property="twitter:title" content="データの整形：Qualtrics"/>
+  <meta property="twitter:description" content="ワイド形式とロング形式の変換方法を応用してQualtricsのデータを整形する方法を説明します。"/>
   <meta property="twitter:creator" content="@sdoi0504"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter"]}},"value":[{"type":"character","attributes":{},"value":["変数の作成"]},{"type":"character","attributes":{},"value":["Rでデータセットに新しい変数を作成する方法を説明します。\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["04-07-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["R","data handling","teaching materials"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter"]}},"value":[{"type":"character","attributes":{},"value":["データの整形：Qualtrics"]},{"type":"character","attributes":{},"value":["ワイド形式とロング形式の変換方法を応用してQualtricsのデータを整形する方法を説明します。\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["04-09-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["R","data handling","teaching materials"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["create-var_files/bowser-1.9.3/bowser.min.js","create-var_files/distill-2.2.21/template.v2.js","create-var_files/jquery-1.11.3/jquery.min.js","create-var_files/pagedtable-1.1/css/pagedtable.css","create-var_files/pagedtable-1.1/js/pagedtable.js","create-var_files/webcomponents-2.0.0/webcomponents.js","data/triangle.csv"]}
+  {"type":"character","attributes":{},"value":["reshape-qualtrics_files/bowser-1.9.3/bowser.min.js","reshape-qualtrics_files/distill-2.2.21/template.v2.js","reshape-qualtrics_files/jquery-1.11.3/jquery.min.js","reshape-qualtrics_files/pagedtable-1.1/css/pagedtable.css","reshape-qualtrics_files/pagedtable-1.1/js/pagedtable.js","reshape-qualtrics_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -928,12 +928,12 @@
   </script>
   
   <!--/radix_placeholder_distill-->
-  <link href="create-var_files/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
-  <script src="create-var_files/pagedtable-1.1/js/pagedtable.js"></script>
-  <script src="create-var_files/jquery-1.11.3/jquery.min.js"></script>
-  <script src="create-var_files/bowser-1.9.3/bowser.min.js"></script>
-  <script src="create-var_files/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="create-var_files/distill-2.2.21/template.v2.js"></script>
+  <link href="reshape-qualtrics_files/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+  <script src="reshape-qualtrics_files/pagedtable-1.1/js/pagedtable.js"></script>
+  <script src="reshape-qualtrics_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="reshape-qualtrics_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="reshape-qualtrics_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="reshape-qualtrics_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
@@ -945,7 +945,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"変数の作成","description":"Rでデータセットに新しい変数を作成する方法を説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-04-07T00:00:00.000+09:00","citationText":"翔平, 2019"}
+{"title":"データの整形：Qualtrics","description":"ワイド形式とロング形式の変換方法を応用してQualtricsのデータを整形する方法を説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-04-09T00:00:00.000+09:00","citationText":"翔平, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -955,29 +955,33 @@
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>変数の作成</h1>
-<p>Rでデータセットに新しい変数を作成する方法を説明します。</p>
+<h1>データの整形：Qualtrics</h1>
+<p>ワイド形式とロング形式の変換方法を応用してQualtricsのデータを整形する方法を説明します。</p>
 </div>
 
 <div class="d-byline">
   土井　翔平  (国立情報学研究所)
   
-<br/>04-07-2019
+<br/>04-09-2019
 </div>
 
 <div class="d-article">
 <h3 class="d-toc-header">Table of Contents</h3>
 <nav class="d-toc" id="TOC">
 <ul>
-<li><a href="#Data">使用するデータセット</a></li>
-<li><a>四則演算</a></li>
-<li><a>条件に基づく変数</a></li>
+<li><a href="#Intro">はじめに</a></li>
+<li><a href="#Manual">気合による方法</a></li>
+<li><a href="#Loop">ループによる方法</a></li>
 <li><a href="#Tidyverse">tidyverseな方法</a></li>
+<li><a href="#Concl">おまけ</a></li>
 </ul>
 </nav>
 <hr class="d-toc-separator"/>
-<h2 id="Data">使用するデータセット</h2>
-<p>ここではTriangulating Peaceの<a href="data/triabgle.csv">レプリケーションデータ</a>を使用します。</p>
+<h2 id="Intro">はじめに</h2>
+<p><a href="https://www.qualtrics.com/">Qualtrics</a>はオンラインサーベイを便利に行うツールですが、政治学では特にサーベイ実験で使われていると思います。</p>
+<p>サーベイ実験では被験者ごとに処理をランダムに与える必要があり、Qualtricsでは簡単にそれを行うことができるのですが、得られたデータを統計分析する際には一手間かかります。</p>
+<p>ここでは、<a href="../2019-04-08-reshape-panel/index.html">データの整形：パネルデータ</a>で紹介したワイド形式からロング形式に変換する方法を応用してQualtricsのデータを統計分析用に整形する方法を説明します。</p>
+<h3>必要なパッケージの読み込み</h3>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 library(tidyverse)</code></pre>
@@ -993,194 +997,313 @@ library(tidyverse)</code></pre>
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>
-data &lt;- read.csv(&quot;data/triangle.csv&quot;)</code></pre>
-</div>
-<aside>
-表を出力するためのパッケージを読み込んでおきます。
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
 library(rmarkdown)</code></pre>
 </div>
-</aside>
-<h2>四則演算</h2>
-<p>基本的にオブジェクトに<code>$</code>をつけて新しい変数名をつけて代入することで新しい変数を作成します。 例えば、A国とB国の民主主義度である<code>demauta</code>と<code>demautb</code>の平均<code>demautm</code>を作成するには次のようにします。</p>
+<h3 id="qualtrics">Qualtricsのデータ</h3>
+<p>ここではQualtricsから得られる架空のデータを使いたいと思います。 Qualtricsでは行は各被験者でユニークな識別番号の他に設問への回答が記載されています。</p>
+<p>サーベイ実験ではグループごとに異なる設問がなされるため、例えば、グループが2つでグループ固有の設問が2種類、共通の設問が2種類の場合、以下のような形になっています。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-data$demautm &lt;- (data$demauta + data$demautb)/2</code></pre>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-paged_table(head(select(data, demauta, demautb, demautm)))</code></pre>
+data &lt;- tibble(id = c(1,2,3,4),
+       y1_1 = c(2,3,NA,NA),
+       y2_1 = c(1,4,NA,NA),
+       y1_2 = c(NA,NA,5,3),
+       y2_2 = c(NA,NA,6,4),
+       x1 = c(2,3,3,6),
+       x2 = c(6,4,1,1))
+paged_table(data)</code></pre>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["demauta"],"name":[1],"type":["int"],"align":["right"]},{"label":["demautb"],"name":[2],"type":["int"],"align":["right"]},{"label":["demautm"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"10","2":"9","3":"9.5","_rn_":"1"},{"1":"10","2":"10","3":"10.0","_rn_":"2"},{"1":"10","2":"10","3":"10.0","_rn_":"3"},{"1":"10","2":"10","3":"10.0","_rn_":"4"},{"1":"10","2":"10","3":"10.0","_rn_":"5"},{"1":"10","2":"10","3":"10.0","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["y1_1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["y2_1"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["y1_2"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["y2_2"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[7],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"1","4":"NA","5":"NA","6":"2","7":"6"},{"1":"2","2":"3","3":"4","4":"NA","5":"NA","6":"3","7":"4"},{"1":"3","2":"NA","3":"NA","4":"5","5":"6","6":"3","7":"1"},{"1":"4","2":"NA","3":"NA","4":"3","5":"4","6":"6","7":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
-<h2>条件に基づく変数</h2>
-<p><code>if_else()</code>関数を使うと条件によって値の変わる変数を作成します。 例えば、<code>smldep</code>とは<code>dependa</code>と<code>dependb</code>の小さい方なので、これを<code>mindep</code>とすると次のように作成します。</p>
+<ul>
+<li>1, 2番目の被験者がグループ1で、3, 4番目の被験者がグループ2である。
+<ul>
+<li>便宜上、グループ1を統制群、グループ2を処置群とする。</li>
+</ul></li>
+<li>グループ1の固有の設問の1つ目の回答が<code>y1_1</code>で2つ目の回答が<code>y2_1</code>である。
+<ul>
+<li>よってグループ1の被験者の<code>y1_2</code>と<code>y2_2</code>への回答は欠損値扱いになっている。</li>
+<li>グループ2についても同様である。</li>
+</ul></li>
+<li>全員共通の設問への回答は<code>x1</code>と<code>x2</code>である。</li>
+<li>5件法の場合、「回答しない」は6番目の回答であることが多いため、被験者1は<code>x2</code>への、被験者3は<code>y2_2</code>への、被験者4は<code>x1</code>への回答を拒否したものとする。</li>
+</ul>
+<p>このデータを統計的に分析するには以下のような形式になっていることが望ましいです。</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-data$mindep &lt;- if_else(data$dependa &lt; data$demautb, data$dependa, data$dependb)</code></pre>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-paged_table(head(select(data, dependa, dependb, smldep, mindep)))</code></pre>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["dependa"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["dependb"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["smldep"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["mindep"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"0.01573063","2":"0.2801780","3":"0.01573063","4":"0.01573063","_rn_":"1"},{"1":"0.01154854","2":"0.2239006","3":"0.01154854","4":"0.01154854","_rn_":"2"},{"1":"0.01125047","2":"0.2008743","3":"0.01125047","4":"0.01125047","_rn_":"3"},{"1":"0.01117924","2":"0.2130951","3":"0.01117924","4":"0.01117924","_rn_":"4"},{"1":"0.01102619","2":"0.2125081","3":"0.01102619","4":"0.01102619","_rn_":"5"},{"1":"0.01076442","2":"0.1913874","3":"0.01076442","4":"0.01076442","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["y1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["y2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"1","4":"0","5":"2","6":"NA"},{"1":"2","2":"3","3":"4","4":"0","5":"3","6":"4"},{"1":"3","2":"5","3":"NA","4":"1","5":"3","6":"1"},{"1":"4","2":"3","3":"4","4":"1","5":"NA","6":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
-<p><code>if_else()</code>は何をしているのでしょうか？ まず、第1引数は条件式となっています。 そして、その条件を満たす場合は第2引数を、満たさない場合は第3引数を出力します。 つまり、<code>dependa</code>が<code>dependb</code>よりも小さければ<code>dependa</code>を、大きければ<code>dependb</code>を返しています。</p>
-<h2 id="Tidyverse">tidyverseな方法</h2>
-<p><code>tidyverse</code>の<code>dplyr</code>では<code>mutate</code>によって変数を新たに作成します。 <code>mutate()</code>の第1引数にデータフレームをとり、第2引数以降は変数を定義します。 新しいデータフレームを返すのでオブジェクトを上書きするか、新たに作ります。</p>
-<h3 id="-1">四則演算</h3>
+<ul>
+<li><code>t</code>は処置群であれば<code>1</code>、統制群であれば<code>0</code>となるような変数である。</li>
+</ul>
+<h2 id="Manual">気合による方法</h2>
+<p>変数やグループの数が少ない場合は気合で書いてしまうという手もあります。 つまり、</p>
+<ol type="1">
+<li>統制群の応答変数<code>y1_1</code>と<code>y2_1</code>および共変量<code>x1</code>と<code>x2</code>を選択する。</li>
+<li>応答変数の名前を<code>y1</code>と<code>y2</code>に共通化する。</li>
+<li>応答変数が欠損しているサンプルは処置群なので除外する。</li>
+</ol>
+<p>という方法です。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-data &lt;- mutate(data, 
-               demautm = (demauta + demautb)/2)</code></pre>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-paged_table(head(select(data, demauta, demautb, demautm)))</code></pre>
+control &lt;- data[c(&quot;id&quot;, &quot;y1_1&quot;, &quot;y2_1&quot;, &quot;x1&quot;, &quot;x2&quot;)]
+names(control) &lt;- c(&quot;id&quot;, &quot;y1&quot;, &quot;y2&quot;, &quot;x1&quot;, &quot;x2&quot;)
+control &lt;- control[!is.na(control$y1) &amp; !is.na(control$y2),]
+control$t &lt;- 0
+paged_table(control)</code></pre>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["demauta"],"name":[1],"type":["int"],"align":["right"]},{"label":["demautb"],"name":[2],"type":["int"],"align":["right"]},{"label":["demautm"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"10","2":"9","3":"9.5","_rn_":"1"},{"1":"10","2":"10","3":"10.0","_rn_":"2"},{"1":"10","2":"10","3":"10.0","_rn_":"3"},{"1":"10","2":"10","3":"10.0","_rn_":"4"},{"1":"10","2":"10","3":"10.0","_rn_":"5"},{"1":"10","2":"10","3":"10.0","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["y1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["y2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"1","4":"2","5":"6","6":"0"},{"1":"2","2":"3","3":"4","4":"3","5":"4","6":"0"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
-<h3 id="-1">条件に基づく変数</h3>
+<ul>
+<li><code>control[!is.na(control$y1) &amp; !is.na(control$y2),]</code>は「第1の応答変数が欠損していない」かつ「第2の応答変数が欠損していない」サンプルを指定しています。</li>
+</ul>
+<p>同様の処理を処置群についても行います。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-data &lt;- mutate(data,
-               if_else(dependa &lt; demautb, dependa, dependb))</code></pre>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-paged_table(head(select(data, dependa, dependb, smldep, mindep)))</code></pre>
+treatment &lt;- data[c(&quot;id&quot;, &quot;y1_2&quot;, &quot;y2_2&quot;, &quot;x1&quot;, &quot;x2&quot;)]
+names(treatment) &lt;- c(&quot;id&quot;, &quot;y1&quot;, &quot;y2&quot;, &quot;x1&quot;, &quot;x2&quot;)
+treatment &lt;- treatment[!is.na(treatment$y1) &amp; !is.na(treatment$y2),]
+treatment$t &lt;- 1
+paged_table(treatment)</code></pre>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["dependa"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["dependb"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["smldep"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["mindep"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"0.01573063","2":"0.2801780","3":"0.01573063","4":"0.01573063","_rn_":"1"},{"1":"0.01154854","2":"0.2239006","3":"0.01154854","4":"0.01154854","_rn_":"2"},{"1":"0.01125047","2":"0.2008743","3":"0.01125047","4":"0.01125047","_rn_":"3"},{"1":"0.01117924","2":"0.2130951","3":"0.01117924","4":"0.01117924","_rn_":"4"},{"1":"0.01102619","2":"0.2125081","3":"0.01102619","4":"0.01102619","_rn_":"5"},{"1":"0.01076442","2":"0.1913874","3":"0.01076442","4":"0.01076442","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["y1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["y2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"3","2":"5","3":"6","4":"3","5":"1","6":"1"},{"1":"4","2":"3","3":"4","4":"6","5":"1","6":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
-<p><code>case_when()</code>を使うと条件に応じて作る変数の値を2種類以上にすることができます。 例えば、<code>1919</code>年までを<code>prewar</code>、<code>1920</code>年から<code>1945</code>年を<code>interwar</code>、<code>1946</code>年からを<code>coldwar</code>とするような変数<code>system</code>を作ります。</p>
+<p>最後に、両者を結合し、<code>6</code>を欠損値に入れ替えます。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-data &lt;- mutate(data, 
-               system = case_when(year &lt;= 1919 ~ &quot;prewar&quot;,
-                                  year &gt; 1919 &amp; year &lt;= 1945 ~ &quot;interwar&quot;,
-                                  year &gt; 1945 ~ &quot;coldwar&quot;))</code></pre>
+data_reshaped &lt;- bind_rows(control, treatment)
+data_reshaped[data_reshaped$y2 == 6,]$y2 &lt;- NA
+data_reshaped[data_reshaped$x1 == 6,]$x1 &lt;- NA
+data_reshaped[data_reshaped$x2 == 6,]$x2 &lt;- NA
+paged_table(data_reshaped)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["y1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["y2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"1","4":"2","5":"NA","6":"0"},{"1":"2","2":"3","3":"4","4":"3","5":"4","6":"0"},{"1":"3","2":"5","3":"NA","4":"3","5":"1","6":"1"},{"1":"4","2":"3","3":"4","4":"NA","5":"1","6":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
 </div>
+</div>
+<h2 id="Loop">ループによる方法</h2>
+<p>この方法はグループの数は多くなるとめんどくさくなるという欠点があります。 各グループについては同様の処理を行うので、<code>for</code>ループによって簡略化することができます。</p>
+<p>アイデアとしては<code>i</code>回目の処理において<code>id</code>共変量と<code>y1_i</code>と<code>y2_i</code>を抜き出します。 文字列は<code>paste0()</code>という関数で結合することができます。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-table(data$year, data$system)</code></pre>
+paste0(&quot;y1_&quot;, 1)</code></pre>
 <pre><code>
-      
-       coldwar interwar prewar
-  1885       0        0    104
-  1886       0        0    104
-  1887       0        0    110
-  1888       0        0    110
-  1889       0        0    110
-  1890       0        0    141
-  1891       0        0    118
-  1892       0        0    118
-  1893       0        0    118
-  1894       0        0    118
-  1895       0        0    141
-  1896       0        0    141
-  1897       0        0    141
-  1898       0        0    140
-  1899       0        0    150
-  1900       0        0    198
-  1901       0        0    161
-  1902       0        0    161
-  1903       0        0    160
-  1904       0        0    170
-  1905       0        0    156
-  1906       0        0    179
-  1907       0        0    170
-  1908       0        0    179
-  1909       0        0    179
-  1910       0        0    167
-  1911       0        0    162
-  1912       0        0    171
-  1913       0        0    172
-  1920       0      265      0
-  1921       0      275      0
-  1922       0      235      0
-  1923       0      242      0
-  1924       0      243      0
-  1925       0      401      0
-  1926       0      373      0
-  1927       0      388      0
-  1928       0      457      0
-  1929       0      465      0
-  1930       0      427      0
-  1931       0      445      0
-  1932       0      454      0
-  1933       0      433      0
-  1934       0      468      0
-  1935       0      478      0
-  1936       0      494      0
-  1937       0      489      0
-  1938       0      479      0
-  1946      15        0      0
-  1947      15        0      0
-  1948      11        0      0
-  1949      11        0      0
-  1950     343        0      0
-  1951     336        0      0
-  1952     331        0      0
-  1953     337        0      0
-  1954     338        0      0
-  1955     363        0      0
-  1956     373        0      0
-  1957     393        0      0
-  1958     400        0      0
-  1959     399        0      0
-  1960     540        0      0
-  1961     599        0      0
-  1962     633        0      0
-  1963     640        0      0
-  1964     644        0      0
-  1965     703        0      0
-  1966     734        0      0
-  1967     743        0      0
-  1968     748        0      0
-  1969     749        0      0
-  1970     784        0      0
-  1971     819        0      0
-  1972     819        0      0
-  1973     825        0      0
-  1974     796        0      0
-  1975     830        0      0
-  1976     850        0      0
-  1977     824        0      0
-  1978     820        0      0
-  1979     800        0      0
-  1980     836        0      0
-  1981     829        0      0
-  1982     850        0      0
-  1983     851        0      0
-  1984     861        0      0
-  1985     849        0      0
-  1986     865        0      0
-  1987     857        0      0
-  1988     855        0      0
-  1989     802        0      0
-  1990     649        0      0
-  1991     567        0      0</code></pre>
+[1] &quot;y1_1&quot;</code></pre>
 </div>
-<h3>複数変数の作成</h3>
-<p><code>mutate()</code>の中では複数の変数を同時に作成することができます。</p>
+<aside>
+<code>paste()</code>は文字列の間に特定の記号を含める関数です。
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-data &lt;- mutate(data, 
-               demautm = (demauta + demautb)/2,
-               if_else(dependa &lt; demautb, dependa, dependb))</code></pre>
+paste(&quot;a&quot;, &quot;b&quot;, sep = &quot;/&quot;)</code></pre>
+<pre><code>
+[1] &quot;a/b&quot;</code></pre>
+</div>
+つまり、<code>paste0()</code>は<code>paste(..., sep = &quot;)</code>のラッパー関数です。
+</aside>
+<p>さて、ここでは<code>i</code>を<code>1</code>として選択する変数の名前を<code>sel_vars</code>というベクトルとして作成します。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+i &lt;- 1
+sel_vars &lt;- c(&quot;id&quot;, paste0(c(&quot;y1_&quot;, &quot;y2_&quot;), i), &quot;x1&quot;, &quot;x2&quot;)
+sel_vars</code></pre>
+<pre><code>
+[1] &quot;id&quot;   &quot;y1_1&quot; &quot;y2_1&quot; &quot;x1&quot;   &quot;x2&quot;  </code></pre>
+</div>
+<p>無事、必要な変数名を抜き出せています。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+temp &lt;- data[sel_vars]
+paged_table(temp)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["y1_1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["y2_1"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"1","4":"2","5":"6"},{"1":"2","2":"3","3":"4","4":"3","5":"4"},{"1":"3","2":"NA","3":"NA","4":"3","5":"1"},{"1":"4","2":"NA","3":"NA","4":"6","5":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<p>その他の処理は先ほどと変わらないので、まとめると次のようになります。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+data_reshaped &lt;- NULL
+for (i in 1:2) {
+  sel_vars &lt;- c(&quot;id&quot;, paste0(c(&quot;y1_&quot;, &quot;y2_&quot;), i), &quot;x1&quot;, &quot;x2&quot;)
+  temp &lt;- data[sel_vars]
+  names(temp) &lt;- c(&quot;id&quot;, &quot;y1&quot;, &quot;y2&quot;, &quot;x1&quot;, &quot;x2&quot;)
+  temp &lt;- temp[!is.na(temp$y1) &amp; !is.na(temp$y2),]
+  temp$t &lt;- i - 1
+  data_reshaped &lt;- bind_rows(data_reshaped, temp)
+}
+data_reshaped[data_reshaped$y2 == 6,]$y2 &lt;- NA
+data_reshaped[data_reshaped$x1 == 6,]$x1 &lt;- NA
+data_reshaped[data_reshaped$x2 == 6,]$x2 &lt;- NA
+paged_table(data_reshaped)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["y1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["y2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"1","4":"2","5":"NA","6":"0"},{"1":"2","2":"3","3":"4","4":"3","5":"4","6":"0"},{"1":"3","2":"5","3":"NA","4":"3","5":"1","6":"1"},{"1":"4","2":"3","3":"4","4":"NA","5":"1","6":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<ul>
+<li>処置変数はグループ番号から<code>1</code>を引いていますが本質的な問題ではありません。</li>
+</ul>
+<h2 id="Tidyverse">tidyverseな方法</h2>
+<p>実は<code>tidyverse</code>の<code>tidyr</code>を応用するとこのような処理をすることができます。 まずは、応答変数に関して<code>gather()</code>でロングにします。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+data_reshaped &lt;- data %&gt;% 
+  gather(key = t, value = y, -id, -x1, -x2)
+paged_table(data_reshaped)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[4],"type":["chr"],"align":["left"]},{"label":["y"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"6","4":"y1_1","5":"2"},{"1":"2","2":"3","3":"4","4":"y1_1","5":"3"},{"1":"3","2":"3","3":"1","4":"y1_1","5":"NA"},{"1":"4","2":"6","3":"1","4":"y1_1","5":"NA"},{"1":"1","2":"2","3":"6","4":"y2_1","5":"1"},{"1":"2","2":"3","3":"4","4":"y2_1","5":"4"},{"1":"3","2":"3","3":"1","4":"y2_1","5":"NA"},{"1":"4","2":"6","3":"1","4":"y2_1","5":"NA"},{"1":"1","2":"2","3":"6","4":"y1_2","5":"NA"},{"1":"2","2":"3","3":"4","4":"y1_2","5":"NA"},{"1":"3","2":"3","3":"1","4":"y1_2","5":"5"},{"1":"4","2":"6","3":"1","4":"y1_2","5":"3"},{"1":"1","2":"2","3":"6","4":"y2_2","5":"NA"},{"1":"2","2":"3","3":"4","4":"y2_2","5":"NA"},{"1":"3","2":"3","3":"1","4":"y2_2","5":"6"},{"1":"4","2":"6","3":"1","4":"y2_2","5":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<p>ポイントはこの段階で応答変数<code>y</code>が欠損値になっているのは、グループが異なる回答ということです。</p>
+<ul>
+<li>グループ1の被験者にとっての<code>y1_2</code>と<code>y2_2</code></li>
+<li>グループ2の被験者にとっての<code>y1_1</code>と<code>y2_1</code></li>
+</ul>
+<p>なので、指定した変数が欠損値であるサンプルを除外する関数<code>drop_na()</code>で<code>y</code>が欠損しているサンプルを除外します。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+data_reshaped &lt;- data_reshaped %&gt;% 
+  drop_na(y)
+paged_table(data_reshaped)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[4],"type":["chr"],"align":["left"]},{"label":["y"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"6","4":"y1_1","5":"2"},{"1":"2","2":"3","3":"4","4":"y1_1","5":"3"},{"1":"1","2":"2","3":"6","4":"y2_1","5":"1"},{"1":"2","2":"3","3":"4","4":"y2_1","5":"4"},{"1":"3","2":"3","3":"1","4":"y1_2","5":"5"},{"1":"4","2":"6","3":"1","4":"y1_2","5":"3"},{"1":"3","2":"3","3":"1","4":"y2_2","5":"6"},{"1":"4","2":"6","3":"1","4":"y2_2","5":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<p>続いて、適当に名付けておいた<code>t</code>からグループの情報と応答変数の種類の情報を抜き出します。 <code>str_extraxt()</code>という関数は文字列からパターンに合致したものを抜き出します。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+str_extract(&quot;y1_1&quot;, &quot;y[0-9]&quot;)</code></pre>
+<pre><code>
+[1] &quot;y1&quot;</code></pre>
+</div>
+<p>パターンのマッチングには正規表現というやや難しい表記が必要になります。 <code>y[0-9]</code>というのは<code>y</code>という文字と数字が1文字続く文字列という意味です。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+str_extract(&quot;y1_1&quot;, &quot;_[0-9]&quot;)</code></pre>
+<pre><code>
+[1] &quot;_1&quot;</code></pre>
+</div>
+<p>同様にしてグループの情報も抜き出せますが、<code>_</code>が邪魔です。 文字列から数値を抜き出す関数は<code>parse_naumber()</code>になります。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+str_extract(&quot;y1_1&quot;, &quot;_[0-9]&quot;) %&gt;% 
+  parse_number()</code></pre>
+<pre><code>
+[1] 1</code></pre>
+</div>
+<p>これでグループと応答変数の種類の情報を抜き出す準備が整いました。 以下では<code>t</code>にグループ番号を<code>k</code>に応答変数の種類を入れる操作をします</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+data_reshaped &lt;- data_reshaped %&gt;% 
+  mutate(k = str_extract(t, &quot;y[0-9]&quot;),
+         t = str_extract(t, &quot;_[0-9]&quot;) %&gt;% 
+           parse_number())
+paged_table(data_reshaped)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["y"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["k"],"name":[6],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"2","3":"6","4":"1","5":"2","6":"y1"},{"1":"2","2":"3","3":"4","4":"1","5":"3","6":"y1"},{"1":"1","2":"2","3":"6","4":"1","5":"1","6":"y2"},{"1":"2","2":"3","3":"4","4":"1","5":"4","6":"y2"},{"1":"3","2":"3","3":"1","4":"2","5":"5","6":"y1"},{"1":"4","2":"6","3":"1","4":"2","5":"3","6":"y1"},{"1":"3","2":"3","3":"1","4":"2","5":"6","6":"y2"},{"1":"4","2":"6","3":"1","4":"2","5":"4","6":"y2"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<p>続いて、<code>k</code>の中身<code>y1</code>と<code>y2</code>を変数名に戻すために<code>spread()</code>を使います。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+data_reshaped &lt;- data_reshaped %&gt;% 
+  spread(key = k, value = y)
+paged_table(data_reshaped)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["y1"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["y2"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"6","4":"1","5":"2","6":"1"},{"1":"2","2":"3","3":"4","4":"1","5":"3","6":"4"},{"1":"3","2":"3","3":"1","4":"2","5":"5","6":"6"},{"1":"4","2":"6","3":"1","4":"2","5":"3","6":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<p>最後に欠損値を<code>na_if()</code>で代入しておきます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+data_reshaped &lt;- data_reshaped %&gt;% 
+  mutate(y2 = na_if(y2, 6),
+         x1 = na_if(x1, 6),
+         x2 = na_if(x2, 6))
+paged_table(data_reshaped)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["y1"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["y2"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"NA","4":"1","5":"2","6":"1"},{"1":"2","2":"3","3":"4","4":"1","5":"3","6":"4"},{"1":"3","2":"3","3":"1","4":"2","5":"5","6":"NA"},{"1":"4","2":"NA","3":"1","4":"2","5":"3","6":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<p>以上をパイプでまとめると次のようになります。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+data_reshaped &lt;- data %&gt;% 
+  gather(key = t, value = y, -id, -x1, -x2) %&gt;% 
+  drop_na(y) %&gt;% 
+  mutate(k = str_extract(t, &quot;y[0-9]&quot;),
+         t = str_extract(t, &quot;_[0-9]&quot;) %&gt;% 
+           parse_number()) %&gt;% 
+  spread(key = k, value = y) %&gt;% 
+  mutate(y2 = na_if(y2, 6),
+         x1 = na_if(x1, 6),
+         x2 = na_if(x2, 6))
+paged_table(data_reshaped)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["y1"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["y2"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"NA","4":"1","5":"2","6":"1"},{"1":"2","2":"3","3":"4","4":"1","5":"3","6":"4"},{"1":"3","2":"3","3":"1","4":"2","5":"5","6":"NA"},{"1":"4","2":"NA","3":"1","4":"2","5":"3","6":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<p>ループを用いるか、<code>tidyverse</code>を用いるかにかかわらず重要なのは変数名の設定です。</p>
+<ul>
+<li>応答変数と共変量をグループごとに定型的な変数名としておくことで処理が楽になります。</li>
+</ul>
+<h2 id="Concl">おまけ</h2>
+<p>5件法の場合、回答上では</p>
+<ol type="1">
+<li>賛成</li>
+<li>やや賛成</li>
+<li>どちらとも言えない</li>
+<li>やや反対</li>
+<li>反対</li>
+</ol>
+<p>となっていることが多いですが、分析上では</p>
+<ol type="1">
+<li>反対</li>
+<li>やや反対</li>
+<li>どちらとも言えない</li>
+<li>やや賛成</li>
+<li>賛成</li>
+</ol>
+<p>としたいのが人情です。</p>
+<p>こういうときは、<code>6</code>（ないし<code>5</code>）から引いてあげればよいです。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+data_reshaped %&gt;% 
+  mutate(y1 = 5 - y1,
+         y2 = 5 - y2) %&gt;% 
+  paged_table()</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["y1"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["y2"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"NA","4":"1","5":"3","6":"4"},{"1":"2","2":"3","3":"4","4":"1","5":"2","6":"1"},{"1":"3","2":"3","3":"1","4":"2","5":"0","6":"NA"},{"1":"4","2":"NA","3":"1","4":"2","5":"2","6":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 </div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

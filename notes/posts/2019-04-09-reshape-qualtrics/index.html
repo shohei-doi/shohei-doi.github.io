@@ -19,42 +19,42 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-<title>備忘録: R操作の基本</title>
+<title>備忘録: データの整形：Qualtrics</title>
 
-<meta property="description" itemprop="description" content="Rの基本的な操作や概念について説明します。"/>
+<meta property="description" itemprop="description" content="ワイド形式とロング形式の変換方法を応用してQualtricsのデータを整形する方法を説明します。"/>
 
-<link rel="canonical" href="https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r/"/>
+<link rel="canonical" href="https://shohei-doi.github.io/notes/posts/2019-04-09-reshape-qualtrics/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2019-04-04"/>
-<meta property="article:created" itemprop="dateCreated" content="2019-04-04"/>
+<meta property="article:published" itemprop="datePublished" content="2019-04-09"/>
+<meta property="article:created" itemprop="dateCreated" content="2019-04-09"/>
 <meta name="article:author" content="土井　翔平"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="備忘録: R操作の基本"/>
+<meta property="og:title" content="備忘録: データの整形：Qualtrics"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="Rの基本的な操作や概念について説明します。"/>
-<meta property="og:url" content="https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r/"/>
+<meta property="og:description" content="ワイド形式とロング形式の変換方法を応用してQualtricsのデータを整形する方法を説明します。"/>
+<meta property="og:url" content="https://shohei-doi.github.io/notes/posts/2019-04-09-reshape-qualtrics/"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="備忘録"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary"/>
-<meta property="twitter:title" content="備忘録: R操作の基本"/>
-<meta property="twitter:description" content="Rの基本的な操作や概念について説明します。"/>
-<meta property="twitter:url" content="https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r/"/>
+<meta property="twitter:title" content="備忘録: データの整形：Qualtrics"/>
+<meta property="twitter:description" content="ワイド形式とロング形式の変換方法を応用してQualtricsのデータを整形する方法を説明します。"/>
+<meta property="twitter:url" content="https://shohei-doi.github.io/notes/posts/2019-04-09-reshape-qualtrics/"/>
 <meta property="twitter:creator" content="@sdoi0504"/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["R操作の基本"]},{"type":"character","attributes":{},"value":["Rの基本的な操作や概念について説明します。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["04-04-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["R","teaching materials"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["データの整形：Qualtrics"]},{"type":"character","attributes":{},"value":["ワイド形式とロング形式の変換方法を応用してQualtricsのデータを整形する方法を説明します。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["04-09-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["R","data handling","teaching materials"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-04-09-reshape-qualtrics/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["figures/intro_r1.jpg","figures/intro_r2.jpg","figures/intro_r3.jpg","figures/intro_r4.jpg","figures/intro_r5.jpg","intro-r_files/bowser-1.9.3/bowser.min.js","intro-r_files/distill-2.2.21/template.v2.js","intro-r_files/jquery-1.11.3/jquery.min.js","intro-r_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["reshape-qualtrics_files/bowser-1.9.3/bowser.min.js","reshape-qualtrics_files/distill-2.2.21/template.v2.js","reshape-qualtrics_files/jquery-1.11.3/jquery.min.js","reshape-qualtrics_files/pagedtable-1.1/css/pagedtable.css","reshape-qualtrics_files/pagedtable-1.1/js/pagedtable.js","reshape-qualtrics_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 
@@ -1269,6 +1269,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
+  <link href="../../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+  <script src="../../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
   <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
@@ -1284,7 +1286,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"R操作の基本","description":"Rの基本的な操作や概念について説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-04-04T00:00:00.000+09:00","citationText":"翔平, 2019"}
+{"title":"データの整形：Qualtrics","description":"ワイド形式とロング形式の変換方法を応用してQualtricsのデータを整形する方法を説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-04-09T00:00:00.000+09:00","citationText":"翔平, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1308,14 +1310,14 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>R操作の基本</h1>
-<p>Rの基本的な操作や概念について説明します。</p>
+<h1>データの整形：Qualtrics</h1>
+<p>ワイド形式とロング形式の変換方法を応用してQualtricsのデータを整形する方法を説明します。</p>
 </div>
 
 <div class="d-byline">
   土井　翔平  (国立情報学研究所)
   
-<br/>04-04-2019
+<br/>04-09-2019
 </div>
 
 <div class="d-article">
@@ -1323,132 +1325,18 @@ document.addEventListener('DOMContentLoaded', function() {
 <nav class="d-toc" id="TOC">
 <ul>
 <li><a href="#Intro">はじめに</a></li>
-<li><a href="#Basic">重要な概念</a></li>
-<li><a href="#DataFrame">データフレーム</a></li>
-<li><a href="#Appendix">おまけ</a></li>
+<li><a href="#Manual">気合による方法</a></li>
+<li><a href="#Loop">ループによる方法</a></li>
+<li><a href="#Tidyverse">tidyverseな方法</a></li>
+<li><a href="#Concl">おまけ</a></li>
 </ul>
 </nav>
 <hr class="d-toc-separator"/>
 <h2 id="Intro">はじめに</h2>
-<p>Rのコンソールでの操作方法を学びます。 コンソールの<code>&gt;</code>の右側にコマンドを打ち込み、<code>Enter</code>を押すことで実行することができます。</p>
-<p>まず、初めてのプログラミング言語に触るときは<code>Hello, World!</code>を出力するのが流儀なので、以下のように実行します。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-print(&quot;Hello, World!&quot;)</code></pre>
-<pre><code>
-[1] &quot;Hello, World!&quot;</code></pre>
-</div>
-<p>四則演算や冪乗は以下の通りに実行できます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-3+2</code></pre>
-<pre><code>
-[1] 5</code></pre>
-<pre class="r"><code>
-3-2</code></pre>
-<pre><code>
-[1] 1</code></pre>
-<pre class="r"><code>
-3*2</code></pre>
-<pre><code>
-[1] 6</code></pre>
-<pre class="r"><code>
-3/2</code></pre>
-<pre><code>
-[1] 1.5</code></pre>
-<pre class="r"><code>
-3^2</code></pre>
-<pre><code>
-[1] 9</code></pre>
-</div>
-<h2 id="Basic">重要な概念</h2>
-<p>Rを使う上で重要な概念は</p>
-<ol type="1">
-<li>オブジェクト</li>
-<li>関数</li>
-<li>パッケージ</li>
-</ol>
-<p>になるので、それぞれ説明していきます。</p>
-<h3>オブジェクト</h3>
-<p>Rでは名前をつけてオブジェクトとして保存することができます。 例えば、</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-a &lt;- 2</code></pre>
-</div>
-<p>は<code>2</code>という数値を<code>a</code>という名前のオブジェクトととして生成しています。 実際に、</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-a</code></pre>
-<pre><code>
-[1] 2</code></pre>
-</div>
-<p><code>a</code>の中に<code>2</code>が入っていることが分かります。</p>
-<p>Rでは<code>&lt;-</code>を代入記号として用いますが、<code>=</code>を使うこともできます。</p>
-<p>生成されたオブジェクトを使って計算することもできます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-a*3</code></pre>
-<pre><code>
-[1] 6</code></pre>
-</div>
-<p>RStudioの場合、右上の<code>Environment</code>パネルに生成されたオブジェクトが表示されます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="figures/intro_r1.jpg" /><!-- --></p>
-</div>
-<p>基本的にRではオブジェクトを作成し、それを加工していく形で分析を行っていきます。</p>
-<h3>関数</h3>
-<p>関数とは大雑把に言ってしまうと、何かを入力すると特定の処理を行って何かを出力するものです。 Rでは関数は<code>関数名()</code>という形で<code>()</code>の中に何かを入力します。</p>
-<p>実はさっきの<code>print(&quot;Hello, World!&quot;)</code>も<code>&quot;Hello, World!&quot;</code>という文字列を<code>print()</code>という関数に入力し、文字列を表示させていたのです。</p>
-<p>関数は様々にあるので、ここでは簡単なものでイメージを掴んでおきます。</p>
-<p>まず、<code>c()</code>は複数の要素（ベクトルなど）を一つのオブジェクトとして作成する関数です。 例えば、<code>1, 3, 5</code>を要素に持つ<code>x</code>というベクトルを作ってみます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-x &lt;- c(1, 3, 5)
-x</code></pre>
-<pre><code>
-[1] 1 3 5</code></pre>
-</div>
-<p>これを<code>sum()</code>という関数に入力すると総和が出力されます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-sum(x)</code></pre>
-<pre><code>
-[1] 9</code></pre>
-</div>
-<p>平均を求めるときには<code>mean()</code>を使います。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-mean(x)</code></pre>
-<pre><code>
-[1] 3</code></pre>
-</div>
-<p>このように、Rではオブジェクトを関数に入力して処理を行っていきます。</p>
-<h3>パッケージ</h3>
-<p>Rには標準でもいろいろな関数がありますが、世界中で様々な人が関数を作成し、それをまとめたものをパッケージ（ライブラリ）としてCRANやGitHubで公開しています。</p>
-<p>これらは全て無料でダウンロードすることができます。 最近では、新しい分析手法を考案した研究者はRやPythonでパッケージを公開することが多いです。 これがRの魅力の一つだと言えます。</p>
-<p>パッケージを使うにはインストールと読み込みの2つの手順が必要になります。</p>
-<h4 id="cran">CRANからのインストール</h4>
-<p>まず、パッケージをインストールするにはCRANのパッケージであれば<code>install.packages()</code>を使うか、RStudioであれば右下の<code>Packages</code>パネルから行います。</p>
-<p><code>Install</code>をクリックし、</p>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="figures/intro_r2.jpg" /><!-- --></p>
-</div>
-<p>インストールしたいパッケージ名を入力して、</p>
-<aside>
-基本的に<code>Install dependencies</code>にはチェックを入れておきます。
-</aside>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="figures/intro_r3.jpg" /><!-- --></p>
-</div>
-<p><code>Install</code>を選択します。</p>
-<p>試しに、<code>tidyverse</code>と呼ばれる便利なパッケージをインストールしてみてください。 コマンドで行う場合は、次のようにします。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-install.packages(&quot;tidyverse&quot;)</code></pre>
-</div>
-<p>なお、パッケージのアップデートはRStudioであれば<code>Packages &gt; Update</code>、コマンドであれば再インストールによって行えます。</p>
-<h4>パッケージの読み込み</h4>
-<p>パッケージは一度インストールすると再度インストールする必要はありません。 しかし、パッケージを使う場合は最初に<code>library()</code>によって読み込む必要があります。</p>
+<p><a href="https://www.qualtrics.com/">Qualtrics</a>はオンラインサーベイを便利に行うツールですが、政治学では特にサーベイ実験で使われていると思います。</p>
+<p>サーベイ実験では被験者ごとに処理をランダムに与える必要があり、Qualtricsでは簡単にそれを行うことができるのですが、得られたデータを統計分析する際には一手間かかります。</p>
+<p>ここでは、<a href="../2019-04-08-reshape-panel/index.html">データの整形：パネルデータ</a>で紹介したワイド形式からロング形式に変換する方法を応用してQualtricsのデータを統計分析用に整形する方法を説明します。</p>
+<h3>必要なパッケージの読み込み</h3>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 library(tidyverse)</code></pre>
@@ -1463,320 +1351,332 @@ library(tidyverse)</code></pre>
 ── Conflicts ──────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>
+library(rmarkdown)</code></pre>
 </div>
-<h4 id="github">GitHubからのインストール*</h4>
-<p>GitHub上のパッケージをインストールする場合は<code>devtools</code>というパッケージを使うので、まずはインストールと読み込みを行います。</p>
+<h3 id="qualtrics">Qualtricsのデータ</h3>
+<p>ここではQualtricsから得られる架空のデータを使いたいと思います。 Qualtricsでは行は各被験者でユニークな識別番号の他に設問への回答が記載されています。</p>
+<p>サーベイ実験ではグループごとに異なる設問がなされるため、例えば、グループが2つでグループ固有の設問が2種類、共通の設問が2種類の場合、以下のような形になっています。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-install.packages(&quot;devtools&quot;)</code></pre>
+data &lt;- tibble(id = c(1,2,3,4),
+       y1_1 = c(2,3,NA,NA),
+       y2_1 = c(1,4,NA,NA),
+       y1_2 = c(NA,NA,5,3),
+       y2_2 = c(NA,NA,6,4),
+       x1 = c(2,3,3,6),
+       x2 = c(6,4,1,1))
+paged_table(data)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["y1_1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["y2_1"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["y1_2"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["y2_2"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[7],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"1","4":"NA","5":"NA","6":"2","7":"6"},{"1":"2","2":"3","3":"4","4":"NA","5":"NA","6":"3","7":"4"},{"1":"3","2":"NA","3":"NA","4":"5","5":"6","6":"3","7":"1"},{"1":"4","2":"NA","3":"NA","4":"3","5":"4","6":"6","7":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
 </div>
+</div>
+<ul>
+<li>1, 2番目の被験者がグループ1で、3, 4番目の被験者がグループ2である。
+<ul>
+<li>便宜上、グループ1を統制群、グループ2を処置群とする。</li>
+</ul></li>
+<li>グループ1の固有の設問の1つ目の回答が<code>y1_1</code>で2つ目の回答が<code>y2_1</code>である。
+<ul>
+<li>よってグループ1の被験者の<code>y1_2</code>と<code>y2_2</code>への回答は欠損値扱いになっている。</li>
+<li>グループ2についても同様である。</li>
+</ul></li>
+<li>全員共通の設問への回答は<code>x1</code>と<code>x2</code>である。</li>
+<li>5件法の場合、「回答しない」は6番目の回答であることが多いため、被験者1は<code>x2</code>への、被験者3は<code>y2_2</code>への、被験者4は<code>x1</code>への回答を拒否したものとする。</li>
+</ul>
+<p>このデータを統計的に分析するには以下のような形式になっていることが望ましいです。</p>
+<div class="layout-chunk" data-layout="l-body">
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["y1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["y2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"1","4":"0","5":"2","6":"NA"},{"1":"2","2":"3","3":"4","4":"0","5":"3","6":"4"},{"1":"3","2":"5","3":"NA","4":"1","5":"3","6":"1"},{"1":"4","2":"3","3":"4","4":"1","5":"NA","6":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<ul>
+<li><code>t</code>は処置群であれば<code>1</code>、統制群であれば<code>0</code>となるような変数である。</li>
+</ul>
+<h2 id="Manual">気合による方法</h2>
+<p>変数やグループの数が少ない場合は気合で書いてしまうという手もあります。 つまり、</p>
+<ol type="1">
+<li>統制群の応答変数<code>y1_1</code>と<code>y2_1</code>および共変量<code>x1</code>と<code>x2</code>を選択する。</li>
+<li>応答変数の名前を<code>y1</code>と<code>y2</code>に共通化する。</li>
+<li>応答変数が欠損しているサンプルは処置群なので除外する。</li>
+</ol>
+<p>という方法です。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-library(devtools)</code></pre>
+control &lt;- data[c(&quot;id&quot;, &quot;y1_1&quot;, &quot;y2_1&quot;, &quot;x1&quot;, &quot;x2&quot;)]
+names(control) &lt;- c(&quot;id&quot;, &quot;y1&quot;, &quot;y2&quot;, &quot;x1&quot;, &quot;x2&quot;)
+control &lt;- control[!is.na(control$y1) &amp; !is.na(control$y2),]
+control$t &lt;- 0
+paged_table(control)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["y1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["y2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"1","4":"2","5":"6","6":"0"},{"1":"2","2":"3","3":"4","4":"3","5":"4","6":"0"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
 </div>
-<p>インストールには<code>install_github()</code>を使いますが、入力はパッケージ名ではなく<code>ユーザー名/レポジトリ名</code>となる点に注意してください。</p>
-<h2 id="DataFrame">データフレーム</h2>
-<p>Rで統計分析を行う場合、データフレームと呼ばれるオブジェクトを扱うことになります。 基本的には外部からデータを読み込むのですが、まずはデモデータで練習します。</p>
-<p>Rやパッケージにはデモデータが含まれています。 <code>data()</code>を実行すると一覧が表示されます。 ここでは、有名なフィッシャーのアヤメのデータを使います。</p>
+</div>
+<ul>
+<li><code>control[!is.na(control$y1) &amp; !is.na(control$y2),]</code>は「第1の応答変数が欠損していない」かつ「第2の応答変数が欠損していない」サンプルを指定しています。</li>
+</ul>
+<p>同様の処理を処置群についても行います。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-data(iris)</code></pre>
+treatment &lt;- data[c(&quot;id&quot;, &quot;y1_2&quot;, &quot;y2_2&quot;, &quot;x1&quot;, &quot;x2&quot;)]
+names(treatment) &lt;- c(&quot;id&quot;, &quot;y1&quot;, &quot;y2&quot;, &quot;x1&quot;, &quot;x2&quot;)
+treatment &lt;- treatment[!is.na(treatment$y1) &amp; !is.na(treatment$y2),]
+treatment$t &lt;- 1
+paged_table(treatment)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["y1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["y2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"3","2":"5","3":"6","4":"3","5":"1","6":"1"},{"1":"4","2":"3","3":"4","4":"6","5":"1","6":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
 </div>
-<p><code>Environment</code>パネルに<code>iris</code>が表示されたかと思います。</p>
+</div>
+<p>最後に、両者を結合し、<code>6</code>を欠損値に入れ替えます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+data_reshaped &lt;- bind_rows(control, treatment)
+data_reshaped[data_reshaped$y2 == 6,]$y2 &lt;- NA
+data_reshaped[data_reshaped$x1 == 6,]$x1 &lt;- NA
+data_reshaped[data_reshaped$x2 == 6,]$x2 &lt;- NA
+paged_table(data_reshaped)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["y1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["y2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"1","4":"2","5":"NA","6":"0"},{"1":"2","2":"3","3":"4","4":"3","5":"4","6":"0"},{"1":"3","2":"5","3":"NA","4":"3","5":"1","6":"1"},{"1":"4","2":"3","3":"4","4":"NA","5":"1","6":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<h2 id="Loop">ループによる方法</h2>
+<p>この方法はグループの数は多くなるとめんどくさくなるという欠点があります。 各グループについては同様の処理を行うので、<code>for</code>ループによって簡略化することができます。</p>
+<p>アイデアとしては<code>i</code>回目の処理において<code>id</code>共変量と<code>y1_i</code>と<code>y2_i</code>を抜き出します。 文字列は<code>paste0()</code>という関数で結合することができます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+paste0(&quot;y1_&quot;, 1)</code></pre>
+<pre><code>
+[1] &quot;y1_1&quot;</code></pre>
+</div>
 <aside>
-ちなみにデモデータは<code>data()</code>で呼び出さなくても、存在するものとして利用することもできます。
+<code>paste()</code>は文字列の間に特定の記号を含める関数です。
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+paste(&quot;a&quot;, &quot;b&quot;, sep = &quot;/&quot;)</code></pre>
+<pre><code>
+[1] &quot;a/b&quot;</code></pre>
+</div>
+つまり、<code>paste0()</code>は<code>paste(..., sep = &quot;)</code>のラッパー関数です。
 </aside>
-<h3>データの概観</h3>
-<p>データをインポートした際にはどのようなデータなのかをチェックすることが大事です。 <code>Environment</code>パネルの<code>Data</code>の欄のオブジェクト名（ここでは<code>iris</code>）をクリックするとデータの中身を見ることができます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="figures/intro_r4.jpg" /><!-- --></p>
-</div>
-<p>同様のことは次のコマンドでも可能です。</p>
-<aside>
-頭文字が大文字である点に注意してください。
-</aside>
+<p>さて、ここでは<code>i</code>を<code>1</code>として選択する変数の名前を<code>sel_vars</code>というベクトルとして作成します。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-View(iris)</code></pre>
-</div>
-<p>必ずしも全てのデータを見る必要はない場合、<code>head()</code>によって冒頭の5つまでを見ることができます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-head(iris)</code></pre>
+i &lt;- 1
+sel_vars &lt;- c(&quot;id&quot;, paste0(c(&quot;y1_&quot;, &quot;y2_&quot;), i), &quot;x1&quot;, &quot;x2&quot;)
+sel_vars</code></pre>
 <pre><code>
-  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-1          5.1         3.5          1.4         0.2  setosa
-2          4.9         3.0          1.4         0.2  setosa
-3          4.7         3.2          1.3         0.2  setosa
-4          4.6         3.1          1.5         0.2  setosa
-5          5.0         3.6          1.4         0.2  setosa
-6          5.4         3.9          1.7         0.4  setosa</code></pre>
+[1] &quot;id&quot;   &quot;y1_1&quot; &quot;y2_1&quot; &quot;x1&quot;   &quot;x2&quot;  </code></pre>
 </div>
-<p>データフレームでは基本的に横方向（行方向）に観察単位（ここではひとつひとつのアヤメ）があり、縦方向（列方向）に変数（ここではがく片と花弁の長さと幅および品種）が並んでいます。</p>
-<p>各変数の記述統計を見たい場合は<code>summary()</code>を使います。</p>
-<aside>
-<code>summary()</code>は総称関数と呼ばれるもので入力するオブジェクトの種類によって挙動が変わります。
-</aside>
+<p>無事、必要な変数名を抜き出せています。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-summary(iris)</code></pre>
+temp &lt;- data[sel_vars]
+paged_table(temp)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["y1_1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["y2_1"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"1","4":"2","5":"6"},{"1":"2","2":"3","3":"4","4":"3","5":"4"},{"1":"3","2":"NA","3":"NA","4":"3","5":"1"},{"1":"4","2":"NA","3":"NA","4":"6","5":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<p>その他の処理は先ほどと変わらないので、まとめると次のようになります。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+data_reshaped &lt;- NULL
+for (i in 1:2) {
+  sel_vars &lt;- c(&quot;id&quot;, paste0(c(&quot;y1_&quot;, &quot;y2_&quot;), i), &quot;x1&quot;, &quot;x2&quot;)
+  temp &lt;- data[sel_vars]
+  names(temp) &lt;- c(&quot;id&quot;, &quot;y1&quot;, &quot;y2&quot;, &quot;x1&quot;, &quot;x2&quot;)
+  temp &lt;- temp[!is.na(temp$y1) &amp; !is.na(temp$y2),]
+  temp$t &lt;- i - 1
+  data_reshaped &lt;- bind_rows(data_reshaped, temp)
+}
+data_reshaped[data_reshaped$y2 == 6,]$y2 &lt;- NA
+data_reshaped[data_reshaped$x1 == 6,]$x1 &lt;- NA
+data_reshaped[data_reshaped$x2 == 6,]$x2 &lt;- NA
+paged_table(data_reshaped)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["y1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["y2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"1","4":"2","5":"NA","6":"0"},{"1":"2","2":"3","3":"4","4":"3","5":"4","6":"0"},{"1":"3","2":"5","3":"NA","4":"3","5":"1","6":"1"},{"1":"4","2":"3","3":"4","4":"NA","5":"1","6":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<ul>
+<li>処置変数はグループ番号から<code>1</code>を引いていますが本質的な問題ではありません。</li>
+</ul>
+<h2 id="Tidyverse">tidyverseな方法</h2>
+<p>実は<code>tidyverse</code>の<code>tidyr</code>を応用するとこのような処理をすることができます。 まずは、応答変数に関して<code>gather()</code>でロングにします。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+data_reshaped &lt;- data %&gt;% 
+  gather(key = t, value = y, -id, -x1, -x2)
+paged_table(data_reshaped)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[4],"type":["chr"],"align":["left"]},{"label":["y"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"6","4":"y1_1","5":"2"},{"1":"2","2":"3","3":"4","4":"y1_1","5":"3"},{"1":"3","2":"3","3":"1","4":"y1_1","5":"NA"},{"1":"4","2":"6","3":"1","4":"y1_1","5":"NA"},{"1":"1","2":"2","3":"6","4":"y2_1","5":"1"},{"1":"2","2":"3","3":"4","4":"y2_1","5":"4"},{"1":"3","2":"3","3":"1","4":"y2_1","5":"NA"},{"1":"4","2":"6","3":"1","4":"y2_1","5":"NA"},{"1":"1","2":"2","3":"6","4":"y1_2","5":"NA"},{"1":"2","2":"3","3":"4","4":"y1_2","5":"NA"},{"1":"3","2":"3","3":"1","4":"y1_2","5":"5"},{"1":"4","2":"6","3":"1","4":"y1_2","5":"3"},{"1":"1","2":"2","3":"6","4":"y2_2","5":"NA"},{"1":"2","2":"3","3":"4","4":"y2_2","5":"NA"},{"1":"3","2":"3","3":"1","4":"y2_2","5":"6"},{"1":"4","2":"6","3":"1","4":"y2_2","5":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<p>ポイントはこの段階で応答変数<code>y</code>が欠損値になっているのは、グループが異なる回答ということです。</p>
+<ul>
+<li>グループ1の被験者にとっての<code>y1_2</code>と<code>y2_2</code></li>
+<li>グループ2の被験者にとっての<code>y1_1</code>と<code>y2_1</code></li>
+</ul>
+<p>なので、指定した変数が欠損値であるサンプルを除外する関数<code>drop_na()</code>で<code>y</code>が欠損しているサンプルを除外します。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+data_reshaped &lt;- data_reshaped %&gt;% 
+  drop_na(y)
+paged_table(data_reshaped)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[4],"type":["chr"],"align":["left"]},{"label":["y"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"6","4":"y1_1","5":"2"},{"1":"2","2":"3","3":"4","4":"y1_1","5":"3"},{"1":"1","2":"2","3":"6","4":"y2_1","5":"1"},{"1":"2","2":"3","3":"4","4":"y2_1","5":"4"},{"1":"3","2":"3","3":"1","4":"y1_2","5":"5"},{"1":"4","2":"6","3":"1","4":"y1_2","5":"3"},{"1":"3","2":"3","3":"1","4":"y2_2","5":"6"},{"1":"4","2":"6","3":"1","4":"y2_2","5":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+<p>続いて、適当に名付けておいた<code>t</code>からグループの情報と応答変数の種類の情報を抜き出します。 <code>str_extraxt()</code>という関数は文字列からパターンに合致したものを抜き出します。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+str_extract(&quot;y1_1&quot;, &quot;y[0-9]&quot;)</code></pre>
 <pre><code>
-  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width          Species  
- Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100   setosa    :50  
- 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300   versicolor:50  
- Median :5.800   Median :3.000   Median :4.350   Median :1.300   virginica :50  
- Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199                  
- 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800                  
- Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500                  </code></pre>
+[1] &quot;y1&quot;</code></pre>
 </div>
-<p>数値データについては最小値、25%分位点、中央値、平均値、75%分位点、最大値が表示され、カテゴリカル変数についてはそれぞれの値の観察数が表示されます。</p>
-<p><code>str()</code>によって観察数（サンプルサイズ）、変数の数、変数の種類を確認することもできます。</p>
+<p>パターンのマッチングには正規表現というやや難しい表記が必要になります。 <code>y[0-9]</code>というのは<code>y</code>という文字と数字が1文字続く文字列という意味です。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-str(iris)</code></pre>
+str_extract(&quot;y1_1&quot;, &quot;_[0-9]&quot;)</code></pre>
 <pre><code>
-&#39;data.frame&#39;:   150 obs. of  5 variables:
- $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
- $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
- $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
- $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
- $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+[1] &quot;_1&quot;</code></pre>
 </div>
-<p>同様のことは、<code>Environment &gt; Data</code>のオブジェクト名の左の青い丸ボタンを押してもできます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="figures/intro_r5.jpg" /><!-- --></p>
-</div>
-<h3>データの要素へのアクセス</h3>
-<p>データを加工するためにはデータの要素へアクセスする必要があります。</p>
-<h4>変数へのアクセス</h4>
-<p>変数にアクセスする場合、<code>オブジェクト名$変数名</code>のように<code>$</code>を使います。</p>
-<aside>
-<code>$</code>で要素にアクセスするのはS3クラスと呼ばれるオブジェクトで、S4クラスの場合は<code>@</code>を使います。 現在はS3クラスが主流ですが次第にS4クラスが主流になると思われます。
-</aside>
+<p>同様にしてグループの情報も抜き出せますが、<code>_</code>が邪魔です。 文字列から数値を抜き出す関数は<code>parse_naumber()</code>になります。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-iris$Species</code></pre>
+str_extract(&quot;y1_1&quot;, &quot;_[0-9]&quot;) %&gt;% 
+  parse_number()</code></pre>
 <pre><code>
-  [1] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
-  [9] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [17] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [25] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [33] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [41] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [49] setosa     setosa     versicolor versicolor versicolor versicolor versicolor versicolor
- [57] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [65] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [73] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [81] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [89] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [97] versicolor versicolor versicolor versicolor virginica  virginica  virginica  virginica 
-[105] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[113] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[121] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[129] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[137] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[145] virginica  virginica  virginica  virginica  virginica  virginica 
-Levels: setosa versicolor virginica</code></pre>
+[1] 1</code></pre>
 </div>
-<p>ほぼ同じことが<code>iris[&quot;Species&quot;]</code>でもできます。</p>
-<aside>
-前者の場合はベクトル、後者の場合はデータフレームとして抜き出しています。
-</aside>
-<p>変数名ではなく列番号でも指定できます。</p>
+<p>これでグループと応答変数の種類の情報を抜き出す準備が整いました。 以下では<code>t</code>にグループ番号を<code>k</code>に応答変数の種類を入れる操作をします</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-iris[,5]</code></pre>
-<pre><code>
-  [1] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
-  [9] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [17] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [25] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [33] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [41] setosa     setosa     setosa     setosa     setosa     setosa     setosa     setosa    
- [49] setosa     setosa     versicolor versicolor versicolor versicolor versicolor versicolor
- [57] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [65] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [73] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [81] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [89] versicolor versicolor versicolor versicolor versicolor versicolor versicolor versicolor
- [97] versicolor versicolor versicolor versicolor virginica  virginica  virginica  virginica 
-[105] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[113] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[121] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[129] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[137] virginica  virginica  virginica  virginica  virginica  virginica  virginica  virginica 
-[145] virginica  virginica  virginica  virginica  virginica  virginica 
-Levels: setosa versicolor virginica</code></pre>
+data_reshaped &lt;- data_reshaped %&gt;% 
+  mutate(k = str_extract(t, &quot;y[0-9]&quot;),
+         t = str_extract(t, &quot;_[0-9]&quot;) %&gt;% 
+           parse_number())
+paged_table(data_reshaped)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["y"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["k"],"name":[6],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"2","3":"6","4":"1","5":"2","6":"y1"},{"1":"2","2":"3","3":"4","4":"1","5":"3","6":"y1"},{"1":"1","2":"2","3":"6","4":"1","5":"1","6":"y2"},{"1":"2","2":"3","3":"4","4":"1","5":"4","6":"y2"},{"1":"3","2":"3","3":"1","4":"2","5":"5","6":"y1"},{"1":"4","2":"6","3":"1","4":"2","5":"3","6":"y1"},{"1":"3","2":"3","3":"1","4":"2","5":"6","6":"y2"},{"1":"4","2":"6","3":"1","4":"2","5":"4","6":"y2"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
 </div>
-<p>列番号なので、カンマの右側で指定している点に注意してください。</p>
-<p>マイナスを使うと、それ以外を指定します。</p>
+</div>
+<p>続いて、<code>k</code>の中身<code>y1</code>と<code>y2</code>を変数名に戻すために<code>spread()</code>を使います。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-head(iris[,-5])</code></pre>
-<pre><code>
-  Sepal.Length Sepal.Width Petal.Length Petal.Width
-1          5.1         3.5          1.4         0.2
-2          4.9         3.0          1.4         0.2
-3          4.7         3.2          1.3         0.2
-4          4.6         3.1          1.5         0.2
-5          5.0         3.6          1.4         0.2
-6          5.4         3.9          1.7         0.4</code></pre>
+data_reshaped &lt;- data_reshaped %&gt;% 
+  spread(key = k, value = y)
+paged_table(data_reshaped)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["y1"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["y2"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"6","4":"1","5":"2","6":"1"},{"1":"2","2":"3","3":"4","4":"1","5":"3","6":"4"},{"1":"3","2":"3","3":"1","4":"2","5":"5","6":"6"},{"1":"4","2":"6","3":"1","4":"2","5":"3","6":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
 </div>
-<p>ベクトルで複数の変数を指定することもできます。</p>
+</div>
+<p>最後に欠損値を<code>na_if()</code>で代入しておきます。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-head(iris[,c(1,3)])</code></pre>
-<pre><code>
-  Sepal.Length Petal.Length
-1          5.1          1.4
-2          4.9          1.4
-3          4.7          1.3
-4          4.6          1.5
-5          5.0          1.4
-6          5.4          1.7</code></pre>
+data_reshaped &lt;- data_reshaped %&gt;% 
+  mutate(y2 = na_if(y2, 6),
+         x1 = na_if(x1, 6),
+         x2 = na_if(x2, 6))
+paged_table(data_reshaped)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["y1"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["y2"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"NA","4":"1","5":"2","6":"1"},{"1":"2","2":"3","3":"4","4":"1","5":"3","6":"4"},{"1":"3","2":"3","3":"1","4":"2","5":"5","6":"NA"},{"1":"4","2":"NA","3":"1","4":"2","5":"3","6":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
 </div>
-<h4>観察へのアクセス</h4>
-<p>特定の観察にのみアクセスすることもできます。</p>
+</div>
+<p>以上をパイプでまとめると次のようになります。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-iris[1,]</code></pre>
-<pre><code>
-  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-1          5.1         3.5          1.4         0.2  setosa</code></pre>
+data_reshaped &lt;- data %&gt;% 
+  gather(key = t, value = y, -id, -x1, -x2) %&gt;% 
+  drop_na(y) %&gt;% 
+  mutate(k = str_extract(t, &quot;y[0-9]&quot;),
+         t = str_extract(t, &quot;_[0-9]&quot;) %&gt;% 
+           parse_number()) %&gt;% 
+  spread(key = k, value = y) %&gt;% 
+  mutate(y2 = na_if(y2, 6),
+         x1 = na_if(x1, 6),
+         x2 = na_if(x2, 6))
+paged_table(data_reshaped)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["y1"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["y2"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"NA","4":"1","5":"2","6":"1"},{"1":"2","2":"3","3":"4","4":"1","5":"3","6":"4"},{"1":"3","2":"3","3":"1","4":"2","5":"5","6":"NA"},{"1":"4","2":"NA","3":"1","4":"2","5":"3","6":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
 </div>
-<p>これは1番目の観察にアクセスしていますが、行番号で指定しているので、カンマの左側にあります。</p>
-<p>あまり意味はないですが、行と列を同時に指定することもできます。</p>
+</div>
+<p>ループを用いるか、<code>tidyverse</code>を用いるかにかかわらず重要なのは変数名の設定です。</p>
+<ul>
+<li>応答変数と共変量をグループごとに定型的な変数名としておくことで処理が楽になります。</li>
+</ul>
+<h2 id="Concl">おまけ</h2>
+<p>5件法の場合、回答上では</p>
+<ol type="1">
+<li>賛成</li>
+<li>やや賛成</li>
+<li>どちらとも言えない</li>
+<li>やや反対</li>
+<li>反対</li>
+</ol>
+<p>となっていることが多いですが、分析上では</p>
+<ol type="1">
+<li>反対</li>
+<li>やや反対</li>
+<li>どちらとも言えない</li>
+<li>やや賛成</li>
+<li>賛成</li>
+</ol>
+<p>としたいのが人情です。</p>
+<p>こういうときは、<code>6</code>（ないし<code>5</code>）から引いてあげればよいです。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-iris[1,1]</code></pre>
-<pre><code>
-[1] 5.1</code></pre>
+data_reshaped %&gt;% 
+  mutate(y1 = 5 - y1,
+         y2 = 5 - y2) %&gt;% 
+  paged_table()</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["x1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["x2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["t"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["y1"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["y2"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2","3":"NA","4":"1","5":"3","6":"4"},{"1":"2","2":"3","3":"4","4":"1","5":"2","6":"1"},{"1":"3","2":"3","3":"1","4":"2","5":"0","6":"NA"},{"1":"4","2":"NA","3":"1","4":"2","5":"2","6":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
 </div>
-<p>実際には特定の条件に合致した観察のみを抜き出すことが多いです。 例えば、<code>Species</code>が<code>versicolor</code>であるものだけを抜き出す場合には</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-head(iris[iris$Species == &quot;versicolor&quot;,])</code></pre>
-<pre><code>
-   Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
-51          7.0         3.2          4.7         1.4 versicolor
-52          6.4         3.2          4.5         1.5 versicolor
-53          6.9         3.1          4.9         1.5 versicolor
-54          5.5         2.3          4.0         1.3 versicolor
-55          6.5         2.8          4.6         1.5 versicolor
-56          5.7         2.8          4.5         1.3 versicolor</code></pre>
 </div>
-<p>とします。</p>
-<p>これは何をしているのでしょうか？</p>
-<p>行を選択しているのは<code>iris$Species == &quot;versicolor&quot;</code>ですが、左辺は先程見たように品種を抜き出しています。 そして、<code>==</code>は右辺と左辺が一致しているかどうかを判定する記号になります。 実際に、これだけを実行してみると</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-iris$Species == &quot;versicolor&quot;</code></pre>
-<pre><code>
-  [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
- [16] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
- [31] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
- [46] FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
- [61]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
- [76]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
- [91]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE
-[106] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-[121] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-[136] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</code></pre>
-</div>
-<p>となります。 つまり、<code>iris$Species == &quot;versicolor&quot;</code>は<code>iris</code>データの<code>Species</code>のなかで<code>versicolor</code>と一致するものを<code>TURE</code>、一致しないものを<code>FALSE</code>としており、<code>TRUE</code>だけの列を指定することで特定の観察だけにアクセスしてるということになります。</p>
-<h3>データの加工</h3>
-<p>アクセスした要素を上書きすることでデータを加工することができます。 例えば、<code>Sepal.Length</code>を10倍にするには以下のように行います。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-iris$Sepal.Length &lt;- 10*iris$Sepal.Length
-head(iris)</code></pre>
-<pre><code>
-  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-1           51         3.5          1.4         0.2  setosa
-2           49         3.0          1.4         0.2  setosa
-3           47         3.2          1.3         0.2  setosa
-4           46         3.1          1.5         0.2  setosa
-5           50         3.6          1.4         0.2  setosa
-6           54         3.9          1.7         0.4  setosa</code></pre>
-</div>
-<p><code>$</code>以降を新しい変数名とすることで変数を新たに加えることができます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-iris$Petal.LengthXWidth &lt;- iris$Petal.Length * iris$Petal.Width
-head(iris)</code></pre>
-<pre><code>
-  Sepal.Length Sepal.Width Petal.Length Petal.Width Species Petal.LengthXWidth
-1           51         3.5          1.4         0.2  setosa               0.28
-2           49         3.0          1.4         0.2  setosa               0.28
-3           47         3.2          1.3         0.2  setosa               0.26
-4           46         3.1          1.5         0.2  setosa               0.30
-5           50         3.6          1.4         0.2  setosa               0.28
-6           54         3.9          1.7         0.4  setosa               0.68</code></pre>
-</div>
-<p>もちろん、列を指定することで特定の条件に合致したサンプルの変数だけを加工することもできます。 例えば、<code>stosa</code>の<code>Sepal.Length</code>だけをもとに戻します。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-iris[iris$Species == &quot;setosa&quot;,]$Sepal.Length &lt;- 
-  iris[iris$Species == &quot;setosa&quot;,]$Sepal.Length/10
-head(iris[iris$Species == &quot;setosa&quot;,])</code></pre>
-<pre><code>
-  Sepal.Length Sepal.Width Petal.Length Petal.Width Species Petal.LengthXWidth
-1          5.1         3.5          1.4         0.2  setosa               0.28
-2          4.9         3.0          1.4         0.2  setosa               0.28
-3          4.7         3.2          1.3         0.2  setosa               0.26
-4          4.6         3.1          1.5         0.2  setosa               0.30
-5          5.0         3.6          1.4         0.2  setosa               0.28
-6          5.4         3.9          1.7         0.4  setosa               0.68</code></pre>
-<pre class="r"><code>
-head(iris[iris$Species == &quot;versicolor&quot;,])</code></pre>
-<pre><code>
-   Sepal.Length Sepal.Width Petal.Length Petal.Width    Species Petal.LengthXWidth
-51           70         3.2          4.7         1.4 versicolor               6.58
-52           64         3.2          4.5         1.5 versicolor               6.75
-53           69         3.1          4.9         1.5 versicolor               7.35
-54           55         2.3          4.0         1.3 versicolor               5.20
-55           65         2.8          4.6         1.5 versicolor               6.90
-56           57         2.8          4.5         1.3 versicolor               5.85</code></pre>
-</div>
-<h2 id="Appendix">おまけ</h2>
-<p>Rで困ったときにすることは、まずググることです。 特に英語でググるといいでしょう。 エラーメッセージが出たときはそれをそのままコピペして検索します。</p>
-<p>他に、Rの情報を知りたいけど余計な情報が混ざっているときは<a href="http://seekr.jp/">seekR</a>で検索します。</p>
-<p><a href="https://stackoverflow.com/">Stack Overflow</a>はRに限らずPCやプログラミングについて質問する掲示板です。</p>
-<p><a href="https://github.com/tokyor/r-wakalang">r-wakalang</a>というSlackもあるそうです。</p>
-<p><a href="https://qiita.com/">Qiita</a>は様々なプログラミングに関する情報を共有するサイトです。</p>
-<p>関数の使い方が分からないときはヘルプを見ましょう。 例えば<code>mean()</code>のヘルプを見たいときは</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-?mean</code></pre>
-</div>
-<p>もしくは</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-help(mean)</code></pre>
-</div>
-<p>でヘルプを表示させることができます。</p>
-<p>同じものは<a href="https://cran.r-project.org/">CRAN</a>にあるパッケージのドキュメントにもあります。</p>
-<p>パッケージを作成した研究者はしばしば<a href="https://www.jstatsoft.org/index">Journal of Statistical Software</a>に使い方に関するペーパーを載せているのでそれも参考になります。</p>
-<aside>
-JCRによれば2017年のJSSのIFは22.7らしいです。
-</aside>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">
     <span class="disqus-comments">
       <i class="fas fa-comments"></i>
       &nbsp;
-      <span class="disqus-comment-count" data-disqus-identifier="posts/2019-04-04-intro-r/">Comment on this article</span>
+      <span class="disqus-comment-count" data-disqus-identifier="posts/2019-04-09-reshape-qualtrics/">Comment on this article</span>
     </span>
     <span class="article-sharing">
       Share: &nbsp;
-      <a href="https://twitter.com/share?text=R%E6%93%8D%E4%BD%9C%E3%81%AE%E5%9F%BA%E6%9C%AC&amp;url=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-04-04-intro-r%2F">
+      <a href="https://twitter.com/share?text=%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E6%95%B4%E5%BD%A2%EF%BC%9AQualtrics&amp;url=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-04-09-reshape-qualtrics%2F">
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-04-04-intro-r%2F">
+      <a href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-04-09-reshape-qualtrics%2F">
         <i class="fab fa-facebook"></i>
       </a>
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-04-04-intro-r%2F&amp;title=R%E6%93%8D%E4%BD%9C%E3%81%AE%E5%9F%BA%E6%9C%AC">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-04-09-reshape-qualtrics%2F&amp;title=%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E6%95%B4%E5%BD%A2%EF%BC%9AQualtrics">
         <i class="fab fa-linkedin"></i>
       </a>
     </span>
@@ -1785,8 +1685,8 @@ JCRによれば2017年のJSSのIFは22.7らしいです。
   <div id="disqus_thread" class="hidden"></div>
   <script>
 var disqus_config = function () {
-  this.page.url = 'https://shohei-doi.github.io/notes/posts/2019-04-04-intro-r/';
-  this.page.identifier = 'posts/2019-04-04-intro-r/';
+  this.page.url = 'https://shohei-doi.github.io/notes/posts/2019-04-09-reshape-qualtrics/';
+  this.page.identifier = 'posts/2019-04-09-reshape-qualtrics/';
 };
 (function() {
   var d = document, s = d.createElement('script');
