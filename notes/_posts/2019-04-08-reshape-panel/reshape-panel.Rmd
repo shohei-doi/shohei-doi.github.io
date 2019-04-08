@@ -358,7 +358,7 @@ paged_table(data)
 もっと欲張れば、これも全てパイプで繋ぐことができます。
 
 ```{r}
-data <- read_csv("data/wb_gdp_pc.csv", skip = 4)%>% 
+data <- read_csv("data/wb_gdp_pc.csv", skip = 4) %>% 
   select(-"Country Code", -"Indicator Name", -"Indicator Code", -X64)%>% 
   rename(name = "Country Name") %>% 
   gather(key = year, value = gdp_pc, -name) %>% 

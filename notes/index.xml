@@ -9,6 +9,14 @@
     <generator>Distill</generator>
     <lastBuildDate>Tue, 09 Apr 2019 00:00:00 +0000</lastBuildDate>
     <item>
+      <title>データの結合</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-08-data-combine</link>
+      <description>Rで複数のデータを行方向および列方向に結合する方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-08-data-combine</guid>
+      <pubDate>Tue, 09 Apr 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>データの整形：Qualtrics</title>
       <dc:creator>土井　翔平</dc:creator>
       <link>https://shohei-doi.github.io/notes/posts/2019-04-09-reshape-qualtrics</link>
