@@ -19,6 +19,25 @@
     "last_modified": "2019-04-08T14:25:35+09:00"
   },
   {
+    "path": "posts/2019-04-08-data-summary/",
+    "title": "データの要約",
+    "description": "Rでデータの含まれる変数を要約する方法について説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-09",
+    "categories": [
+      "R",
+      "data handling",
+      "teaching materials"
+    ],
+    "preview": {},
+    "last_modified": "2019-04-08T15:41:58+09:00"
+  },
+  {
     "path": "posts/2019-04-09-reshape-qualtrics/",
     "title": "データの整形：Qualtrics",
     "description": "ワイド形式とロング形式の変換方法を応用してQualtricsのデータを整形する方法を説明します。",

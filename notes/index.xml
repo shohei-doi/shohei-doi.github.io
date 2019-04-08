@@ -17,6 +17,14 @@
       <pubDate>Tue, 09 Apr 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>データの要約</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-08-data-summary</link>
+      <description>Rでデータの含まれる変数を要約する方法について説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-08-data-summary</guid>
+      <pubDate>Tue, 09 Apr 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>データの整形：Qualtrics</title>
       <dc:creator>土井　翔平</dc:creator>
       <link>https://shohei-doi.github.io/notes/posts/2019-04-09-reshape-qualtrics</link>
