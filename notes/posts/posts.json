@@ -1,6 +1,6 @@
 [
   {
-    "path": "posts/2019-04-08-data-combine/",
+    "path": "posts/2019-04-10-data-combine/",
     "title": "データの結合",
     "description": "Rで複数のデータを行方向および列方向に結合する方法を説明します。",
     "author": [
@@ -9,17 +9,17 @@
         "url": {}
       }
     ],
-    "date": "2019-04-09",
+    "date": "2019-04-10",
     "categories": [
       "R",
       "data handling",
       "teaching materials"
     ],
     "preview": {},
-    "last_modified": "2019-04-08T14:25:35+09:00"
+    "last_modified": "2019-04-08T15:54:30+09:00"
   },
   {
-    "path": "posts/2019-04-08-data-summary/",
+    "path": "posts/2019-04-10-data-summary/",
     "title": "データの要約",
     "description": "Rでデータの含まれる変数を要約する方法について説明します。",
     "author": [
@@ -28,14 +28,14 @@
         "url": {}
       }
     ],
-    "date": "2019-04-09",
+    "date": "2019-04-10",
     "categories": [
       "R",
       "data handling",
       "teaching materials"
     ],
     "preview": {},
-    "last_modified": "2019-04-08T15:51:42+09:00"
+    "last_modified": "2019-04-08T15:54:27+09:00"
   },
   {
     "path": "posts/2019-04-09-reshape-qualtrics/",
