@@ -52,6 +52,8 @@ gdp_pc <- read_csv("data/wb_gdp_pc.csv", skip = 4) %>%
   mutate(year = as.numeric(year))
 ```
 
+### ユニークなベクトル
+
 そのようなときは`unique()`という関数を使うとユニークな（重複を除いた）要素を抽出します。
 
 ```{r}
@@ -65,6 +67,8 @@ unique(gdp_pc$year)
 length(unique(gdp_pc$name))
 length(unique(gdp_pc$year))
 ```
+
+### ユニークなデータセット
 
 データセットに対してユニークなサンプルを抽出するには`unique()`あるいは`distinct()`を使います。
 例えば、間違って同じサンプルが含まれていたとします。
@@ -80,7 +84,6 @@ paged_table(gdp_pc)
 paged_table(gdp_pc[duplicated(gdp_pc),])
 ```
 
-
 `distinct()`を使うと重複していたサンプルが削除されます。
 
 ```{r}
@@ -90,7 +93,9 @@ paged_table(gdp_pc)
 
 - 一般的に言って、サンプルが重複しているのはどこかでデータ処理に失敗していることが多いので、なぜ重複しているのかを明らかにせずに除外するのは危険です。
 
-## 度数分布 {#Freq}
+## 頻度 {#Freq}
+
+### 度数分布
 
 離散変数やカテゴリカル変数に対して、それぞれの値を取るサンプルの数を求めることができます。
 例えば、各年に何カ国がデータに収録されているかを知りたい場合は次のようにします。
@@ -98,6 +103,8 @@ paged_table(gdp_pc)
 ```{r}
 table(gdp_pc[!is.na(gdp_pc$gdp_pc),]$year)
 ```
+
+### クロス表
 
 `table()`によってクロス表を作成することも可能です。
 [Triangulating Peaceデータ](data/triangle.csv)において各年に紛争が生じたダイアッド数と生じなかったダイアッド数を求めてみます。
@@ -166,7 +173,10 @@ sd(gdp_pc$gdp_pc, na.rm = TRUE)
 
 ## グループごとの要約 {#Group}
 
-`tidyverse`の`dplyr`を使うとグループごとの要約が簡単に行えます。
+`tidyverse`の`dplyr`を使うとグループごとの要約が簡単に行えます
+
+### 記述統計
+。
 例えば、各年の一人あたりGDPの平均値と中央値を求めたいとします。
 
 ```{r}
@@ -229,7 +239,9 @@ triangle %>%
 残念ながら`summary()`を無理やりデータフレームにしてもいい感じにはなりません。
 
 ```{r}
-data.frame(summary(gdp_pc))
+summary(gdp_pc) %>% 
+  as.data.frame() %>% 
+  paged_table()
 ```
 
 ### ループを使用する方法
@@ -262,6 +274,19 @@ paged_table(desc_data)
 
 - `triangle[i]`ではベクトルにならないのが面倒くさいです。
 
+### sapplyを使用する方法
+
+`sapply()`は各要素に同じ処理を行う関数です。
+
+```{r}
+temp <- triangle %>% 
+  select(-statea, -stateb, -year, -dyadid)
+desc_data <- tibble(var = names(temp),
+                    mean = sapply(temp, mean, na.rm = TRUE),
+                    median = sapply(temp, median, na.rm = TRUE))
+paged_table(desc_data)
+```
+
 ### tidyverseな方法
 
 `tidyverse`によるグループかと要約、そしてワイドとロングの変換を応用すると次のように記述統計を求めることができます。
@@ -271,8 +296,8 @@ triangle %>%
   select(-statea, -stateb, -year, -dyadid) %>% 
   gather(key = var, value = val, factor_key = TRUE) %>% 
   group_by(var) %>% 
-  summarise(mean = mean(val),
-            meadian = median(val)) %>% 
+  summarise(mean = mean(val, na.rm = TRUE),
+            meadian = median(val, na.rm = TRUE)) %>% 
   paged_table()
 ```
 

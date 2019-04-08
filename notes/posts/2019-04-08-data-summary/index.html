@@ -1326,7 +1326,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <ul>
 <li><a href="#Intro">はじめに</a></li>
 <li><a href="#Unique">ユニークな要素</a></li>
-<li><a href="#Freq">度数分布</a></li>
+<li><a href="#Freq">頻度</a></li>
 <li><a href="#Desc">記述統計</a></li>
 <li><a href="#Group">グループごとの要約</a></li>
 <li><a href="#Multvariate">多変量の記述統計*</a></li>
@@ -1378,6 +1378,7 @@ cols(
 <pre><code>
 See spec(...) for full column specifications.</code></pre>
 </div>
+<h3>ユニークなベクトル</h3>
 <p>そのようなときは<code>unique()</code>という関数を使うとユニークな（重複を除いた）要素を抽出します。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
@@ -1666,6 +1667,7 @@ length(unique(gdp_pc$year))</code></pre>
 <pre><code>
 [1] 59</code></pre>
 </div>
+<h3>ユニークなデータセット</h3>
 <p>データセットに対してユニークなサンプルを抽出するには<code>unique()</code>あるいは<code>distinct()</code>を使います。 例えば、間違って同じサンプルが含まれていたとします。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
@@ -1701,7 +1703,8 @@ paged_table(gdp_pc)</code></pre>
 <ul>
 <li>一般的に言って、サンプルが重複しているのはどこかでデータ処理に失敗していることが多いので、なぜ重複しているのかを明らかにせずに除外するのは危険です。</li>
 </ul>
-<h2 id="Freq">度数分布</h2>
+<h2 id="Freq">頻度</h2>
+<h3>度数分布</h3>
 <p>離散変数やカテゴリカル変数に対して、それぞれの値を取るサンプルの数を求めることができます。 例えば、各年に何カ国がデータに収録されているかを知りたい場合は次のようにします。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
@@ -1714,6 +1717,7 @@ table(gdp_pc[!is.na(gdp_pc$gdp_pc),]$year)</code></pre>
 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 
  245  244  249  249  250  251  251  251  249  249  249  250  249  250  249  248  246  240 </code></pre>
 </div>
+<h3>クロス表</h3>
 <p><code>table()</code>によってクロス表を作成することも可能です。 <a href="data/triangle.csv">Triangulating Peaceデータ</a>において各年に紛争が生じたダイアッド数と生じなかったダイアッド数を求めてみます。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
@@ -1879,7 +1883,9 @@ sd(gdp_pc$gdp_pc, na.rm = TRUE)</code></pre>
 [1] 14723.77</code></pre>
 </div>
 <h2 id="Group">グループごとの要約</h2>
-<p><code>tidyverse</code>の<code>dplyr</code>を使うとグループごとの要約が簡単に行えます。 例えば、各年の一人あたりGDPの平均値と中央値を求めたいとします。</p>
+<p><code>tidyverse</code>の<code>dplyr</code>を使うとグループごとの要約が簡単に行えます</p>
+<h3>記述統計</h3>
+<p>。 例えば、各年の一人あたりGDPの平均値と中央値を求めたいとします。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 gdp_pc %&gt;% 
@@ -1899,7 +1905,7 @@ gdp_pc %&gt;%
 <li><code>group_by</code>によってグループ化する変数を指定する。</li>
 <li><code>summarise()</code>の中で要約する変数を定義する。</li>
 </ol>
-<h3>度数分布</h3>
+<h3 id="-1">度数分布</h3>
 <p>これを応用すると度数分布を作成することもできます。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
@@ -1918,7 +1924,7 @@ gdp_pc %&gt;%
 <ul>
 <li><code>n()</code>はサンプルサイズを計算する関数です。</li>
 </ul>
-<h3>クロス表</h3>
+<h3 id="-1">クロス表</h3>
 <p>同様にしてクロス表も作成できます。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
@@ -1955,30 +1961,14 @@ triangle %&gt;%
 <p>ここまでは単一の変数の要約や記述統計を行ってきましたが一般的に多変量の記述統計を求めたくなるのが人情です。 残念ながら<code>summary()</code>を無理やりデータフレームにしてもいい感じにはなりません。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-data.frame(summary(gdp_pc))</code></pre>
-<pre><code>
-   Var1       Var2                Freq
-1             name  Length:15576      
-2             name  Class :character  
-3             name  Mode  :character  
-4             name                &lt;NA&gt;
-5             name                &lt;NA&gt;
-6             name                &lt;NA&gt;
-7             name                &lt;NA&gt;
-8             year      Min.   :1960  
-9             year      1st Qu.:1974  
-10            year      Median :1989  
-11            year      Mean   :1989  
-12            year      3rd Qu.:2004  
-13            year      Max.   :2018  
-14            year                &lt;NA&gt;
-15          gdp_pc Min.   :    34.74  
-16          gdp_pc 1st Qu.:   488.39  
-17          gdp_pc Median :  1679.78  
-18          gdp_pc Mean   :  7305.29  
-19          gdp_pc 3rd Qu.:  6668.29  
-20          gdp_pc Max.   :185152.53  
-21          gdp_pc      NA&#39;s   :3752  </code></pre>
+summary(gdp_pc) %&gt;% 
+  as.data.frame() %&gt;% 
+  paged_table()</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Var1"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["Var2"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["Freq"],"name":[3],"type":["fctr"],"align":["left"]}],"data":[{"1":"","2":"name","3":"Length:15576"},{"1":"","2":"name","3":"Class :character"},{"1":"","2":"name","3":"Mode  :character"},{"1":"","2":"name","3":"NA"},{"1":"","2":"name","3":"NA"},{"1":"","2":"name","3":"NA"},{"1":"","2":"name","3":"NA"},{"1":"","2":"year","3":"Min.   :1960"},{"1":"","2":"year","3":"1st Qu.:1974"},{"1":"","2":"year","3":"Median :1989"},{"1":"","2":"year","3":"Mean   :1989"},{"1":"","2":"year","3":"3rd Qu.:2004"},{"1":"","2":"year","3":"Max.   :2018"},{"1":"","2":"year","3":"NA"},{"1":"","2":"gdp_pc","3":"Min.   :    34.74"},{"1":"","2":"gdp_pc","3":"1st Qu.:   488.39"},{"1":"","2":"gdp_pc","3":"Median :  1679.78"},{"1":"","2":"gdp_pc","3":"Mean   :  7305.29"},{"1":"","2":"gdp_pc","3":"3rd Qu.:  6668.29"},{"1":"","2":"gdp_pc","3":"Max.   :185152.53"},{"1":"","2":"gdp_pc","3":"NA's   :3752"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 </div>
 <h3>ループを使用する方法</h3>
 <p>単純な方法はループで処理することです。 例えば、<code>triangle</code>の<code>state1</code>、<code>stateb</code>、<code>year</code>, <code>dyad_id</code>以外の記述統計を取りたいとします。 まずは記述統計を取りたい変数名を抽出します。</p>
@@ -2014,6 +2004,22 @@ paged_table(desc_data)</code></pre>
 <ul>
 <li><code>triangle[i]</code>ではベクトルにならないのが面倒くさいです。</li>
 </ul>
+<h3 id="sapply">sapplyを使用する方法</h3>
+<p><code>sapply()</code>は各要素に同じ処理を行う関数です。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+temp &lt;- triangle %&gt;% 
+  select(-statea, -stateb, -year, -dyadid)
+desc_data &lt;- tibble(var = names(temp),
+                    mean = sapply(temp, mean, na.rm = TRUE),
+                    median = sapply(temp, median, na.rm = TRUE))
+paged_table(desc_data)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["var"],"name":[1],"type":["chr"],"align":["left"]},{"label":["mean"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["median"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"dependa","2":"0.006849134","3":"0.0006987362"},{"1":"dependb","2":"0.017575924","3":"0.0019762777"},{"1":"demauta","2":"2.538378838","3":"6.0000000000"},{"1":"demautb","2":"-1.164816482","3":"-5.0000000000"},{"1":"allies","2":"0.215496550","3":"0.0000000000"},{"1":"dispute1","2":"0.047004700","3":"0.0000000000"},{"1":"logdstab","2":"7.625547844","3":"8.0422439575"},{"1":"lcaprat2","2":"2.978975701","3":"2.8307049274"},{"1":"smigoabi","2":"25.333733373","3":"22.0000000000"},{"1":"opena","2":"0.308274463","3":"0.2346114665"},{"1":"openb","2":"0.323658962","3":"0.2439305782"},{"1":"minrpwrs","2":"0.235598560","3":"0.0000000000"},{"1":"noncontg","2":"0.630688069","3":"1.0000000000"},{"1":"smldmat","2":"-3.311056106","3":"-7.0000000000"},{"1":"smldep","2":"0.002328343","3":"0.0002466768"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
 <h3 id="tidyverse">tidyverseな方法</h3>
 <p><code>tidyverse</code>によるグループかと要約、そしてワイドとロングの変換を応用すると次のように記述統計を求めることができます。</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2022,12 +2028,12 @@ triangle %&gt;%
   select(-statea, -stateb, -year, -dyadid) %&gt;% 
   gather(key = var, value = val, factor_key = TRUE) %&gt;% 
   group_by(var) %&gt;% 
-  summarise(mean = mean(val),
-            meadian = median(val)) %&gt;% 
+  summarise(mean = mean(val, na.rm = TRUE),
+            meadian = median(val, na.rm = TRUE)) %&gt;% 
   paged_table()</code></pre>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["var"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["mean"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["meadian"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"dependa","2":"0.006849134","3":"0.0006987362"},{"1":"dependb","2":"0.017575924","3":"0.0019762777"},{"1":"demauta","2":"2.538378838","3":"6.0000000000"},{"1":"demautb","2":"-1.164816482","3":"-5.0000000000"},{"1":"allies","2":"0.215496550","3":"0.0000000000"},{"1":"dispute1","2":"0.047004700","3":"0.0000000000"},{"1":"logdstab","2":"7.625547844","3":"8.0422439575"},{"1":"lcaprat2","2":"2.978975701","3":"2.8307049274"},{"1":"smigoabi","2":"25.333733373","3":"22.0000000000"},{"1":"opena","2":"NA","3":"NA"},{"1":"openb","2":"NA","3":"NA"},{"1":"minrpwrs","2":"0.235598560","3":"0.0000000000"},{"1":"noncontg","2":"0.630688069","3":"1.0000000000"},{"1":"smldmat","2":"-3.311056106","3":"-7.0000000000"},{"1":"smldep","2":"0.002328343","3":"0.0002466768"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["var"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["mean"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["meadian"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"dependa","2":"0.006849134","3":"0.0006987362"},{"1":"dependb","2":"0.017575924","3":"0.0019762777"},{"1":"demauta","2":"2.538378838","3":"6.0000000000"},{"1":"demautb","2":"-1.164816482","3":"-5.0000000000"},{"1":"allies","2":"0.215496550","3":"0.0000000000"},{"1":"dispute1","2":"0.047004700","3":"0.0000000000"},{"1":"logdstab","2":"7.625547844","3":"8.0422439575"},{"1":"lcaprat2","2":"2.978975701","3":"2.8307049274"},{"1":"smigoabi","2":"25.333733373","3":"22.0000000000"},{"1":"opena","2":"0.308274463","3":"0.2346114665"},{"1":"openb","2":"0.323658962","3":"0.2439305782"},{"1":"minrpwrs","2":"0.235598560","3":"0.0000000000"},{"1":"noncontg","2":"0.630688069","3":"1.0000000000"},{"1":"smldmat","2":"-3.311056106","3":"-7.0000000000"},{"1":"smldep","2":"0.002328343","3":"0.0002466768"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
