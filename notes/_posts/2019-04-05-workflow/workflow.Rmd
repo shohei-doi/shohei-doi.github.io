@@ -211,8 +211,7 @@ knitr::include_graphics("figures/workflow7.jpg")
 1+2 #ここは無視されます
 ```
 
-
-## まとめ {#Conclぢ}
+## まとめ {#Concl}
 
 ここまでをまとめると、
 

@@ -1,0 +1,87 @@
+1554709313003	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.HBZDQC3z9Tef"
+1554709313353	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1554709313354	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1554709313354	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1554709314263	Marionette	INFO	Listening on port 41223
+1554709314307	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 14742, Gecko_IOThread] WARNING: pipe error (170): Connection reset by peer: file /build/firefox-QFhmDU/firefox-66.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+JavaScript warning: resource://devtools/client/shared/demangle.js, line 0: Successfully compiled asm.js code (total compilation time 49ms)
+console.warn: "Got an unexpected frameLoad in the inspector, please file a bug on bugzilla.mozilla.org!"
+console.trace: 
+resource://devtools/shared/fronts/inspector.js 346 getMutations/<
+console.error: "Error while calling actor 'layout's method 'getGrids'" "node is null"
+console.error: "getGrids@resource://devtools/server/actors/layout.js:455:11\ngetGrids@resource://devtools/server/actors/layout.js:460:38\nhandler@resource://devtools/shared/protocol.js:1206:21\nonPacket@resource://devtools/server/main.js:1286:15\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:5\n"
+1554709973490	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.ZPJVoebxx0UC"
+1554709973821	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1554709973821	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1554709973821	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1554709974707	Marionette	INFO	Listening on port 46337
+1554709974795	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 14742, Gecko_IOThread] WARNING: pipe error (81): Connection reset by peer: file /build/firefox-QFhmDU/firefox-66.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+[Parent 14742, Gecko_IOThread] WARNING: pipe error (93): Connection reset by peer: file /build/firefox-QFhmDU/firefox-66.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+1554709976967	Marionette	INFO	Stopped listening on port 41223
+console.error: "Error while calling actor 'layout's method 'getGrids'" "node is null"
+console.error: "getGrids@resource://devtools/server/actors/layout.js:455:11\ngetGrids@resource://devtools/server/actors/layout.js:460:38\nhandler@resource://devtools/shared/protocol.js:1206:21\nonPacket@resource://devtools/server/main.js:1286:15\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:5\n"
+1554710323771	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.hjObk0nViw2s"
+1554710324133	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1554710324133	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1554710324133	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1554710325036	Marionette	INFO	Listening on port 35089
+1554710325077	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 16359, Gecko_IOThread] WARNING: pipe error (84): Connection reset by peer: file /build/firefox-QFhmDU/firefox-66.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+1554710327822	Marionette	INFO	Stopped listening on port 46337
+[Parent 16359, Gecko_IOThread] WARNING: pipe error (81): Connection reset by peer: file /build/firefox-QFhmDU/firefox-66.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+[Parent 17163, Gecko_IOThread] WARNING: pipe error (81): Connection reset by peer: file /build/firefox-QFhmDU/firefox-66.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+[Parent 17163, Gecko_IOThread] WARNING: pipe error (84): Connection reset by peer: file /build/firefox-QFhmDU/firefox-66.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+1554710374433	Marionette	INFO	Stopped listening on port 35089
+1554710375852	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.0GbSq2CB6zs8"
+1554710376209	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1554710376209	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1554710376209	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1554710377094	Marionette	INFO	Listening on port 40923
+1554710377165	Marionette	WARN	TLS certificate errors will be ignored for this session
+1554710455930	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.YqTfhN34DtiZ"
+1554710456239	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1554710456240	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1554710456240	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1554710457110	Marionette	INFO	Listening on port 44203
+1554710457141	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 17502, Gecko_IOThread] WARNING: pipe error (89): Connection reset by peer: file /build/firefox-QFhmDU/firefox-66.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+[Parent 17502, Gecko_IOThread] WARNING: pipe error (81): Connection reset by peer: file /build/firefox-QFhmDU/firefox-66.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+1554710458752	Marionette	INFO	Stopped listening on port 40923
+[Parent 18198, Gecko_IOThread] WARNING: pipe error (81): Connection reset by peer: file /build/firefox-QFhmDU/firefox-66.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+[Parent 18198, Gecko_IOThread] WARNING: pipe error (97): Connection reset by peer: file /build/firefox-QFhmDU/firefox-66.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+1554710460045	Marionette	INFO	Stopped listening on port 44203
+1554710462815	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.qPLMvwWuHQYx"
+1554710463146	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1554710463146	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1554710463146	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1554710464013	Marionette	INFO	Listening on port 41743
+1554710464020	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 18480, Gecko_IOThread] WARNING: pipe error (81): Connection reset by peer: file /build/firefox-QFhmDU/firefox-66.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+[Parent 18480, Gecko_IOThread] WARNING: pipe error (97): Connection reset by peer: file /build/firefox-QFhmDU/firefox-66.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+1554710532470	Marionette	INFO	Stopped listening on port 41743
+1554710696634	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.5mOJIeL9i0HO"
+1554710696967	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1554710696967	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1554710696967	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1554710697852	Marionette	INFO	Listening on port 42921
+1554710697938	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Error while calling actor 'layout's method 'getGrids'" "node is null"
+console.error: "getGrids@resource://devtools/server/actors/layout.js:455:11\ngetGrids@resource://devtools/server/actors/layout.js:460:38\nhandler@resource://devtools/shared/protocol.js:1206:21\nonPacket@resource://devtools/server/main.js:1286:15\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:5\n"
+console.error: "Error while calling actor 'layout's method 'getGrids'" "node is null"
+console.error: "getGrids@resource://devtools/server/actors/layout.js:455:11\ngetGrids@resource://devtools/server/actors/layout.js:460:38\nhandler@resource://devtools/shared/protocol.js:1206:21\nonPacket@resource://devtools/server/main.js:1286:15\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:5\n"
+JavaScript error: resource://gre/modules/css-selector.js, line 112: TypeError: ele.ownerGlobal is null
+console.error: "Error while calling actor 'layout's method 'getGrids'" "node is null"
+console.error: "getGrids@resource://devtools/server/actors/layout.js:455:11\ngetGrids@resource://devtools/server/actors/layout.js:460:38\nhandler@resource://devtools/shared/protocol.js:1206:21\nonPacket@resource://devtools/server/main.js:1286:15\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:5\n"
+console.error: "Error while calling actor 'layout's method 'getGrids'" "node is null"
+console.error: "getGrids@resource://devtools/server/actors/layout.js:455:11\ngetGrids@resource://devtools/server/actors/layout.js:460:38\nhandler@resource://devtools/shared/protocol.js:1206:21\nonPacket@resource://devtools/server/main.js:1286:15\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:5\n"
+console.error: "Error while calling actor 'layout's method 'getGrids'" "node is null"
+console.error: "getGrids@resource://devtools/server/actors/layout.js:455:11\ngetGrids@resource://devtools/server/actors/layout.js:460:38\ngetGrids@resource://devtools/server/actors/layout.js:460:38\nhandler@resource://devtools/shared/protocol.js:1206:21\nonPacket@resource://devtools/server/main.js:1286:15\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:5\n"
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+[Parent 18954, Gecko_IOThread] WARNING: pipe error (81): Connection reset by peer: file /build/firefox-QFhmDU/firefox-66.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+1554711281846	Marionette	INFO	Stopped listening on port 42921
+[Parent 18954, Gecko_IOThread] WARNING: pipe error (99): Connection reset by peer: file /build/firefox-QFhmDU/firefox-66.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357

@@ -15,7 +15,7 @@
       "data handling"
     ],
     "preview": {},
-    "last_modified": "2019-04-08T16:01:01+09:00"
+    "last_modified": "2019-04-09T12:34:29+09:00"
   },
   {
     "path": "posts/2019-04-10-data-summary/",
@@ -52,6 +52,24 @@
     ],
     "preview": {},
     "last_modified": "2019-04-08T16:02:40+09:00"
+  },
+  {
+    "path": "posts/2019-04-09-rmarkdown-html/",
+    "title": "R Markdown: HTML編",
+    "description": "RStudioでR Markdownを使ってHTMLファイルを作成する方法を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-09",
+    "categories": [
+      "R",
+      "data handling"
+    ],
+    "preview": {},
+    "last_modified": "2019-04-09T13:06:44+09:00"
   },
   {
     "path": "posts/2019-04-08-reshape-panel/",

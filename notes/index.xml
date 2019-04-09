@@ -33,6 +33,14 @@
       <pubDate>Tue, 09 Apr 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>R Markdown: HTML編</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-09-rmarkdown-html</link>
+      <description>RStudioでR Markdownを使ってHTMLファイルを作成する方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-09-rmarkdown-html</guid>
+      <pubDate>Tue, 09 Apr 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>データの整形：パネルデータ</title>
       <dc:creator>土井　翔平</dc:creator>
       <link>https://shohei-doi.github.io/notes/posts/2019-04-08-reshape-panel</link>
