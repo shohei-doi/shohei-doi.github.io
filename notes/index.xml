@@ -7,7 +7,23 @@
     <description>備忘録
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 10 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>R Markdown: pdf編</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-12-rmarkdown-pdf</link>
+      <description>RStudioでR Markdownを使ってpdfファイルを作成する方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-12-rmarkdown-pdf</guid>
+      <pubDate>Fri, 12 Apr 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>R Markdown: HTML編</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-11-rmarkdown-html</link>
+      <description>RStudioでR Markdownを使ってHTMLファイルを作成する方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-11-rmarkdown-html</guid>
+      <pubDate>Thu, 11 Apr 2019 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>データの結合</title>
       <dc:creator>土井　翔平</dc:creator>
@@ -30,22 +46,6 @@
       <link>https://shohei-doi.github.io/notes/posts/2019-04-09-reshape-qualtrics</link>
       <description>ワイド形式とロング形式の変換方法を応用してQualtricsのデータを整形する方法を説明します。</description>
       <guid>https://shohei-doi.github.io/notes/posts/2019-04-09-reshape-qualtrics</guid>
-      <pubDate>Tue, 09 Apr 2019 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>R Markdown: HTML編</title>
-      <dc:creator>土井　翔平</dc:creator>
-      <link>https://shohei-doi.github.io/notes/posts/2019-04-09-rmarkdown-html</link>
-      <description>RStudioでR Markdownを使ってHTMLファイルを作成する方法を説明します。</description>
-      <guid>https://shohei-doi.github.io/notes/posts/2019-04-09-rmarkdown-html</guid>
-      <pubDate>Tue, 09 Apr 2019 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>R Markdown: pdf編</title>
-      <dc:creator>土井　翔平</dc:creator>
-      <link>https://shohei-doi.github.io/notes/posts/2019-04-09-rmarkdown-pdf</link>
-      <description>RStudioでR Markdownを使ってpdfファイルを作成する方法を説明します。</description>
-      <guid>https://shohei-doi.github.io/notes/posts/2019-04-09-rmarkdown-pdf</guid>
       <pubDate>Tue, 09 Apr 2019 00:00:00 +0000</pubDate>
     </item>
     <item>

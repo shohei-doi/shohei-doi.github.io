@@ -1,5 +1,42 @@
 [
   {
+    "path": "posts/2019-04-12-rmarkdown-pdf/",
+    "title": "R Markdown: pdf編",
+    "description": "RStudioでR Markdownを使ってpdfファイルを作成する方法を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-12",
+    "categories": [
+      "R",
+      "R Markdown",
+      "LaTeX"
+    ],
+    "preview": {},
+    "last_modified": "2019-04-10T11:54:10+09:00"
+  },
+  {
+    "path": "posts/2019-04-11-rmarkdown-html/",
+    "title": "R Markdown: HTML編",
+    "description": "RStudioでR Markdownを使ってHTMLファイルを作成する方法を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-11",
+    "categories": [
+      "R",
+      "R Markdown"
+    ],
+    "preview": {},
+    "last_modified": "2019-04-10T11:54:01+09:00"
+  },
+  {
     "path": "posts/2019-04-10-data-combine/",
     "title": "データの結合",
     "description": "Rで複数のデータを行方向および列方向に結合する方法を説明します。",
@@ -52,43 +89,6 @@
     ],
     "preview": {},
     "last_modified": "2019-04-08T16:02:40+09:00"
-  },
-  {
-    "path": "posts/2019-04-09-rmarkdown-html/",
-    "title": "R Markdown: HTML編",
-    "description": "RStudioでR Markdownを使ってHTMLファイルを作成する方法を説明します。",
-    "author": [
-      {
-        "name": "土井　翔平",
-        "url": {}
-      }
-    ],
-    "date": "2019-04-09",
-    "categories": [
-      "R",
-      "R Markdown"
-    ],
-    "preview": {},
-    "last_modified": "2019-04-10T11:43:58+09:00"
-  },
-  {
-    "path": "posts/2019-04-09-rmarkdown-pdf/",
-    "title": "R Markdown: pdf編",
-    "description": "RStudioでR Markdownを使ってpdfファイルを作成する方法を説明します。",
-    "author": [
-      {
-        "name": "土井　翔平",
-        "url": {}
-      }
-    ],
-    "date": "2019-04-09",
-    "categories": [
-      "R",
-      "R Markdown",
-      "LaTeX"
-    ],
-    "preview": {},
-    "last_modified": "2019-04-10T11:45:49+09:00"
   },
   {
     "path": "posts/2019-04-08-reshape-panel/",
