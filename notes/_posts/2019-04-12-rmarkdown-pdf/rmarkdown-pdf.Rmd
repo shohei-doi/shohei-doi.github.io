@@ -149,6 +149,12 @@ tinytex::tlmgr_install("ipaex")
 `.html`の時と同様に`.pdf`のときもいくつかの[rtciles](https://github.com/rstudio/rticles)にテンプレートが用意されています。
 `rticles`というパッケージをインストールするとテンプレートが追加されます。
 
+### Sumatra PDF
+
+おそらく、Adobe AcrobatがPDFリーダーとしては人気だとは思いますが、Acrobatで開いている`.pdf`ファイルを編集することはできないという欠点があります。
+
+そこで、[Sumatra PDF](https://www.sumatrapdfreader.org/download-free-pdf-viewer.html)などのPDFリーダーを使用することがおすすめです。
+
 ## スライドの作成 {#Beamer}
 
 LaTeXでスライドを作成する際によく用いられているのが[Beamer](https://ja.wikipedia.org/wiki/Beamer)と呼ばれるドキュメントクラスです。
