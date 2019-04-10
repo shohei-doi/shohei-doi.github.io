@@ -1,0 +1,250 @@
+---
+title: "R Markdown: pdf編"
+description: |
+  RStudioでR Markdownを使ってpdfファイルを作成する方法を説明します。
+author:
+  - name: 土井　翔平
+    affiliation: 国立情報学研究所
+date: 04-09-2019
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 2
+categories:
+  - R
+  - R Markdown
+  - LaTeX
+twitter:
+  creator: "@sdoi0504"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = TRUE,
+  message = TRUE,
+  R.options = list(width = 100)
+)
+```
+
+## はじめに {#Intro}
+
+R Markdownから`.pdf`ファイルを作成するにはLaTeXと呼ばれる組版システムを導入する必要があります。
+一手間かかりますが、逆にR Markdownによって簡単にLaTeXを使えるとも言えます。
+
+ここではLaTeXの導入から`.pdf`形式による論文とスライドの作成、そしていくつかのLaTeX記法の紹介を行います。
+
+## LaTeXの導入 {#Install}
+
+LaTeXのディストリビューションはいろいろあるのですが、今回は[TinyTeX](https://yihui.name/tinytex/)を使って環境構築を行います。
+TinyTeXはメジャーなディストリビューションである[TeX Live](https://www.tug.org/texlive/)のうち必要最小限の要素だけを含んでいます。
+
+<aside>
+  TeX Live以外にも[MikTeX](https://miktex.org/)、Windowsであれば[W32TeX](http://w32tex.org/index-ja.html)、Macでは[MacTeX](http://www.tug.org/mactex/)も有名です。
+</aside>
+
+TeX Liveは全てのパッケージを一度にダウンロードするので非常に時間がかかります。
+本格的にLaTeXを使わないのであればTinyTeXで十分だと思います。
+
+- また、[Overleaf](https://ja.overleaf.com/)というオンラインLaTeXエディタもあります。
+
+### tinytexのインストール
+
+`tinytex`というRパッケージがありますので、それをインストールします。
+
+```{r, eval = FALSE}
+install.packages("tinytex")
+```
+
+続いて、TinyTeX本体を以下のコマンドでインストールします。
+
+```{r, eval = FALSE}
+tinytex::install_tinytex()
+```
+
+- エラーメッセージが出てくるかもしれませんがダイアログにあるように無視して進めて問題ありません。
+
+そこそこ時間がかかりますが、TeX Liveを使ったことがある人はあまりの速さにびっくりするかもしれません。
+
+### タイプセット
+
+R Markdownファイルを作成する際に`Document`の`PDF`を選択します。
+
+```{r, echo = FALSE}
+knitr::include_graphics("figures/rmarkdown_pdf1.jpg")
+```
+
+やはりサンプルファイルができるので、適当なフォルダに保存して`Knit`もしくは`Shift + Ctrl + K`でタイプセットすると`.pdf`ファイルが作成されるはずです。
+
+- `.tex`からタイプセットする場合は`pdflatex()`、`lualatex()`、`xelatex()`でパスを指定して使います。
+
+タイプセット時にいろいろとインストールを行い、時間がかかるかもしれません。
+これはTiny TeXが最低限のパッケージだけを持っていて、必要なパッケージは適宜インストールするからです。
+一度、パッケージをインストールすると再度インストールはしないので時間は掛かりません。
+
+## 日本語環境の構築 {#Japanese}
+
+残念ながら、デフォルトの状態では日本語を含むファイルをタイプセットすることはできません。
+実際に、サンプルファイルに適当な日本語を入れてタイプセットしてみるとエラーが出るはずです。
+
+今回はXeLaTeXによる日本語ファイルのタイプセットを目指します。
+
+- Windowsでしか確認していないのでMacではうまくいかないかもしれません。
+その時は教えてください。
+
+### LaTeXエンジンのあれこれ*
+
+なぜXeLaTeXを使うのかについて説明しますが読み飛ばしても構いません。
+
+僕も詳しくはないですが、LaTeXエンジンにはいろいろな種類があります。
+モダンなエンジンはpdfLaTeX、LuaLaTeX、XeLaTeXと呼ばれています。
+
+<aside>
+  例えば、[こちら](https://qiita.com/yyu/items/6404656f822ce14db935)を参照。
+</aside>
+
+- 実際にR MarkdownやTinyTeXで対応しているのはこの3つになります。
+- Overleafでもこの3つにpLaTeXを加えたものに対応しています。
+
+一方で、日本語ファイルをタイプセットする際にこれまで用いられてきたのは[u]pLaTeXと呼ばれるエンジンです。
+しかし、今後は徐々にモダンなエンジンが主流になると思われます。
+
+このうち、pdfLaTeXでは日本語を扱えないので選択肢はLuaLaTeXとXeLaTeXのどちらかになります。
+どうやら、LuaLaTeXが主流となりつつあるらしく、またLuaと呼ばれる言語を使えるという利点もありそうです。
+
+しかし、僕はLuaが何なのか分かりませんし（したがって、どんなご利益があるのかも知りません）、XeLaTeXの方がタイプセットの速度が早いらしいので、現時点ではこちらを使用しています。
+
+### yamlヘッダー
+
+XeLaTeXによってR Markdownから`/pdf`ファイルを生成するにはyamlヘッダーの`output`以下を次のようにします。
+
+```{}
+output:
+  pdf_document: 
+    latex_engine: xelatex 
+documentclass: bxjsarticle
+header-includes: 
+  - \usepackage{zxjatype} 
+  - \usepackage[ipa]{zxjafont} 
+geometry: no
+```
+
+- 目次を出力する際は`.html`の時と同様に設定します。
+- フォントの大きさは`fontsize: 10pt`のように指定します。
+
+### フォントのインストール
+
+もしIPAexフォントがPCに入っていない場合は以下のコマンドでインストールします。
+
+```{r, eval = FALSE}
+tinytex::tlmgr_install("ipaex")
+```
+
+この状態でタイプセットすると日本語も表示されるはずです。
+
+### その他のテンプレート
+
+`.html`の時と同様に`.pdf`のときもいくつかの[rtciles](https://github.com/rstudio/rticles)にテンプレートが用意されています。
+`rticles`というパッケージをインストールするとテンプレートが追加されます。
+
+## スライドの作成 {#Beamer}
+
+LaTeXでスライドを作成する際によく用いられているのが[Beamer](https://ja.wikipedia.org/wiki/Beamer)と呼ばれるドキュメントクラスです。
+R MarkdownからBeamerスライドを作成することも可能です。
+
+```{}
+output: 
+  beamer_presentation:
+    latex_engine: xelatex 
+header-includes: 
+  - \usepackage{zxjatype} 
+  - \usepackage[ipa]{zxjafont} 
+```
+
+- スライドでは`#`がセクションタイトル、`##`が各スライドのタイトルになります。
+- `classoption: "aspectratio=169"`とするとアスペクト比が16:9になります。
+
+### テーマ
+
+Beamerにはデフォルトで多くの[テーマとカラー](https://hartwork.org/beamer-theme-matrix/)があります。
+以下のようにして設定することができます。
+
+```{}
+output:
+  beamer_presentation:
+    theme: "AnnArbor"
+    colortheme: "dolphin"
+    fonttheme: "structurebold"
+```
+
+## LaTeX記法 {#LaTeX}
+
+もちろん、Markdown記法はそのまま使うことができます。
+LaTeXもhtmlと同様にマークアップ言語であり、専用の記法があります。
+Markdown記法ではできないことはLaTeX記法で直接書き込むことで可能になります。
+
+### 定理環境
+
+定理や仮説を書くときには、まずyamlヘッダーに以下を付け加えます。
+
+```{}
+header-includes:
+  - \usepackage{amsthm}
+  - \newtheorem{hypo}{仮説}
+```
+
+そして仮説を書くときには次のように書きます。
+
+```{}
+\begin{hypo}
+  Xが大きくなるとYも大きくなりやすくなる。
+\end{hypo}
+```
+
+### 数式
+
+数式はインラインであれば`$`で、ディスプレイであれば`$$`で囲みます。
+
+#### 添字
+
+上付きの添字は`~`で、下付きの添字は`_`で書きます。
+複数の文字列をまとめるときは`{}`で囲みます。
+
+```{}
+$x^n, y_{it}$
+```
+
+$x^n, y_{it}$
+
+#### 太字
+
+数式内で太字にする場合は`\mathbf{}`を使います。
+
+```{}
+$\mathbf{x}$
+```
+
+$\mathbf{x}$
+
+#### 条件
+
+条件に応じて値が変わる場合は次のように書きます。
+
+```{}
+$$
+  T_i = 
+  \begin{cases}
+    1 & もしiさんが処置群にいた場合 \\
+    0 & そうでない場合 \\
+  \end{cases}
+$$
+```
+
+$$
+  T_i = 
+  \begin{cases}
+    1 & もしiさんが処置群にいた場合 \\
+    0 & そうでない場合 \\
+  \end{cases}
+$$

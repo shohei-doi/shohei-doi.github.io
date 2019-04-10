@@ -13,7 +13,7 @@ output:
     toc_depth: 2
 categories:
   - R
-  - data handling
+  - R Markdown
 twitter:
   creator: "@sdoi0504"
 ---
@@ -29,7 +29,7 @@ knitr::opts_chunk$set(
 
 ## はじめに {#Intro}
 
-データ分析の再現可能性の必要性は論を待たないですが、再現可能性を担保するにはレプリケーションデータやコードを公開するだけでなく、それらが理解可能である必要があります。
+データ分析の再現可能性の必要性は論を俟たないですが、再現可能性を担保するにはレプリケーションデータやコードを公開するだけでなく、それらが理解可能である必要があります。
 
 <aside>
   恐ろしいことに自分が書いたコードでさえ数カ月後に読み返すと意味がわからないことはまれによくあります。
@@ -250,6 +250,8 @@ Markdownでは`#`を使ってセクションのタイトルを記述します。
 LaTeX記法による数式を記述できます。
 インラインの場合は`$`で囲み、ディスプレイの場合は`$$`で囲みます。
 
+- `.html`の場合、`mathjax`によって数式を表示するのでオフラインでは表示できません。
+
 ```{}
 確率変数$X_i$は平均$\mu$、分散$\sigma^2$の正規分布に従う。
 ```
@@ -406,6 +408,11 @@ devtools::install_github("rstudio/distill")
 knitr::include_graphics("figures/rmarkdown_html6.jpg")
 ```
 
+### rmdformats
+
+[rmdformats](https://github.com/juba/rmdformats)というテンプレートもあります。
+同様に、`rmdformats`というパッケージをインストールします。
+
 ### スライド
 
 R Markdownから作成できる`.html`ファイルのスライドには[ioslides](https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html)と[slidy](https://bookdown.org/yihui/rmarkdown/slidy-presentation.html)というものがあります。
@@ -414,6 +421,15 @@ R Markdownから作成できる`.html`ファイルのスライドには[ioslides
 ```{r, echo = FALSE}
 knitr::include_graphics("figures/rmarkdown_html7.jpg")
 ```
+
+また、[reveal.js](https://revealjs.com/)という`.html`スライドを作ることもできます。
+`revealjs`というパッケージをインストールするとテンプレートが追加されます。
+
+<aside>
+  `Presentation`の方ではない点に注意。
+</aside>
+
+同様にして[xaringan](https://github.com/yihui/xaringan)というNARUTOという忍者マンガにインスパイアされたテンプレートを使用することもできます。
 
 ### ダッシュボード {#Dashboard}
 

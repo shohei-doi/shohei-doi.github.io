@@ -15,7 +15,7 @@
       "data handling"
     ],
     "preview": {},
-    "last_modified": "2019-04-09T12:34:29+09:00"
+    "last_modified": "2019-04-10T11:47:00+09:00"
   },
   {
     "path": "posts/2019-04-10-data-summary/",
@@ -66,10 +66,29 @@
     "date": "2019-04-09",
     "categories": [
       "R",
-      "data handling"
+      "R Markdown"
     ],
     "preview": {},
-    "last_modified": "2019-04-09T13:06:44+09:00"
+    "last_modified": "2019-04-10T11:43:58+09:00"
+  },
+  {
+    "path": "posts/2019-04-09-rmarkdown-pdf/",
+    "title": "R Markdown: pdf編",
+    "description": "RStudioでR Markdownを使ってpdfファイルを作成する方法を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-09",
+    "categories": [
+      "R",
+      "R Markdown",
+      "LaTeX"
+    ],
+    "preview": {},
+    "last_modified": "2019-04-10T11:45:49+09:00"
   },
   {
     "path": "posts/2019-04-08-reshape-panel/",
