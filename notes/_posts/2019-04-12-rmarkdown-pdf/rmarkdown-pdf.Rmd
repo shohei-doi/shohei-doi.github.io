@@ -11,6 +11,7 @@ output:
     self_contained: false
     toc: true
     toc_depth: 2
+bibliography: reference.bib
 categories:
   - R
   - R Markdown
@@ -162,7 +163,7 @@ R MarkdownからBeamerスライドを作成することも可能です。
 まず、`Presentation`の中の`PDF (Beamer)`を選択します。
 
 ```{r, echo = FALSE}
-knitr::include_graphics("figures/rmarkdown_pdf1.jpg")
+knitr::include_graphics("figures/rmarkdown_pdf2.jpg")
 ```
 
 そして、yamlヘッダーの`output`以下を次のように書き換えます。
@@ -263,5 +264,87 @@ $$
   \end{cases}
 $$
 
-## 参考文献と引用
+## 参考文献と引用 {#Reference}
 
+R Markdownでは文献ファイルから引用と参考文献を作成することができます。
+[いろいろな形式](https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html)に対応しているようですが、ここではLaTeXでよく使われている`.bib`ファイルを使います。
+
+### .bibファイル
+
+`.bib`ファイルは文献情報を保存する形式の一つです。
+
+まず、RStudioでも他のテキストエディタでもいいので、`.Rmd`ファイルがあるディレクトリに`.bib`ファイルを作成します。
+ここでは`reference.bib`という名前で作成したとします。
+
+[Google Scholar](https://scholar.google.co.jp/)に登録されている文献であれば次のように`bib`形式の情報を取得することができます。
+
+<aside>
+  ただし、Google Scholarの文献情報はいい加減であることも多いので気をつけてください。
+</aside>
+
+まず、引用したい文献を検索します。
+続いて、引用したい文献の引用ボタンをクリックします。
+
+```{r, echo = FALSE}
+knitr::include_graphics("figures/rmarkdown_pdf3.jpg")
+```
+
+そして、`BibTeX`ボタンをクリックすると`.bib`形式の書誌情報が表示されます。
+
+```{r, echo = FALSE}
+knitr::include_graphics("figures/rmarkdown_pdf4.jpg")
+```
+
+```{}
+@article{fearon1995rationalist,
+  title={Rationalist explanations for war},
+  author={Fearon, James D},
+  journal={International organization},
+  volume={49},
+  number={3},
+  pages={379--414},
+  year={1995},
+  publisher={Cambridge University Press}
+}
+```
+
+これを先ほど作成した`reference.bib`にコピペして保存します。
+
+- 直接`.bib`ファイルを編集したい場合は[JabRef](http://www.jabref.org/)などのソフトを使うといいでしょう。
+- [Mendeley](https://www.mendeley.com/)を使うと`/pdf`ファイルを取り込んで自動で`.bib`ファイルを作成してくれます。
+
+### 文献の引用
+
+引用する際には`[@citation_key]`という形で記述します。
+`citation_key`とは書誌情報の最初の要素（この場合は`fearon1995rationalist`）になります。
+したがって、`[@fearon1995rationalist]`と記述すると引用ができます。[@fearon1995rationalist]
+
+- Google Scholarの場合は自動で引用キーが生成されますが長いので適当なものに書き直したほうが楽です。
+
+### 日本語文献の引用
+
+日本語文献の場合も概ね同様の方法で行います。
+ただし、Google Scholarに収録されていないことも多いので次のようなサービスも利用できます。
+
+- [Lead2Amazon](http://lead.to/amazon/jp/)でAmazonの検索結果からBibTeX情報を取り出す。
+- [CiNii](https://ci.nii.ac.jp/)には標準でBibTeXをエクスポートする機能があります。
+
+例えば、Lead2Amazonで取り出した高坂正堯の「国際政治」の書誌情報は以下のようになります。
+ただし、このまま引用すると、名前と名字が入れ替わって表示されてしまうので、名字の後ろに`,`をつける必要があります。
+
+```{}
+@BOOK{高坂201710,
+title={国際政治 - 恐怖と希望 (中公新書)},
+author={高坂 正堯},
+publisher={中央公論新社},
+year={2017},
+month={10},
+edition={改},
+isbn={9784121801081},
+url={http://amazon.co.jp/o/ASIN/4121801083/},
+totalpages={233},
+timestamp={2019.04.10},
+}
+```
+
+- 本格的に日本語文献を適切な形で表示するには[jecon.bst](http://shirotakeda.org/ja/tex-ja/jecon-ja.html)のようなBibTeXスタイルファイルを使う必要があります。

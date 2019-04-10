@@ -42,15 +42,17 @@
   <meta property="twitter:creator" content="@sdoi0504"/>
   
   <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=Rationalist explanations for war;citation_publication_date=1995;citation_publisher=Cambridge University Press;citation_volume=49;citation_author=James D Fearon"/>
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter"]}},"value":[{"type":"character","attributes":{},"value":["R Markdown: pdf編"]},{"type":"character","attributes":{},"value":["RStudioでR Markdownを使ってpdfファイルを作成する方法を説明します。\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["04-12-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["R","R Markdown","LaTeX"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","categories","twitter"]}},"value":[{"type":"character","attributes":{},"value":["R Markdown: pdf編"]},{"type":"character","attributes":{},"value":["RStudioでR Markdownを使ってpdfファイルを作成する方法を説明します。\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["04-12-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["reference.bib"]},{"type":"character","attributes":{},"value":["R","R Markdown","LaTeX"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["figures/rmarkdown_pdf1.jpg","figures/rmarkdown_pdf2.jpg","rmarkdown-pdf_files/bowser-1.9.3/bowser.min.js","rmarkdown-pdf_files/distill-2.2.21/template.v2.js","rmarkdown-pdf_files/jquery-1.11.3/jquery.min.js","rmarkdown-pdf_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["figures/rmarkdown_pdf1.jpg","figures/rmarkdown_pdf2.jpg","figures/rmarkdown_pdf3.jpg","figures/rmarkdown_pdf4.jpg","reference.bib","rmarkdown-pdf_files/bowser-1.9.3/bowser.min.js","rmarkdown-pdf_files/distill-2.2.21/template.v2.js","rmarkdown-pdf_files/jquery-1.11.3/jquery.min.js","rmarkdown-pdf_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -972,7 +974,7 @@
 <li><a href="#Japanese">日本語環境の構築</a></li>
 <li><a href="#Beamer">スライドの作成</a></li>
 <li><a href="#LaTeX">LaTeX記法</a></li>
-<li><a>参考文献と引用</a></li>
+<li><a href="#Reference">参考文献と引用</a></li>
 </ul>
 </nav>
 <hr class="d-toc-separator"/>
@@ -1066,7 +1068,7 @@ tinytex::tlmgr_install(&quot;ipaex&quot;)</code></pre>
 </figure>
 <p>まず、<code>Presentation</code>の中の<code>PDF (Beamer)</code>を選択します。</p>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="figures/rmarkdown_pdf1.jpg" /><!-- --></p>
+<p><img src="figures/rmarkdown_pdf2.jpg" /><!-- --></p>
 </div>
 <p>そして、yamlヘッダーの<code>output</code>以下を次のように書き換えます。</p>
 <pre><code>
@@ -1130,7 +1132,72 @@ $$</code></pre>
     0 &amp; そうでない場合 \\
   \end{cases}
 \]</span></p>
-<h2>参考文献と引用</h2>
+<h2 id="Reference">参考文献と引用</h2>
+<p>R Markdownでは文献ファイルから引用と参考文献を作成することができます。 <a href="https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html">いろいろな形式</a>に対応しているようですが、ここではLaTeXでよく使われている<code>.bib</code>ファイルを使います。</p>
+<h3 id="bib">.bibファイル</h3>
+<p><code>.bib</code>ファイルは文献情報を保存する形式の一つです。</p>
+<p>まず、RStudioでも他のテキストエディタでもいいので、<code>.Rmd</code>ファイルがあるディレクトリに<code>.bib</code>ファイルを作成します。 ここでは<code>reference.bib</code>という名前で作成したとします。</p>
+<p><a href="https://scholar.google.co.jp/">Google Scholar</a>に登録されている文献であれば次のように<code>bib</code>形式の情報を取得することができます。</p>
+<aside>
+ただし、Google Scholarの文献情報はいい加減であることも多いので気をつけてください。
+</aside>
+<p>まず、引用したい文献を検索します。 続いて、引用したい文献の引用ボタンをクリックします。</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="figures/rmarkdown_pdf3.jpg" /><!-- --></p>
+</div>
+<p>そして、<code>BibTeX</code>ボタンをクリックすると<code>.bib</code>形式の書誌情報が表示されます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="figures/rmarkdown_pdf4.jpg" /><!-- --></p>
+</div>
+<pre><code>
+@article{fearon1995rationalist,
+  title={Rationalist explanations for war},
+  author={Fearon, James D},
+  journal={International organization},
+  volume={49},
+  number={3},
+  pages={379--414},
+  year={1995},
+  publisher={Cambridge University Press}
+}</code></pre>
+<p>これを先ほど作成した<code>reference.bib</code>にコピペして保存します。</p>
+<ul>
+<li>直接<code>.bib</code>ファイルを編集したい場合は<a href="http://www.jabref.org/">JabRef</a>などのソフトを使うといいでしょう。</li>
+<li><a href="https://www.mendeley.com/">Mendeley</a>を使うと<code>/pdf</code>ファイルを取り込んで自動で<code>.bib</code>ファイルを作成してくれます。</li>
+</ul>
+<h3>文献の引用</h3>
+<p>引用する際には<code>[@citation_key]</code>という形で記述します。 <code>citation_key</code>とは書誌情報の最初の要素（この場合は<code>fearon1995rationalist</code>）になります。 したがって、<code>[@fearon1995rationalist]</code>と記述すると引用ができます。<span class="citation" data-cites="fearon1995rationalist">(Fearon <a href="#ref-fearon1995rationalist">1995</a>)</span></p>
+<ul>
+<li>Google Scholarの場合は自動で引用キーが生成されますが長いので適当なものに書き直したほうが楽です。</li>
+</ul>
+<h3>日本語文献の引用</h3>
+<p>日本語文献の場合も概ね同様の方法で行います。 ただし、Google Scholarに収録されていないことも多いので次のようなサービスも利用できます。</p>
+<ul>
+<li><a href="http://lead.to/amazon/jp/">Lead2Amazon</a>でAmazonの検索結果からBibTeX情報を取り出す。</li>
+<li><a href="https://ci.nii.ac.jp/">CiNii</a>には標準でBibTeXをエクスポートする機能があります。</li>
+</ul>
+<p>例えば、Lead2Amazonで取り出した高坂正堯の「国際政治」の書誌情報は以下のようになります。 ただし、このまま引用すると、名前と名字が入れ替わって表示されてしまうので、名字の後ろに<code>,</code>をつける必要があります。</p>
+<pre><code>
+@BOOK{高坂201710,
+title={国際政治 - 恐怖と希望 (中公新書)},
+author={高坂 正堯},
+publisher={中央公論新社},
+year={2017},
+month={10},
+edition={改},
+isbn={9784121801081},
+url={http://amazon.co.jp/o/ASIN/4121801083/},
+totalpages={233},
+timestamp={2019.04.10},
+}</code></pre>
+<ul>
+<li>本格的に日本語文献を適切な形で表示するには<a href="http://shirotakeda.org/ja/tex-ja/jecon-ja.html">jecon.bst</a>のようなBibTeXスタイルファイルを使う必要があります。</li>
+</ul>
+<div id="refs" class="references">
+<div id="ref-fearon1995rationalist">
+<p>Fearon, James D. 1995. “Rationalist Explanations for War.” <em>International Organization</em> 49 (3). Cambridge University Press: 379–414.</p>
+</div>
+</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -1152,6 +1219,44 @@ $$</code></pre>
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
 <div class="appendix-bottom"></div>
+<script id="distill-bibliography" type="text/bibtex">
+@article{fearon1995rationalist,
+  title={Rationalist explanations for war},
+  author={Fearon, James D},
+  journal={International organization},
+  volume={49},
+  number={3},
+  pages={379--414},
+  year={1995},
+  publisher={Cambridge University Press}
+}
+
+@BOOK{高坂201710,
+title={国際政治 - 恐怖と希望 (中公新書)},
+author={高坂, 正堯},
+publisher={中央公論新社},
+year={2017},
+month={10},
+edition={改},
+isbn={9784121801081},
+url={http://amazon.co.jp/o/ASIN/4121801083/},
+totalpages={233},
+timestamp={2019.04.10},
+}
+
+@BOOK{高坂2017102,
+title={国際政治 - 恐怖と希望 (中公新書)},
+author={高坂 正堯},
+publisher={中央公論新社},
+year={2017},
+month={10},
+edition={改},
+isbn={9784121801081},
+url={http://amazon.co.jp/o/ASIN/4121801083/},
+totalpages={233},
+timestamp={2019.04.10},
+}
+</script>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->
