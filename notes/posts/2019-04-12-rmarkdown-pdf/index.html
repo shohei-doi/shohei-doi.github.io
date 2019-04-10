@@ -54,7 +54,7 @@
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["figures/rmarkdown_pdf1.jpg","rmarkdown-pdf_files/bowser-1.9.3/bowser.min.js","rmarkdown-pdf_files/distill-2.2.21/template.v2.js","rmarkdown-pdf_files/jquery-1.11.3/jquery.min.js","rmarkdown-pdf_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["figures/rmarkdown_pdf1.jpg","figures/rmarkdown_pdf2.jpg","rmarkdown-pdf_files/bowser-1.9.3/bowser.min.js","rmarkdown-pdf_files/distill-2.2.21/template.v2.js","rmarkdown-pdf_files/jquery-1.11.3/jquery.min.js","rmarkdown-pdf_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 
@@ -1327,6 +1327,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><a href="#Japanese">日本語環境の構築</a></li>
 <li><a href="#Beamer">スライドの作成</a></li>
 <li><a href="#LaTeX">LaTeX記法</a></li>
+<li><a>参考文献と引用</a></li>
 </ul>
 </nav>
 <hr class="d-toc-separator"/>
@@ -1387,7 +1388,7 @@ tinytex::install_tinytex()</code></pre>
 <p>このうち、pdfLaTeXでは日本語を扱えないので選択肢はLuaLaTeXとXeLaTeXのどちらかになります。 どうやら、LuaLaTeXが主流となりつつあるらしく、またLuaと呼ばれる言語を使えるという利点もありそうです。</p>
 <p>しかし、僕はLuaが何なのか分かりませんし（したがって、どんなご利益があるのかも知りません）、XeLaTeXの方がタイプセットの速度が早いらしいので、現時点ではこちらを使用しています。</p>
 <h3 id="yaml">yamlヘッダー</h3>
-<p>XeLaTeXによってR Markdownから<code>/pdf</code>ファイルを生成するにはyamlヘッダーの<code>output</code>以下を次のようにします。</p>
+<p>XeLaTeXによってR Markdownから<code>.。pdf</code>ファイルを生成するにはyamlヘッダーの<code>output</code>以下を次のようにします。</p>
 <pre><code>
 output:
   pdf_document: 
@@ -1412,6 +1413,17 @@ tinytex::tlmgr_install(&quot;ipaex&quot;)</code></pre>
 <p><code>.html</code>の時と同様に<code>.pdf</code>のときもいくつかの<a href="https://github.com/rstudio/rticles">rtciles</a>にテンプレートが用意されています。 <code>rticles</code>というパッケージをインストールするとテンプレートが追加されます。</p>
 <h2 id="Beamer">スライドの作成</h2>
 <p>LaTeXでスライドを作成する際によく用いられているのが<a href="https://ja.wikipedia.org/wiki/Beamer">Beamer</a>と呼ばれるドキュメントクラスです。 R MarkdownからBeamerスライドを作成することも可能です。</p>
+<aside>
+京都府立大学の秦先生がPowerPointでBeamer風のスライドを作るため<a href="http://hatam.sakura.ne.jp/nisebeamer.html">テンプレート</a>を公開しています。
+</aside>
+<figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Beamer01.png" alt="こんな感じの。" /><figcaption>こんな感じの。</figcaption>
+</figure>
+<p>まず、<code>Presentation</code>の中の<code>PDF (Beamer)</code>を選択します。</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="figures/rmarkdown_pdf1.jpg" /><!-- --></p>
+</div>
+<p>そして、yamlヘッダーの<code>output</code>以下を次のように書き換えます。</p>
 <pre><code>
 output: 
   beamer_presentation:
@@ -1473,6 +1485,7 @@ $$</code></pre>
     0 &amp; そうでない場合 \\
   \end{cases}
 \]</span></p>
+<h2>参考文献と引用</h2>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">

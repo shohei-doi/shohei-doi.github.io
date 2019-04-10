@@ -117,7 +117,7 @@ knitr::include_graphics("figures/rmarkdown_pdf1.jpg")
 
 ### yamlヘッダー
 
-XeLaTeXによってR Markdownから`/pdf`ファイルを生成するにはyamlヘッダーの`output`以下を次のようにします。
+XeLaTeXによってR Markdownから`.。pdf`ファイルを生成するにはyamlヘッダーの`output`以下を次のようにします。
 
 ```{}
 output:
@@ -152,6 +152,20 @@ tinytex::tlmgr_install("ipaex")
 
 LaTeXでスライドを作成する際によく用いられているのが[Beamer](https://ja.wikipedia.org/wiki/Beamer)と呼ばれるドキュメントクラスです。
 R MarkdownからBeamerスライドを作成することも可能です。
+
+<aside>
+  京都府立大学の秦先生がPowerPointでBeamer風のスライドを作るため[テンプレート](http://hatam.sakura.ne.jp/nisebeamer.html)を公開しています。
+</aside>
+
+![こんな感じの。](https://upload.wikimedia.org/wikipedia/commons/b/b9/Beamer01.png)
+
+まず、`Presentation`の中の`PDF (Beamer)`を選択します。
+
+```{r, echo = FALSE}
+knitr::include_graphics("figures/rmarkdown_pdf1.jpg")
+```
+
+そして、yamlヘッダーの`output`以下を次のように書き換えます。
 
 ```{}
 output: 
@@ -248,3 +262,6 @@ $$
     0 & そうでない場合 \\
   \end{cases}
 $$
+
+## 参考文献と引用
+

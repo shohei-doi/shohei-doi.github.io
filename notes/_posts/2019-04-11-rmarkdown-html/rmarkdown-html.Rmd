@@ -388,8 +388,11 @@ output:
 ### Distill
 
 [Distill](https://rstudio.github.io/distill/)はウェブで公開することを念頭に置いた専門的な記事を書くためのテンプレートになっています。
-
 インストールは以下のように行います。
+
+<aside>
+  このブログはDistillテーマで書いています。
+</aside>
 
 ```{r, eval = FALSE}
 devtools::install_github("rstudio/distill")
@@ -402,6 +405,9 @@ devtools::install_github("rstudio/distill")
 ### Tufte Handout
 
 [Tufte Handout](https://rstudio.github.io/tufte/)というテンプレートもあります。
+
+![Tufte HandoutT](https://bookdown.org/yihui/rmarkdown/images/tufte-overview.png)
+
 `tufte`というパッケージをインストールするとテンプレートに追加されます。
 
 ```{r, echo = FALSE}
@@ -413,9 +419,26 @@ knitr::include_graphics("figures/rmarkdown_html6.jpg")
 [rmdformats](https://github.com/juba/rmdformats)というテンプレートもあります。
 同様に、`rmdformats`というパッケージをインストールします。
 
+![material](https://raw.githubusercontent.com/juba/rmdformats/master/tools/screenshots/material.png)
+
+![readthedown](https://raw.githubusercontent.com/juba/rmdformats/master/tools/screenshots/readthedown.png)
+
+![html_clean](https://raw.githubusercontent.com/juba/rmdformats/master/tools/screenshots/html_clean.png)
+
+![html_docco](https://raw.githubusercontent.com/juba/rmdformats/master/tools/screenshots/html_docco.png)
+
 ### スライド
 
 R Markdownから作成できる`.html`ファイルのスライドには[ioslides](https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html)と[slidy](https://bookdown.org/yihui/rmarkdown/slidy-presentation.html)というものがあります。
+
+![ioslides](https://bookdown.org/yihui/rmarkdown/images/ioslides-1.png)
+
+![ioslides](https://bookdown.org/yihui/rmarkdown/images/ioslides-2.png)
+
+![slidy](https://bookdown.org/yihui/rmarkdown/images/slidy-1.png)
+
+![slidy](https://bookdown.org/yihui/rmarkdown/images/slidy-2.png)
+
 これらはデフォルトで入っています。
 
 ```{r, echo = FALSE}
@@ -429,12 +452,22 @@ knitr::include_graphics("figures/rmarkdown_html7.jpg")
   `Presentation`の方ではない点に注意。
 </aside>
 
+![reveal.js](https://bookdown.org/yihui/rmarkdown/images/revealjs-1.png)
+
+![reveal.js](https://bookdown.org/yihui/rmarkdown/images/revealjs-2.png)
+
 同様にして[xaringan](https://github.com/yihui/xaringan)というNARUTOという忍者マンガにインスパイアされたテンプレートを使用することもできます。
+
+![xaringan](https://bookdown.org/yihui/rmarkdown/images/xaringan-1.png)
+
+![xaringan](https://bookdown.org/yihui/rmarkdown/images/xaringan-2.png)
 
 ### ダッシュボード {#Dashboard}
 
 `flexdashboard`というパッケージを使うと[ダッシュボード](https://rmarkdown.rstudio.com/flexdashboard/)を作ることができます。
 パッケージをインストールすると`Flex Dashboard`というテンプレートが追加されます。
+
+![flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/images/htmlwidgets-d3heatmap.png)
 
 ### Microsoft Office
 
