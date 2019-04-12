@@ -20,7 +20,7 @@
   {
     "path": "posts/2019-04-12-pipe/",
     "title": "パイプ演算子%>%あれこれ",
-    "description": "ときどきRコードで見かける`%>%`が何者なのかをまとめます。",
+    "description": "ときどきRコードで見かける%>%が何者なのかをまとめます。",
     "author": [
       {
         "name": "土井　翔平",
@@ -33,7 +33,7 @@
       "coding"
     ],
     "preview": "posts/2019-04-12-pipe/pipe_files/figure-html5/unnamed-chunk-13-1.png",
-    "last_modified": "2019-04-12T17:17:37+09:00",
+    "last_modified": "2019-04-12T17:28:14+09:00",
     "preview_width": 1248,
     "preview_height": 768
   },

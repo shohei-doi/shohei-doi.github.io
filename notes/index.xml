@@ -20,7 +20,7 @@
       <title>パイプ演算子%&gt;%あれこれ</title>
       <dc:creator>土井　翔平</dc:creator>
       <link>https://shohei-doi.github.io/notes/posts/2019-04-12-pipe</link>
-      <description>ときどきRコードで見かける`%&gt;%`が何者なのかをまとめます。</description>
+      <description>ときどきRコードで見かける%&gt;%が何者なのかをまとめます。</description>
       <guid>https://shohei-doi.github.io/notes/posts/2019-04-12-pipe</guid>
       <pubDate>Fri, 12 Apr 2019 00:00:00 +0000</pubDate>
       <media:content url="https://shohei-doi.github.io/notes/posts/2019-04-12-pipe/pipe_files/figure-html5/unnamed-chunk-13-1.png" medium="image" type="image/png" width="1248" height="768"/>
