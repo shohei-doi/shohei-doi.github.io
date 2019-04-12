@@ -164,7 +164,7 @@ iris$Sepal.Length %>%
   {
     mean(.) %>% print()
     median(.) %>% print()
-    var(.) %>% print(ｐ)
+    var(.) %>% print()
   }
 ```
 

@@ -1569,13 +1569,12 @@ iris$Sepal.Length %&gt;%
   {
     mean(.) %&gt;% print()
     median(.) %&gt;% print()
-    var(.) %&gt;% print(ｐ)
+    var(.) %&gt;% print()
   }</code></pre>
 <pre><code>
 [1] 5.843333
-[1] 5.8</code></pre>
-<pre><code>
-Error in print.default(., ｐ): object &#39;ｐ&#39; not found</code></pre>
+[1] 5.8
+[1] 0.6856935</code></pre>
 </div>
 <p><code>$T&gt;$</code>という演算子を使うと右辺は評価されるが、返り値は左辺のままになります。 例えば、<code>plot()</code>に流すことで図を出力しつつ、<code>iris</code>を<code>summary()</code>にも流すことができます。</p>
 <div class="layout-chunk" data-layout="l-body">
