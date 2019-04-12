@@ -14,6 +14,7 @@ output:
 categories:
   - R
   - R Markdown
+  - html/css
 twitter:
   creator: "@sdoi0504"
 ---

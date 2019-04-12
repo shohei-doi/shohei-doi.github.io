@@ -1,7 +1,7 @@
 name: "notes"
-title: "備忘録"
+title: "ノート"
 description: |
-  備忘録
+  ノート
 output_dir: "."
 base_url: https://shohei-doi.github.io/notes/
 navbar:

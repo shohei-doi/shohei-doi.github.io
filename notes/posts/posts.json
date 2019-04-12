@@ -1,5 +1,23 @@
 [
   {
+    "path": "posts/2019-04-12-missing-values/",
+    "title": "欠損値の扱い方",
+    "description": "Rにおける欠損値の扱い方についてまとめました。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-12",
+    "categories": [
+      "R",
+      "data handling"
+    ],
+    "preview": {},
+    "last_modified": "2019-04-12T16:24:33+09:00"
+  },
+  {
     "path": "posts/2019-04-12-rmarkdown-pdf/",
     "title": "R Markdown: pdf編",
     "description": "RStudioでR Markdownを使ってpdfファイルを作成する方法を説明します。",
@@ -16,7 +34,7 @@
       "LaTeX"
     ],
     "preview": {},
-    "last_modified": "2019-04-10T13:20:07+09:00"
+    "last_modified": "2019-04-12T12:59:28+09:00"
   },
   {
     "path": "posts/2019-04-11-rmarkdown-html/",
@@ -31,10 +49,11 @@
     "date": "2019-04-11",
     "categories": [
       "R",
-      "R Markdown"
+      "R Markdown",
+      "html/css"
     ],
     "preview": {},
-    "last_modified": "2019-04-10T12:23:21+09:00"
+    "last_modified": "2019-04-11T12:53:20+09:00"
   },
   {
     "path": "posts/2019-04-10-data-combine/",
@@ -210,10 +229,11 @@
     ],
     "date": "2019-04-05",
     "categories": [
-      "R"
+      "R",
+      "project management"
     ],
     "preview": {},
-    "last_modified": "2019-04-08T16:01:34+09:00"
+    "last_modified": "2019-04-11T12:54:10+09:00"
   },
   {
     "path": "posts/2019-04-04-intro-r/",
@@ -244,9 +264,10 @@
     ],
     "date": "2019-04-03",
     "categories": [
-      "R"
+      "R",
+      "setup"
     ],
     "preview": {},
-    "last_modified": "2019-04-08T16:01:14+09:00"
+    "last_modified": "2019-04-11T12:53:42+09:00"
   }
 ]
