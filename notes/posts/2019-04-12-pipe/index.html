@@ -1556,10 +1556,28 @@ F-statistic: 43.36 on 1 and 98 DF,  p-value: 2.27e-09</code></pre>
 <pre class="r"><code>
 iris %&gt;% 
   filter(Species != &quot;setosa&quot;) %&gt;% 
-  lm(.$Sepal.Length ~ .$Sepal.Width) %&gt;% 
+  {
+    lm(.$Sepal.Length ~ .$Sepal.Width)
+  } %&gt;% 
   summary()</code></pre>
 <pre><code>
-Error in as.data.frame.default(data): cannot coerce class &#39;&quot;formula&quot;&#39; to a data.frame</code></pre>
+Call:
+lm(formula = .$Sepal.Length ~ .$Sepal.Width)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.0032 -0.3877 -0.0774  0.3200  1.7381 
+
+Coefficients:
+              Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)     3.0934     0.4844   6.387 5.70e-09 ***
+.$Sepal.Width   1.1033     0.1675   6.585 2.27e-09 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 0.5547 on 98 degrees of freedom
+Multiple R-squared:  0.3068,    Adjusted R-squared:  0.2997 
+F-statistic: 43.36 on 1 and 98 DF,  p-value: 2.27e-09</code></pre>
 </div>
 <h2 id="Output">複数の出力</h2>
 <p><code>.</code>を使うことで複数の出力を行うことも可能です。</p>

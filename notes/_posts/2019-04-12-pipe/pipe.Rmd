@@ -151,7 +151,9 @@ iris %>%
 ```{r}
 iris %>% 
   filter(Species != "setosa") %>% 
-  lm(.$Sepal.Length ~ .$Sepal.Width) %>% 
+  {
+    lm(.$Sepal.Length ~ .$Sepal.Width)
+  } %>% 
   summary()
 ```
 
