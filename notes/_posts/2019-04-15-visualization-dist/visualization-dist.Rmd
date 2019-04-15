@@ -1,0 +1,193 @@
+---
+title: "データ可視化：一変数の分布"
+description: |
+  Rで一変数の分布を可視化する方法を説明します。
+author:
+  - name: 土井　翔平
+    affiliation: 国立情報学研究所
+date: 04-15-2019
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 2
+categories:
+  - R
+  - data visualization
+twitter:
+  creator: "@sdoi0504"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  error = TRUE,
+  warning = TRUE,
+  message = TRUE,
+  R.options = list(width = 100)
+)
+```
+
+## はじめに {#Intro}
+
+ある変数がどのように分布しているのかを示すための図を作ります。
+具体的にはヒストグラム、カーネル密度、棒グラフについて説明します。
+
+基本的に
+
+- 標準作図関数
+- `tidyverse`の`ggplot2`
+- インタラクティブな図を作成する`plotly`
+
+による方法を説明します。
+
+<aside>
+  一番使うのは`ggplot2`なので、詳しくなります。
+</aside>
+
+### 必要なパッケージの読み込み
+
+```{r}
+library(tidyverse)
+library(plotly)
+```
+
+### データセットの読み込み
+
+[国レベルのパネルデータ](dara/state_year.csv)を使います。
+
+```{r}
+data <- read.csv("data/state_year.csv")
+str(data)
+```
+
+## 標準作図関数
+
+Rで標準に備わっている作図関数を使います。
+
+### ヒストグラム
+
+分布を示す代表的な図はヒストグラムです。
+貿易額`trade`のヒストグラムを作図します。
+
+```{r}
+hist(data$trade)
+```
+
+左に歪んでいる場合は対数を取ると正規分布っぽくなります。
+
+```{r}
+hist(log(data$trade))
+```
+
+### カーネル密度
+
+カーネル密度というヒストグラムを平滑化したグラフもあります。
+ただし、欠損値を取り除き、`density()`で密度を計算して`plot()`で線グラフを作成します。
+
+```{r}
+plot(density(log(data[!is.na(data$trade),]$trade)))
+```
+
+### 棒グラフ
+
+離散変数の場合はヒストグラムではなく棒グラフを使います。
+民主主義度`democ`の棒グラフを作成します。
+`table()`で度数分布表を作成し、`barplot()`で作図します。
+
+```{r}
+barplot(table(data$democ))
+```
+
+## ggplot2
+
+`tidyverse`の中の`ggplot2`というパッケージを使って作図します。
+`ggplot2`では
+
+1. `ggplot()`という関数でオブジェクトを作成し、
+3. `+`で適当なグラフを重ね合わせていき、
+1. 適宜、`aes()`で使用する変数を指定する、
+
+という流れになります。
+
+<aside>
+  `%>%`と`+`を間違えることがあります。
+</aside>
+
+### ヒストグラム
+
+`trade`のヒストグラムを作成します。
+
+```{r}
+data %>% 
+  ggplot() + 
+  geom_histogram(aes(x = trade))
+```
+
+対数を取る場合は直接対数を取るかすケースを変更する関数を重ねます。
+
+```{r}
+data %>% 
+  ggplot() + 
+  geom_histogram(aes(x = trade)) + 
+  scale_x_log10()
+```
+
+### カーネル密度
+
+```{r}
+data %>% 
+  ggplot() + 
+  geom_density(aes(x = trade)) + 
+  scale_x_log10()
+```
+
+### 棒グラフ
+
+```{r}
+data %>% 
+  ggplot() + 
+  geom_bar(aes(x = democ))
+```
+
+## plotly
+
+`plotly`はインタラクティブな作図をする[Plotly](https://plot.ly/feed/#/)を使うパッケージです。
+
+### ヒストグラム
+
+変数を指定するときには`~`をつけます。
+
+```{r}
+data %>% 
+  plot_ly(x = ~trade, type = "histogram")
+```
+
+```{r}
+data %>% 
+  plot_ly(x = ~log(trade), type = "histogram")
+```
+
+`plotly`では`ggplot2`のオブジェクトを`ggployly()`で変換することができます。
+
+<aside>
+  パイプで繋ぐことはできないようです。
+</aside>
+
+```{r}
+p <- data %>% 
+  ggplot() + 
+  geom_histogram(aes(x = trade)) + 
+  scale_x_log10()
+ggplotly(p)
+```
+
+### 棒グラフ
+
+`plotly`の場合は離散変数でもヒストグラムをちゃんと出力してくれます。
+
+```{r}
+data %>% 
+  plot_ly(x = ~democ, type = "histogram")
+```
+

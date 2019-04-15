@@ -1,5 +1,45 @@
 [
   {
+    "path": "posts/2019-04-15-visualization-dist/",
+    "title": "データ可視化：一変数の分布",
+    "description": "Rで一変数の分布を可視化する方法を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-15",
+    "categories": [
+      "R",
+      "data visualization"
+    ],
+    "preview": "posts/2019-04-15-visualization-dist/visualization-dist_files/figure-html5/unnamed-chunk-3-1.png",
+    "last_modified": "2019-04-15T13:52:46+09:00",
+    "preview_width": 1248,
+    "preview_height": 768
+  },
+  {
+    "path": "posts/2019-04-15-visualization-scatter/",
+    "title": "データ可視化：二変数の分布",
+    "description": "Rで二変数の分布を可視化する方法を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-15",
+    "categories": [
+      "R",
+      "data visualization"
+    ],
+    "preview": "posts/2019-04-15-visualization-scatter/visualization-scatter_files/figure-html5/unnamed-chunk-3-1.png",
+    "last_modified": "2019-04-15T14:15:31+09:00",
+    "preview_width": 1248,
+    "preview_height": 768
+  },
+  {
     "path": "posts/2019-04-12-missing-values/",
     "title": "欠損値の扱い方",
     "description": "Rにおける欠損値の扱い方についてまとめました。",

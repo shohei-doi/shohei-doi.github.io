@@ -7,7 +7,25 @@
     <description>ノート
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 12 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>データ可視化：一変数の分布</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-dist</link>
+      <description>Rで一変数の分布を可視化する方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-dist</guid>
+      <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-dist/visualization-dist_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
+    <item>
+      <title>データ可視化：二変数の分布</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-scatter</link>
+      <description>Rで二変数の分布を可視化する方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-scatter</guid>
+      <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-scatter/visualization-scatter_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>欠損値の扱い方</title>
       <dc:creator>土井　翔平</dc:creator>
