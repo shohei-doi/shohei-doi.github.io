@@ -1,0 +1,303 @@
+---
+title: "データの要約"
+description: |
+  Rでデータの含まれる変数を要約する方法について説明します。
+author:
+  - name: 土井　翔平
+    affiliation: 国立情報学研究所
+date: 04-10-2019
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 2
+categories:
+  - R
+  - data handling
+twitter:
+  creator: "@sdoi0504"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = TRUE,
+  message = TRUE,
+  R.options = list(width = 100)
+)
+```
+
+## はじめに {#Intro}
+
+データ分析をする前にどのようなデータなのか、どのような変数が含まれているのかを把握する必要があります。
+
+### 必要なパッケージの読み込み
+
+```{r}
+library(tidyverse)
+library(rmarkdown)
+```
+
+## ユニークな要素 {#Unique}
+
+変数の値が離散であったり、カテゴリカルである場合はユニークな要素を抜き出すことが有用です。
+例えば、[一人あたりGDP](data/wb_gdp_pc.csv)に含まれている国や年を知りたいとします。
+
+```{r}
+gdp_pc <- read_csv("data/wb_gdp_pc.csv", skip = 4) %>% 
+  select(-"Country Code", -"Indicator Name", -"Indicator Code", -X64)%>% 
+  rename(name = "Country Name") %>% 
+  gather(key = year, value = gdp_pc, -name) %>% 
+  mutate(year = as.numeric(year))
+```
+
+### ユニークなベクトル
+
+そのようなときは`unique()`という関数を使うとユニークな（重複を除いた）要素を抽出します。
+
+```{r}
+unique(gdp_pc$name)
+unique(gdp_pc$year)
+```
+
+これとベクトルの長さを求める`length()`を使うとデータセットに含まれる国の数や年の数が分かります。
+
+```{r}
+length(unique(gdp_pc$name))
+length(unique(gdp_pc$year))
+```
+
+### ユニークなデータセット
+
+データセットに対してユニークなサンプルを抽出するには`unique()`あるいは`distinct()`を使います。
+例えば、間違って同じサンプルが含まれていたとします。
+
+```{r}
+gdp_pc <- bind_rows(gdp_pc[1,], gdp_pc)
+paged_table(gdp_pc)
+```
+
+`duplicated()`を使うと重複しているサンプルが抽出できます。
+
+```{r}
+paged_table(gdp_pc[duplicated(gdp_pc),])
+```
+
+`distinct()`を使うと重複していたサンプルが削除されます。
+
+```{r}
+gdp_pc <- distinct(gdp_pc)
+paged_table(gdp_pc)
+```
+
+- 一般的に言って、サンプルが重複しているのはどこかでデータ処理に失敗していることが多いので、なぜ重複しているのかを明らかにせずに除外するのは危険です。
+
+## 頻度 {#Freq}
+
+### 度数分布
+
+離散変数やカテゴリカル変数に対して、それぞれの値を取るサンプルの数を求めることができます。
+例えば、各年に何カ国がデータに収録されているかを知りたい場合は次のようにします。
+
+```{r}
+table(gdp_pc[!is.na(gdp_pc$gdp_pc),]$year)
+```
+
+### クロス表
+
+`table()`によってクロス表を作成することも可能です。
+[Triangulating Peaceデータ](data/triangle.csv)において各年に紛争が生じたダイアッド数と生じなかったダイアッド数を求めてみます。
+
+```{r}
+triangle <- read_csv("data/triangle.csv")
+table(triangle$dispute1, triangle$year)
+```
+
+## 記述統計 {#Desc}
+
+データ全体の記述統計を求める際には`summary()`を使います。
+
+```{r}
+summary(gdp_pc)
+summary(triangle)
+```
+
+`summary()`は変数に対しても使用できます。
+
+```{r}
+summary(gdp_pc$gdp_pc)
+```
+
+個別に記述統計を取る場合は以下のような関数を使います。
+
+### 平均
+
+```{r}
+mean(gdp_pc$gdp_pc)
+```
+
+実は、欠損値が含まれている場合、平均を求めることはできないので、オプションで`na.rm = TRUE`とします。
+
+```{r}
+mean(gdp_pc$gdp_pc, na.rm = TRUE)
+```
+
+### 中央値
+
+```{r}
+median(gdp_pc$gdp_pc, na.rm = TRUE)
+```
+
+### 分位点
+
+```{r}
+quantile(gdp_pc$gdp_pc, c(0.25, 0.5, 0.75), na.rm = TRUE)
+```
+
+- 中央値は50%分位点になります。
+
+### 最大値、最小値
+
+```{r}
+max(gdp_pc$gdp_pc, na.rm = TRUE)
+min(gdp_pc$gdp_pc, na.rm = TRUE)
+```
+
+### 分散、標準偏差
+
+```{r}
+var(gdp_pc$gdp_pc, na.rm = TRUE)
+sd(gdp_pc$gdp_pc, na.rm = TRUE)
+```
+
+## グループごとの要約 {#Group}
+
+`tidyverse`の`dplyr`を使うとグループごとの要約が簡単に行えます
+
+### 記述統計
+。
+例えば、各年の一人あたりGDPの平均値と中央値を求めたいとします。
+
+```{r}
+gdp_pc %>% 
+  group_by(year) %>% 
+  summarise(mean = mean(gdp_pc, na.rm = TRUE),
+            median = median(gdp_pc, na.rm = TRUE)) %>% 
+  head() %>% 
+  paged_table()
+```
+
+基本的に以下のように行います。
+
+1. `group_by`によってグループ化する変数を指定する。
+1. `summarise()`の中で要約する変数を定義する。
+
+### 度数分布
+
+これを応用すると度数分布を作成することもできます。
+
+```{r}
+gdp_pc %>% 
+  drop_na() %>% 
+  group_by(year) %>% 
+  summarise(n = n()) %>% 
+  head() %>% 
+  paged_table()
+```
+
+- `n()`はサンプルサイズを計算する関数です。
+
+### クロス表
+
+同様にしてクロス表も作成できます。
+
+```{r}
+triangle %>% 
+  group_by(year, dispute1) %>% 
+  summarise(n = n()) %>% 
+  head() %>% 
+  paged_table()
+```
+
+- グループ化する変数は複数選択することができ、`year`と`dispute1`（紛争の有無）でグループ化しています。
+
+ワイドにすることで見た目もクロス表にすることもできます。
+
+```{r}
+triangle %>% 
+  group_by(year, dispute1) %>% 
+  summarise(n = n()) %>% 
+  spread(key = dispute1, value = n) %>% 
+  head() %>% 
+  paged_table()
+```
+
+## 多変量の記述統計* {#Multvariate}
+
+ここまでは単一の変数の要約や記述統計を行ってきましたが一般的に多変量の記述統計を求めたくなるのが人情です。
+残念ながら`summary()`を無理やりデータフレームにしてもいい感じにはなりません。
+
+```{r}
+summary(gdp_pc) %>% 
+  as.data.frame() %>% 
+  paged_table()
+```
+
+### ループを使用する方法
+
+単純な方法はループで処理することです。
+例えば、`triangle`の`state1`、`stateb`、`year`, `dyad_id`以外の記述統計を取りたいとします。
+まずは記述統計を取りたい変数名を抽出します。
+
+```{r}
+desc_names <- triangle %>% 
+  select(-statea, -stateb, -year, -dyadid) %>% 
+  names()
+desc_names
+```
+
+続いて、ループを書きます。
+
+```{r}
+desc_data <- NULL
+for (i in desc_names) {
+  temp <- triangle[i]
+  names(temp) <- "val"
+  temp <- tibble(var = i,
+                 mean = mean(temp$val, na.rm = TRUE),
+                 median = median(temp$val, na.rm = TRUE))
+  desc_data <- bind_rows(desc_data, temp)
+}
+paged_table(desc_data)
+```
+
+- `triangle[i]`ではベクトルにならないのが面倒くさいです。
+
+### sapplyを使用する方法
+
+`sapply()`は各要素に同じ処理を行う関数です。
+
+```{r}
+temp <- triangle %>% 
+  select(-statea, -stateb, -year, -dyadid)
+desc_data <- tibble(var = names(temp),
+                    mean = sapply(temp, mean, na.rm = TRUE),
+                    median = sapply(temp, median, na.rm = TRUE))
+paged_table(desc_data)
+```
+
+### tidyverseな方法
+
+`tidyverse`によるグループかと要約、そしてワイドとロングの変換を応用すると次のように記述統計を求めることができます。
+
+```{r}
+triangle %>% 
+  select(-statea, -stateb, -year, -dyadid) %>% 
+  gather(key = var, value = val, factor_key = TRUE) %>% 
+  group_by(var) %>% 
+  summarise(mean = mean(val, na.rm = TRUE),
+            meadian = median(val, na.rm = TRUE)) %>% 
+  paged_table()
+```
+
+- `gather()`で`factor_key = TRUE`とすることで`summarise()`するときに変数名がアルファベット順ではなく、もとの順番を保持してくれます。

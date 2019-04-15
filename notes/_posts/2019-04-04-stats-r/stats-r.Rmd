@@ -1,0 +1,203 @@
+---
+title: "Rで統計分析"
+description: |
+  Rによる初歩的な統計分析の方法について説明します。
+author:
+  - name: 土井　翔平
+    affiliation: 国立情報学研究所
+date: 04-05-2019
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 2
+categories:
+  - R
+  - data analysis
+twitter:
+  creator: "@sdoi0504"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = TRUE,
+  message = TRUE,
+  error = TRUE,
+  R.options = list(width = 100)
+)
+```
+
+## はじめに {#Intro}
+
+統計分析の方法にはいろいろありますが、ここでは
+
+1. t検定
+1. 分散分析 (ANOVA)
+1. 最小二乗法
+1. ロジスティック回帰
+
+について解説します。
+
+### 参考になるサイト
+
+- 高知工科大学の矢内勇生先生の[計量経済学（2018年度）](http://yukiyanai.github.io/jp/classes/econometrics1/contents/)と[計量経済学応用（2018年度）](http://yukiyanai.github.io/jp/classes/econometrics2/contents/)の講義ページ
+- 拓殖大学の浅野正彦先生の[計量政治学01（2018年度）](https://www.asanoucla.com/%E8%AC%9B%E7%BE%A9%E4%B8%80%E8%A6%A7/keiryo2017/)の講義ページ
+- [Seeing Theory](https://seeing-theory.brown.edu/)
+
+## t検定 {#t-test}
+
+t検定は2つのグループにおける平均値の違いについて分析するときに使われることが多いです。
+
+`R t検定`のように検索すると`t.test()`でt検定ができるという情報が出てくるはずです。
+そこで、この関数のヘルプを見てみましょう。
+
+```{r, eval = FALSE}
+?t.test
+```
+
+そうすると`Usage`に
+
+```{}
+## Default S3 method:
+t.test(x, y = NULL,
+       alternative = c("two.sided", "less", "greater"),
+       mu = 0, paired = FALSE, var.equal = FALSE,
+       conf.level = 0.95, ...)
+```
+
+
+と書いてあるのがわかります。
+
+続いて、`Examples`にあるコードを実行して、ちゃんと関数が動くことを確認します。
+
+```{r}
+t.test(1:10, y = c(7:20))
+```
+
+<aside>
+  `m:n`は`m`から`n`まで1刻みに増える数列を作成します。
+  ```{r}
+    1:5
+  ```
+</aside>
+
+さらに、`Arguments`とは関数に入力するもの（入力引数）ですが、
+
+```{}
+x	   a (non-empty) numeric vector of data values.
+y	   an optional (non-empty) numeric vector of data values.
+```
+
+とあります。
+ここらへんから数値ベクトル`x`と`y`に入れるとt検定をするのだなとあたりをつけます。
+
+ここでは練習として`iris`データを使ってアヤメの品種が違うと`Sepal.Length`が異なるのかを調べます。
+例えば、`setosa`と`versicolor`を比較する場合は
+
+```{r}
+t.test(x = iris[iris$Species == "setosa",]$Sepal.Length, 
+       y = iris[iris$Species == "versicolor",]$Sepal.Length)
+```
+
+とします。
+
+<aside>
+  `e-16`とは$10^{-16}$のことです。
+</aside>
+
+### `formula`
+
+ところで、`t.test()`のヘルプを見ると
+
+```{}
+## S3 method for class 'formula'
+t.test(formula, data, subset, na.action, ...)
+```
+
+という記述もあります。
+これは`formula`を使ってt検定も行うことができるという意味です。
+`formula`の説明は後述するとして、まずは`formula`を使ったt検定の方法を解説します。
+
+t検定は2群間の比較なので、`iris`から`virginica`のサンプルを除外した新しいデータ`iris2`を作成します。
+
+```{r}
+iris2 <- iris[iris$Species != "virginica",]
+```
+
+<aside>
+  `!=`は不一致を判定する記号です。
+</aside>
+
+念の為、確認すると`virginica`がないことがわかります。
+
+```{r}
+summary(iris2)
+```
+
+`formula`を使ってt検定をする場合には`Examples`の最後の行にあるように`~`を使います。
+
+```{r}
+t.test(Sepal.Length ~ Species, data = iris2)
+```
+
+先ほどを同じ結果であることがわかります。
+
+## 分散分析 {#ANOVA}
+
+t検定は2群間の比較ですが、（`iris`のように）3群以上の場合、t検定を繰り返すこと（多重比較）は問題があると言われており、分散分析を代わりに使います。
+
+```{r}
+anova(aov(Sepal.Length ~ Species, data = iris))
+```
+
+## 最小二乗法 {#OLS}
+
+ところで、分散分析の結果はグループのダミー変数を使った回帰分析の結果と一致します。
+最小二乗法を行うには`lm()`（linear modelの略？）を使います。
+
+```{r}
+summary(lm(Sepal.Length ~ Species, data = iris))
+```
+
+F値を見ると同じであることが分かります。
+
+ここまで来ると`formula`の実態が分かるかと思います。
+つまり、`formula`は`~`の左辺に従属変数、右辺に独立変数を指定しています。
+
+## ロジスティック回帰 {#Logit}
+
+分析対象が（品種のように）カテゴリーである場合、最小二乗法ではなく一般化線形モデルのうちのロジスティック回帰などを使うほうがよいと信じられています。
+ここでは`setosa`と`versicolor`を分類するロジスティック回帰を行ってみます。
+
+```{r}
+summary(glm(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris2))
+```
+
+<aside>
+  ちなみに、独立変数は`+`で追加することができます。
+</aside>
+
+するとエラーが表示されます。
+何を言っているのかよくわかりませんが、`y`と`factor`が諸悪の根源のように見えます。
+
+そこで、ロジスティック回帰は従属変数が0と1で表現されるのだからもしかするとファクターではなく数値でないといけないのでは、と思い`as.numeric()`で数値データに変換したところ、うまく行きました。
+
+<aside>
+  ここらへんは経験していくうちに相場観が養われていきます。
+</aside>
+
+```{r}
+summary(glm(as.numeric(Species) ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris2))
+```
+
+ただし、これだと`setosa`と`versicolor`のどっちを予測しているのかわからないので、数値に置き換えたほうがいいでしょう。
+新たに`species`という変数を作り全て`0`とした上で、`versicolor`だけ`1`に置き換えて、ロジスティック回帰を行います。
+
+```{r}
+iris2$species <- 0
+iris2[iris2$Species == "versicolor",]$species <- 1
+summary(glm(species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris2))
+```
+
+結果自体は変わっていないことが分かります。
