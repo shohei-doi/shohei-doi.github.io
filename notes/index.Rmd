@@ -1,5 +1,0 @@
----
-title: "ノート"
-site: distill::distill_website
-listing: posts
----
