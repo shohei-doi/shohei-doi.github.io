@@ -2,4 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
-_post
+*.Rproj
+/notes/_post
