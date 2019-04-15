@@ -1,0 +1,19 @@
+name: "notes"
+title: "ノート"
+description: |
+  ノート
+output_dir: "."
+base_url: https://shohei-doi.github.io/notes/
+navbar:
+  right:
+    - text: "Shohei Doi"
+      href: ../index.html
+    - icon: fa fa-rss
+      href: index.xml
+collections:
+  posts:
+    disqus: notes-shohei-doi
+    share: [twitter, facebook, linkedin]
+    citations: false
+    subscribe: _subscribe.html
+output: distill::distill_article
