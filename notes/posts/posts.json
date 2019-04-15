@@ -40,6 +40,26 @@
     "preview_height": 768
   },
   {
+    "path": "posts/2019-04-15-visualization-line/",
+    "title": "データの可視化：時系列",
+    "description": "Rで変数の時系列変化を可視化する方法を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-15",
+    "categories": [
+      "R",
+      "data visualization"
+    ],
+    "preview": "posts/2019-04-15-visualization-line/visualization-line_files/figure-html5/unnamed-chunk-4-1.png",
+    "last_modified": "2019-04-15T16:11:35+09:00",
+    "preview_width": 1248,
+    "preview_height": 768
+  },
+  {
     "path": "posts/2019-04-12-missing-values/",
     "title": "欠損値の扱い方",
     "description": "Rにおける欠損値の扱い方についてまとめました。",

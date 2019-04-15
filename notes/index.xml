@@ -23,8 +23,17 @@
       <link>https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-dist</link>
       <description>Rで1変数の分布を可視化する方法を説明します。</description>
       <guid>https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-dist</guid>
-      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
       <media:content url="https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-dist/visualization-dist_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
+    <item>
+      <title>データの可視化：時系列</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-line</link>
+      <description>Rで変数の時系列変化を可視化する方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-line</guid>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-line/visualization-line_files/figure-html5/unnamed-chunk-4-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
     <item>
       <title>欠損値の扱い方</title>
