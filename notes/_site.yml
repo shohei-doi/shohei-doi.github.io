@@ -4,6 +4,7 @@ description: |
   ノート
 output_dir: "."
 base_url: https://shohei-doi.github.io/notes/
+google_analytics: "UA-75879658-3"
 navbar:
   right:
     - text: "Shohei Doi"
