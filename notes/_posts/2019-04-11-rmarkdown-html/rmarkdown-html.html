@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+  <!--radix_placeholder_meta_tags-->
+  <title>R Markdown: HTML編</title>
+  
+  <meta property="description" itemprop="description" content="RStudioでR Markdownを使ってHTMLファイルを作成する方法を説明します。"/>
+  
+  
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2019-04-11"/>
+  <meta property="article:created" itemprop="dateCreated" content="2019-04-11"/>
+  <meta name="article:author" content="土井　翔平"/>
+  
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="R Markdown: HTML編"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="RStudioでR Markdownを使ってHTMLファイルを作成する方法を説明します。"/>
+  <meta property="og:locale" content="en_US"/>
+  
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="R Markdown: HTML編"/>
+  <meta property="twitter:description" content="RStudioでR Markdownを使ってHTMLファイルを作成する方法を説明します。"/>
+  <meta property="twitter:creator" content="@sdoi0504"/>
+  
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter"]}},"value":[{"type":"character","attributes":{},"value":["R Markdown: HTML編"]},{"type":"character","attributes":{},"value":["RStudioでR Markdownを使ってHTMLファイルを作成する方法を説明します。\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["04-11-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["R","R Markdown","html/css"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["figures/Rlogo.png","figures/rmarkdown_html1.jpg","figures/rmarkdown_html2.jpg","figures/rmarkdown_html3.jpg","figures/rmarkdown_html4.jpg","figures/rmarkdown_html5_1.jpg","figures/rmarkdown_html5_2.jpg","figures/rmarkdown_html5_3.jpg","figures/rmarkdown_html6.jpg","figures/rmarkdown_html7.jpg","rmarkdown-html_files/bowser-1.9.3/bowser.min.js","rmarkdown-html_files/distill-2.2.21/template.v2.js","rmarkdown-html_files/jquery-1.11.3/jquery.min.js","rmarkdown-html_files/webcomponents-2.0.0/webcomponents.js"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+  
+  <style type="text/css">
+  
+  body {
+    background-color: white;
+  }
+  
+  .pandoc-table {
+    width: 100%;
+  }
+  
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+  
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+  
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+  
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+  
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+  
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+  
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .shaded .shaded-content {
+    background: white;
+  }
+  
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  d-article {
+    padding-bottom: 30px;
+  }
+  
+  d-appendix {
+    padding-top: 30px;
+  }
+  
+  d-article>p>img {
+    width: 100%;
+  }
+  
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+  
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+  
+  /* CSS for table of contents */
+  
+  .d-toc {
+    color: rgba(0,0,0,0.8);
+    font-size: 0.8em;
+    line-height: 1em;
+  }
+  
+  .d-toc-header {
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 1.3em;
+  }
+  
+  .d-toc a {
+    border-bottom: none;
+  }
+  
+  .d-toc ul {
+    padding-left: 0;
+  }
+  
+  .d-toc li>ul {
+    padding-top: 0.8em;
+    padding-left: 16px;
+    margin-bottom: 0.6em;
+  }
+  
+  .d-toc ul,
+  .d-toc li {
+    list-style-type: none;
+  }
+  
+  .d-toc li {
+    margin-bottom: 0.9em;
+  }
+  
+  .d-toc-separator {
+    margin-top: 20px;
+    margin-bottom: 2em;
+  }
+  
+  .d-article-with-toc {
+    border-top: none;
+    padding-top: 0;
+  }
+  
+  
+  
+  /* Tweak code blocks (note that this CSS is repeated above in an injection
+     into the d-code shadow dom) */
+  
+  d-code {
+    overflow-x: auto !important;
+  }
+  
+  pre.d-code code.d-code {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+  
+  pre.text-output {
+  
+    font-size: 12px;
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+  
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+  
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+  
+  @media(min-width: 768px) {
+  
+  d-code {
+    overflow-x: visible !important;
+  }
+  
+  pre.d-code code.d-code  {
+      padding-left: 18px;
+      font-size: 14px;
+  }
+  pre.text-output {
+    font-size: 14px;
+  }
+  }
+  
+  /* Figure */
+  
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+  
+  .figure img {
+    width: 100%;
+  }
+  
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+  
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+  
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+  
+  
+  
+  /* Tweak 1000px media break to show more text */
+  
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+  
+    .grid {
+      grid-column-gap: 16px;
+    }
+  
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+  
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+  
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+  
+  
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+  
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  
+  /* Social footer */
+  
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+  
+  .disqus-comments {
+    margin-right: 30px;
+  }
+  
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  
+  #disqus_thread {
+    margin-top: 30px;
+  }
+  
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+  
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+  
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+  
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+  
+  
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+  
+  
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+  
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+  
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+  
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+  
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+  
+  
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+  
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+  
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+  
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+  
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+  
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+  
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+  
+  </style>
+  
+  <script type="application/javascript">
+  
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+  
+  // show body when load is complete
+  function on_load_complete() {
+  
+    // set body to visible
+    document.body.style.visibility = 'visible';
+  
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+  
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+  
+  function init_distill() {
+  
+    init_common();
+  
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+  
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+  
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+  
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+  
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+  
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+  
+    // create d-bibliography
+    var bibliography = $('<d-bibliography></d-bibliography>');
+    $('#distill-bibliography').wrap(bibliography);
+  
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+  
+    // replace citations with <d-cite>
+    $('.citation').each(function(i, val) {
+      appendix = true;
+      var cites = $(this).attr('data-cites').split(" ");
+      var dt_cite = $('<d-cite></d-cite>');
+      dt_cite.attr('key', cites.join());
+      $(this).replaceWith(dt_cite);
+    });
+    // remove refs
+    $('#refs').remove();
+  
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+  
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-toc a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+  
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+  
+    // replace code blocks with d-code
+    $('pre>code').each(function(i, val) {
+      var code = $(this);
+      var pre = code.parent();
+      var clz = "";
+      var language = pre.attr('class');
+      if (language) {
+        // map unknown languages to "clike" (without this they just dissapear)
+        if ($.inArray(language, ["bash", "clike", "css", "go", "html",
+                                 "javascript", "js", "julia", "lua", "markdown",
+                                 "markup", "mathml", "python", "svg", "xml"]) == -1)
+          language = "clike";
+        language = ' language="' + language + '"';
+        var dt_code = $('<d-code block' + language + clz + '></d-code>');
+        dt_code.text(code.text());
+        pre.replaceWith(dt_code);
+      } else {
+        code.addClass('text-output').unwrap().changeElementType('pre');
+      }
+    });
+  
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+  
+      // capture layout
+      var layout = $(this).attr('data-layout');
+  
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('d-code, pre.text-output, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+  
+  
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+  
+    // load distill framework
+    load_distill_framework();
+  
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+  
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+  
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+  
+      // table of contents
+      if (have_authors) // adjust border if we are in authors
+        $('.d-toc').parent().addClass('d-article-with-toc');
+  
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+  
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+  
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+  
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+  
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+  
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+  
+      // inject pre code styles (can't do this with a global stylesheet b/c a shadow root is used)
+      $('d-code').each(function(i, val) {
+        var style = document.createElement('style');
+        style.innerHTML = 'pre code { padding-left: 10px; font-size: 12px; border-left: 2px solid rgba(0,0,0,0.1); } ' +
+                          '@media(min-width: 768px) { pre code { padding-left: 18px; font-size: 14px; } }';
+        if (this.shadowRoot)
+          this.shadowRoot.appendChild(style);
+      });
+  
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+  
+      // clear polling timer
+      clearInterval(tid);
+  
+      // show body now that everything is ready
+      on_load_complete();
+    }
+  
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+  
+  }
+  
+  function init_downlevel() {
+  
+    init_common();
+  
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+  
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+  
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+  
+    // remove toc
+    $('.d-toc-header').remove();
+    $('.d-toc').remove();
+    $('.d-toc-separator').remove();
+  
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+  
+  
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+  
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+  
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+  
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+  
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+  
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+  
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+  
+    $('body').addClass('downlevel');
+  
+    on_load_complete();
+  }
+  
+  
+  function init_common() {
+  
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+  
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+  
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+  
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+  
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+  
+      }
+    });
+  
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+  
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+  
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+  
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+  
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+  
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+  
+  </script>
+  
+  <!--/radix_placeholder_distill-->
+  <script src="rmarkdown-html_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="rmarkdown-html_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="rmarkdown-html_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="rmarkdown-html_files/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"R Markdown: HTML編","description":"RStudioでR Markdownを使ってHTMLファイルを作成する方法を説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-04-11T00:00:00.000+09:00","citationText":"翔平, 2019"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>R Markdown: HTML編</h1>
+<p>RStudioでR Markdownを使ってHTMLファイルを作成する方法を説明します。</p>
+</div>
+
+<div class="d-byline">
+  土井　翔平  (国立情報学研究所)
+  
+<br/>04-11-2019
+</div>
+
+<div class="d-article">
+<h3 class="d-toc-header">Table of Contents</h3>
+<nav class="d-toc" id="TOC">
+<ul>
+<li><a href="#Intro">はじめに</a></li>
+<li><a href="#Markdown">Markdown記法</a></li>
+<li><a href="#Chunk">Rチャンク</a></li>
+<li><a href="#YAML">yamlヘッダー</a></li>
+<li><a href="#Others">その他のテンプレート</a></li>
+</ul>
+</nav>
+<hr class="d-toc-separator"/>
+<h2 id="Intro">はじめに</h2>
+<p>データ分析の再現可能性の必要性は論を俟たないですが、再現可能性を担保するにはレプリケーションデータやコードを公開するだけでなく、それらが理解可能である必要があります。</p>
+<aside>
+恐ろしいことに自分が書いたコードでさえ数カ月後に読み返すと意味がわからないことはまれによくあります。
+</aside>
+<p>Rスクリプトに<code>#</code>でコメントするのが単純な方法ですが、データ分析においてはしばしば文章とコード、アウトプットを混在させたノートブックを使用することがあります。</p>
+<aside>
+詳しくはないですが文芸的プラグラミングと呼ばれるものの一種のような気がします。
+</aside>
+<p>更にノートブックからより見やすいファイルを作成することができ、そのファイルおよびシステムを<strong>R Markdown</strong>と呼びます。 実は、と言うほどではないですが、このブログもR Markdownで書かれています。</p>
+<p>百聞は一見に如かずなので、一まずはR Markdownを使ってみます。 まず、左上のファイルを作成するボタンを押し、<code>R Markdown...</code>を選択します。</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="figures/rmarkdown_html1.jpg" /><!-- --></p>
+</div>
+<ul>
+<li>初めてR Markdownを使う場合は必要なパッケージをインストールするか聞かれるのでインストールを選択します。</li>
+</ul>
+<p>続いて、どのような種類のR Markdownファイルを作成するかを選択するので、（デフォルトのままですが）<code>Document</code>の<code>HTML</code>を選択します。</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="figures/rmarkdown_html2.jpg" /><!-- --></p>
+</div>
+<p>すると、エディタに以下のようなサンプルの<code>Rmd</code>ファイルが表示されます。 適当なフォルダに保存し、エディタ上部の<code>Knit</code>をクリックするか<code>Shift + Ctrl + k</code>を押すとR Markdownファイルがタイプセットされます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="figures/rmarkdown_html3.jpg" /><!-- --></p>
+</div>
+<p>無事、タイプセットに成功すると以下のような<code>.html</code>ファイルのプレビューが表示されます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="figures/rmarkdown_html4.jpg" /><!-- --></p>
+</div>
+<p><code>.Rmd</code>ファイルを保存したフォルダに<code>.html</code>ファイルが生成されているはずです。 <code>/html</code>ファイルとはウェブサイトを作成するためのファイルで、ウェブブラウザ（例、FirefoxやGoogle Chrome）で開くことできれいに見れます。</p>
+<h3>参考になるサイト</h3>
+<ul>
+<li><a href="https://rmarkdown.rstudio.com/">R Markdownの公式サイト</a></li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a></li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">R Markdownのチートシート (pdf)</a></li>
+<li>比治山大学の前田和寛先生の<a href="https://kazutan.github.io/kazutanR/Rmd_intro.html">R Markdown入門</a></li>
+</ul>
+<h2 id="Markdown">Markdown記法</h2>
+<h3 id="markdown">Markdownとは*</h3>
+<p>R MarkdownとはMarkdownとRスクリプトを合体させたようなものです。 ここではMarkdownについて説明しますが、読み飛ばしても構いません。</p>
+<p>Markdownとは計量マークアップ言語と呼ばれているように<a href="https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E8%A8%80%E8%AA%9E">マークアップ言語</a>の一種です。 マークアップ言語とは文章の中身と役割・外見を区別して記述する言語です。</p>
+<p>逆に、世間で普及しているWordのように文章の中身と役割・外見が混在しているエディターは<a href="https://ja.wikipedia.org/wiki/WYSIWYG">WYSIWYG</a>と呼びます。</p>
+<p>例えば、Wordではセクションの名前などは指定することができますが、見た目はフォントのサイズが大きくなったり、太字になったりします。 一方で、マークアップ言語の一種である<code>.html</code>ファイルでは</p>
+<pre><code>
+&lt;h1&gt;セクションタイトル&lt;/h1&gt;</code></pre>
+<p>のように明示的に<code>h1</code>というタグをつけ、<code>h1</code>タグのついている文章に対して<code>.css</code>ファイルで見た目を決定します。 同様に、LaTeXでは<code>\section{セクションタイトル}</code>のようにタグをつけます。</p>
+<p>基本的にはWYSIWYGなソフトのほうが直観的な操作が可能で作業が楽ではあるものの、マークアップ言語はテキストで役割や外見も決めるので再現可能性が高いと言えるでしょう。</p>
+<p>そこで、より簡便なマークアップ言語として登場したのがMarkdown記法です。 なので、HTML記法を使うこともできます。</p>
+<h3>セクション</h3>
+<p>Markdownでは<code>#</code>を使ってセクションのタイトルを記述します。 <code>#</code>が多くなればなるほどより小さな見出しになります。</p>
+<pre><code>
+# レベル1
+## レベル2
+### レベル3
+#### レベル4</code></pre>
+<h3>パラグラフ</h3>
+<p>空行を入れると新しいパラグラフになります。</p>
+<pre><code>
+同じパラグラフです。
+同じパラグラフです。</code></pre>
+<p>同じパラグラフです。 同じパラグラフです。</p>
+<pre><code>
+違うパラグラフです。
+
+違うパラグラフです。</code></pre>
+<p>違うパラグラフです。</p>
+<p>違うパラグラフです。</p>
+<ul>
+<li>なので、パラグラフ内でも一文ごとに改行したほうが見やすいと思います。</li>
+</ul>
+<h3>箇条書き</h3>
+<p>番号なしの箇条書きの場合は<code>=</code>を、番号付きの箇条書きの場合は<code>1.</code>を入れます。</p>
+<pre><code>
+- 番号なし箇条書き
+- 番号なし箇条書き
+- 番号なし箇条書き</code></pre>
+<ul>
+<li>番号なし箇条書き</li>
+<li>番号なし箇条書き</li>
+<li>番号なし箇条書き</li>
+</ul>
+<pre><code>
+1. 番号付き箇条書き
+1. 番号付き箇条書き
+1. 番号付き箇条書き</code></pre>
+<ol type="1">
+<li>番号付き箇条書き</li>
+<li>番号付き箇条書き</li>
+<li>番号付き箇条書き</li>
+</ol>
+<p>タブ（半角スペース4つ分）を入れると階層構造をつけることができます。</p>
+<pre><code>
+- レベル1
+    - レベル2
+- レベル１</code></pre>
+<ul>
+<li>レベル1
+<ul>
+<li>レベル2</li>
+</ul></li>
+<li>レベル１</li>
+</ul>
+<h3>文字の強調</h3>
+<p><code>*</code>もしくは<code>_</code>で囲むと斜体になり、<code>**</code>もしくは<code>__</code>で囲むと太字になります。</p>
+<pre><code>
+*斜体*と**太字**</code></pre>
+<p><em>斜体</em>と<strong>太字</strong></p>
+<p><code>｀</code>で囲むとコードになり、<code>~~</code>で囲むと打ち消されます。</p>
+<pre><code>
+`code`と~打ち消し~</code></pre>
+<p><code>code</code>と<del>打ち消し</del></p>
+<h3>引用</h3>
+<p><code>&gt;</code>から始めると引用になります。</p>
+<pre><code>
+&gt; 引用文です。</code></pre>
+<blockquote>
+<p>引用文です。</p>
+</blockquote>
+<h3>リンク</h3>
+<p>リンクを貼る場合は<code>[リンク名](リンク先のURL)</code>あるいは<code>&lt;リンク先のURL&gt;</code>とします。</p>
+<pre><code>
+- [RStudio](https://www.rstudio.com/)
+- &lt;https://www.rstudio.com/&gt;</code></pre>
+<ul>
+<li><a href="https://www.rstudio.com/">RStudio</a></li>
+<li><a href="https://www.rstudio.com/" class="uri">https://www.rstudio.com/</a></li>
+</ul>
+<h3>画像、表</h3>
+<p>画像を埋め込む場合は<code>!！[画像名](画像のパス)</code>とします。</p>
+<pre><code>
+![Rlogo](figures/Rlogo.png)</code></pre>
+<figure>
+<img src="figures/Rlogo.png" alt="Rlogo" /><figcaption>Rlogo</figcaption>
+</figure>
+<p>表を埋め込む際には次のように書きます。</p>
+<pre><code>
+| 項目1 | 項目2 | 項目3 |
+|-------|-------|-------|
+| りんご| 100   | 赤    |
+| みかん| 80    | オレンジ |</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th>項目1</th>
+<th>項目2</th>
+<th>項目3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>りんご</td>
+<td>100</td>
+<td>赤</td>
+</tr>
+<tr class="even">
+<td>みかん</td>
+<td>80</td>
+<td>オレンジ</td>
+</tr>
+</tbody>
+</table>
+<h3>数式</h3>
+<p>LaTeX記法による数式を記述できます。 インラインの場合は<code>$</code>で囲み、ディスプレイの場合は<code>$$</code>で囲みます。</p>
+<ul>
+<li><code>.html</code>の場合、<code>mathjax</code>によって数式を表示するのでオフラインでは表示できません。</li>
+</ul>
+<pre><code>
+確率変数$X_i$は平均$\mu$、分散$\sigma^2$の正規分布に従う。</code></pre>
+<p>確率変数<span class="math inline">\(X_i\)</span>は平均<span class="math inline">\(\mu\)</span>、分散<span class="math inline">\(\sigma^2\)</span>の正規分布に従う。</p>
+<pre><code>
+$$
+  X_i \sim \mathcal{N}(\mu,\sigma^2)
+$$</code></pre>
+<p><span class="math display">\[
+  X_i \sim \mathcal{N}(\mu,\sigma^2)
+\]</span></p>
+<h2 id="Chunk">Rチャンク</h2>
+<p>R Markdown内でRコードを記述する際にはRチャンクと呼ばれるものの中で行います。 Rチャンクは次のような形をしています。 <code>Ctrl + Alt + I</code>でRチャンクを挿入することができます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="figures/rmarkdown_html5_1.jpg" /><!-- --></p>
+</div>
+<p>まず、この部分は後述するチャンクオプションを指定する場所になります。 ここではRコードであること、チャンク名を<code>cars</code>と指定しています。</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="figures/rmarkdown_html5_2.jpg" /><!-- --></p>
+</div>
+<p>R MrkdownにおいてもRスクリプトと同様に<code>Ctrl + Enter</code>でコードを実行することができます。 あるいはRチャンクの右上のボタンをクリックしても実行できます。 実行されたコードはチャンクの直下に表示されます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="figures/rmarkdown_html5_3.jpg" /><!-- --></p>
+</div>
+<p>右上から二番目のボタンはこのRチャンクの直前のRチャンクまでのコードを全て実行するボタンになります。</p>
+<h3>チャンクオプション</h3>
+<p>チャンクオプションを指定することでコードとそのアウトプットをどのように出力するかを制御することができます。 主なものをまとめておきます。</p>
+<ul>
+<li><code>eval = FALSE</code>とするとコードは表示されるが実行されない。</li>
+<li><code>echo = FALSE</code>とするとコードは実行されるが表示されない。</li>
+<li><code>include = FALSE</code>とするとコードは実行されるがコードも実行結果も表示されない。</li>
+<li><code>warning = FALSE</code>や<code>error = FALSE</code>、<code>message = FALSE</code>とすると警告やエラー、メッセージが表示されない。</li>
+</ul>
+<p>例えば、<code>{r, echo = FALSE}</code>のように書きます。</p>
+<p>デフォルトを変更したい場合は冒頭で<code>knitr::opts_chunk$set(echo = TRUE)</code>のように設定します。</p>
+<h2 id="YAML">yamlヘッダー</h2>
+<p>yamlヘッダーとは<code>.Rmd</code>ファイルの冒頭で<code>---</code>によって囲まれた箇所で、ページ全体の設定を行います。 初期状態では</p>
+<pre><code>
+---
+title: &quot;Untitled&quot;
+author: &quot;Shohei Doi&quot;
+date: &quot;4/9/2019&quot;
+output: html_document
+---</code></pre>
+<p>となっていますが、<code>title</code>や<code>author</code>、<code>date</code>でタイトル、著者、日付を設定できます。</p>
+<h3 id="output">output</h3>
+<p><code>output</code>によって出力形式を決定します。 これによってyamlヘッダーにおいてどのような項目を設定できるのかも決まります。</p>
+<p>どのような出力形式が利用可能であるかは後述するとして、以下では<code>html_document</code>における主なyamlヘッダーの設定を紹介します。</p>
+<ul>
+<li>前田先生の<a href="https://qiita.com/kazutan/items/726e03dfcef1615ae999">ページ</a>が参考になります。</li>
+</ul>
+<h3>目次</h3>
+<p>目次を出力するには次のように書きます。</p>
+<pre><code>
+output:
+  html_document:
+    toc: TRUE</code></pre>
+<p>目次の設定には次のようなものがあります。</p>
+<pre><code>
+output:
+  html_document:
+    toc: TRUE
+    toc_depth: 2
+    toc_gloat: TRUE
+    number_sections: TRUE</code></pre>
+<ul>
+<li><code>toc_depth</code>によってどの階層の見出しまで表示するかを決めます。</li>
+<li><code>toc_float</code>を<code>TRUE</code>にすると目次がスクロールしてもついてきます。</li>
+<li><code>number_sections</code>を<code>TRUE</code>にすると見出しに通し番号がつきます。</li>
+</ul>
+<h3>テーマ</h3>
+<p>テーマを決める場合は<code>theme</code>で指定します。 テーマ一覧は<a href="https://bootswatch.com/3/">こちら</a>になります。</p>
+<pre><code>
+output:
+  html_document:
+    theme: &quot;paper&quot;</code></pre>
+<h3 id="htmlcss">htmlとcss</h3>
+<p><code>css</code>によってカスタム<code>.css</code>ファイルを指定できます。 <code>include</code>によって<code>.html</code>ファイルの挿入ができます。</p>
+<p>デフォルトでは<code>.css</code>ファイルは画像データなどは全て<code>.html</code>ファイルに含まれてスタンドアロンな形で見ることができます。 しかし、<code>self_contained</code>を<code>FALSE</code>とすると付属ファイルは別フォルダに作成され、<code>.html</code>ファイル自体が見やすくなります。</p>
+<h2 id="Others">その他のテンプレート</h2>
+<p><code>output</code>を変更することで、いくつかのテンプレートを使用することができます。 ここでは<code>.html</code>ファイルが出力されるいくつかのテンプレートを紹介しておきます。</p>
+<ul>
+<li>公式サイトの<a href="https://rmarkdown.rstudio.com/gallery.html">Gallery</a>や<a href="https://rmarkdown.rstudio.com/formats.html">Formats</a>をご覧ください。</li>
+</ul>
+<h3 id="distill">Distill</h3>
+<p><a href="https://rstudio.github.io/distill/">Distill</a>はウェブで公開することを念頭に置いた専門的な記事を書くためのテンプレートになっています。 インストールは以下のように行います。</p>
+<aside>
+このブログはDistillテーマで書いています。
+</aside>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+devtools::install_github(&quot;rstudio/distill&quot;)</code></pre>
+</div>
+<ul>
+<li>RStudioのバージョンは1.2以上であることが求められています。</li>
+</ul>
+<p>インストールに成功すると<code>R Markdown...</code>の中の<code>From Template</code>に<code>Distill Article</code>が追加されているはずです。</p>
+<h3 id="tufte-handout">Tufte Handout</h3>
+<p><a href="https://rstudio.github.io/tufte/">Tufte Handout</a>というテンプレートもあります。</p>
+<figure>
+<img src="https://bookdown.org/yihui/rmarkdown/images/tufte-overview.png" alt="Tufte HandoutT" /><figcaption>Tufte HandoutT</figcaption>
+</figure>
+<p><code>tufte</code>というパッケージをインストールするとテンプレートに追加されます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="figures/rmarkdown_html6.jpg" /><!-- --></p>
+</div>
+<h3 id="rmdformats">rmdformats</h3>
+<p><a href="https://github.com/juba/rmdformats">rmdformats</a>というテンプレートもあります。 同様に、<code>rmdformats</code>というパッケージをインストールします。</p>
+<figure>
+<img src="https://raw.githubusercontent.com/juba/rmdformats/master/tools/screenshots/material.png" alt="material" /><figcaption>material</figcaption>
+</figure>
+<figure>
+<img src="https://raw.githubusercontent.com/juba/rmdformats/master/tools/screenshots/readthedown.png" alt="readthedown" /><figcaption>readthedown</figcaption>
+</figure>
+<figure>
+<img src="https://raw.githubusercontent.com/juba/rmdformats/master/tools/screenshots/html_clean.png" alt="html_clean" /><figcaption>html_clean</figcaption>
+</figure>
+<figure>
+<img src="https://raw.githubusercontent.com/juba/rmdformats/master/tools/screenshots/html_docco.png" alt="html_docco" /><figcaption>html_docco</figcaption>
+</figure>
+<h3>スライド</h3>
+<p>R Markdownから作成できる<code>.html</code>ファイルのスライドには<a href="https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html">ioslides</a>と<a href="https://bookdown.org/yihui/rmarkdown/slidy-presentation.html">slidy</a>というものがあります。</p>
+<figure>
+<img src="https://bookdown.org/yihui/rmarkdown/images/ioslides-1.png" alt="ioslides" /><figcaption>ioslides</figcaption>
+</figure>
+<figure>
+<img src="https://bookdown.org/yihui/rmarkdown/images/ioslides-2.png" alt="ioslides" /><figcaption>ioslides</figcaption>
+</figure>
+<figure>
+<img src="https://bookdown.org/yihui/rmarkdown/images/slidy-1.png" alt="slidy" /><figcaption>slidy</figcaption>
+</figure>
+<figure>
+<img src="https://bookdown.org/yihui/rmarkdown/images/slidy-2.png" alt="slidy" /><figcaption>slidy</figcaption>
+</figure>
+<p>これらはデフォルトで入っています。</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="figures/rmarkdown_html7.jpg" /><!-- --></p>
+</div>
+<p>また、<a href="https://revealjs.com/">reveal.js</a>という<code>.html</code>スライドを作ることもできます。 <code>revealjs</code>というパッケージをインストールするとテンプレートが追加されます。</p>
+<aside>
+<code>Presentation</code>の方ではない点に注意。
+</aside>
+<figure>
+<img src="https://bookdown.org/yihui/rmarkdown/images/revealjs-1.png" alt="reveal.js" /><figcaption>reveal.js</figcaption>
+</figure>
+<figure>
+<img src="https://bookdown.org/yihui/rmarkdown/images/revealjs-2.png" alt="reveal.js" /><figcaption>reveal.js</figcaption>
+</figure>
+<p>同様にして<a href="https://github.com/yihui/xaringan">xaringan</a>というNARUTOという忍者マンガにインスパイアされたテンプレートを使用することもできます。</p>
+<figure>
+<img src="https://bookdown.org/yihui/rmarkdown/images/xaringan-1.png" alt="xaringan" /><figcaption>xaringan</figcaption>
+</figure>
+<figure>
+<img src="https://bookdown.org/yihui/rmarkdown/images/xaringan-2.png" alt="xaringan" /><figcaption>xaringan</figcaption>
+</figure>
+<h3 id="Dashboard">ダッシュボード</h3>
+<p><code>flexdashboard</code>というパッケージを使うと<a href="https://rmarkdown.rstudio.com/flexdashboard/">ダッシュボード</a>を作ることができます。 パッケージをインストールすると<code>Flex Dashboard</code>というテンプレートが追加されます。</p>
+<figure>
+<img src="https://rmarkdown.rstudio.com/flexdashboard/images/htmlwidgets-d3heatmap.png" alt="flexdashboard" /><figcaption>flexdashboard</figcaption>
+</figure>
+<h3 id="microsoft-office">Microsoft Office</h3>
+<p>R MarkdownからMicrosoft OfficeのWordやPowerPointの形式のファイルを作成することも可能です。</p>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>
