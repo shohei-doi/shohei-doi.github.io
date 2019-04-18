@@ -17,6 +17,14 @@
       <pubDate>Thu, 18 Apr 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>スクレイピング：Twitter編</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-18-scraping-twitter</link>
+      <description>RでAPI経由でTwitterのクローリング&amp;スクレイピングをする方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-18-scraping-twitter</guid>
+      <pubDate>Thu, 18 Apr 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>データの可視化：1変数の分布</title>
       <dc:creator>土井　翔平</dc:creator>
       <link>https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-dist</link>
