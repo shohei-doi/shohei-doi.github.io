@@ -1,23 +1,21 @@
 [
   {
-    "path": "posts/2019-04-15-visualization-scatter/",
-    "title": "データの可視化：2変数の分布",
-    "description": "Rで2変数の分布を可視化する方法を説明します。",
+    "path": "posts/2019-04-18-dropbox/",
+    "title": "Dropboxの使い方",
+    "description": "Dropboでデータをクラウド上に保存し、他の人と共有する方法を説明します。",
     "author": [
       {
         "name": "土井　翔平",
         "url": {}
       }
     ],
-    "date": "2019-04-15",
+    "date": "2019-04-18",
     "categories": [
-      "R",
-      "data visualization"
+      "dropbox",
+      "project management"
     ],
-    "preview": "posts/2019-04-15-visualization-scatter/visualization-scatter_files/figure-html5/unnamed-chunk-3-1.png",
-    "last_modified": "2019-04-15T15:26:53+09:00",
-    "preview_width": 1248,
-    "preview_height": 768
+    "preview": {},
+    "last_modified": "2019-04-18T11:12:42+09:00"
   },
   {
     "path": "posts/2019-04-15-visualization-dist/",
@@ -55,7 +53,27 @@
       "data visualization"
     ],
     "preview": "posts/2019-04-15-visualization-line/visualization-line_files/figure-html5/unnamed-chunk-4-1.png",
-    "last_modified": "2019-04-15T16:11:35+09:00",
+    "last_modified": "2019-04-15T16:11:36+09:00",
+    "preview_width": 1248,
+    "preview_height": 768
+  },
+  {
+    "path": "posts/2019-04-15-visualization-scatter/",
+    "title": "データの可視化：2変数の分布",
+    "description": "Rで2変数の分布を可視化する方法を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-15",
+    "categories": [
+      "R",
+      "data visualization"
+    ],
+    "preview": "posts/2019-04-15-visualization-scatter/visualization-scatter_files/figure-html5/unnamed-chunk-3-1.png",
+    "last_modified": "2019-04-15T15:26:53+09:00",
     "preview_width": 1248,
     "preview_height": 768
   },

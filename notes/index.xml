@@ -7,15 +7,14 @@
     <description>ノート
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 15 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Apr 2019 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>データの可視化：2変数の分布</title>
+      <title>Dropboxの使い方</title>
       <dc:creator>土井　翔平</dc:creator>
-      <link>https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-scatter</link>
-      <description>Rで2変数の分布を可視化する方法を説明します。</description>
-      <guid>https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-scatter</guid>
-      <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-scatter/visualization-scatter_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="1248" height="768"/>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-18-dropbox</link>
+      <description>Dropboでデータをクラウド上に保存し、他の人と共有する方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-18-dropbox</guid>
+      <pubDate>Thu, 18 Apr 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>データの可視化：1変数の分布</title>
@@ -32,8 +31,17 @@
       <link>https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-line</link>
       <description>Rで変数の時系列変化を可視化する方法を説明します。</description>
       <guid>https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-line</guid>
-      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
       <media:content url="https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-line/visualization-line_files/figure-html5/unnamed-chunk-4-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
+    <item>
+      <title>データの可視化：2変数の分布</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-scatter</link>
+      <description>Rで2変数の分布を可視化する方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-scatter</guid>
+      <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-scatter/visualization-scatter_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
     <item>
       <title>欠損値の扱い方</title>
