@@ -1,7 +1,7 @@
 [
   {
     "path": "posts/2019-04-21-scraping-html/",
-    "title": "スクレイピング：html編（基礎）",
+    "title": "スクレイピング：html編",
     "description": "RでHTMLファイルのクローリング&スクレイピングをする方法を説明します。",
     "author": [
       {
@@ -16,7 +16,7 @@
       "html/css"
     ],
     "preview": {},
-    "last_modified": "2019-04-21T18:18:29+09:00"
+    "last_modified": "2019-04-21T18:22:02+09:00"
   },
   {
     "path": "posts/2019-04-19-intro-html/",

@@ -9,7 +9,7 @@
     <generator>Distill</generator>
     <lastBuildDate>Sun, 21 Apr 2019 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>スクレイピング：html編（基礎）</title>
+      <title>スクレイピング：html編</title>
       <dc:creator>土井　翔平</dc:creator>
       <link>https://shohei-doi.github.io/notes/posts/2019-04-21-scraping-html</link>
       <description>RでHTMLファイルのクローリング&amp;スクレイピングをする方法を説明します。</description>
