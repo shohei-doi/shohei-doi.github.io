@@ -1418,7 +1418,7 @@ results</code></pre>
 <li>今回は表が2つあるのでデータフレームのリストが返ってきました。</li>
 </ul>
 <h3>タグの中身の読み込み</h3>
-<p>特定のタグの中身を読み込む際には、<code>html_nodes()</code>でノードを指定し、<code>html_test()</code>でテキストを抽出します。 例えば、選挙の名前がほしいとします。 選挙の名前は<code>h2</code>タグなので、以下のように指定します。</p>
+<p>特定のタグの中身を読み込む際には、<code>html_nodes()</code>でノードを指定し、<code>html_text()</code>でテキストを抽出します。 例えば、選挙の名前がほしいとします。 選挙の名前は<code>h2</code>タグなので、以下のように指定します。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 elections &lt;- html %&gt;% 
@@ -1786,9 +1786,13 @@ data</code></pre>
 html &lt;- read_html(&quot;https://www.tv-asahi.co.jp/hst/poll/201903/index.html&quot;)
 html %&gt;% 
   html_nodes(&quot;.data dd em&quot;) %&gt;% 
-  html_text(て)</code></pre>
+  html_text()</code></pre>
 <pre><code>
-Error in isTRUE(trim): object &#39;て&#39; not found</code></pre>
+ [1] &quot;43.2%&quot; &quot;36.1%&quot; &quot;20.7%&quot; &quot;12.8%&quot; &quot;15.6%&quot; &quot;12.1%&quot; &quot;2.2%&quot;  &quot;48.5%&quot; &quot;5.9%&quot;  &quot;2.9%&quot;  &quot;29.7%&quot; &quot;10.7%&quot;
+[13] &quot;30.7%&quot; &quot;12.1%&quot; &quot;5.1%&quot;  &quot;8.3%&quot;  &quot;3.4%&quot;  &quot;33.9%&quot; &quot;9.8%&quot;  &quot;0.8%&quot;  &quot;4.8%&quot;  &quot;4.5%&quot;  &quot;1.6%&quot;  &quot;0.5%&quot; 
+[25] &quot;0%&quot;    &quot;0.4%&quot;  &quot;0.9%&quot;  &quot;2.8%&quot;  &quot;40.0%&quot; &quot;12%&quot;   &quot;78%&quot;   &quot;10%&quot;   &quot;38%&quot;   &quot;51%&quot;   &quot;11%&quot;   &quot;26%&quot;  
+[37] &quot;61%&quot;   &quot;13%&quot;   &quot;32%&quot;   &quot;31%&quot;   &quot;37%&quot;   &quot;59%&quot;   &quot;21%&quot;   &quot;20%&quot;   &quot;54%&quot;   &quot;25%&quot;   &quot; 21%&quot;  &quot;27%&quot;  
+[49] &quot; 46%&quot;  &quot;19%&quot;   &quot; 6%&quot;   &quot;2%&quot;    &quot;32%&quot;   &quot;24%&quot;   &quot;42%&quot;   &quot;2%&quot;    &quot;33%&quot;   &quot;51%&quot;   &quot;16%&quot;  </code></pre>
 </div>
 <p>同様のことを、<a href="https://www.tv-asahi.co.jp/hst_archive/poll/201201/index.html">2012年1月のページ</a>で見てみるとうまくいきません。</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1797,7 +1801,7 @@ html &lt;- read_html(&quot;https://www.tv-asahi.co.jp/hst/poll/201201/index.html
 <pre><code>
 Error in open.connection(x, &quot;rb&quot;): HTTP error 404.</code></pre>
 </div>
-<p>URLで<code>hist</code>だったところが、<code>hst_archive</code>になっているのがわかります。 URLを正しく入力するとうまくいきました。</p>
+<p>URLで<code>hst</code>だったところが、<code>hst_archive</code>になっているのがわかります。 URLを正しく入力するとうまくいきました。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 html &lt;- read_html(&quot;https://www.tv-asahi.co.jp/hst_archive/poll/201201/index.html&quot;)
@@ -1812,7 +1816,7 @@ html %&gt;%
 </div>
 <p>いろいろ調べていると2017年以前は<code>hst_archive</code>に、2018年以降は<code>hst</code>にあることがわかります。</p>
 <h3>ループを書く</h3>
-<p>下調べはここまでです。 各ページからどのように情報を抜き出せばいいのか、そして各ページのURLがどうなっているのかは検討がつきました。</p>
+<p>下調べはここまでです。 各ページからどのように情報を抜き出せばいいのか、そして各ページのURLがどうなっているのかは見当がつきました。</p>
 <p>そこで、ループを書いていくのですが、どの箇所をループすべきなのでしょうか。 今回の場合はURLの年と月の箇所になります。</p>
 <ul>
 <li>例えば2012年1月であれば<code>201201</code>、2019年3月であれば<code>201903</code>となっている箇所です。</li>
