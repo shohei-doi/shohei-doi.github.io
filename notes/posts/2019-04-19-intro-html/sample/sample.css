@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+* {
+  font-family: 'Noto Sans JP';
+}
+
+h1 {
+  text-align: center;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+td {
+  padding-left: 15px;
+}
+
+tbody td {
+  text-align: right;
+}
+
+#city {
+  color: green;
+}
+
+#prefecture {
+  color: blue;
+}
+
+.elected {
+  background-color: red;
+}

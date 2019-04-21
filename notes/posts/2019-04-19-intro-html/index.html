@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+  <!--radix_placeholder_meta_tags-->
+<title>ノート: 政治学のためのHTML/CSS入門</title>
+
+<meta property="description" itemprop="description" content="スクレイピングと個人ウェブサイト作成のために必要なHTMLとCSSの基礎知識を説明します。"/>
+
+<link rel="canonical" href="https://shohei-doi.github.io/notes/posts/2019-04-19-intro-html/"/>
+
+<!--  https://schema.org/Article -->
+<meta property="article:published" itemprop="datePublished" content="2019-04-21"/>
+<meta property="article:created" itemprop="dateCreated" content="2019-04-21"/>
+<meta name="article:author" content="土井　翔平"/>
+
+<!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+<meta property="og:title" content="ノート: 政治学のためのHTML/CSS入門"/>
+<meta property="og:type" content="article"/>
+<meta property="og:description" content="スクレイピングと個人ウェブサイト作成のために必要なHTMLとCSSの基礎知識を説明します。"/>
+<meta property="og:url" content="https://shohei-doi.github.io/notes/posts/2019-04-19-intro-html/"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:site_name" content="ノート"/>
+
+<!--  https://dev.twitter.com/cards/types/summary -->
+<meta property="twitter:card" content="summary"/>
+<meta property="twitter:title" content="ノート: 政治学のためのHTML/CSS入門"/>
+<meta property="twitter:description" content="スクレイピングと個人ウェブサイト作成のために必要なHTMLとCSSの基礎知識を説明します。"/>
+<meta property="twitter:url" content="https://shohei-doi.github.io/notes/posts/2019-04-19-intro-html/"/>
+<meta property="twitter:creator" content="@sdoi0504"/>
+
+<!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+<script type="text/json" id="radix-rmarkdown-metadata">
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["政治学のためのHTML/CSS入門"]},{"type":"character","attributes":{},"value":["スクレイピングと個人ウェブサイト作成のために必要なHTMLとCSSの基礎知識を説明します。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-04-21"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["html/css"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-04-19-intro-html/"]}]}
+</script>
+<!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["bootstrap4.html","intro-html_files/bowser-1.9.3/bowser.min.js","intro-html_files/distill-2.2.21/template.v2.js","intro-html_files/jquery-1.11.3/jquery.min.js","intro-html_files/webcomponents-2.0.0/webcomponents.js","sample/index.html","sample/sample.css","sample.html","sample.zip"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+
+<script type="application/javascript">
+
+  window.headroom_prevent_pin = false;
+
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+
+    // initialize headroom for banner
+    var header = $('header').get(0);
+    var headerHeight = header.offsetHeight;
+    var headroom = new Headroom(header, {
+      onPin : function() {
+        if (window.headroom_prevent_pin) {
+          window.headroom_prevent_pin = false;
+          headroom.unpin();
+        }
+      }
+    });
+    headroom.init();
+    if(window.location.hash)
+      headroom.unpin();
+    $(header).addClass('headroom--transition');
+
+    // offset scroll location for banner on hash change
+    // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+    window.addEventListener("hashchange", function(event) {
+      window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+    });
+
+    // responsive menu
+    $('.distill-site-header').each(function(i, val) {
+      var topnav = $(this);
+      var toggle = topnav.find('.nav-toggle');
+      toggle.on('click', function() {
+        topnav.toggleClass('responsive');
+      });
+    });
+
+    // nav dropdowns
+    $('.nav-dropbtn').click(function(e) {
+      $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+      $(this).parent().siblings('.nav-dropdown')
+         .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $("body").click(function(e){
+      $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $(".nav-dropdown").click(function(e){
+      e.stopPropagation();
+    });
+  });
+</script>
+
+<style type="text/css">
+
+/* Theme (user-documented overrideables for nav appearance) */
+
+.distill-site-nav {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #455a64;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.distill-site-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.distill-site-nav a:hover {
+  color: white;
+}
+
+@media print {
+  .distill-site-nav {
+    display: none;
+  }
+}
+
+.distill-site-header {
+
+}
+
+.distill-site-footer {
+
+}
+
+
+/* Site Header */
+
+.distill-site-header {
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.distill-site-header .nav-left {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header .nav-left {
+    margin-left: 0;
+  }
+}
+
+
+.distill-site-header .nav-right {
+  float: right;
+  margin-right: 8px;
+}
+
+.distill-site-header a,
+.distill-site-header .title {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 10px 14px 10px;
+}
+
+.distill-site-header .title {
+  font-size: 18px;
+}
+
+.distill-site-header .logo {
+  padding: 0;
+}
+
+.distill-site-header .logo img {
+  display: none;
+  max-height: 20px;
+  width: auto;
+  margin-bottom: -4px;
+}
+
+.distill-site-header .nav-image img {
+  max-height: 18px;
+  width: auto;
+  display: inline-block;
+  margin-bottom: -3px;
+}
+
+
+
+@media screen and (min-width: 1000px) {
+  .distill-site-header .logo img {
+    display: inline-block;
+  }
+  .distill-site-header .nav-left {
+    margin-left: 20px;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 20px;
+  }
+  .distill-site-header .title {
+    padding-left: 12px;
+  }
+}
+
+
+.distill-site-header .nav-toggle {
+  display: none;
+}
+
+.nav-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-dropdown .nav-dropbtn {
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 16px 10px;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  margin-top: 1px;
+  z-index: 2;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  z-index: 1;
+  margin-top: 2px;
+  white-space: nowrap;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.nav-dropdown-content hr {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-dropdown-active {
+  display: block;
+}
+
+.nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+  color: black;
+  padding: 6px 24px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.nav-dropdown-content .nav-dropdown-header {
+  display: block;
+  padding: 5px 24px;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #999999;
+  white-space: nowrap;
+}
+
+.nav-dropdown:hover .nav-dropbtn {
+  color: white;
+}
+
+.nav-dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.nav-right .nav-dropdown-content {
+  margin-left: -45%;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+  .distill-site-header a.nav-toggle {
+    float: right;
+    display: block;
+  }
+  .distill-site-header .title {
+    margin-left: 0;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 0;
+  }
+  .distill-site-header {
+    overflow: hidden;
+  }
+  .nav-right .nav-dropdown-content {
+    margin-left: 0;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .distill-site-header.responsive {position: relative;}
+  .distill-site-header.responsive a.nav-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .distill-site-header.responsive a,
+  .distill-site-header.responsive .nav-dropdown {
+    display: block;
+    text-align: left;
+  }
+  .distill-site-header.responsive .nav-left,
+  .distill-site-header.responsive .nav-right {
+    width: 100%;
+  }
+  .distill-site-header.responsive .nav-dropdown {float: none;}
+  .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+  .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Site Footer */
+
+.distill-site-footer {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 3;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+/* Headroom */
+
+d-title {
+  padding-top: 6rem;
+}
+
+@media print {
+  d-title {
+    padding-top: 4rem;
+  }
+}
+
+.headroom {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.headroom--transition {
+  transition: all .4s ease-in-out;
+}
+
+.headroom--unpinned {
+  top: -100px;
+}
+
+.headroom--pinned {
+  top: 0;
+}
+
+</style>
+
+<link href="../../site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+<link href="../../site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+<script src="../../site_libs/headroom-0.9.4/headroom.min.js"></script>
+<!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+<style type="text/css">
+
+body {
+  background-color: white;
+}
+
+.pandoc-table {
+  width: 100%;
+}
+
+.pandoc-table>caption {
+  margin-bottom: 10px;
+}
+
+.pandoc-table th:not([align]) {
+  text-align: left;
+}
+
+.pagedtable-footer {
+  font-size: 15px;
+}
+
+.html-widget {
+  margin-bottom: 2.0em;
+}
+
+.l-screen-inset {
+  padding-right: 16px;
+}
+
+.l-screen .caption {
+  margin-left: 10px;
+}
+
+.shaded {
+  background: rgb(247, 247, 247);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .html-widget {
+  margin-bottom: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .shaded-content {
+  background: white;
+}
+
+.text-output {
+  margin-top: 0;
+  line-height: 1.5em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+d-article {
+  padding-bottom: 30px;
+}
+
+d-appendix {
+  padding-top: 30px;
+}
+
+d-article>p>img {
+  width: 100%;
+}
+
+d-article iframe {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.0em;
+  width: 100%;
+}
+
+figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+/* CSS for table of contents */
+
+.d-toc {
+  color: rgba(0,0,0,0.8);
+  font-size: 0.8em;
+  line-height: 1em;
+}
+
+.d-toc-header {
+  font-size: 0.6rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 1.3em;
+}
+
+.d-toc a {
+  border-bottom: none;
+}
+
+.d-toc ul {
+  padding-left: 0;
+}
+
+.d-toc li>ul {
+  padding-top: 0.8em;
+  padding-left: 16px;
+  margin-bottom: 0.6em;
+}
+
+.d-toc ul,
+.d-toc li {
+  list-style-type: none;
+}
+
+.d-toc li {
+  margin-bottom: 0.9em;
+}
+
+.d-toc-separator {
+  margin-top: 20px;
+  margin-bottom: 2em;
+}
+
+.d-article-with-toc {
+  border-top: none;
+  padding-top: 0;
+}
+
+
+
+/* Tweak code blocks (note that this CSS is repeated above in an injection
+   into the d-code shadow dom) */
+
+d-code {
+  overflow-x: auto !important;
+}
+
+pre.d-code code.d-code {
+  padding-left: 10px;
+  font-size: 12px;
+  border-left: 2px solid rgba(0,0,0,0.1);
+}
+
+pre.text-output {
+
+  font-size: 12px;
+  color: black;
+  background: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+@media(min-width: 768px) {
+
+d-code {
+  overflow-x: visible !important;
+}
+
+pre.d-code code.d-code  {
+    padding-left: 18px;
+    font-size: 14px;
+}
+pre.text-output {
+  font-size: 14px;
+}
+}
+
+/* Figure */
+
+.figure {
+  position: relative;
+  margin-bottom: 2.5em;
+  margin-top: 1.5em;
+}
+
+.figure img {
+  width: 100%;
+}
+
+.figure .caption {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+.figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.figure .caption a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.figure .caption b,
+.figure .caption strong, {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1.0);
+}
+
+
+
+/* Tweak 1000px media break to show more text */
+
+@media(min-width: 1000px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 16px;
+  }
+
+  .grid {
+    grid-column-gap: 16px;
+  }
+
+  d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+  }
+  figure .caption, .figure .caption, figure figcaption {
+    font-size: 13px;
+  }
+}
+
+@media(min-width: 1180px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 32px;
+  }
+
+  .grid {
+    grid-column-gap: 32px;
+  }
+}
+
+
+/* Get the citation styles for the appendix (not auto-injected on render since
+   we do our own rendering of the citation appendix) */
+
+d-appendix .citation-appendix,
+.d-appendix .citation-appendix {
+  font-size: 11px;
+  line-height: 15px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 18px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.02);
+  padding: 10px 18px;
+  border-radius: 3px;
+  color: rgba(150, 150, 150, 1);
+  overflow: hidden;
+  margin-top: -12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+
+/* Social footer */
+
+.social_footer {
+  margin-top: 30px;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.67);
+}
+
+.disqus-comments {
+  margin-right: 30px;
+}
+
+.disqus-comment-count {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+#disqus_thread {
+  margin-top: 30px;
+}
+
+.article-sharing a {
+  border-bottom: none;
+  margin-right: 8px;
+}
+
+.article-sharing a:hover {
+  border-bottom: none;
+}
+
+.sidebar-section.subscribe {
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.subscribe p {
+  margin-bottom: 0.5em;
+}
+
+
+.article-footer .subscribe {
+  font-size: 15px;
+  margin-top: 45px;
+}
+
+
+/* Improve display for browsers without grid (IE/Edge <= 15) */
+
+.downlevel {
+  line-height: 1.6em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+}
+
+.downlevel .d-title {
+  padding-top: 6rem;
+  padding-bottom: 1.5rem;
+}
+
+.downlevel .d-title h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.1em;
+  margin: 0 0 0.5rem;
+}
+
+.downlevel .d-title p {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.55em;
+  margin-top: 0;
+}
+
+.downlevel .d-byline {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  font-size: 0.8rem;
+  line-height: 1.8em;
+}
+
+.downlevel .section-separator {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.downlevel .d-article {
+  font-size: 1.06rem;
+  line-height: 1.7em;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+
+.downlevel .d-appendix {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: none;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.5);
+  padding-top: 40px;
+  padding-bottom: 48px;
+}
+
+.downlevel .footnotes ol {
+  padding-left: 13px;
+}
+
+.downlevel .base-grid,
+.downlevel .distill-header,
+.downlevel .d-title,
+.downlevel .d-abstract,
+.downlevel .d-article,
+.downlevel .d-appendix,
+.downlevel .distill-appendix,
+.downlevel .d-byline,
+.downlevel .d-footnote-list,
+.downlevel .d-citation-list,
+.downlevel .distill-footer,
+.downlevel .appendix-bottom,
+.downlevel .posts-container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media(min-width: 768px) {
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+  padding-left: 150px;
+  padding-right: 150px;
+  max-width: 900px;
+}
+}
+
+.downlevel pre code {
+  display: block;
+  border-left: 2px solid rgba(0, 0, 0, .1);
+  padding: 0 0 0 20px;
+  font-size: 14px;
+}
+
+.downlevel code, .downlevel pre {
+  color: black;
+  background: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+</style>
+
+<script type="application/javascript">
+
+function is_downlevel_browser() {
+  if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                 window.navigator.userAgent)) {
+    return true;
+  } else {
+    return window.load_distill_framework === undefined;
+  }
+}
+
+// show body when load is complete
+function on_load_complete() {
+
+  // set body to visible
+  document.body.style.visibility = 'visible';
+
+  // force redraw for leaflet widgets
+  if (window.HTMLWidgets) {
+    var maps = window.HTMLWidgets.findAll(".leaflet");
+    $.each(maps, function(i, el) {
+      var map = this.getMap();
+      map.invalidateSize();
+      map.eachLayer(function(layer) {
+        if (layer instanceof L.TileLayer)
+          layer.redraw();
+      });
+    });
+  }
+
+  // trigger 'shown' so htmlwidgets resize
+  $('d-article').trigger('shown');
+}
+
+function init_distill() {
+
+  init_common();
+
+  // create front matter
+  var front_matter = $('<d-front-matter></d-front-matter>');
+  $('#distill-front-matter').wrap(front_matter);
+
+  // create d-title
+  $('.d-title').changeElementType('d-title');
+
+  // create d-byline
+  var byline = $('<d-byline></d-byline>');
+  $('.d-byline').replaceWith(byline);
+
+  // create d-article
+  var article = $('<d-article></d-article>');
+  $('.d-article').wrap(article).children().unwrap();
+
+  // move posts container into article
+  $('.posts-container').appendTo($('d-article'));
+
+  // create d-appendix
+  $('.d-appendix').changeElementType('d-appendix');
+
+  // create d-bibliography
+  var bibliography = $('<d-bibliography></d-bibliography>');
+  $('#distill-bibliography').wrap(bibliography);
+
+  // flag indicating that we have appendix items
+  var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+  // replace citations with <d-cite>
+  $('.citation').each(function(i, val) {
+    appendix = true;
+    var cites = $(this).attr('data-cites').split(" ");
+    var dt_cite = $('<d-cite></d-cite>');
+    dt_cite.attr('key', cites.join());
+    $(this).replaceWith(dt_cite);
+  });
+  // remove refs
+  $('#refs').remove();
+
+  // replace footnotes with <d-footnote>
+  $('.footnote-ref').each(function(i, val) {
+    appendix = true;
+    var href = $(this).attr('href');
+    var id = href.replace('#', '');
+    var fn = $('#' + id);
+    var fn_p = $('#' + id + '>p');
+    fn_p.find('.footnote-back').remove();
+    var text = fn_p.html();
+    var dtfn = $('<d-footnote></d-footnote>');
+    dtfn.html(text);
+    $(this).replaceWith(dtfn);
+  });
+  // remove footnotes
+  $('.footnotes').remove();
+
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    var id = $(this).attr('id');
+    $('.d-toc a[href="#' + id + '"]').parent().remove();
+    appendix = true;
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+  });
+
+  // show d-appendix if we have appendix content
+  $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+  // replace code blocks with d-code
+  $('pre>code').each(function(i, val) {
+    var code = $(this);
+    var pre = code.parent();
+    var clz = "";
+    var language = pre.attr('class');
+    if (language) {
+      // map unknown languages to "clike" (without this they just dissapear)
+      if ($.inArray(language, ["bash", "clike", "css", "go", "html",
+                               "javascript", "js", "julia", "lua", "markdown",
+                               "markup", "mathml", "python", "svg", "xml"]) == -1)
+        language = "clike";
+      language = ' language="' + language + '"';
+      var dt_code = $('<d-code block' + language + clz + '></d-code>');
+      dt_code.text(code.text());
+      pre.replaceWith(dt_code);
+    } else {
+      code.addClass('text-output').unwrap().changeElementType('pre');
+    }
+  });
+
+  // localize layout chunks to just output
+  $('.layout-chunk').each(function(i, val) {
+
+    // capture layout
+    var layout = $(this).attr('data-layout');
+
+    // apply layout to markdown level block elements
+    var elements = $(this).children().not('d-code, pre.text-output, script');
+    elements.each(function(i, el) {
+      var layout_div = $('<div class="' + layout + '"></div>');
+      if (layout_div.hasClass('shaded')) {
+        var shaded_content = $('<div class="shaded-content"></div>');
+        $(this).wrap(shaded_content);
+        $(this).parent().wrap(layout_div);
+      } else {
+        $(this).wrap(layout_div);
+      }
+    });
+
+
+    // unwrap the layout-chunk div
+    $(this).children().unwrap();
+  });
+
+  // load distill framework
+  load_distill_framework();
+
+  // wait for window.distillRunlevel == 4 to do post processing
+  function distill_post_process() {
+
+    if (!window.distillRunlevel || window.distillRunlevel < 4)
+      return;
+
+    // hide author/affiliations entirely if we have no authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+    if (!have_authors)
+      $('d-byline').addClass('hidden');
+
+    // table of contents
+    if (have_authors) // adjust border if we are in authors
+      $('.d-toc').parent().addClass('d-article-with-toc');
+
+    // strip links that point to #
+    $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+    // hide elements of author/affiliations grid that have no value
+    function hide_byline_column(caption) {
+      $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+    }
+
+    // affiliations
+    var have_affiliations = false;
+    for (var i = 0; i<front_matter.authors.length; ++i) {
+      var author = front_matter.authors[i];
+      if (author.affiliation !== "&nbsp;") {
+        have_affiliations = true;
+        break;
+      }
+    }
+    if (!have_affiliations)
+      $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+    // published date
+    if (!front_matter.publishedDate)
+      hide_byline_column("Published");
+
+    // document object identifier
+    var doi = $('d-byline').find('h3:contains("DOI")');
+    var doi_p = doi.next().empty();
+    if (!front_matter.doi) {
+      // if we have a citation and valid citationText then link to that
+      if ($('#citation').length > 0 && front_matter.citationText) {
+        doi.html('Citation');
+        $('<a href="#citation"></a>')
+          .text(front_matter.citationText)
+          .appendTo(doi_p);
+      } else {
+        hide_byline_column("DOI");
+      }
+    } else {
+      $('<a></a>')
+         .attr('href', "https://doi.org/" + front_matter.doi)
+         .html(front_matter.doi)
+         .appendTo(doi_p);
+    }
+
+     // change plural form of authors/affiliations
+    if (front_matter.authors.length === 1) {
+      var grid = $('.authors-affiliations');
+      grid.children('h3:contains("Authors")').text('Author');
+      grid.children('h3:contains("Affiliations")').text('Affiliation');
+    }
+
+    // inject pre code styles (can't do this with a global stylesheet b/c a shadow root is used)
+    $('d-code').each(function(i, val) {
+      var style = document.createElement('style');
+      style.innerHTML = 'pre code { padding-left: 10px; font-size: 12px; border-left: 2px solid rgba(0,0,0,0.1); } ' +
+                        '@media(min-width: 768px) { pre code { padding-left: 18px; font-size: 14px; } }';
+      if (this.shadowRoot)
+        this.shadowRoot.appendChild(style);
+    });
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // clear polling timer
+    clearInterval(tid);
+
+    // show body now that everything is ready
+    on_load_complete();
+  }
+
+  var tid = setInterval(distill_post_process, 50);
+  distill_post_process();
+
+}
+
+function init_downlevel() {
+
+  init_common();
+
+   // insert hr after d-title
+  $('.d-title').after($('<hr class="section-separator"/>'));
+
+  // check if we have authors
+  var front_matter = JSON.parse($("#distill-front-matter").html());
+  var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+  // manage byline/border
+  if (!have_authors)
+    $('.d-byline').remove();
+  $('.d-byline').after($('<hr class="section-separator"/>'));
+  $('.d-byline a').remove();
+
+  // remove toc
+  $('.d-toc-header').remove();
+  $('.d-toc').remove();
+  $('.d-toc-separator').remove();
+
+  // move appendix elements
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+  });
+
+
+  // inject headers into references and footnotes
+  var refs_header = $('<h3></h3>');
+  refs_header.text('References');
+  $('#refs').prepend(refs_header);
+
+  var footnotes_header = $('<h3></h3');
+  footnotes_header.text('Footnotes');
+  $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+  // move appendix-bottom entries to the bottom
+  $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+  $('.appendix-bottom').remove();
+
+  // remove appendix if it's empty
+  if ($('.d-appendix').children().length === 0)
+    $('.d-appendix').remove();
+
+  // prepend separator above appendix
+  $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+  // trim code
+  $('pre>code').each(function(i, val) {
+    $(this).html($.trim($(this).html()));
+  });
+
+  // move posts-container right before article
+  $('.posts-container').insertBefore($('.d-article'));
+
+  $('body').addClass('downlevel');
+
+  on_load_complete();
+}
+
+
+function init_common() {
+
+  // jquery plugin to change element types
+  (function($) {
+    $.fn.changeElementType = function(newType) {
+      var attrs = {};
+
+      $.each(this[0].attributes, function(idx, attr) {
+        attrs[attr.nodeName] = attr.nodeValue;
+      });
+
+      this.replaceWith(function() {
+        return $("<" + newType + "/>", attrs).append($(this).contents());
+      });
+    };
+  })(jQuery);
+
+  // prevent underline for linked images
+  $('a > img').parent().css({'border-bottom' : 'none'});
+
+  // mark non-body figures created by knitr chunks as 100% width
+  $('.layout-chunk').each(function(i, val) {
+    var figures = $(this).find('img, .html-widget');
+    if ($(this).attr('data-layout') !== "l-body") {
+      figures.css('width', '100%');
+    } else {
+      figures.css('max-width', '100%');
+      figures.filter("[width]").each(function(i, val) {
+        var fig = $(this);
+        fig.css('width', fig.attr('width') + 'px');
+      });
+
+    }
+  });
+
+  // auto-append index.html to post-preview links in file: protocol
+  // and in rstudio ide preview
+  $('.post-preview').each(function(i, val) {
+    if (window.location.protocol === "file:")
+      $(this).attr('href', $(this).attr('href') + "index.html");
+  });
+
+  // get rid of index.html references in header
+  if (window.location.protocol !== "file:") {
+    $('.distill-site-header a[href]').each(function(i,val) {
+      $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+    });
+  }
+
+  // add class to pandoc style tables
+  $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+  $('.kable-table').children('table').addClass('pandoc-table');
+
+  // add figcaption style to table captions
+  $('caption').parent('table').addClass("figcaption");
+
+  // initialize posts list
+  if (window.init_posts_list)
+    window.init_posts_list();
+
+  // implmement disqus comment link
+  $('.disqus-comment-count').click(function() {
+    window.headroom_prevent_pin = true;
+    $('#disqus_thread').toggleClass('hidden');
+    if (!$('#disqus_thread').hasClass('hidden')) {
+      var offset = $(this).offset();
+      $(window).resize();
+      $('html, body').animate({
+        scrollTop: offset.top - 35
+      });
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (is_downlevel_browser())
+    init_downlevel();
+  else
+    window.addEventListener('WebComponentsReady', init_distill);
+});
+
+</script>
+
+<!--/radix_placeholder_distill-->
+  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75879658-3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-75879658-3');
+</script>
+<!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"政治学のためのHTML/CSS入門","description":"スクレイピングと個人ウェブサイト作成のために必要なHTMLとCSSの基礎知識を説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-04-21T00:00:00.000+09:00","citationText":"翔平, 2019"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="../../index.html" class="title">ノート</a>
+</div>
+<div class="nav-right">
+<a href="../../../index.html">Shohei Doi</a>
+<a href="../../index.xml">
+<i class="fa fa-rss"></i>
+</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>政治学のためのHTML/CSS入門</h1>
+<p>スクレイピングと個人ウェブサイト作成のために必要なHTMLとCSSの基礎知識を説明します。</p>
+</div>
+
+<div class="d-byline">
+  土井　翔平  (国立情報学研究所)
+  
+<br/>2019-04-21
+</div>
+
+<div class="d-article">
+<h3 class="d-toc-header">Table of Contents</h3>
+<nav class="d-toc" id="TOC">
+<ul>
+<li><a href="#Intro">はじめに</a></li>
+<li><a href="#HTML">HTML</a></li>
+<li><a href="#CSS">CSS</a></li>
+<li><a href="#bootstrap">Bootstrap<code>*</code></a></li>
+</ul>
+</nav>
+<hr class="d-toc-separator"/>
+<h2 id="Intro">はじめに</h2>
+<p>政治学においてウェブサイトの知識が必要になる局面としては少なくとも次の2つがあります。</p>
+<ol type="1">
+<li>ウェブスクレイピング</li>
+<li>個人ウェブサイトの作成</li>
+</ol>
+<p>そこで、今回はこれらを実施する際に必要となる最低限の知識について紹介します。</p>
+<p>基本的に、ウェブサイトは<code>.html</code>ファイルによって構成されています。 <code>.html</code>ファイルには文章や画像のパスなどのコンテンツが記入されています。</p>
+<p>HTMLはマークアップ言語でタグ付けすることにより各要素の役割と外見を紐付けます。 具体的には<code>.css</code>ファイルによってそれぞれのタグなどをどのように表示するか指定します。</p>
+<p>その他に、JavaScriptによってより動的な表現・サービスを行ったり、PHPによってサイトの構築と動的サービスを一体的に行ったりします。 ひとまず、ウェブスクレイピングには<code>.html</code>ファイルの、ウェブサイト作成にはそれに加えて<code>.css</code>ファイルの知識があれば最低限のことはできます。</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>HTML</th>
+<th>CSS</th>
+<th>JS</th>
+<th>PHP</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ウェブスクレイピング</td>
+<td>必要</td>
+<td>必要ない</td>
+<td>必要ない</td>
+<td>必要ない</td>
+</tr>
+<tr class="even">
+<td>ウェブサイト作成</td>
+<td>必要</td>
+<td>必要</td>
+<td>もしかすると必要</td>
+<td>もしかすると必要</td>
+</tr>
+</tbody>
+</table>
+<h2 id="HTML">HTML</h2>
+<p>まず、<a href="https://getbootstrap.com/">Bootstrap 4</a>というフレームワークのサンプル<code>.html</code>ファイルを見てみましょう。</p>
+<aside>
+フレームワークとはある言語を実行する際の便利なテンプレートのようなものです。
+</aside>
+<pre><code>
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot; integrity=&quot;sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&quot; crossorigin=&quot;anonymous&quot;&gt;
+
+    &lt;title&gt;Hello, world!&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+
+    &lt;!-- Optional JavaScript --&gt;
+    &lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.slim.min.js&quot; integrity=&quot;sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js&quot; integrity=&quot;sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js&quot; integrity=&quot;sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>これはブラウザ上では<a href="sample1.html">このように</a>表示されます。</p>
+<aside>
+ブラウザとはウェブサイトを閲覧するためのソフトでFirefoxやGoogle Chromeなどがあります（Internat ExplorerやEdgeというものはFirefoxとGoogle Chromeをダウンロードするためのソフトです）。
+</aside>
+<p>以下ではHTMLの代表的なタグと要素について説明していきます。</p>
+<h3 id="headbody">headとbody</h3>
+<p>なんとなく分かると思うのですが、基本的に<code>&lt;...&gt;</code>がタグの始まりで<code>&lt;/...&gt;</code>がタグの終わりになっています。 そして、<code>...</code>がタグの名前になっています。</p>
+<p><code>.html</code>ファイルではまず<code>head</code>と<code>body</code>に大きく分けられます。 <code>head</code>ではメタデータの設定（例えば文字コードやサイトのタイトル）や<code>.css</code>ファイルの読み込みなどを行います。 ときどき、この例のように<code>body</code>内でJavaScriptを読み込むときもあります。</p>
+<p>次に、<code>body</code>内においてウェブサイト上に表示される情報を記述します。 ウェブスクレイピングをする際には基本的に<code>body</code>内を見れば事足ります。</p>
+<aside>
+なお、<code>&lt;!--</code>と<code>--&gt;</code>で囲まれている箇所はコメントアウトされます。
+</aside>
+<h3 id="h">hタグ</h3>
+<p><code>h</code>タグとは論文や本における見出しのようなものです。 上記の例で言えば、<code>&lt;h1&gt;Hello, world!&lt;/h1&gt;</code>がそれに当たります。</p>
+<p><code>h2</code>、<code>h3</code>と番号が大きくなるにつれてより小さな見出しになっていきます。 例えば、このページの<code>h</code>タグ次のようになっています。</p>
+<pre><code>
+&lt;h1&gt;政治学のためのHTML/CSS入門&lt;/h1&gt;
+
+&lt;h2 id=&quot;Intro&quot;&gt;はじめに&lt;/h2&gt;
+
+&lt;h2 id=&quot;HTML&quot;&gt;HTML&lt;/h2&gt;
+
+&lt;h3 id=&quot;headbody&quot;&gt;headとbody&lt;/h3&gt;
+
+...</code></pre>
+<h3 id="pa">pタグとaタグ</h3>
+<p>さて、このページのHTMLの節の最初の一文は<code>.html</code>ファイルでは次のように記述されます。</p>
+<pre><code>
+&lt;p&gt;まず、&lt;a href=&quot;https://getbootstrap.com/&quot;&gt;Bootstrap 4&lt;/a&gt;というフレームワークのサンプル&lt;code&gt;.html&lt;/code&gt;ファイルを見てみましょう。&lt;/p&gt;</code></pre>
+<p><code>p</code>タグは文章を記述する箇所で、<code>a</code>タグはリンクを張るタグになります。 <code>a</code>タグの中の<code>href =</code>の箇所でリンク先のパスやURLを記述します。</p>
+<h3>リスト</h3>
+<p>このページの冒頭で番号付きの箇条書きの箇所がありますが、これは以下の様に記述されます。</p>
+<pre><code>
+&lt;ol type=&quot;1&quot;&gt;
+  &lt;li&gt;ウェブスクレイピング&lt;/li&gt;
+  &lt;li&gt;個人ウェブサイトの作成&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+<p><code>ol</code>タグは順序付きリストを作成するタグで、<code>li</code>タグはリストの項目を記述します。 ちなみに、<code>ul</code>にすると順序なしリストになります。</p>
+<ul>
+<li>ウェブスクレイピング</li>
+<li>個人ウェブサイトの作成</li>
+</ul>
+<pre><code>
+&lt;ul&gt;
+  &lt;li&gt;ウェブスクレイピング&lt;/li&gt;
+  &lt;li&gt;個人ウェブサイトの作成&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<h3>テーブル</h3>
+<p>このページ冒頭のテーブルは以下のように記述されています。</p>
+<pre><code>
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr class=&quot;header&quot;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;HTML&lt;/th&gt;
+      &lt;th&gt;CSS&lt;/th&gt;
+      &lt;th&gt;JS&lt;/th&gt;
+      &lt;th&gt;PHP&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr class=&quot;odd&quot;&gt;
+      &lt;td&gt;ウェブスクレイピング&lt;/td&gt;
+      &lt;td&gt;必要&lt;/td&gt;
+      &lt;td&gt;必要ない&lt;/td&gt;
+      &lt;td&gt;必要ない&lt;/td&gt;
+      &lt;td&gt;必要ない&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr class=&quot;even&quot;&gt;
+      &lt;td&gt;ウェブサイト作成&lt;/td&gt;
+      &lt;td&gt;必要&lt;/td&gt;
+      &lt;td&gt;必要&lt;/td&gt;
+      &lt;td&gt;もしかすると必要&lt;/td&gt;
+      &lt;td&gt;もしかすると必要&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+<p>まず、<code>table</code>タグでテーブル全体を囲み、<code>thead</code>タグと<code>tbody</code>タグでヘッダーとボディを囲みます。 そして、<code>tr</code>タグで各行を決めて、<code>td</code>タグで各セルの中身を記述しています。</p>
+<h3 id="div">divタグ</h3>
+<p><code>div</code>タグとは分割を意味するタグです。 このページのタイトルは以下のようになっています。</p>
+<pre><code>
+&lt;div class=&quot;d-title&quot;&gt;
+  &lt;h1&gt;政治学のためのHTML/CSS入門&lt;/h1&gt;
+  &lt;p&gt;スクレイピングと個人ウェブサイト作成のために必要なHTMLとCSSの基礎知識を説明します。&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<ul>
+<li><code>div</code>タグそれ自体に意味はないですが、そこからどこまでが一つの塊なのかを明らかにするのに役立ちます。</li>
+</ul>
+<h3 id="idclass">idとclass</h3>
+<p>タグの中で<code>id</code>や<code>class</code>を指定することができます。 例えば、<code>&lt;h2 id=&quot;Intro&quot;&gt;はじめに&lt;/h2&gt;</code>や<code>&lt;tr class=&quot;header&quot;&gt;...&lt;/tr&gt;</code>といった形です。</p>
+<p>これらはそれぞれ特定のタグの目印となるものですが、以下のような違いがあります。</p>
+<ul>
+<li><code>id</code>は複数のタグで同じものを使えない。</li>
+<li><code>class</code>は複数のタグで共通のものが使える。</li>
+</ul>
+<aside>
+しかし、そこまで厳密に使い分けているとも限りません。
+</aside>
+<h2 id="CSS">CSS</h2>
+<p>続いて、HTMLとCSSの編集方法を簡単に学びます。 なお、実際にウェブサイトを作成する際にはR Markdownで作る、Bootstrap 4などのフレームワークを使うなどしたほうがいいでしょう。</p>
+<p>練習用の<code>.html</code>ファイルと<code>.css</code>ファイルを圧縮した<a href="sample.zip">zipファイル</a>をダウンロードして、適当な場所で解凍してください。 中に、<code>index.html</code>と<code>sample.css</code>というのがあるはずなので、それらを適当なテキストエディタで開きます。</p>
+<aside>
+ガチ勢はVimやEmacs、宗教論争に巻き込まれたくないライト層はAtomやSublime Textを使うのが定番でしょうか。 <del>そんなのどうでもいい</del>エディタにこだわりのない人はRStudioでもできます。
+</aside>
+<p>なお、編集結果はブラウザで見ながら作業をしたいと思うので、<code>index.html</code>はブラウザでも開いてください。</p>
+<p><code>index.html</code>にはある程度記述がありますが、<code>sample.css</code>は空白のはずです。 以下ではこれらを編集しながら使い方を学びます。</p>
+<p><code>index.html</code>の<code>head</code>タグ内に</p>
+<pre><code>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;sample.css&quot;&gt;</code></pre>
+<p>という記述があります。 これは、（<code>index.html</code>と同じディレクトリにある）<code>sample.css</code>をスタイルシートとして読み込む、という意味です。</p>
+<h3>リンクを貼る</h3>
+<p>このサンプルデータは2019年の大阪市長および大阪府知事のダブル選挙の結果のページになっています。 もとのデータは<a href="https://go2senkyo.com/">選挙ドットコム</a>から拝借しました。</p>
+<p>そうならば、引用元のページのリンクを貼るというのがマナーでしょう。 前述したようにリンクを貼るには<code>a</code>タグを使います。 例えば、</p>
+<pre><code>
+&lt;p&gt;以下の情報は選挙ドットコムからお借りしました。&lt;/p&gt;</code></pre>
+<p>を</p>
+<pre><code>
+&lt;p&gt;以下の情報は&lt;a href=&quot;https://go2senkyo.com/&quot;&gt;選挙ドットコム&lt;/a&gt;からお借りしました。&lt;/p&gt;</code></pre>
+<p>と書き換えてください。</p>
+<p>そして、<code>sample.thml</code>をエディタ上で保存し（<code>Ctrl + S</code>を押し）、ブラウザ上で更新して（<code>Ctrl + R</code>を押して）ください。 すると、「選挙ドットコム」の場所にリンクが貼られているはずです。</p>
+<aside>
+この<code>Ctrl + S</code>と<code>Ctrl + R</code>はウェブサイトの作成において必須です。
+</aside>
+<p>ちなみに、以下のように<code>target=&quot;_blank&quot;</code>とすることでリンク先を新しいタブで開きます。</p>
+<pre><code>
+&lt;p&gt;以下の情報は&lt;a href=&quot;https://go2senkyo.com/&quot; target=&quot;_blank&quot;&gt;選挙ドットコム&lt;/a&gt;からお借りしました。&lt;/p&gt;</code></pre>
+<h3>全体への適用</h3>
+<p>ここからは<code>sample.css</code>を編集して文字の見た目を変化させていきたいと思います。</p>
+<p>まずは、デフォルトのダサいフォントを変えたいと思います。 何がきれいなフォンとかは人それぞれだとは思いますが、僕はGoogleとAdobeの<code>Noto Sans</code>が好きです。</p>
+<p>また、（読み込みに時間がかかるという問題はあるものの）ウェブ上で無料でフォントをインポートできるので、デバイスに依存せずにフォントを決めることができます。 <code>sample.css</code>の冒頭で、</p>
+<pre><code>
+@import url(&#39;https://fonts.googleapis.com/css?family=Noto+Sans+JP&#39;);</code></pre>
+<p>と記述することで<code>noto Sans JP</code>をオンラインでインポートします。</p>
+<p>そして、次のように記述すると全ての文字に<code>Noto Sans JP</code>が適用されます。</p>
+<pre><code>
+* {
+  font-family: &#39;Noto Sans JP&#39;;
+}</code></pre>
+<p><code>sample.css</code>を保存し、ブラウザを更新すると（分かりにくいですが）フォントが少しスマートになったような気がするはずです。</p>
+<p>さて、CSSの記述ですが、まず最初にどのタグに適用させるかを決めます。 今回は<code>*</code>とすることで全てのタグに適用させています。</p>
+<p>続いて、<code>{}</code>内に適用させる内容を記述します。 今回は<code>fontfamily</code>でフォントの種類を指定しています。 そして、<code>:</code>の後ろに指定内容を記述し、<code>;</code>で閉じます。</p>
+<h3>特定のタグへの適用</h3>
+<p>特定のタグに適用したい場合も<code>{}</code>の前にタグの名前を記述します。 例えば、<code>h1</code>タグを中央揃えにしたい場合は以下のように記述します。</p>
+<pre><code>
+h1 {
+  text-align: center;
+}</code></pre>
+<p>複数のタグを一括して選択することもできます。 例えば、<code>h1</code>から<code>h3</code>タグ全ての文字の太さを標準にします。</p>
+<pre><code>
+h1, h2, h3 {
+  font-weight: normal;
+}</code></pre>
+<p>同じタグであれば一括して指定されます。 例えば、</p>
+<pre><code>
+td {
+  padding-left: 15px;
+}</code></pre>
+<p>とすると、表の全てのセルの左側に15ピクセル分の余白が生まれます。</p>
+<h3 id="css">CSSパス</h3>
+<p>特定の条件のタグだけに適用させたい場合もあります。 例えば、候補者の情報だけを右揃えにしたい場合、<code>td</code>タグに一括で適用させるとうまく行きません。 そのような場合は、次のように書くことで<code>tbody</code>タグ内の<code>td</code>タグにだけ適用させることができます。</p>
+<pre><code>
+tbody td {
+  text-align: right;
+}</code></pre>
+<h3 id="css">CSSセレクタ</h3>
+<p>より細かく指定したい場合は<code>id</code>や<code>class</code>といったCSSセレクタを使用します。 例えば、大阪市長選挙の文字を緑、大阪府知事前挙の文字を青色に変えたい場合は、次のように書きます。</p>
+<aside>
+本当はRGB方式で色指定をしたほうがいいです。
+</aside>
+<pre><code>
+#city {
+  color: green;
+}
+
+#prefecture {
+  color: blue;
+}</code></pre>
+<ul>
+<li><code>#</code>は特定の<code>id</code>がついているタグだけに適用するという意味です。</li>
+</ul>
+<p>続いて、以下のように書くことで当選者の背景を赤色にすることができます。</p>
+<pre><code>
+.elected {
+  background-color: red;
+}</code></pre>
+<ul>
+<li>特定の<code>class</code>に適用したい場合は<code>.</code>を使います。</li>
+</ul>
+<p>最終的には<a href="sample/index.html">こちら</a>のようになっていると思います。</p>
+<h2 id="bootstrap">Bootstrap<code>*</code></h2>
+<p>先程も触れたように、本格的なウェブサイトを作成したい場合、一から書くよりは既存のフレームワークを利用したほうが楽です。 例として、おそらく一番普及しているであろう<a href="https://getbootstrap.com/">Bootstrap 4</a>というTwitter社が開発したフレームワークの初歩的な使い方を解説します。</p>
+<aside>
+R MarkdownもBootstrap 3に依拠しているはずです。
+</aside>
+<ul>
+<li>日本語のドキュメントは<a href="https://getbootstrap.jp/docs/4.3/getting-started/introduction/">こちら</a>です。</li>
+</ul>
+<h3>テンプレート</h3>
+<p>Starter templateとされている以下のコードをコピー&amp;ペーストして適当な<code>.html</code>ファイルとして保存してください。 そして、先ほどと同様に<code>.html</code>ファイルをエディタとブラウザで開きましょう。</p>
+<pre><code>
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot; integrity=&quot;sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&quot; crossorigin=&quot;anonymous&quot;&gt;
+
+    &lt;title&gt;Hello, world!&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+
+    &lt;!-- Optional JavaScript --&gt;
+    &lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.slim.min.js&quot; integrity=&quot;sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js&quot; integrity=&quot;sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js&quot; integrity=&quot;sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<h3>レスポンシブデザイン</h3>
+<p>レスポンシブデザインとはディスプレイの大きさによって表示を変化させるようなウェブデザインのことです。 これによPCで開いてもスマートフォンで開いても適切に表示されるようになります。</p>
+<p>Bootstrapではグリッドシステムによってこれを実現しているのですが、そのために、まずは<code>container</code>クラスの<code>div</code>タグ内に内容を記述する必要があります。</p>
+<pre><code>
+&lt;h1&gt;Hello, world!&lt;/h1&gt;</code></pre>
+<p>を</p>
+<pre><code>
+&lt;div class=&quot;container&quot;&gt;
+  &lt;h1&gt;Hello, world!&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+<p>のように書き換えます。 すると、若干左に余白が生まれてナイスな感じになります。</p>
+<p>グリッドシステムの詳細はドキュメントを参照してもらうとして、先程の大阪ダブル選挙の結果をもう少しきれいにしたいと思います。 以下のコードをコピー&amp;ペーストして上書きしてみてください。</p>
+<pre><code>
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;!-- Required meta tags --&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
+
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot; integrity=&quot;sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&quot; crossorigin=&quot;anonymous&quot;&gt;
+
+    &lt;title&gt;HTML/CSS練習&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;h1&gt;HTML/CSS練習&lt;/h1&gt;
+  
+      &lt;p&gt;このページは2019年の大阪市長選挙および大阪府知事選挙の結果をまとめたものです。&lt;/p&gt;
+      &lt;p&gt;以下の情報は&lt;a href=&quot;https://go2senkyo.com/&quot;&gt;選挙ドットコム&lt;/a&gt;からお借りしました。&lt;/p&gt;
+  
+      &lt;h2 id=&quot;city&quot;&gt;大阪市長選挙&lt;/h2&gt;
+  
+      &lt;h3&gt;概要&lt;/h3&gt;
+  
+        &lt;ul&gt;
+          &lt;li&gt;投票日：2019年4月7日&lt;/li&gt;
+          &lt;li&gt;投票率：51.7%&lt;/li&gt;
+          &lt;li&gt;前回投票率：50.51%&lt;/li&gt;
+          &lt;li&gt;事由：辞職&lt;/li&gt;
+        &lt;/ul&gt;
+  
+      &lt;h3&gt;候補者&lt;/h3&gt;
+  
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;名前&lt;/th&gt;
+            &lt;th&gt;年齢&lt;/th&gt;
+            &lt;th&gt;性別&lt;/th&gt;
+            &lt;th&gt;所属&lt;/th&gt;
+            &lt;th&gt;新・現&lt;/th&gt;
+            &lt;th&gt;職業&lt;/th&gt;
+            &lt;th&gt;経歴&lt;/th&gt;
+            &lt;th&gt;得票&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr class=&quot;elected&quot;&gt;
+            &lt;td&gt;松井一郎&lt;/td&gt;
+            &lt;td&gt;55歳&lt;/td&gt;
+            &lt;td&gt;男性&lt;/td&gt;
+            &lt;td&gt;大阪維新&lt;/td&gt;
+            &lt;td&gt;新人&lt;/td&gt;
+            &lt;td&gt;政党役員&lt;/td&gt;
+            &lt;td&gt;元大阪府知事&lt;/td&gt;
+            &lt;td&gt;660,819票&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;柳本顕&lt;/td&gt;
+            &lt;td&gt;45歳&lt;/td&gt;
+            &lt;td&gt;男性&lt;/td&gt;
+            &lt;td&gt;無所属&lt;/td&gt;
+            &lt;td&gt;新人&lt;/td&gt;
+            &lt;td&gt;会社社長&lt;/td&gt;
+            &lt;td&gt;元大阪市議&lt;/td&gt;
+            &lt;td&gt;476,351票&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+  
+      &lt;h2 id=&quot;prefecture&quot;&gt;大阪府知事選挙&lt;/h2&gt;
+  
+      &lt;h3&gt;概要&lt;/h3&gt;
+  
+        &lt;ul&gt;
+          &lt;li&gt;投票日：2019年4月7日&lt;/li&gt;
+          &lt;li&gt;投票率：49.49%&lt;/li&gt;
+          &lt;li&gt;前回投票率：45.47%&lt;/li&gt;
+          &lt;li&gt;事由：辞職&lt;/li&gt;
+        &lt;/ul&gt;
+  
+      &lt;h3&gt;候補者&lt;/h3&gt;
+  
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;名前&lt;/th&gt;
+            &lt;th&gt;年齢&lt;/th&gt;
+            &lt;th&gt;性別&lt;/th&gt;
+            &lt;th&gt;所属&lt;/th&gt;
+            &lt;th&gt;新・現&lt;/th&gt;
+            &lt;th&gt;職業&lt;/th&gt;
+            &lt;th&gt;経歴&lt;/th&gt;
+            &lt;th&gt;得票&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr class=&quot;elected&quot;&gt;
+            &lt;td&gt;吉村洋文&lt;/td&gt;
+            &lt;td&gt;43歳&lt;/td&gt;
+            &lt;td&gt;男性&lt;/td&gt;
+            &lt;td&gt;大阪維新&lt;/td&gt;
+            &lt;td&gt;新人&lt;/td&gt;
+            &lt;td&gt;弁護士&lt;/td&gt;
+            &lt;td&gt;元大阪市長&lt;/td&gt;
+            &lt;td&gt;2,266,103票&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;小西禎一&lt;/td&gt;
+            &lt;td&gt;64歳&lt;/td&gt;
+            &lt;td&gt;男性&lt;/td&gt;
+            &lt;td&gt;無所属&lt;/td&gt;
+            &lt;td&gt;新人&lt;/td&gt;
+            &lt;td&gt;団体役員&lt;/td&gt;
+            &lt;td&gt;元副知事&lt;/td&gt;
+            &lt;td&gt;1,254,200票&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Optional JavaScript --&gt;
+    &lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.slim.min.js&quot; integrity=&quot;sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js&quot; integrity=&quot;sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js&quot; integrity=&quot;sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>すると、（タイトル部分は若干変ですが）PCでは選挙結果が横並びになったはずです。</p>
+<ul>
+<li><code>raw</code>クラスで囲むことで一列に並び、<code>col-sm-6</code>クラスによって<code>sm</code>サイズ以上のディスプレイではそれぞれ画面の6/12ずつ使用するという形になっています。</li>
+</ul>
+<h3>コンポーネント</h3>
+<p><code>.html</code>の中身についてはドキュメントのコンテンツやコンポーネント、ユーティリティから実装したいものを見つけ、サンプルコードをコピー&amp;ペーストして修正するという形になります。</p>
+<p>例えば、タイトルをいい感じにしたいので<a href="https://getbootstrap.jp/docs/4.2/components/jumbotron/">Jumbotron</a>を見てみると、以下のようなサンプルコードがあります。</p>
+<pre><code>
+&lt;div class=&quot;jumbotron&quot;&gt;
+  &lt;h1 class=&quot;display-4&quot;&gt;Hello, world!&lt;/h1&gt;
+  &lt;p class=&quot;lead&quot;&gt;This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.&lt;/p&gt;
+  &lt;hr class=&quot;my-4&quot;&gt;
+  &lt;p&gt;It uses utility classes for typography and spacing to space content out within the larger container.&lt;/p&gt;
+  &lt;a class=&quot;btn btn-primary btn-lg&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Learn more&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+<p>これを参考に、タイトル部分を以下のように書き換えてみます。</p>
+<pre><code>
+&lt;div class=&quot;jumbotron&quot;&gt;
+  &lt;h1 class=&quot;display-4&quot;&gt;HTML/CSS練習&lt;/h1&gt;
+  &lt;p class=&quot;lead&quot;&gt;このページは2019年の大阪市長選挙および大阪府知事選挙の結果をまとめたものです。以下の情報は&lt;a href=&quot;https://go2senkyo.com/&quot;&gt;選挙ドットコム&lt;/a&gt;からお借りしました。&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<p>ナイスな感じになったと思います。</p>
+<p>箇条書き部分をいい感じにしたいので<a href="https://getbootstrap.jp/docs/4.2/components/list-group/">List group</a>を参考に次のように書き直します。</p>
+<pre><code>
+&lt;ul class=&quot;list-group&quot;&gt;
+  &lt;li class=&quot;list-group-item&quot;&gt;投票日：2019年4月7日&lt;/li&gt;
+  &lt;li class=&quot;list-group-item&quot;&gt;投票率：51.7%&lt;/li&gt;
+  &lt;li class=&quot;list-group-item&quot;&gt;前回投票率：50.51%&lt;/li&gt;
+  &lt;li class=&quot;list-group-item&quot;&gt;事由：辞職&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<pre><code>
+&lt;ul class=&quot;list-group&quot;&gt;
+  &lt;li class=&quot;list-group-item&quot;&gt;投票日：2019年4月7日&lt;/li&gt;
+  &lt;li class=&quot;list-group-item&quot;&gt;投票率：49.49%&lt;/li&gt;
+  &lt;li class=&quot;list-group-item&quot;&gt;前回投票率：45.47%&lt;/li&gt;
+  &lt;li class=&quot;list-group-item&quot;&gt;事由：辞職&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<p>いい感じになりましたが、<code>h3</code>タグとリストの間の余白がないので、<code>h3</code>タグ全てに<code>class = &quot;ml-3&quot;</code>をつけておきます。 これは上部にマージンを付けるクラスで、数字の大きさに応じて余白も変わります。</p>
+<ul>
+<li>マージンとパディングは違うのですがここでは割愛します。</li>
+</ul>
+<p>表についても<a href="https://getbootstrap.jp/docs/4.3/content/tables/">Tables</a>を参考に,<code>table</code>タグに<code>table</code>クラスを付与します。 そして、当選者の背景を赤色にするために<code>elected</code>クラスの代わりに<code>table-danger</code>というクラスに変えます。</p>
+<p>最終的には<a href="bootstrap4.html">こちら</a>のようになります。 Bootstrapなどのフレームワークを使うことで簡単にクオリティの高いウェブサイトを作成することができます。</p>
+<ul>
+<li>今回は<code>.css</code>ファイルをオンラインでインポートしていますが、より細かな調整をしたい場合はBootstrap一式をダウンロードして直接<code>.CSS</code>ファイルを編集してください。</li>
+</ul>
+<!--radix_placeholder_article_footer-->
+<div class="article-footer">
+  <p class="social_footer">
+    <span class="disqus-comments">
+      <i class="fas fa-comments"></i>
+      &nbsp;
+      <span class="disqus-comment-count" data-disqus-identifier="posts/2019-04-19-intro-html/">Comment on this article</span>
+    </span>
+    <span class="article-sharing">
+      Share: &nbsp;
+      <a href="https://twitter.com/share?text=%E6%94%BF%E6%B2%BB%E5%AD%A6%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEHTML%2FCSS%E5%85%A5%E9%96%80&amp;url=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-04-19-intro-html%2F">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-04-19-intro-html%2F">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-04-19-intro-html%2F&amp;title=%E6%94%BF%E6%B2%BB%E5%AD%A6%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEHTML%2FCSS%E5%85%A5%E9%96%80">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </span>
+  </p>
+  <script id="dsq-count-scr" src="https://notes-shohei-doi.disqus.com/count.js" async></script>
+  <div id="disqus_thread" class="hidden"></div>
+  <script>
+var disqus_config = function () {
+  this.page.url = 'https://shohei-doi.github.io/notes/posts/2019-04-19-intro-html/';
+  this.page.identifier = 'posts/2019-04-19-intro-html/';
+};
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = 'https://notes-shohei-doi.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+  <p>
+    <div class="subscribe"><form method='post' action='https://blogtrottr.com'>
+  <p>Enjoy this blog? Get notified of new posts via email:</p>
+  <input type='text' name='btr_email' />
+  <input type='hidden' name='btr_url'
+         value='https://beta.rstudioconnect.com/content/3776/index.xml'/>
+  <input type='hidden' name='schedule_type' value='0' />
+  <input type='submit' value='Subscribe' />
+</form>
+</div>
+  </p>
+</div>
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

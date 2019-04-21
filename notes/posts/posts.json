@@ -1,8 +1,25 @@
 [
   {
+    "path": "posts/2019-04-19-intro-html/",
+    "title": "政治学のためのHTML/CSS入門",
+    "description": "スクレイピングと個人ウェブサイト作成のために必要なHTMLとCSSの基礎知識を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-21",
+    "categories": [
+      "html/css"
+    ],
+    "preview": {},
+    "last_modified": "2019-04-21T14:48:27+09:00"
+  },
+  {
     "path": "posts/2019-04-18-dropbox/",
     "title": "Dropboxの使い方",
-    "description": "Dropboでデータをクラウド上に保存し、他の人と共有する方法を説明します。",
+    "description": "Dropboxでデータをクラウド上に保存し、他の人と共有する方法を説明します。",
     "author": [
       {
         "name": "土井　翔平",
@@ -15,7 +32,7 @@
       "project management"
     ],
     "preview": {},
-    "last_modified": "2019-04-18T11:12:42+09:00"
+    "last_modified": "2019-04-18T19:46:32+09:00"
   },
   {
     "path": "posts/2019-04-18-scraping-twitter/",

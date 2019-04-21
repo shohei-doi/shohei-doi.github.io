@@ -7,12 +7,20 @@
     <description>ノート
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 18 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>政治学のためのHTML/CSS入門</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-19-intro-html</link>
+      <description>スクレイピングと個人ウェブサイト作成のために必要なHTMLとCSSの基礎知識を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-19-intro-html</guid>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Dropboxの使い方</title>
       <dc:creator>土井　翔平</dc:creator>
       <link>https://shohei-doi.github.io/notes/posts/2019-04-18-dropbox</link>
-      <description>Dropboでデータをクラウド上に保存し、他の人と共有する方法を説明します。</description>
+      <description>Dropboxでデータをクラウド上に保存し、他の人と共有する方法を説明します。</description>
       <guid>https://shohei-doi.github.io/notes/posts/2019-04-18-dropbox</guid>
       <pubDate>Thu, 18 Apr 2019 00:00:00 +0000</pubDate>
     </item>
