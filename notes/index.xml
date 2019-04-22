@@ -7,14 +7,14 @@
     <description>ノート
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 21 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Apr 2019 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>スクレイピング：html編</title>
+      <title>スクレイピング：HTML編</title>
       <dc:creator>土井　翔平</dc:creator>
       <link>https://shohei-doi.github.io/notes/posts/2019-04-21-scraping-html</link>
-      <description>RでHTMLファイルのクローリング&amp;スクレイピングをする方法を説明します。</description>
+      <description>RでHTMLファイルのスクレイピングをする方法を説明します。</description>
       <guid>https://shohei-doi.github.io/notes/posts/2019-04-21-scraping-html</guid>
-      <pubDate>Sun, 21 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>政治学のためのHTML/CSS入門</title>

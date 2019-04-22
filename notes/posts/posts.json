@@ -1,22 +1,22 @@
 [
   {
     "path": "posts/2019-04-21-scraping-html/",
-    "title": "スクレイピング：html編",
-    "description": "RでHTMLファイルのクローリング&スクレイピングをする方法を説明します。",
+    "title": "スクレイピング：HTML編",
+    "description": "RでHTMLファイルのスクレイピングをする方法を説明します。",
     "author": [
       {
         "name": "土井　翔平",
         "url": {}
       }
     ],
-    "date": "2019-04-21",
+    "date": "2019-04-22",
     "categories": [
       "R",
       "crawling/scraping",
       "html/css"
     ],
     "preview": {},
-    "last_modified": "2019-04-21T18:33:49+09:00"
+    "last_modified": "2019-04-22T16:43:41+09:00"
   },
   {
     "path": "posts/2019-04-19-intro-html/",
@@ -186,7 +186,7 @@
       "LaTeX"
     ],
     "preview": {},
-    "last_modified": "2019-04-12T12:59:28+09:00"
+    "last_modified": "2019-04-10T13:20:07+09:00"
   },
   {
     "path": "posts/2019-04-11-rmarkdown-html/",
@@ -223,7 +223,7 @@
       "data handling"
     ],
     "preview": {},
-    "last_modified": "2019-04-10T11:47:00+09:00"
+    "last_modified": "2019-04-09T12:34:29+09:00"
   },
   {
     "path": "posts/2019-04-10-data-summary/",
