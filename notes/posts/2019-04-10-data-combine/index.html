@@ -1555,6 +1555,26 @@ Joining, by = c(&quot;name&quot;, &quot;year&quot;)</code></pre>
 [1] 12078</code></pre>
 </div>
 <p>なお、<code>by</code>で指定しなくても自動で結合してくれますが、一般的には<code>by</code>で指定したほうがいいでしょう。</p>
+<p>例えば、このように指定します。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+left_join(gdp_pc, gdp_gr, by = c(&quot;name&quot;, &quot;year&quot;))</code></pre>
+<pre><code>
+# A tibble: 11,824 x 4
+   name          year gdp_pc gdp_gr
+   &lt;chr&gt;        &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+ 1 Afghanistan   1960   59.8     NA
+ 2 Australia     1960 1807.      NA
+ 3 Austria       1960  935.      NA
+ 4 Burundi       1960   70.3     NA
+ 5 Belgium       1960 1274.      NA
+ 6 Benin         1960   93.0     NA
+ 7 Burkina Faso  1960   68.4     NA
+ 8 Bangladesh    1960   88.7     NA
+ 9 Bahamas, The  1960 1550.      NA
+10 Belize        1960  305.      NA
+# … with 11,814 more rows</code></pre>
+</div>
 <h4>観察の選択</h4>
 <p><code>semi_join()</code>と<code>anti_join()</code>という関数ではデータの結合ではなく、マッチングに応じた観察の選択が可能です。</p>
 <ol type="1">
