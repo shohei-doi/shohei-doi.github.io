@@ -26,8 +26,8 @@
 <link rel="canonical" href="https://shohei-doi.github.io/notes/posts/2019-04-25-encoding-r/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2019-04-25"/>
-<meta property="article:created" itemprop="dateCreated" content="2019-04-25"/>
+<meta property="article:published" itemprop="datePublished" content="2019-04-27"/>
+<meta property="article:created" itemprop="dateCreated" content="2019-04-27"/>
 <meta name="article:author" content="土井　翔平"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -49,7 +49,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Rにおける文字コード"]},{"type":"character","attributes":{},"value":["RとRStudioにおける文字コードの扱い方について説明します。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-04-25"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["R","coding"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-04-25-encoding-r/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Rにおける文字コード"]},{"type":"character","attributes":{},"value":["RとRStudioにおける文字コードの扱い方について説明します。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-04-27"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["R","coding"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-04-25-encoding-r/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1291,7 +1291,7 @@ gtag('config', 'UA-75879658-3');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Rにおける文字コード","description":"RとRStudioにおける文字コードの扱い方について説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-04-25T00:00:00.000+09:00","citationText":"翔平, 2019"}
+{"title":"Rにおける文字コード","description":"RとRStudioにおける文字コードの扱い方について説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-04-27T00:00:00.000+09:00","citationText":"翔平, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1322,7 +1322,7 @@ gtag('config', 'UA-75879658-3');
 <div class="d-byline">
   土井　翔平  (国立情報学研究所)
   
-<br/>2019-04-25
+<br/>2019-04-27
 </div>
 
 <div class="d-article">
@@ -1332,6 +1332,7 @@ gtag('config', 'UA-75879658-3');
 <li><a href="#Intro">はじめに</a></li>
 <li><a href="#RScript">Rスクリプトの文字化け</a></li>
 <li><a href="#Data">データの文字化け</a></li>
+<li><a href="#Others">その他の問題</a></li>
 </ul>
 </nav>
 <hr class="d-toc-separator"/>
@@ -1443,6 +1444,32 @@ cols(
 </div>
 <h3>もとのデータを見たい場合</h3>
 <p>しばしばRではなく直接データを見たいときがあります。 そのような場合は、<a href="https://ja.libreoffice.org/">LibreOffice</a>のCalcというソフトで開くとエンコーディングを指定することができます。</p>
+<h2 id="Others">その他の問題</h2>
+<h3>アカウント名が日本語の場合</h3>
+<p>Windowsでアカウント名が日本語の場合、パスを通すときにエラーが出てくる場合があります。 そのような場合は、</p>
+<ol type="1">
+<li>新しいアカウントを作成する。</li>
+<li>新しいアカウントを作成し、現在のアカウントの内容を全てコピーして、現在のアカウントを削除する。</li>
+<li>OSをクリーンインストールする。</li>
+<li>Linux（Ubuntuなど）を使う。
+<ol type="1">
+<li>仮想マシン（VMwareやVirtualBox）を使う。</li>
+<li>デュアルブートをする。</li>
+</ol></li>
+</ol>
+<p>といった選択肢が考えられます（下に行くほど難易度が高い）。</p>
+<h3>画像で日本語が文字化けする場合</h3>
+<p>Macで画像を出力する際に日本語が文字化けすることがあります。 <code>plot()</code>の場合は、</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+par(family = &quot;HiraKakuProN-W3&quot;)</code></pre>
+</div>
+<p><code>ggplot2</code>の場合は、</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+theme(base_family = &quot;HiraKakuProN-W3&quot;)</code></pre>
+</div>
+<p>とするらしいです（Macは使ったことがないので分かりません）。</p>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">

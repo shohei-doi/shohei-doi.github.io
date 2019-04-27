@@ -1,5 +1,23 @@
 [
   {
+    "path": "posts/2019-04-25-encoding-r/",
+    "title": "Rにおける文字コード",
+    "description": "RとRStudioにおける文字コードの扱い方について説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-27",
+    "categories": [
+      "R",
+      "coding"
+    ],
+    "preview": {},
+    "last_modified": "2019-04-27T16:59:36+09:00"
+  },
+  {
     "path": "posts/2019-04-18-scraping-twitter/",
     "title": "スクレイピング：Twitter編",
     "description": "RでAPI経由でTwitterのクローリング&スクレイピングをする方法を説明します。",
@@ -16,24 +34,6 @@
     ],
     "preview": {},
     "last_modified": "2019-04-25T14:52:40+09:00"
-  },
-  {
-    "path": "posts/2019-04-25-encoding-r/",
-    "title": "Rにおける文字コード",
-    "description": "RとRStudioにおける文字コードの扱い方について説明します。",
-    "author": [
-      {
-        "name": "土井　翔平",
-        "url": {}
-      }
-    ],
-    "date": "2019-04-25",
-    "categories": [
-      "R",
-      "coding"
-    ],
-    "preview": {},
-    "last_modified": "2019-04-25T13:30:15+09:00"
   },
   {
     "path": "posts/2019-04-22-crawling-html/",
@@ -102,11 +102,10 @@
     ],
     "date": "2019-04-18",
     "categories": [
-      "dropbox",
       "project management"
     ],
     "preview": {},
-    "last_modified": "2019-04-18T19:46:32+09:00"
+    "last_modified": "2019-04-25T20:59:35+09:00"
   },
   {
     "path": "posts/2019-04-15-visualization-dist/",
