@@ -7,14 +7,22 @@
     <description>ノート
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 27 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 May 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>スクレイピング：Twitter編</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-18-scraping-twitter</link>
+      <description>RでAPI経由でTwitterのクローリング&amp;スクレイピングをする方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-18-scraping-twitter</guid>
+      <pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>スクレイピング：HTML編</title>
       <dc:creator>土井　翔平</dc:creator>
       <link>https://shohei-doi.github.io/notes/posts/2019-04-21-scraping-html</link>
       <description>RでHTMLファイルのスクレイピングをする方法を説明します。</description>
       <guid>https://shohei-doi.github.io/notes/posts/2019-04-21-scraping-html</guid>
-      <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Rにおける文字コード</title>
@@ -23,14 +31,6 @@
       <description>RとRStudioにおける文字コードの扱い方について説明します。</description>
       <guid>https://shohei-doi.github.io/notes/posts/2019-04-25-encoding-r</guid>
       <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>スクレイピング：Twitter編</title>
-      <dc:creator>土井　翔平</dc:creator>
-      <link>https://shohei-doi.github.io/notes/posts/2019-04-18-scraping-twitter</link>
-      <description>RでAPI経由でTwitterのクローリング&amp;スクレイピングをする方法を説明します。</description>
-      <guid>https://shohei-doi.github.io/notes/posts/2019-04-18-scraping-twitter</guid>
-      <pubDate>Thu, 25 Apr 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>クローリング：HTML編</title>
