@@ -1,23 +1,5 @@
 [
   {
-    "path": "posts/2019-04-18-scraping-twitter/",
-    "title": "スクレイピング：Twitter編",
-    "description": "RでAPI経由でTwitterのクローリング&スクレイピングをする方法を説明します。",
-    "author": [
-      {
-        "name": "土井　翔平",
-        "url": {}
-      }
-    ],
-    "date": "2019-05-09",
-    "categories": [
-      "R",
-      "crawling/scraping"
-    ],
-    "preview": {},
-    "last_modified": "2019-05-09T15:48:12+09:00"
-  },
-  {
     "path": "posts/2019-05-09-scraping-google/",
     "title": "スクレイピング：Googleトレンド編",
     "description": "RでAPI経由でGoogleトレンドのクローリング&スクレイピングをする方法を説明します。",
@@ -36,6 +18,24 @@
     "last_modified": "2019-05-10T15:42:13+09:00",
     "preview_width": 1248,
     "preview_height": 768
+  },
+  {
+    "path": "posts/2019-04-18-scraping-twitter/",
+    "title": "スクレイピング：Twitter編",
+    "description": "RでAPI経由でTwitterのクローリング&スクレイピングをする方法を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-05-09",
+    "categories": [
+      "R",
+      "crawling/scraping"
+    ],
+    "preview": {},
+    "last_modified": "2019-05-09T15:48:12+09:00"
   },
   {
     "path": "posts/2019-04-21-scraping-html/",
@@ -354,24 +354,6 @@
     "last_modified": "2019-04-08T16:08:41+09:00"
   },
   {
-    "path": "posts/2019-04-07-select-obs/",
-    "title": "観察の選択",
-    "description": "Rでデータセットの中から特定の条件を満たす観察を取り出す方法を説明します。",
-    "author": [
-      {
-        "name": "土井　翔平",
-        "url": {}
-      }
-    ],
-    "date": "2019-04-07",
-    "categories": [
-      "R",
-      "data handling"
-    ],
-    "preview": {},
-    "last_modified": "2019-04-08T16:02:03+09:00"
-  },
-  {
     "path": "posts/2019-04-07-select-var/",
     "title": "変数の選択",
     "description": "Rでデータセットの中から特定の変数を取り出す方法と変数名を変える方法を説明します。",
@@ -388,6 +370,24 @@
     ],
     "preview": {},
     "last_modified": "2019-04-08T16:02:17+09:00"
+  },
+  {
+    "path": "posts/2019-04-07-select-obs/",
+    "title": "観察の選択",
+    "description": "Rでデータセットの中から特定の条件を満たす観察を取り出す方法を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-07",
+    "categories": [
+      "R",
+      "data handling"
+    ],
+    "preview": {},
+    "last_modified": "2019-05-15T11:09:15+09:00"
   },
   {
     "path": "posts/2019-04-06-data-import/",

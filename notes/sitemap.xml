@@ -5,12 +5,12 @@
     <lastmod>2019-04-12T13:28:23+09:00</lastmod>
   </url>
   <url>
-    <loc>https://shohei-doi.github.io/notes/posts/2019-04-18-scraping-twitter/</loc>
-    <lastmod>2019-05-09T15:48:12+09:00</lastmod>
-  </url>
-  <url>
     <loc>https://shohei-doi.github.io/notes/posts/2019-05-09-scraping-google/</loc>
     <lastmod>2019-05-10T15:42:13+09:00</lastmod>
+  </url>
+  <url>
+    <loc>https://shohei-doi.github.io/notes/posts/2019-04-18-scraping-twitter/</loc>
+    <lastmod>2019-05-09T15:48:12+09:00</lastmod>
   </url>
   <url>
     <loc>https://shohei-doi.github.io/notes/posts/2019-04-21-scraping-html/</loc>
@@ -81,12 +81,12 @@
     <lastmod>2019-04-08T16:08:41+09:00</lastmod>
   </url>
   <url>
-    <loc>https://shohei-doi.github.io/notes/posts/2019-04-07-select-obs/</loc>
-    <lastmod>2019-04-08T16:02:03+09:00</lastmod>
-  </url>
-  <url>
     <loc>https://shohei-doi.github.io/notes/posts/2019-04-07-select-var/</loc>
     <lastmod>2019-04-08T16:02:17+09:00</lastmod>
+  </url>
+  <url>
+    <loc>https://shohei-doi.github.io/notes/posts/2019-04-07-select-obs/</loc>
+    <lastmod>2019-05-15T11:09:15+09:00</lastmod>
   </url>
   <url>
     <loc>https://shohei-doi.github.io/notes/posts/2019-04-06-data-import/</loc>
