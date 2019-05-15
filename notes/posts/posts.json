@@ -264,24 +264,6 @@
     "last_modified": "2019-04-11T12:53:20+09:00"
   },
   {
-    "path": "posts/2019-04-10-data-combine/",
-    "title": "データの結合",
-    "description": "Rで複数のデータを行方向および列方向に結合する方法を説明します。",
-    "author": [
-      {
-        "name": "土井　翔平",
-        "url": {}
-      }
-    ],
-    "date": "2019-04-10",
-    "categories": [
-      "R",
-      "data handling"
-    ],
-    "preview": {},
-    "last_modified": "2019-04-25T15:13:37+09:00"
-  },
-  {
     "path": "posts/2019-04-10-data-summary/",
     "title": "データの要約",
     "description": "Rでデータの含まれる変数を要約する方法について説明します。",
@@ -298,6 +280,24 @@
     ],
     "preview": {},
     "last_modified": "2019-04-08T16:01:08+09:00"
+  },
+  {
+    "path": "posts/2019-04-10-data-combine/",
+    "title": "データの結合",
+    "description": "Rで複数のデータを行方向および列方向に結合する方法を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-10",
+    "categories": [
+      "R",
+      "data handling"
+    ],
+    "preview": {},
+    "last_modified": "2019-05-15T11:25:33+09:00"
   },
   {
     "path": "posts/2019-04-09-reshape-qualtrics/",
