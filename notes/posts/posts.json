@@ -1,5 +1,25 @@
 [
   {
+    "path": "posts/2019-05-17-regression/",
+    "title": "Rで最小二乗法",
+    "description": "Rで最小二乗法を行う方法を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-05-17",
+    "categories": [
+      "R",
+      "crawling/scraping"
+    ],
+    "preview": "posts/2019-05-17-regression/regression_files/figure-html5/unnamed-chunk-6-1.png",
+    "last_modified": "2019-05-17T18:06:56+09:00",
+    "preview_width": 1248,
+    "preview_height": 768
+  },
+  {
     "path": "posts/2019-05-09-scraping-google/",
     "title": "スクレイピング：Googleトレンド編",
     "description": "RでAPI経由でGoogleトレンドのクローリング&スクレイピングをする方法を説明します。",
@@ -15,7 +35,7 @@
       "crawling/scraping"
     ],
     "preview": "posts/2019-05-09-scraping-google/scraping-google_files/figure-html5/unnamed-chunk-2-1.png",
-    "last_modified": "2019-05-10T15:42:13+09:00",
+    "last_modified": "2019-05-10T15:42:14+09:00",
     "preview_width": 1248,
     "preview_height": 768
   },
@@ -264,6 +284,24 @@
     "last_modified": "2019-04-11T12:53:20+09:00"
   },
   {
+    "path": "posts/2019-04-10-data-combine/",
+    "title": "データの結合",
+    "description": "Rで複数のデータを行方向および列方向に結合する方法を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-10",
+    "categories": [
+      "R",
+      "data handling"
+    ],
+    "preview": {},
+    "last_modified": "2019-05-15T11:25:34+09:00"
+  },
+  {
     "path": "posts/2019-04-10-data-summary/",
     "title": "データの要約",
     "description": "Rでデータの含まれる変数を要約する方法について説明します。",
@@ -280,24 +318,6 @@
     ],
     "preview": {},
     "last_modified": "2019-04-08T16:01:08+09:00"
-  },
-  {
-    "path": "posts/2019-04-10-data-combine/",
-    "title": "データの結合",
-    "description": "Rで複数のデータを行方向および列方向に結合する方法を説明します。",
-    "author": [
-      {
-        "name": "土井　翔平",
-        "url": {}
-      }
-    ],
-    "date": "2019-04-10",
-    "categories": [
-      "R",
-      "data handling"
-    ],
-    "preview": {},
-    "last_modified": "2019-05-15T11:25:33+09:00"
   },
   {
     "path": "posts/2019-04-09-reshape-qualtrics/",
@@ -354,6 +374,24 @@
     "last_modified": "2019-04-08T16:08:41+09:00"
   },
   {
+    "path": "posts/2019-04-07-select-obs/",
+    "title": "観察の選択",
+    "description": "Rでデータセットの中から特定の条件を満たす観察を取り出す方法を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-07",
+    "categories": [
+      "R",
+      "data handling"
+    ],
+    "preview": {},
+    "last_modified": "2019-05-15T11:09:16+09:00"
+  },
+  {
     "path": "posts/2019-04-07-select-var/",
     "title": "変数の選択",
     "description": "Rでデータセットの中から特定の変数を取り出す方法と変数名を変える方法を説明します。",
@@ -370,24 +408,6 @@
     ],
     "preview": {},
     "last_modified": "2019-04-08T16:02:17+09:00"
-  },
-  {
-    "path": "posts/2019-04-07-select-obs/",
-    "title": "観察の選択",
-    "description": "Rでデータセットの中から特定の条件を満たす観察を取り出す方法を説明します。",
-    "author": [
-      {
-        "name": "土井　翔平",
-        "url": {}
-      }
-    ],
-    "date": "2019-04-07",
-    "categories": [
-      "R",
-      "data handling"
-    ],
-    "preview": {},
-    "last_modified": "2019-05-15T11:09:15+09:00"
   },
   {
     "path": "posts/2019-04-06-data-import/",

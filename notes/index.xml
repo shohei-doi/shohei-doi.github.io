@@ -7,7 +7,16 @@
     <description>ノート
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 10 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 May 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Rで最小二乗法</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-05-17-regression</link>
+      <description>Rで最小二乗法を行う方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-05-17-regression</guid>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://shohei-doi.github.io/notes/posts/2019-05-17-regression/regression_files/figure-html5/unnamed-chunk-6-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>スクレイピング：Googleトレンド編</title>
       <dc:creator>土井　翔平</dc:creator>
@@ -126,20 +135,20 @@
       <pubDate>Thu, 11 Apr 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>データの結合</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-10-data-combine</link>
+      <description>Rで複数のデータを行方向および列方向に結合する方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-10-data-combine</guid>
+      <pubDate>Wed, 10 Apr 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>データの要約</title>
       <dc:creator>土井　翔平</dc:creator>
       <link>https://shohei-doi.github.io/notes/posts/2019-04-10-data-summary</link>
       <description>Rでデータの含まれる変数を要約する方法について説明します。</description>
       <guid>https://shohei-doi.github.io/notes/posts/2019-04-10-data-summary</guid>
       <pubDate>Wed, 10 Apr 2019 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>データの結合</title>
-      <dc:creator>土井　翔平</dc:creator>
-      <link>https://shohei-doi.github.io/notes/posts/2019-04-10-data-combine</link>
-      <description>Rで複数のデータを行方向および列方向に結合する方法を説明します。</description>
-      <guid>https://shohei-doi.github.io/notes/posts/2019-04-10-data-combine</guid>
-      <pubDate>Tue, 09 Apr 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>データの整形：Qualtrics</title>
@@ -167,19 +176,19 @@
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>変数の選択</title>
-      <dc:creator>土井　翔平</dc:creator>
-      <link>https://shohei-doi.github.io/notes/posts/2019-04-07-select-var</link>
-      <description>Rでデータセットの中から特定の変数を取り出す方法と変数名を変える方法を説明します。</description>
-      <guid>https://shohei-doi.github.io/notes/posts/2019-04-07-select-var</guid>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>観察の選択</title>
       <dc:creator>土井　翔平</dc:creator>
       <link>https://shohei-doi.github.io/notes/posts/2019-04-07-select-obs</link>
       <description>Rでデータセットの中から特定の条件を満たす観察を取り出す方法を説明します。</description>
       <guid>https://shohei-doi.github.io/notes/posts/2019-04-07-select-obs</guid>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>変数の選択</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-07-select-var</link>
+      <description>Rでデータセットの中から特定の変数を取り出す方法と変数名を変える方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-07-select-var</guid>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
