@@ -19,11 +19,11 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-<title>ノート: Rで最小二乗法</title>
+<title>ノート: Rでロジスティック回帰</title>
 
-<meta property="description" itemprop="description" content="Rで最小二乗法を行う方法を説明します。"/>
+<meta property="description" itemprop="description" content="Rでロジスティック回帰を行う方法を説明します。"/>
 
-<link rel="canonical" href="https://shohei-doi.github.io/notes/posts/2019-05-17-regression/"/>
+<link rel="canonical" href="https://shohei-doi.github.io/notes/posts/2019-05-19-logistic/"/>
 
 <!--  https://schema.org/Article -->
 <meta property="article:published" itemprop="datePublished" content="2019-05-19"/>
@@ -31,11 +31,11 @@
 <meta name="article:author" content="土井　翔平"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="ノート: Rで最小二乗法"/>
+<meta property="og:title" content="ノート: Rでロジスティック回帰"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="Rで最小二乗法を行う方法を説明します。"/>
-<meta property="og:url" content="https://shohei-doi.github.io/notes/posts/2019-05-17-regression/"/>
-<meta property="og:image" content="https://shohei-doi.github.io/notes/posts/2019-05-17-regression/regression_files/figure-html5/unnamed-chunk-6-1.png"/>
+<meta property="og:description" content="Rでロジスティック回帰を行う方法を説明します。"/>
+<meta property="og:url" content="https://shohei-doi.github.io/notes/posts/2019-05-19-logistic/"/>
+<meta property="og:image" content="https://shohei-doi.github.io/notes/posts/2019-05-19-logistic/logistic_files/figure-html5/unnamed-chunk-5-1.png"/>
 <meta property="og:image:width" content="1248"/>
 <meta property="og:image:height" content="768"/>
 <meta property="og:locale" content="en_US"/>
@@ -43,10 +43,10 @@
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:title" content="ノート: Rで最小二乗法"/>
-<meta property="twitter:description" content="Rで最小二乗法を行う方法を説明します。"/>
-<meta property="twitter:url" content="https://shohei-doi.github.io/notes/posts/2019-05-17-regression/"/>
-<meta property="twitter:image" content="https://shohei-doi.github.io/notes/posts/2019-05-17-regression/regression_files/figure-html5/unnamed-chunk-6-1.png"/>
+<meta property="twitter:title" content="ノート: Rでロジスティック回帰"/>
+<meta property="twitter:description" content="Rでロジスティック回帰を行う方法を説明します。"/>
+<meta property="twitter:url" content="https://shohei-doi.github.io/notes/posts/2019-05-19-logistic/"/>
+<meta property="twitter:image" content="https://shohei-doi.github.io/notes/posts/2019-05-19-logistic/logistic_files/figure-html5/unnamed-chunk-5-1.png"/>
 <meta property="twitter:image:width" content="1248"/>
 <meta property="twitter:image:height" content="768"/>
 <meta property="twitter:creator" content="@sdoi0504"/>
@@ -55,12 +55,12 @@
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Rで最小二乗法"]},{"type":"character","attributes":{},"value":["Rで最小二乗法を行う方法を説明します。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-05-19"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["R","data analysis"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-05-17-regression/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Rでロジスティック回帰"]},{"type":"character","attributes":{},"value":["Rでロジスティック回帰を行う方法を説明します。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-05-19"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["R","data analysis"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-05-19-logistic/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["regression_files/bowser-1.9.3/bowser.min.js","regression_files/distill-2.2.21/template.v2.js","regression_files/figure-html5/unnamed-chunk-11-1.png","regression_files/figure-html5/unnamed-chunk-13-1.png","regression_files/figure-html5/unnamed-chunk-6-1.png","regression_files/figure-html5/unnamed-chunk-9-1.png","regression_files/jquery-1.11.3/jquery.min.js","regression_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["logistic_files/bowser-1.9.3/bowser.min.js","logistic_files/distill-2.2.21/template.v2.js","logistic_files/figure-html5/unnamed-chunk-4-1.png","logistic_files/figure-html5/unnamed-chunk-5-1.png","logistic_files/figure-html5/unnamed-chunk-6-1.png","logistic_files/figure-html5/unnamed-chunk-7-1.png","logistic_files/figure-html5/unnamed-chunk-8-1.png","logistic_files/jquery-1.11.3/jquery.min.js","logistic_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 
@@ -1297,7 +1297,7 @@ gtag('config', 'UA-75879658-3');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Rで最小二乗法","description":"Rで最小二乗法を行う方法を説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-05-19T00:00:00.000+09:00","citationText":"翔平, 2019"}
+{"title":"Rでロジスティック回帰","description":"Rでロジスティック回帰を行う方法を説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-05-19T00:00:00.000+09:00","citationText":"翔平, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1321,8 +1321,8 @@ gtag('config', 'UA-75879658-3');
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Rで最小二乗法</h1>
-<p>Rで最小二乗法を行う方法を説明します。</p>
+<h1>Rでロジスティック回帰</h1>
+<p>Rでロジスティック回帰を行う方法を説明します。</p>
 </div>
 
 <div class="d-byline">
@@ -1336,16 +1336,15 @@ gtag('config', 'UA-75879658-3');
 <nav class="d-toc" id="TOC">
 <ul>
 <li><a href="#Intro">はじめに</a></li>
-<li><a href="#OLS">最小二乗法</a></li>
-<li><a href="#Advanced">最小二乗法の拡張</a></li>
+<li><a href="#Logit">応答変数の種類が2種類の場合</a></li>
+<li><a href="#Multinomial">応答変数の種類が3つ以上の場合</a></li>
 </ul>
 </nav>
 <hr class="d-toc-separator"/>
 <h2 id="Intro">はじめに</h2>
-<p>データ分析の目的の一つは何かを何かで予測したり、説明したりすることです。 例えば、気温からビールの売上を予測・説明するといった具合です。</p>
-<p>いろいろな分野や流派で同じことを違う言葉で表現しますが、予測において予測したい変数を目的変数、予測に使う変数を特徴量と呼びます。 先程の例で言えば気温が特徴量でビールの売上が目的変数です。</p>
-<p>統計学や計量経済学では説明したい変数を従属変数、非説明変数などと呼び、説明に使う変数を独立変数、統制変数、説明変数と呼びます。 因果推論を強調する場合は説明したい変数を応答変数、説明に使う変数を処置（変数）、処置以外を共変量と呼んだりもします。</p>
-<p>以下では有権者のデータを使ってRで回帰分析をする基本的な方法を説明していきます。 そのため、あえて数学的には厳密でない表現を使っているところもありますが、ご容赦ください。</p>
+<p><a href="https://shohei-doi.github.io/notes/posts/2019-05-17-regression/">前回</a>自民党の感情温度という一定の範囲内の値を取る数値を応答変数に持つ分析を行いました。 しかし、世の中のデータのすべてがこのように数値で表現できるとは限りません。</p>
+<p>例えば「投票に行く（行かない）」や「投票した政党」のように数値化されていないデータをカテゴリカルデータ（変数）と呼びます。 このような場合を応答変数にする分析の場合は、「投票に行く確率」や「ある政党に投票する確率」を求めることで対処します。</p>
+<p>以下では、応答変数の種類が2種類の場合と3以上の場合に分けて、カテゴリカルデータの分析をRで行う方法を紹介します。</p>
 <h3>必要なパッケージの読み込み</h3>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
@@ -1372,12 +1371,17 @@ Registered S3 method overwritten by &#39;rvest&#39;:
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()</code></pre>
 </div>
+<p>多項ロジットを行うためのライブラリーを読み込みます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+library(nnet)</code></pre>
+</div>
 <h3>データの読み込み</h3>
 <p><a href="http://www.masaki.j.u-tokyo.ac.jp/utas/utasv.html">東大・朝日共同調査</a>の2014年衆院選・2016年参院選世論調査のデータを使います。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 data &lt;- read_csv(&quot;http://www.masaki.j.u-tokyo.ac.jp/utas/2014_2016UTASV20161004.csv&quot;, 
-                 locale = locale(encoding = &quot;shift-jis&quot;), na = c(&quot;99&quot;, &quot;999&quot;))</code></pre>
+                 locale = locale(encoding = &quot;shift-jis&quot;), na = c(&quot;66&quot;, &quot;99&quot;, &quot;999&quot;))</code></pre>
 <pre><code>
 Parsed with column specification:
 cols(
@@ -1418,311 +1422,261 @@ Warning: 8 parsing failures.
 See problems(...) for more details.</code></pre>
 </div>
 <ul>
-<li>無回答は<code>99</code>なので、これらを欠損値として読み込んでおきます。</li>
+<li>非該当は<code>66</code>で、無回答は<code>99</code>なので、これらを欠損値として読み込んでおきます。</li>
 </ul>
 <p>なお、以下で特に断りのない限り、2014年の衆院選のデータを使います。</p>
-<h2 id="OLS">最小二乗法</h2>
-<p>最も基本的な回帰分析である最小二乗法についてまずは説明します。</p>
-<p>有権者の感情温度を分析したいと思います。 感情温度とは</p>
-<blockquote>
-<p>あなたは、次の①から⑪の政党や政治家に対し、好意的な気持ちを持っていますか、それとも反感を持っていますか。好意も反感も持たないときは、下の「感情温度計」で50度としてください。好意的な気持ちがあれば、その強さに応じて51度から100度、また、反感を感じていれば、49度から0度のどこかの数字で答えてください</p>
-</blockquote>
-<p>という質問の答えです。</p>
-<h3>最小二乗法の前提</h3>
-<p>ここでは自民党に対する感情温度に関心があるとします。 また、性別によってそれは変化すると考えているとします。</p>
-<p>ここで、<span class="math inline">\(i\)</span>さんの自民党の感情温度を<span class="math inline">\(y_i\)</span>、性別を<span class="math inline">\(X_i\)</span>＄とすると、次のような式で表現できる、というのが最小二乗法の前提です。</p>
-<p><span class="math display">\[
-  y_i = \beta_0 + \beta_1 X_i + \varepsilon_i
-\]</span></p>
-<p>例えば、<span class="math inline">\(X_i\)</span>は男性のときには0で女性のときには1になるとします。 すると<span class="math inline">\(i\)</span>が男性のときには<span class="math inline">\(y_i = \beta_0 + \varepsilon_i\)</span>となり、女性のときには<span class="math inline">\(y_i = \beta_0 + \beta_1 + \varepsilon_i\)</span>となります。</p>
-<p>ひとまず、<span class="math inline">\(\varepsilon_i\)</span>のことは無視しておくと、<span class="math inline">\(\beta_0\)</span>は男性のときの自民党への感情温度で、<span class="math inline">\(\beta_1\)</span>は男性と女性の感情温度の差であるという意味になります。 この<span class="math inline">\(\beta_0\)</span>や<span class="math inline">\(\beta_1\)</span>が分かれば、男性と女性の自民党に対する感情温度を予測したり説明することができます。</p>
-<p>さて、この<span class="math inline">\(\varepsilon_i\)</span>は誤差項や撹乱項と呼ばれるもので、<span class="math inline">\(X_i\)</span>以外の<span class="math inline">\(y_i\)</span>に影響する全ての要素、です。 例えば年齢や職業、住んでいる場所も自民党への感情温度には影響するかもしれませんが、<span class="math inline">\(X_i\)</span>には含まれていないので誤差項に含まれていると考えます。</p>
-<p>問題はこの誤差項は観察できない要素が含まれている点です。 例えば、調査を受けた時の気分によっても自民党への感情温度の解答は変わるかもしれません。</p>
-<p>もし、誤差項がなければ、データ<span class="math inline">\((y_i,X_i)\)</span>から男性の感情温度<span class="math inline">\(\beta_0\)</span>と女性の感情温度<span class="math inline">\(\beta_0+\beta_1\)</span>が分かります。 そして、そこから<span class="math inline">\(\beta_0\)</span>と<span class="math inline">\(\beta_1\)</span>観察することはできます。 しかし、誤差項があるので我々は<span class="math inline">\(\beta_0\)</span>と<span class="math inline">\(\beta_1\)</span>を観察することができません。</p>
-<h3>最小二乗法でやっていること</h3>
-<p>そこで、それらしい<span class="math inline">\(\beta_0\)</span>と<span class="math inline">\(\beta_1\)</span>を推定するための方法が最小二乗法になります。</p>
-<p>まず、当てずっぽうに<span class="math inline">\(\hat{\beta}_0\)</span>と<span class="math inline">\(\hat{\beta}_1\)</span>を決めます。 そして、そこから<span class="math inline">\(y_i\)</span>の予測値として<span class="math inline">\(\hat{y}_i = \hat{\beta}_0 + \hat{\beta}_1 X_i\)</span>を求めます。</p>
-<p>当然、予測値<span class="math inline">\(\hat{y}_i\)</span>と観測値<span class="math inline">\(y_i\)</span>が全ての<span class="math inline">\(i\)</span>さんについて一致することはありません。 そこで、観測値と予測値の差を<span class="math inline">\(e_i = y_i - \hat{y}_i\)</span>として求める、残差と名付けます。</p>
-<aside>
-誤差項と残差はしばしば混同されますが違う概念です。
-</aside>
-<p>この残差が一番小さくなるような<span class="math inline">\(\hat{\beta}_0\)</span>と<span class="math inline">\(\hat{\beta}_1\)</span>が<span class="math inline">\(\beta_0\)</span>と<span class="math inline">\(\beta_1\)</span>の推定値としていいんじゃないだろうか、というのが最小二乗法の基本的な発想です。 最小二乗法と呼ばれる所以は、残差の<strong>二乗</strong><span class="math inline">\(e_i^2\)</span>の総和を<strong>最小</strong>にするからです。</p>
-<h3 id="r">Rによる最小二乗法</h3>
-<p>まず準備として性別の変数を修正します。 このデータでは男性が<code>1</code>で女性が<code>2</code>なので、<code>1</code>を引いて男性が<code>0</code>、女性が<code>1</code>となるようにします。</p>
+<h2 id="Logit">応答変数の種類が2種類の場合</h2>
+<p>「投票に行く」あるいは「行かない」のように応答変数が2つの値のどちらかを取る場合を、まずは考えます。 選択肢は「投票に行く」か「行かない」しかないので、「投票に行く確率」を求めれば「投票に行かない確率」も分かる点に注意しましょう。</p>
+<h3>線形確率モデル</h3>
+<p>実は、最小二乗法をそのまま使うこともできます。 試しに投票率が年齢によって増えるかどうかを確認します。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 data &lt;- data %&gt;% 
-  mutate(W1F1 = W1F1 - 1)</code></pre>
-</div>
-<p>最小二乗法を行う際には<code>lm()</code>を使います。 基本的に</p>
-<ol type="1">
-<li><code>formula</code>によって<code>y_i</code>と<code>X_i</code>を定義し、</li>
-<li><code>data</code>によって使用するデータを選択します。</li>
-</ol>
-<p>その結果を<code>model1</code>という名前のオブジェクトに保存しておきます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-model1 &lt;- lm(W1Q15_1 ~ W1F1, data = data)</code></pre>
-</div>
-<p>結果を保存したオブジェクトを<code>summary()</code>に入れると分析結果が表示されます。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
+  mutate(W1Q1 = W1Q1 - 1)
+model1 &lt;- lm(W1Q1 ~ W1F2, data = data)
 summary(model1)</code></pre>
 <pre><code>
 Call:
-lm(formula = W1Q15_1 ~ W1F1, data = data)
+lm(formula = W1Q1 ~ W1F2, data = data)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--53.244 -10.905  -0.905  16.756  49.095 
+-0.8350 -0.5721  0.2176  0.2701  0.4279 
 
 Coefficients:
             Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)  53.2438     0.8104  65.702   &lt;2e-16 ***
-W1F1         -2.3392     1.1226  -2.084   0.0373 *  
+(Intercept) 0.519547   0.027322  19.016   &lt;2e-16 ***
+W1F2        0.052578   0.006227   8.444   &lt;2e-16 ***
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
-Residual standard error: 22.5 on 1608 degrees of freedom
-  (203 observations deleted due to missingness)
-Multiple R-squared:  0.002693,  Adjusted R-squared:  0.002073 
-F-statistic: 4.342 on 1 and 1608 DF,  p-value: 0.03734</code></pre>
+Residual standard error: 0.4339 on 1791 degrees of freedom
+  (20 observations deleted due to missingness)
+Multiple R-squared:  0.03828,   Adjusted R-squared:  0.03775 
+F-statistic: 71.29 on 1 and 1791 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
-<h3>最小二乗法の分析結果</h3>
-<ol type="1">
-<li><code>(Intercept)</code>の<code>Estimate</code>が<span class="math inline">\(\hat{\beta}_0\)</span>に、<code>W1F1</code>の<code>Estimate</code>が<span class="math inline">\(\hat{\beta}_1\)</span>になります。 つまり、女性の方が自民党への感情温度が低いことが分かります。</li>
-<li><code>Std. Error</code>や<code>t vale</code>、<code>Pr(&gt;|t|)</code>などはやや複雑なので割愛しますが、分析結果がたまたまなのかに関する指標です。 今回の場合、女性の方が男性に比べて約2.3度感情温度が低いという結果は偶然だとすれば3%の確率でしか生じないということがわかります。</li>
-<li><code>Residuals</code>とは残差のことです。 つまり、予測値と観測値のズレが-53.2から49.1くらいあるということです。 この最小値と最大値は男性なのに0度と答えた人や、逆に女性だけど100度と答えた人になります。</li>
-<li>最後に、下から2行目に<code>R-squared</code>というものがあります。 これは<span class="math inline">\(R^2\)</span>と書かれたりもするのですが、<span class="math inline">\(X_i\)</span>によってどれだけ<span class="math inline">\(y_i\)</span>を予測できるのかを示しています。 大雑把に言って、性別は自民党への感情温度の0.2%としか予測できていないと言えます。</li>
-</ol>
-<h3>分析の可視化</h3>
-<p>ちなみに、グラフにするとこうなります。</p>
+<p>10歳増えるごとに投票率が5%上がることがわかります。</p>
+<ul>
+<li><code>W1Q1</code>は投票に行くと<code>2</code>、行かないと<code>0</code>なので、<code>1</code>を引いています。</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 data %&gt;% 
-  ggplot(aes(x = W1F1, y = W1Q15_1)) + 
+  ggplot(aes(x = W1F2, y = W1Q1)) + 
   geom_jitter() + 
   geom_smooth(method = &quot;lm&quot;)</code></pre>
 <pre><code>
-Warning: Removed 203 rows containing non-finite values (stat_smooth).</code></pre>
+Warning: Removed 20 rows containing non-finite values (stat_smooth).</code></pre>
 <pre><code>
-Warning: Removed 203 rows containing missing values (geom_point).</code></pre>
-<p><img src="regression_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
+Warning: Removed 20 rows containing missing values (geom_point).</code></pre>
+<p><img src="logistic_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
 </div>
-<h2 id="Advanced">最小二乗法の拡張</h2>
-<h3>複数の特徴量</h3>
-<p>最小二乗法において<span class="math inline">\(X_i\)</span>の数は一つである必要はありません。 一般的に<span class="math inline">\(m\)</span>個の特徴量、説明変数を入れることができます。</p>
+<h3>ロジスティック回帰の前提</h3>
+<p>線形確率モデルには良い点も悪い点もありますが、一般的にはロジスティック回帰（ロジット）を用いることが多いです。</p>
+<p>大雑把に言うと、最小二乗法での式の右辺を</p>
 <p><span class="math display">\[
-  y_i = \beta_0 + \beta_1 X_{i1} + \cdots \beta_m X_{im} + \varepsilon_iｙ
+  y_i = \beta_0 + \beta_1 X_{i1} + \cdots \beta_m X_{im} + \varepsilon_i
 \]</span></p>
-<p>Rで分析する際には<code>formula</code>において<code>+</code>で変数を増やします。 試しに、年齢を入れて、次のようなモデルを推定します。</p>
+<p>ロジスティック関数あるいはシグモイド関数で変形します。」</p>
 <p><span class="math display">\[
-  y_i = \beta_0 + \beta_1 \mathit{sex} + \beta_2 \mathit{age} + \varepsilon_i
+  y_i = \frac{\exp^{\beta_0 + \beta_1 X_{i1} + \cdots \beta_m X_{im} + \varepsilon_i}}{1+\exp^{\beta_0 + \beta_1 X_{i1} + \cdots \beta_m X_{im} + \varepsilon_i}}
 \]</span></p>
+<aside>
+計量経済学では前者、機械学習では後者の名称がよく使われています。
+</aside>
+<p>この操作により、<span class="math inline">\(y_i\)</span>が0から1の間に収まるようになり、確率の定義に対応します。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-model2 &lt;- lm(W1Q15_1 ~ W1F1 + W1F2, data = data)
+tibble(x = seq(-3,3,by = 0.1),
+       y = plogis(x)) %&gt;% 
+  ggplot(aes(x = x, y = y)) + 
+  geom_line()</code></pre>
+<p><img src="logistic_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
+</div>
+<h3>ロジスティック回帰でやっていること</h3>
+<p>アイデアは最小二乗法と変わりません。 予測値と観測値のズレを最小にするような<span class="math inline">\(\beta_{j}\)</span>を求めるだけです。</p>
+<p>専門的な言葉を使うと、機械学習ではクロスエントロピー誤差を最小化します。 計量経済学では、それを裏返して、対数尤度関数を最大化します。 表現は違えど、やっていることは同じです。</p>
+<h3 id="r">Rによるロジスティック回帰</h3>
+<p>Rでロジスティック回帰をする場合、最小二乗法のときとそれほど変わりません。 おまじないは2つあり、1つ目は<code>lm()</code>の代わりに<code>glm()</code>を使うこと。 2つ目は<code>family = binomial()</code>というオプションをつけることです。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+model2 &lt;- glm(W1Q1 ~ W1F2, family = binomial(), data = data)
 summary(model2)</code></pre>
 <pre><code>
 Call:
-lm(formula = W1Q15_1 ~ W1F1 + W1F2, data = data)
+glm(formula = W1Q1 ~ W1F2, family = binomial(), data = data)
 
-Residuals:
-    Min      1Q  Median      3Q     Max 
--55.543  -9.738   0.088  16.710  50.088 
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.8758  -1.2799   0.6931   0.7789   1.0783  
 
 Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)  48.7856     1.5878  30.725   &lt;2e-16 ***
-W1F1         -2.4263     1.1217  -2.163   0.0307 *  
-W1F2          1.1262     0.3444   3.270   0.0011 ** 
+            Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept) -0.02881    0.13420  -0.215     0.83    
+W1F2         0.26653    0.03270   8.150 3.64e-16 ***
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
-Residual standard error: 22.45 on 1602 degrees of freedom
-  (208 observations deleted due to missingness)
-Multiple R-squared:  0.009424,  Adjusted R-squared:  0.008187 
-F-statistic: 7.621 on 2 and 1602 DF,  p-value: 0.0005082</code></pre>
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 2079.3  on 1792  degrees of freedom
+Residual deviance: 2011.4  on 1791  degrees of freedom
+  (20 observations deleted due to missingness)
+AIC: 2015.4
+
+Number of Fisher Scoring iterations: 4</code></pre>
 </div>
-<p><code>WF2</code>の<code>Estimate</code>が正なので年齢が上がると自民党への感情温度が上がることが分かりました。</p>
-<ul>
-<li>複数の変数がある場合の可視化はちょっと面倒くさいです。</li>
-</ul>
-<h3>多項式</h3>
-<p>若者も自民党に好意的ではないかと思うのが人情だと思います。 そういう場合には年齢の二乗項を入れることで分析できます。</p>
-<aside>
-二次関数の上に凸、下に凸の放物線を思い浮かべてください。
-</aside>
-<p><span class="math display">\[
-  y_i = \beta_0 + \beta_1 \mathit{age} + \beta_2 \mathit{age}^2 + \varepsilon_i
-\]</span></p>
-<p>Rで二乗項や三乗項などを入れる場合は<code>poly()</code>を使います。</p>
+<p>年齢とともに投票確率が上がるという結論は変わりませんが、線形確率モデルのときとは違い、10歳上がるごとに投票確率が20%上がるという解釈はできません。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-model3 &lt;- lm(W1Q15_1 ~ poly(W1F2, 2, raw = TRUE), data = data)
+data %&gt;% 
+  ggplot(aes(x = W1F2, y = ,W1Q1)) + 
+  geom_jitter() + 
+  geom_smooth(method = &quot;glm&quot;, method.args = list(family = &quot;binomial&quot;))</code></pre>
+<pre><code>
+Warning: Removed 20 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>
+Warning: Removed 20 rows containing missing values (geom_point).</code></pre>
+<p><img src="logistic_files/figure-html5/unnamed-chunk-8-1.png" width="624" /></p>
+</div>
+<ul>
+<li>今回の例だと線形確率モデルと大差ないですね。</li>
+</ul>
+<p>もちろん、最小二乗法と同様、複数の説明変数を入れたり、多項式や交差項を含めることが可能です。</p>
+<h3>予測精度</h3>
+<p>ロジスティック回帰の結果を使って、投票に行く確率を<code>predict()</code>で予測できます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+predict(model2, type = &quot;response&quot;) %&gt;% 
+  head()</code></pre>
+<pre><code>
+        1         2         3         4         5         6 
+0.6836879 0.5591515 0.7864781 0.6836879 0.6234566 0.8278338 </code></pre>
+</div>
+<p>それでは、予測結果を<code>predict</code>という変数として<code>data</code>内に作成します。 また、予測結果は0から1の間の確率ですが、観測値は投票に行ったかどうかの0もしくは1なので、予測確率が<code>0.5</code>以上の場合は投票に行くと予測して<code>vote</code>を<code>1</code>として上書きし、<code>0.5</code>以下であれば<code>0</code>とします。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+data &lt;- data %&gt;% 
+  drop_na(W1F2) %&gt;% 
+  mutate(predict = predict(model2, type = &quot;response&quot;),
+         vote = if_else(predict &gt; 0.5, 1, 0))</code></pre>
+</div>
+<ul>
+<li>年齢<code>W1F2</code>が欠損しているサンプルは分析で使われていないので除外します。</li>
+<li><code>type = &quot;response&quot;</code>とすることで予測確率を計算します。</li>
+</ul>
+<p>予測精度を測る指標はいくつかありますが、ここではシンプルに正答率でいきたいと思います。 つまり、「実際に投票に行ったかどうか」と「投票に行ったかどうかの予測」が一致したサンプルの数を全体で割ったものを計算します。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+sum(data$W1Q1 == data$vote)/nrow(data)</code></pre>
+<pre><code>
+[1] 0.7334077</code></pre>
+</div>
+<p>年齢だけで70%以上の人々の投票行動を予測することができました。</p>
+<p>せっかくなので、投票に行った人だけに限定して予測精度を確認してみます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+temp &lt;- data %&gt;% 
+  filter(W1Q1 == 1)
+sum(temp$W1Q1 == temp$vote)/nrow(temp)</code></pre>
+<pre><code>
+[1] 1</code></pre>
+</div>
+<p>投票に行った人を100%の確率で的中していることがわかりました（投票に行った人はすべて投票に行くと予測された）。</p>
+<ul>
+<li>もちろん、これにはからくりがあります。</li>
+</ul>
+<h2 id="Multinomial">応答変数の種類が3つ以上の場合</h2>
+<p>続いて、「比例区でどの政党に投票したのか」という応答変数の取りうる値が3つ以上の場合を考えます。 やや複雑にはなりますが、「政党Aに投票する確率」を求めるという点では大きく変わりません。</p>
+<p>細かい数学的な話は省きますが、シグモイド関数を拡張したソフトマックス関数で変形して、「<span class="math inline">\(i\)</span>さんが<span class="math inline">\(j\)</span>を選択する確率」を計算します。</p>
+<p><span class="math display">\[
+  y_{ij} = \frac{\exp^{\beta_0 + \beta_{1k} X_{i1} + \cdots \beta_{mk} X_{im} + \varepsilon_i}}{\sum_j \exp^{\beta_0 + \beta_{1k} X_{i1} + \cdots \beta_{mk} X_{im} + \varepsilon_i}}
+\]</span></p>
+<p>あとはクロスエントロピー誤差を最小化あるいは対数尤度関数を最大化して<span class="math inline">\(\beta_{jk}\)</span>を求めます。</p>
+<h3 id="r">Rで多項ロジット</h3>
+<p>Rで多項ロジットをする場合、<code>nnet</code>や<code>mlogit</code>といったパッケージを利用します。 今回は簡単な<code>nnet</code>を使います（統計的仮説検定をしたい場合は<code>mlogit</code>の方が良さそうです）。</p>
+<p>これまで1<code>lm()</code>や<code>glm()</code>だったところを<code>multinom()</code>に変えるだけです。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+model3 &lt;- multinom(W1Q2 ~ W1F2, data = data)</code></pre>
+<pre><code>
+# weights:  30 (18 variable)
+initial  value 3000.268376 
+iter  10 value 2533.512402
+iter  20 value 2311.558503
+iter  30 value 2308.152154
+iter  30 value 2308.152145
+iter  30 value 2308.152144
+final  value 2308.152144 
+converged</code></pre>
+<pre class="r"><code>
 summary(model3)</code></pre>
 <pre><code>
 Call:
-lm(formula = W1Q15_1 ~ poly(W1F2, 2, raw = TRUE), data = data)
-
-Residuals:
-    Min      1Q  Median      3Q     Max 
--56.994  -8.548   0.747  16.532  51.452 
+multinom(formula = W1Q2 ~ W1F2, data = data)
 
 Coefficients:
-                           Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)                 59.0939     2.9612  19.956  &lt; 2e-16 ***
-poly(W1F2, 2, raw = TRUE)1  -6.6809     1.7675  -3.780 0.000163 ***
-poly(W1F2, 2, raw = TRUE)2   1.0551     0.2343   4.503  7.2e-06 ***
----
-Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+   (Intercept)          W1F2
+2   -0.6219656  0.0001710116
+3   -0.3370387 -0.1147746330
+4   -0.9880643 -0.0256141963
+5   -1.5240283 -0.3566910238
+6   -1.0792824 -0.0044498016
+7   -3.7177611  0.1418345680
+8   -3.3173280  0.0433698085
+9   -2.8774910 -0.3330421114
+90  -1.8317165 -0.2799296451
 
-Residual standard error: 22.34 on 1603 degrees of freedom
-  (207 observations deleted due to missingness)
-Multiple R-squared:  0.01903,   Adjusted R-squared:  0.0178 
-F-statistic: 15.55 on 2 and 1603 DF,  p-value: 2.054e-07</code></pre>
+Std. Errors:
+   (Intercept)       W1F2
+2    0.2338356 0.05061460
+3    0.2331229 0.05234528
+4    0.2714737 0.05926795
+5    0.4653035 0.12169128
+6    0.2755666 0.05973794
+7    0.7554437 0.15504046
+8    0.7022554 0.14935682
+9    0.8614424 0.22409268
+90   0.4961090 0.12377863
+
+Residual Deviance: 4616.304 
+AIC: 4652.304 </code></pre>
 </div>
-<p>年齢の二乗項<code>poly(W1F2, 2)2</code>が正なので下向きに凸ということを意味しています。 ということは両端（若者と老人）で自民党への感情温度が高いと言えます。</p>
+<h3 id="-1">予測精度</h3>
+<p>ロジットのときと同様、予測した結果と実際の投票先の的中率を求めてみます。 今回は<code>predict()</code>で投票先をそのまま予測してくれるので、それを<code>party</code>という変数にします。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-data %&gt;% 
-  ggplot(aes(x = W1F2, y = W1Q15_1)) + 
-  geom_jitter() + 
-  geom_smooth(method = &quot;lm&quot;, formula = y ~ poly(x,2))</code></pre>
+data &lt;- data %&gt;% 
+  drop_na(W1Q2) %&gt;% 
+  mutate(party = predict(model3))
+sum(data$W1Q2 == data$party)/nrow(data)</code></pre>
 <pre><code>
-Warning: Removed 207 rows containing non-finite values (stat_smooth).</code></pre>
-<pre><code>
-Warning: Removed 207 rows containing missing values (geom_point).</code></pre>
-<p><img src="regression_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
+[1] 0.3499616</code></pre>
 </div>
-<h3>交差項</h3>
-<p>それでは、年齢による違いは性別によっても違うのではないだろうか、と思うひともいるかと思います。 例えば、女性は年齢にかかわらず自民党への感情温度は低いままかもしれません。</p>
-<p>このような場合は性別と年齢をかけ合わせたもの、いわゆる交差項を入れることで分析できます。 数式で表すとこの通りです。</p>
-<p><span class="math display">\[
-  y_i = \beta_0 + \beta_1 \mathit{sex} + \beta_2 \mathit{age} + \beta_3 \mathit{sex} \times \mathit{age} + \varepsilon_i
-\]</span></p>
-<p>なぜ、この式で男女における年齢の違いが分かるのでしょうか？ 仮に男性の場合、<span class="math inline">\(\mathit{se}\)</span>は0なので、</p>
-<p><span class="math display">\[
-  y_i = \beta_0 + \beta_2 \mathit{age}  + \varepsilon_i
-\]</span></p>
-<p>となります。 つまり、<span class="math inline">\(\beta_2\)</span>は男性の場合の年齢と感情温度の関係を意味しています。</p>
-<p>一方で、女性の場合は<span class="math inline">\(\mathit{sex}\)</span>が1になるので、</p>
-<p><span class="math display">\[
-  y_i = \beta_0 + \beta_1 + \beta_2 \mathit{age} + \beta_3 \mathit{age} + \varepsilon_i
-\]</span></p>
-<p>となります。 もう少しわかりやすく整理すると、</p>
-<p><span class="math display">\[
-  y_i = (\beta_0 + \beta_1) + (\beta_2 + \beta_3) \mathit{age} + \varepsilon_i
-\]</span></p>
-<p>となります。 つまり、女性の場合の年齢と感情温度の関係は<span class="math inline">\(\beta_2 + \beta_3\)</span>なのです。</p>
-<p>さて、Rで交差項を入れるには<code>*</code>で掛け算をします。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-model4 &lt;- lm(W1Q15_1 ~ W1F1*W1F2, data = data)
-summary(model4)</code></pre>
-<pre><code>
-Call:
-lm(formula = W1Q15_1 ~ W1F1 * W1F2, data = data)
-
-Residuals:
-    Min      1Q  Median      3Q     Max 
--55.677  -9.796   0.204  16.707  50.284 
-
-Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)  48.5240     2.1567  22.500   &lt;2e-16 ***
-W1F1         -1.9334     2.9686  -0.651   0.5150    
-W1F2          1.1921     0.5040   2.365   0.0181 *  
-W1F1:W1F2    -0.1238     0.6905  -0.179   0.8577    
----
-Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-
-Residual standard error: 22.45 on 1601 degrees of freedom
-  (208 observations deleted due to missingness)
-Multiple R-squared:  0.009444,  Adjusted R-squared:  0.007588 
-F-statistic: 5.088 on 3 and 1601 DF,  p-value: 0.001656</code></pre>
-</div>
-<p>交差項を含む分析の結果の解釈には注意が必要です。 まず、<code>W1F2</code>は正なっています。 これは<span class="math inline">\(\beta_2\)</span>に相当するものなので、男性の場合は年齢が上がると自民党への感情温度が上がることを意味します。</p>
-<p>一方、<code>W1F1:W1F2</code>は負です。 これを見ると女性は年齢が上がると自民党への感情温度が下がる、と思いそうです。 しかし、これは<span class="math inline">\(\beta_3\)</span>に相当するものです。 女性における年齢と感情温度の関係は<span class="math inline">\(\beta_2 + \beta_3\)</span>なので、引き算をしても依然として正であることがわかります。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-data %&gt;% 
-  ggplot(aes(x = W1F2, y = W1Q15_1, colour = as.factor(W1F1))) + 
-  geom_jitter() + 
-  geom_smooth(method = &quot;lm&quot;, formula = y ~ x)</code></pre>
-<pre><code>
-Warning: Removed 207 rows containing non-finite values (stat_smooth).</code></pre>
-<pre><code>
-Warning: Removed 207 rows containing missing values (geom_point).</code></pre>
-<p><img src="regression_files/figure-html5/unnamed-chunk-11-1.png" width="624" /></p>
-</div>
-<h3>てんこ盛りモデル</h3>
-<p>最後に、てんこ盛りにしたモデルを作ってみます。 二次関数とは言わずに五次関数にして、それぞれ性別によって変化するモデルを推定しちゃいましょう。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-model5 &lt;- lm(W1Q15_1 ~ W1F1*poly(W1F2, 5, raw = TRUE), data = data)
-summary(model5)</code></pre>
-<pre><code>
-Call:
-lm(formula = W1Q15_1 ~ W1F1 * poly(W1F2, 5, raw = TRUE), data = data)
-
-Residuals:
-    Min      1Q  Median      3Q     Max 
--60.239 -10.239  -0.096  14.904  51.986 
-
-Coefficients:
-                                 Estimate Std. Error t value Pr(&gt;|t|)  
-(Intercept)                      -44.8999    63.2956  -0.709   0.4782  
-W1F1                              24.3253    87.3222   0.279   0.7806  
-poly(W1F2, 5, raw = TRUE)1       203.6362   130.2536   1.563   0.1182  
-poly(W1F2, 5, raw = TRUE)2      -150.2097    94.1040  -1.596   0.1106  
-poly(W1F2, 5, raw = TRUE)3        50.2245    30.7719   1.632   0.1028  
-poly(W1F2, 5, raw = TRUE)4        -7.7822     4.6498  -1.674   0.0944 .
-poly(W1F2, 5, raw = TRUE)5         0.4537     0.2636   1.722   0.0853 .
-W1F1:poly(W1F2, 5, raw = TRUE)1  -51.8308   179.6514  -0.289   0.7730  
-W1F1:poly(W1F2, 5, raw = TRUE)2   40.9427   129.7956   0.315   0.7525  
-W1F1:poly(W1F2, 5, raw = TRUE)3  -15.5561    42.4631  -0.366   0.7142  
-W1F1:poly(W1F2, 5, raw = TRUE)4    2.7295     6.4215   0.425   0.6709  
-W1F1:poly(W1F2, 5, raw = TRUE)5   -0.1760     0.3643  -0.483   0.6290  
----
-Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-
-Residual standard error: 22.28 on 1593 degrees of freedom
-  (208 observations deleted due to missingness)
-Multiple R-squared:  0.02933,   Adjusted R-squared:  0.02263 
-F-statistic: 4.376 on 11 and 1593 DF,  p-value: 1.716e-06</code></pre>
-</div>
-<p><span class="math inline">\(R^2\)</span>を見ると0.029で、二次関数だけのモデル<code>model3</code>の0.019から少し改善していることがわかります。</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-data %&gt;% 
-  ggplot(aes(x = W1F2, y = W1Q15_1, colour = as.factor(W1F1))) + 
-  geom_jitter() + 
-  geom_smooth(method = &quot;lm&quot;, formula = y ~ poly(x, 5))</code></pre>
-<pre><code>
-Warning: Removed 207 rows containing non-finite values (stat_smooth).</code></pre>
-<pre><code>
-Warning: Removed 207 rows containing missing values (geom_point).</code></pre>
-<p><img src="regression_files/figure-html5/unnamed-chunk-13-1.png" width="624" /></p>
-</div>
-<p>ただし、予測力が高くなっても説明力が高くなるとは限りません。</p>
+<ul>
+<li>比例区で投票先が欠損しているサンプルを除外しています。</li>
+</ul>
+<p>的中率は35%でした。</p>
+<ul>
+<li>これが高いと見るか低いと見るかはともかく、ここでもとあるからくりがあります。</li>
+</ul>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">
     <span class="disqus-comments">
       <i class="fas fa-comments"></i>
       &nbsp;
-      <span class="disqus-comment-count" data-disqus-identifier="posts/2019-05-17-regression/">Comment on this article</span>
+      <span class="disqus-comment-count" data-disqus-identifier="posts/2019-05-19-logistic/">Comment on this article</span>
     </span>
     <span class="article-sharing">
       Share: &nbsp;
-      <a href="https://twitter.com/share?text=R%E3%81%A7%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%97%E6%B3%95&amp;url=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-05-17-regression%2F">
+      <a href="https://twitter.com/share?text=R%E3%81%A7%E3%83%AD%E3%82%B8%E3%82%B9%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF%E5%9B%9E%E5%B8%B0&amp;url=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-05-19-logistic%2F">
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-05-17-regression%2F">
+      <a href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-05-19-logistic%2F">
         <i class="fab fa-facebook"></i>
       </a>
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-05-17-regression%2F&amp;title=R%E3%81%A7%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%97%E6%B3%95">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fshohei-doi.github.io%2Fnotes%2Fposts%2F2019-05-19-logistic%2F&amp;title=R%E3%81%A7%E3%83%AD%E3%82%B8%E3%82%B9%E3%83%86%E3%82%A3%E3%83%83%E3%82%AF%E5%9B%9E%E5%B8%B0">
         <i class="fab fa-linkedin"></i>
       </a>
     </span>
@@ -1731,8 +1685,8 @@ Warning: Removed 207 rows containing missing values (geom_point).</code></pre>
   <div id="disqus_thread" class="hidden"></div>
   <script>
 var disqus_config = function () {
-  this.page.url = 'https://shohei-doi.github.io/notes/posts/2019-05-17-regression/';
-  this.page.identifier = 'posts/2019-05-17-regression/';
+  this.page.url = 'https://shohei-doi.github.io/notes/posts/2019-05-19-logistic/';
+  this.page.identifier = 'posts/2019-05-19-logistic/';
 };
 (function() {
   var d = document, s = d.createElement('script');
