@@ -26,8 +26,8 @@
 <link rel="canonical" href="https://shohei-doi.github.io/notes/posts/2019-05-17-regression/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2019-05-20"/>
-<meta property="article:created" itemprop="dateCreated" content="2019-05-20"/>
+<meta property="article:published" itemprop="datePublished" content="2019-05-23"/>
+<meta property="article:created" itemprop="dateCreated" content="2019-05-23"/>
 <meta name="article:author" content="土井　翔平"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -35,7 +35,7 @@
 <meta property="og:type" content="article"/>
 <meta property="og:description" content="Rで最小二乗法を行う方法を説明します。"/>
 <meta property="og:url" content="https://shohei-doi.github.io/notes/posts/2019-05-17-regression/"/>
-<meta property="og:image" content="https://shohei-doi.github.io/notes/posts/2019-05-17-regression/regression_files/figure-html5/unnamed-chunk-6-1.png"/>
+<meta property="og:image" content="https://shohei-doi.github.io/notes/posts/2019-05-17-regression/regression_files/figure-html5/unnamed-chunk-3-1.png"/>
 <meta property="og:image:width" content="1248"/>
 <meta property="og:image:height" content="768"/>
 <meta property="og:locale" content="en_US"/>
@@ -46,7 +46,7 @@
 <meta property="twitter:title" content="ノート: Rで最小二乗法"/>
 <meta property="twitter:description" content="Rで最小二乗法を行う方法を説明します。"/>
 <meta property="twitter:url" content="https://shohei-doi.github.io/notes/posts/2019-05-17-regression/"/>
-<meta property="twitter:image" content="https://shohei-doi.github.io/notes/posts/2019-05-17-regression/regression_files/figure-html5/unnamed-chunk-6-1.png"/>
+<meta property="twitter:image" content="https://shohei-doi.github.io/notes/posts/2019-05-17-regression/regression_files/figure-html5/unnamed-chunk-3-1.png"/>
 <meta property="twitter:image:width" content="1248"/>
 <meta property="twitter:image:height" content="768"/>
 <meta property="twitter:creator" content="@sdoi0504"/>
@@ -55,12 +55,12 @@
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Rで最小二乗法"]},{"type":"character","attributes":{},"value":["Rで最小二乗法を行う方法を説明します。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-05-20"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["R","data analysis"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-05-17-regression/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Rで最小二乗法"]},{"type":"character","attributes":{},"value":["Rで最小二乗法を行う方法を説明します。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-05-23"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["R","data analysis"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-05-17-regression/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["regression_files/bowser-1.9.3/bowser.min.js","regression_files/distill-2.2.21/template.v2.js","regression_files/figure-html5/unnamed-chunk-11-1.png","regression_files/figure-html5/unnamed-chunk-13-1.png","regression_files/figure-html5/unnamed-chunk-6-1.png","regression_files/figure-html5/unnamed-chunk-9-1.png","regression_files/jquery-1.11.3/jquery.min.js","regression_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["regression_files/bowser-1.9.3/bowser.min.js","regression_files/distill-2.2.21/template.v2.js","regression_files/figure-html5/unnamed-chunk-10-1.png","regression_files/figure-html5/unnamed-chunk-11-1.png","regression_files/figure-html5/unnamed-chunk-12-1.png","regression_files/figure-html5/unnamed-chunk-13-1.png","regression_files/figure-html5/unnamed-chunk-14-1.png","regression_files/figure-html5/unnamed-chunk-3-1.png","regression_files/figure-html5/unnamed-chunk-6-1.png","regression_files/figure-html5/unnamed-chunk-7-1.png","regression_files/figure-html5/unnamed-chunk-9-1.png","regression_files/jquery-1.11.3/jquery.min.js","regression_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 
@@ -1297,7 +1297,7 @@ gtag('config', 'UA-75879658-3');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Rで最小二乗法","description":"Rで最小二乗法を行う方法を説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-05-20T00:00:00.000+09:00","citationText":"翔平, 2019"}
+{"title":"Rで最小二乗法","description":"Rで最小二乗法を行う方法を説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-05-23T00:00:00.000+09:00","citationText":"翔平, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1328,7 +1328,7 @@ gtag('config', 'UA-75879658-3');
 <div class="d-byline">
   土井　翔平  (国立情報学研究所)
   
-<br/>2019-05-20
+<br/>2019-05-23
 </div>
 
 <div class="d-article">
@@ -1357,18 +1357,14 @@ Registered S3 methods overwritten by &#39;ggplot2&#39;:
   c.quosures     rlang
   print.quosures rlang</code></pre>
 <pre><code>
-Registered S3 method overwritten by &#39;rvest&#39;:
-  method            from
-  read_xml.response xml2</code></pre>
-<pre><code>
-── Attaching packages ───────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+── Attaching packages ─────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
 <pre><code>
 ✔ ggplot2 3.1.1       ✔ purrr   0.3.2  
 ✔ tibble  2.1.1       ✔ dplyr   0.8.0.1
 ✔ tidyr   0.8.3       ✔ stringr 1.4.0  
 ✔ readr   1.3.1       ✔ forcats 0.4.0  </code></pre>
 <pre><code>
-── Conflicts ──────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+── Conflicts ────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()</code></pre>
 </div>
@@ -1447,6 +1443,18 @@ See problems(...) for more details.</code></pre>
 誤差項と残差はしばしば混同されますが違う概念です。
 </aside>
 <p>この残差が一番小さくなるような<span class="math inline">\(\hat{\beta}_0\)</span>と<span class="math inline">\(\hat{\beta}_1\)</span>が<span class="math inline">\(\beta_0\)</span>と<span class="math inline">\(\beta_1\)</span>の推定値としていいんじゃないだろうか、というのが最小二乗法の基本的な発想です。 最小二乗法と呼ばれる所以は、残差の<strong>二乗</strong><span class="math inline">\(e_i^2\)</span>の総和を<strong>最小</strong>にするからです。</p>
+<p>図にすると次のようになります。 各点が観察を表していて、斜めの直線が予測線になります。 各点から予測線への垂線が残差になります。 このズレが最小になるような予測線の切片と傾きを求める方法が最小二乗法になります。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+n &lt;- 50
+tibble(x = rnorm(n, 0, 1),
+       y = x + rnorm(n, 0, 1)) %&gt;% 
+  ggplot() + 
+  geom_point(aes(x = x, y = y)) + 
+  geom_line(aes(x = x, y = x)) + 
+  geom_errorbar(aes(x = x, ymin = x, ymax = y))</code></pre>
+<p><img src="regression_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
+</div>
 <h3 id="r">Rによる最小二乗法</h3>
 <p>まず準備として性別の変数を修正します。 このデータでは男性が<code>1</code>で女性が<code>2</code>なので、<code>1</code>を引いて男性が<code>0</code>、女性が<code>1</code>となるようにします。</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1507,7 +1515,7 @@ data %&gt;%
 Warning: Removed 203 rows containing non-finite values (stat_smooth).</code></pre>
 <pre><code>
 Warning: Removed 203 rows containing missing values (geom_point).</code></pre>
-<p><img src="regression_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
+<p><img src="regression_files/figure-html5/unnamed-chunk-7-1.png" width="624" /></p>
 </div>
 <h2 id="Advanced">最小二乗法の拡張</h2>
 <h3>複数の特徴量</h3>
@@ -1593,7 +1601,7 @@ data %&gt;%
 Warning: Removed 207 rows containing non-finite values (stat_smooth).</code></pre>
 <pre><code>
 Warning: Removed 207 rows containing missing values (geom_point).</code></pre>
-<p><img src="regression_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
+<p><img src="regression_files/figure-html5/unnamed-chunk-10-1.png" width="624" /></p>
 </div>
 <h3>交差項</h3>
 <p>それでは、年齢による違いは性別によっても違うのではないだろうか、と思うひともいるかと思います。 例えば、女性は年齢にかかわらず自民党への感情温度は低いままかもしれません。</p>
@@ -1654,7 +1662,7 @@ data %&gt;%
 Warning: Removed 207 rows containing non-finite values (stat_smooth).</code></pre>
 <pre><code>
 Warning: Removed 207 rows containing missing values (geom_point).</code></pre>
-<p><img src="regression_files/figure-html5/unnamed-chunk-11-1.png" width="624" /></p>
+<p><img src="regression_files/figure-html5/unnamed-chunk-12-1.png" width="624" /></p>
 </div>
 <h3>てんこ盛りモデル</h3>
 <p>最後に、てんこ盛りにしたモデルを作ってみます。 二次関数とは言わずに五次関数にして、それぞれ性別によって変化するモデルを推定しちゃいましょう。</p>
@@ -1703,7 +1711,7 @@ data %&gt;%
 Warning: Removed 207 rows containing non-finite values (stat_smooth).</code></pre>
 <pre><code>
 Warning: Removed 207 rows containing missing values (geom_point).</code></pre>
-<p><img src="regression_files/figure-html5/unnamed-chunk-13-1.png" width="624" /></p>
+<p><img src="regression_files/figure-html5/unnamed-chunk-14-1.png" width="624" /></p>
 </div>
 <p>ただし、予測力が高くなっても説明力が高くなるとは限りません。</p>
 <!--radix_placeholder_article_footer-->

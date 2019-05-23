@@ -7,7 +7,16 @@
     <description>ノート
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 21 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 May 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Rで最小二乗法</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-05-17-regression</link>
+      <description>Rで最小二乗法を行う方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-05-17-regression</guid>
+      <pubDate>Thu, 23 May 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://shohei-doi.github.io/notes/posts/2019-05-17-regression/regression_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>Rで機械学習：分類編</title>
       <dc:creator>土井　翔平</dc:creator>
@@ -15,15 +24,6 @@
       <description>Rで機械学習による分類を行ういくつかの方法を説明します。</description>
       <guid>https://shohei-doi.github.io/notes/posts/2019-05-20-classification</guid>
       <pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Rで最小二乗法</title>
-      <dc:creator>土井　翔平</dc:creator>
-      <link>https://shohei-doi.github.io/notes/posts/2019-05-17-regression</link>
-      <description>Rで最小二乗法を行う方法を説明します。</description>
-      <guid>https://shohei-doi.github.io/notes/posts/2019-05-17-regression</guid>
-      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://shohei-doi.github.io/notes/posts/2019-05-17-regression/regression_files/figure-html5/unnamed-chunk-6-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
     <item>
       <title>Rでロジスティック回帰</title>
