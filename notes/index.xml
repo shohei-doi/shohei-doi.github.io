@@ -7,7 +7,24 @@
     <description>ノート
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 23 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 May 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Rで機械学習：分類編</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-05-20-classification</link>
+      <description>Rで機械学習による分類を行ういくつかの方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-05-20-classification</guid>
+      <pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Rで機械学習：交差検証編</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-05-27-cross-validation</link>
+      <description>機械学習をする際の注意点とRにおけるいくつかのテクニックを説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-05-27-cross-validation</guid>
+      <pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://shohei-doi.github.io/notes/posts/2019-05-27-cross-validation/cross-validation_files/figure-html5/unnamed-chunk-7-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>Rで最小二乗法</title>
       <dc:creator>土井　翔平</dc:creator>
@@ -16,14 +33,6 @@
       <guid>https://shohei-doi.github.io/notes/posts/2019-05-17-regression</guid>
       <pubDate>Thu, 23 May 2019 00:00:00 +0000</pubDate>
       <media:content url="https://shohei-doi.github.io/notes/posts/2019-05-17-regression/regression_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="1248" height="768"/>
-    </item>
-    <item>
-      <title>Rで機械学習：分類編</title>
-      <dc:creator>土井　翔平</dc:creator>
-      <link>https://shohei-doi.github.io/notes/posts/2019-05-20-classification</link>
-      <description>Rで機械学習による分類を行ういくつかの方法を説明します。</description>
-      <guid>https://shohei-doi.github.io/notes/posts/2019-05-20-classification</guid>
-      <pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Rでロジスティック回帰</title>
