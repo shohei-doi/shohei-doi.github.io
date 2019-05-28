@@ -1336,8 +1336,8 @@ gtag('config', 'UA-75879658-3');
 <nav class="d-toc" id="TOC">
 <ul>
 <li><a href="#Intro">はじめに</a></li>
-<li><a>深層学習による投票行動の予測</a></li>
-<li><a>深層学習による投票先の予測</a></li>
+<li><a href="#Vote">深層学習による投票行動の予測</a></li>
+<li><a href="#Party">深層学習による投票先の予測</a></li>
 </ul>
 </nav>
 <hr class="d-toc-separator"/>
@@ -1479,7 +1479,7 @@ See problems(...) for more details.</code></pre>
 <pre class="r"><code>
 set.seed(334)</code></pre>
 </div>
-<h2>深層学習による投票行動の予測</h2>
+<h2 id="Vote">深層学習による投票行動の予測</h2>
 <p>まずは、投票に行くかどうかを深層学習によって予測します。 投票に行くかどうかを<code>target</code>として、投票先を取り除いたデータを作ります。 そして、<code>caret</code>を使って訓練データと検証データに分けるためのインデックスを求めます。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
@@ -1594,19 +1594,19 @@ history &lt;- model_vote %&gt;%
 plot(history)</code></pre>
 <p><img src="deep-learning_files/figure-html5/unnamed-chunk-14-1.png" width="624" /></p>
 </div>
-<p>検証データで予測精度を求めます。 全然精度が良くないことがわかります。</p>
+<p>検証データで予測精度を求めます。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 model_vote %&gt;% evaluate(x_test, y_test)</code></pre>
 <pre><code>
 $loss
-[1] 0.5869596
+[1] 0.5803263
 
 $acc
-[1] 0.6955017</code></pre>
+[1] 0.6989619</code></pre>
 </div>
 <p>深層学習ではハイパーパラメータの種類が非常に多いのでいろいろなチューニングを試す必要がありそうです。</p>
-<h2>深層学習による投票先の予測</h2>
+<h2 id="Party">深層学習による投票先の予測</h2>
 <p>続いて、どの政党に投票するかを予測します。 概ね、先ほどと同じコードなので相違点だけ言及します。</p>
 <p><code>target</code>を<code>vote</code>ではなく<code>party</code>にします。</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1690,10 +1690,10 @@ plot(history)</code></pre>
 model_party %&gt;% evaluate(x_test, y_test)</code></pre>
 <pre><code>
 $loss
-[1] 1.371642
+[1] 1.464055
 
 $acc
-[1] 0.5735294</code></pre>
+[1] 0.5441176</code></pre>
 </div>
 <p>精度はまずまずといったところでしょうか。</p>
 <h3>エポック数の増加</h3>
@@ -1716,10 +1716,10 @@ plot(history)</code></pre>
 model_party %&gt;% evaluate(x_test, y_test)</code></pre>
 <pre><code>
 $loss
-[1] 1.228705
+[1] 1.297755
 
 $acc
-[1] 0.5980392</code></pre>
+[1] 0.6127451</code></pre>
 </div>
 <h3>過学習</h3>
 <p>今回のデータはサンプルサイズも変数の数も少ないのでドロップアウトやバッチ学習はいらないのかもしれません。</p>
@@ -1753,10 +1753,10 @@ plot(history)</code></pre>
 model_party %&gt;% evaluate(x_test, y_test)</code></pre>
 <pre><code>
 $loss
-[1] 1.248358
+[1] 1.376232
 
 $acc
-[1] 0.6323529</code></pre>
+[1] 0.5931373</code></pre>
 </div>
 <p>最初の学習に比べると予測精度が改善しましたが、過学習気味です。 しかし、投票行動のデータでやると過学習を起こしている疑いがありました。</p>
 <p>（シード値を設定していても毎回結果が変わっているので、何か間違えている可能性があります）</p>
