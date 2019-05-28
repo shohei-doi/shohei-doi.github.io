@@ -18,6 +18,15 @@
       <media:content url="https://shohei-doi.github.io/notes/posts/2019-05-27-cross-validation/cross-validation_files/figure-html5/unnamed-chunk-7-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
     <item>
+      <title>Rで機械学習：深層学習編</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-05-28-deep-learning</link>
+      <description>Rで深層学習を行う方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-05-28-deep-learning</guid>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://shohei-doi.github.io/notes/posts/2019-05-28-deep-learning/deep-learning_files/figure-html5/unnamed-chunk-14-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
+    <item>
       <title>Rで機械学習：分類編</title>
       <dc:creator>土井　翔平</dc:creator>
       <link>https://shohei-doi.github.io/notes/posts/2019-05-20-classification</link>
