@@ -1,5 +1,23 @@
 [
   {
+    "path": "posts/2019-06-19-ubuntu/",
+    "title": "Ubuntuのセットアップ",
+    "description": "Ubuntuをインストールした後に行う環境構築をまとめました。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-06-24",
+    "categories": [
+      "Ubuntu",
+      "setup"
+    ],
+    "preview": {},
+    "last_modified": "2019-06-24T19:47:25+09:00"
+  },
+  {
     "path": "posts/2019-06-06-scraping-wikipedia/",
     "title": "スクレイピング：Wikipedia編",
     "description": "RでAPI経由でWikipediaのスクレイピングをする方法を説明します。",
