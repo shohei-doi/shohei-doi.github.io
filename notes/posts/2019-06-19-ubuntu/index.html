@@ -26,8 +26,8 @@
 <link rel="canonical" href="https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2019-06-24"/>
-<meta property="article:created" itemprop="dateCreated" content="2019-06-24"/>
+<meta property="article:published" itemprop="datePublished" content="2019-07-12"/>
+<meta property="article:created" itemprop="dateCreated" content="2019-07-12"/>
 <meta name="article:author" content="土井　翔平"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -49,7 +49,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Ubuntuのセットアップ"]},{"type":"character","attributes":{},"value":["Ubuntuをインストールした後に行う環境構築をまとめました。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-06-24"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["Ubuntu","setup"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Ubuntuのセットアップ"]},{"type":"character","attributes":{},"value":["Ubuntuをインストールした後に行う環境構築をまとめました。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-07-12"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["Ubuntu","setup"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1291,7 +1291,7 @@ gtag('config', 'UA-75879658-3');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Ubuntuのセットアップ","description":"Ubuntuをインストールした後に行う環境構築をまとめました。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-06-24T00:00:00.000+09:00","citationText":"翔平, 2019"}
+{"title":"Ubuntuのセットアップ","description":"Ubuntuをインストールした後に行う環境構築をまとめました。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-07-12T00:00:00.000+09:00","citationText":"翔平, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1322,7 +1322,7 @@ gtag('config', 'UA-75879658-3');
 <div class="d-byline">
   土井　翔平  (国立情報学研究所)
   
-<br/>2019-06-24
+<br/>2019-07-12
 </div>
 
 <div class="d-article">
@@ -1416,7 +1416,10 @@ sudo apt install r-base</code></pre>
 <pre><code>
 sudo apt install libcurl4-openssl-dev
 sudo apt install libssl-dev
-sudo apt install libxml2-dev</code></pre>
+sudo apt install libxml2-dev
+sudo add-apt-repository -y ppa:opencpu/poppler
+sudo apt-get update
+sudo sudo apt-get install -y libpoppler-cpp-dev</code></pre>
 <h3>パッケージのインストール</h3>
 <p>いくつか代表的なパッケージをインストールします。</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1426,6 +1429,7 @@ install.packages(&quot;distill&quot;)
 install.packages(&quot;rstan&quot;)
 install.packages(&quot;brms&quot;)
 install.packages(&quot;quanteda&quot;)
+install.packages(&quot;readtext&quot;)
 install.packages(&quot;devtools&quot;)</code></pre>
 </div>
 <h2 id="LaTeX">TeXLive</h2>
@@ -1443,7 +1447,13 @@ sudo /usr/local/texlive/YYYY/bin/x86_64-linux/tlmgr path add</code></pre>
 <li><code>tinytex</code>をRでインストールする方法は<a href="https://shohei-doi.github.io/notes/posts/2019-04-12-rmarkdown-pdf/#Install">こちら</a>を参照。</li>
 </ul>
 <h2 id="Python">Python</h2>
-<p>UbuntuではPython2とPython3がデフォルトで入っているはずです。 Python3をメインに使いたいので以下のように設定します。</p>
+<p>UbuntuではPython2とPython3がデフォルトで入っているはずです。 なぜか、Atom上でpython3を使いたくてもpython2系のモジュールをインストールしないとうまく行きません。 正直、pythonの環境構築に関しては未だに分からないことが多いので間違いがあれば教えてください。</p>
+<pre><code>
+sudo apt install python-pip
+pip install numpy pandas scikit-learn matplotlib ipykernel
+
+sudo apt install python3-pip
+pip3 install numpy pandas scikit-learn matplotlib ipykernel</code></pre>
 <h2 id="Slack">Slack &amp; Skype</h2>
 <p>Slackを<a href="https://slack.com/intl/ja-jp/downloads/linux">公式サイト</a>からダウンロード&amp;インストールします。</p>
 <ul>
@@ -1455,11 +1465,15 @@ sudo /usr/local/texlive/YYYY/bin/x86_64-linux/tlmgr path add</code></pre>
 <h3>一般向けパッケージ</h3>
 <h3 id="latex">LaTeX向けパッケージ</h3>
 <ul>
-<li><a href="https://atom.io/packages/latex">lat4ex</a>：タイプセット</li>
+<li><a href="https://atom.io/packages/latex">latex</a>：タイプセット</li>
 <li><a href="https://atom.io/packages/language-latex">language-latex</a>：シンタックス・ハイライト</li>
 <li><a href="https://atom.io/packages/latexer">latexer</a>：オートコンプリート</li>
 </ul>
 <h3 id="python">Python向けパッケージ</h3>
+<ul>
+<li><a href="https://atom.io/packages/hydrogen">Hydrogen</a>：Atom上でjupyterの操作</li>
+<li><a href="https://atom.io/packages/hydrogen-python">hydrogen-python</a>：variable explorer</li>
+</ul>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">
