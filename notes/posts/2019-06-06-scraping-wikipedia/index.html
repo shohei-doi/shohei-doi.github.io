@@ -26,8 +26,8 @@
 <link rel="canonical" href="https://shohei-doi.github.io/notes/posts/2019-06-06-scraping-wikipedia/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2019-06-06"/>
-<meta property="article:created" itemprop="dateCreated" content="2019-06-06"/>
+<meta property="article:published" itemprop="datePublished" content="2019-07-19"/>
+<meta property="article:created" itemprop="dateCreated" content="2019-07-19"/>
 <meta name="article:author" content="土井　翔平"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -55,7 +55,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["スクレイピング：Wikipedia編"]},{"type":"character","attributes":{},"value":["RでAPI経由でWikipediaのスクレイピングをする方法を説明します。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-06-06"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["R","crawling/scraping"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-06-06-scraping-wikipedia/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["スクレイピング：Wikipedia編"]},{"type":"character","attributes":{},"value":["RでAPI経由でWikipediaのスクレイピングをする方法を説明します。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-07-19"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["R","crawling/scraping"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-06-06-scraping-wikipedia/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1297,7 +1297,7 @@ gtag('config', 'UA-75879658-3');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"スクレイピング：Wikipedia編","description":"RでAPI経由でWikipediaのスクレイピングをする方法を説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-06-06T00:00:00.000+09:00","citationText":"翔平, 2019"}
+{"title":"スクレイピング：Wikipedia編","description":"RでAPI経由でWikipediaのスクレイピングをする方法を説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-07-19T00:00:00.000+09:00","citationText":"翔平, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1328,7 +1328,7 @@ gtag('config', 'UA-75879658-3');
 <div class="d-byline">
   土井　翔平  (国立情報学研究所)
   
-<br/>2019-06-06
+<br/>2019-07-19
 </div>
 
 <div class="d-article">
@@ -1341,6 +1341,7 @@ gtag('config', 'UA-75879658-3');
 <li><a href="#PageText">Wikipediaの記事</a></li>
 <li><a href="#PageLink">Wikipediaの記事のリンク</a></li>
 <li><a href="#Text">テキスト分析入門<code>*</code></a></li>
+<li><a href="#Date">Wikipediaの記事の作成日の取得</a></li>
 </ul>
 </nav>
 <hr class="d-toc-separator"/>
@@ -1351,20 +1352,14 @@ gtag('config', 'UA-75879658-3');
 <pre class="r"><code>
 library(tidyverse)</code></pre>
 <pre><code>
-Registered S3 methods overwritten by &#39;ggplot2&#39;:
-  method         from 
-  [.quosures     rlang
-  c.quosures     rlang
-  print.quosures rlang</code></pre>
+── Attaching packages ─────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
 <pre><code>
-── Attaching packages ────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+✔ ggplot2 3.2.0     ✔ purrr   0.3.2
+✔ tibble  2.1.3     ✔ dplyr   0.8.3
+✔ tidyr   0.8.3     ✔ stringr 1.4.0
+✔ readr   1.3.1     ✔ forcats 0.4.0</code></pre>
 <pre><code>
-✔ ggplot2 3.1.1       ✔ purrr   0.3.2  
-✔ tibble  2.1.1       ✔ dplyr   0.8.0.1
-✔ tidyr   0.8.3       ✔ stringr 1.4.0  
-✔ readr   1.3.1       ✔ forcats 0.4.0  </code></pre>
-<pre><code>
-── Conflicts ───────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+── Conflicts ────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>
@@ -1379,10 +1374,11 @@ library(gtrendsR)</code></pre>
 <ul>
 <li>Googleトレンドとの比較のために<code>gtrendsR</code>も読み込んでみます。</li>
 </ul>
-<p>また、Wikipediaの記事の情報を取得するには<code>WikipediR</code>というパッケージを使います。</p>
+<p>また、Wikipediaの記事の情報を取得するには<code>WikipediR</code>というパッケージを使います。 <em>（2019年7月19日追記）</em>直接APIを叩いて情報を取得する際には<code>httr</code>というパッケージを使います。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 library(WikipediR)
+library(httr)
 library(rvest)</code></pre>
 <pre><code>
 Loading required package: xml2</code></pre>
@@ -1436,7 +1432,7 @@ full_join(wiki_trend %&gt;%
   geom_point(aes(x = wiki, y = google, colour = term)) + 
   facet_wrap(~term)</code></pre>
 <pre><code>
-Warning: Removed 2462 rows containing missing values (geom_point).</code></pre>
+Warning: Removed 2536 rows containing missing values (geom_point).</code></pre>
 <p><img src="scraping-wikipedia_files/figure-html5/unnamed-chunk-7-1.png" width="624" /></p>
 </div>
 <p>見にくいので両軸の対数を取ると正の相関がありそうなのが分かります。</p>
@@ -1453,7 +1449,7 @@ full_join(wiki_trend %&gt;%
   scale_y_log10() + 
   facet_wrap(~term)</code></pre>
 <pre><code>
-Warning: Removed 2462 rows containing missing values (geom_point).</code></pre>
+Warning: Removed 2536 rows containing missing values (geom_point).</code></pre>
 <p><img src="scraping-wikipedia_files/figure-html5/unnamed-chunk-8-1.png" width="624" /></p>
 </div>
 <h2 id="PageInfo">Wikipediaの記事の情報</h2>
@@ -1544,7 +1540,7 @@ for (i in term) {
 <pre class="r"><code>
 library(quanteda)</code></pre>
 <pre><code>
-Package version: 1.4.3</code></pre>
+Package version: 1.5.0</code></pre>
 <pre><code>
 Parallel computing: 2 of 8 threads used.</code></pre>
 <pre><code>
@@ -1587,9 +1583,17 @@ toks &lt;- tokens_compound(toks, any_col[any_col$z &gt; 3,], concatenator = &quo
 <pre class="r"><code>
 head(toks$text1)</code></pre>
 <pre><code>
+Warning: &#39;$.tokens&#39; is deprecated.
+Use &#39;[].tokens&#39; instead.
+See help(&quot;Deprecated&quot;)</code></pre>
+<pre><code>
 [1] &quot;小泉&quot;   &quot;進次郎&quot; &quot;&quot;       &quot;こ&quot;     &quot;いずみ&quot; &quot;しん&quot;  </code></pre>
 <pre class="r"><code>
 head(toks$text2)</code></pre>
+<pre><code>
+Warning: &#39;$.tokens&#39; is deprecated.
+Use &#39;[].tokens&#39; instead.
+See help(&quot;Deprecated&quot;)</code></pre>
 <pre><code>
 [1] &quot;小泉&quot;       &quot;純一郎&quot;     &quot;&quot;           &quot;こ&quot;         &quot;いずみ&quot;     &quot;じゅんいち&quot;</code></pre>
 </div>
@@ -1639,6 +1643,49 @@ dfm_subset(wiki_dfm, term == &quot;小泉純一郎&quot;) %&gt;%
 dfm_subset(wiki_dfm, term == &quot;小泉進次郎&quot;) %&gt;% 
   textplot_wordcloud(max_words = 50)</code></pre>
 <p><img src="scraping-wikipedia_files/figure-html5/unnamed-chunk-22-2.png" width="624" /></p>
+</div>
+<h2 id="Date">Wikipediaの記事の作成日の取得</h2>
+<p><em>（2010年7月19日追記）</em>直接APIを叩いてWikipediaの記事の作成日を取得してみます。</p>
+<p>まず、検索したい単語のベクトルを作成します。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+key.words &lt;- c(&quot;新世紀エヴァンゲリオン&quot;, &quot;魔法少女まどか☆マギカ&quot;, &quot;けものフレンズ&quot;)</code></pre>
+</div>
+<p>続いて、作成日を格納する空のベクトルを作成します。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+wiki.date &lt;- NULL</code></pre>
+</div>
+<p>最後に、ループによって各単語の記事の作成日を取得します。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+for (i in key.words) {
+  wiki.date &lt;- c(wiki.date,
+                 GET(&quot;https://ja.wikipedia.org/w/api.php&quot;,
+                     query = list(action = &quot;query&quot;,
+                                  prop = &quot;revisions&quot;,
+                                  rvlimit = 1,
+                                  rvprop = &quot;timestamp&quot;,
+                                  rvdir = &quot;newer&quot;,
+                                  titles = i,
+                                  format = &quot;json&quot;)) %&gt;% 
+                   content(&quot;text&quot;) %&gt;% 
+                   str_extract(&quot;[0-9]+-[0-9]+-[0-9]+&quot;))
+}</code></pre>
+</div>
+<p>念のため、データフレームにしておきます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+df &lt;- tibble(key.words,
+             wiki.date)
+df</code></pre>
+<pre><code>
+# A tibble: 3 x 2
+  key.words              wiki.date 
+  &lt;chr&gt;                  &lt;chr&gt;     
+1 新世紀エヴァンゲリオン 2003-06-25
+2 魔法少女まどか☆マギカ  2010-10-30
+3 けものフレンズ         2016-04-16</code></pre>
 </div>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
