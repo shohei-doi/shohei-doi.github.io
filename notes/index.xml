@@ -154,6 +154,15 @@
       <media:content url="https://shohei-doi.github.io/notes/posts/2019-04-15-visualization-scatter/visualization-scatter_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
     <item>
+      <title>データの可視化：回帰分析</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-07-20-visualization-coef</link>
+      <description>Rで回帰分析の結果を可視化する方法を説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-07-20-visualization-coef</guid>
+      <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://shohei-doi.github.io/notes/posts/2019-07-20-visualization-coef/visualization-coef_files/figure-html5/unnamed-chunk-8-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
+    <item>
       <title>欠損値の扱い方</title>
       <dc:creator>土井　翔平</dc:creator>
       <link>https://shohei-doi.github.io/notes/posts/2019-04-12-missing-values</link>

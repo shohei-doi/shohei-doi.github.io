@@ -324,6 +324,26 @@
     "preview_height": 768
   },
   {
+    "path": "posts/2019-07-20-visualization-coef/",
+    "title": "データの可視化：回帰分析",
+    "description": "Rで回帰分析の結果を可視化する方法を説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-04-15",
+    "categories": [
+      "R",
+      "data visualization"
+    ],
+    "preview": "posts/2019-07-20-visualization-coef/visualization-coef_files/figure-html5/unnamed-chunk-8-1.png",
+    "last_modified": "2019-07-20T17:06:41+09:00",
+    "preview_width": 1248,
+    "preview_height": 768
+  },
+  {
     "path": "posts/2019-04-12-missing-values/",
     "title": "欠損値の扱い方",
     "description": "Rにおける欠損値の扱い方についてまとめました。",
