@@ -7,7 +7,15 @@
     <description>ノート
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 20 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Ubuntuのセットアップ</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu</link>
+      <description>Ubuntuをインストールした後に行う環境構築をまとめました。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu</guid>
+      <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>データの可視化：回帰分析</title>
       <dc:creator>土井　翔平</dc:creator>
@@ -25,14 +33,6 @@
       <guid>https://shohei-doi.github.io/notes/posts/2019-06-06-scraping-wikipedia</guid>
       <pubDate>Fri, 19 Jul 2019 00:00:00 +0000</pubDate>
       <media:content url="https://shohei-doi.github.io/notes/posts/2019-06-06-scraping-wikipedia/scraping-wikipedia_files/figure-html5/unnamed-chunk-5-1.png" medium="image" type="image/png" width="1248" height="768"/>
-    </item>
-    <item>
-      <title>Ubuntuのセットアップ</title>
-      <dc:creator>土井　翔平</dc:creator>
-      <link>https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu</link>
-      <description>Ubuntuをインストールした後に行う環境構築をまとめました。</description>
-      <guid>https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu</guid>
-      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>スクレイピング：Googleトレンド編</title>
