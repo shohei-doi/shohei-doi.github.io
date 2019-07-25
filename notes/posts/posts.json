@@ -1,5 +1,23 @@
 [
   {
+    "path": "posts/2019-07-25-democratization-ml/",
+    "title": "機械学習の民主化",
+    "description": "プログラミングをせずに機械学習をするためのソフトを紹介します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2019-07-25",
+    "categories": [
+      "data analysis",
+      "data visualization"
+    ],
+    "preview": {},
+    "last_modified": "2019-07-25T14:50:28+09:00"
+  },
+  {
     "path": "posts/2019-06-19-ubuntu/",
     "title": "Ubuntuのセットアップ",
     "description": "Ubuntuをインストールした後に行う環境構築をまとめました。",
