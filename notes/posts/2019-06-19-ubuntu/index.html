@@ -1483,14 +1483,14 @@ sudo apt-get install openjdk-11-jdk
 java --version</code></pre>
 <p>続いて、適当なディレクトリに移動して、Apache Sparkのファイルをダウンロード&amp;展開します（バージョンを2.4.4でHadoop付きとします）。</p>
 <pre><code>
-sudo cd /usr/local
-curl -O https://www-us.apache.org/dist/spark/spark-2.4.4/spark-2.4.4４-bin-hadoop2.7.tgz
-tar xvf spark-2.4.4-bin-hadoop2.7.tgz</code></pre>
+cd /usr/local
+sudo curl -O https://www-us.apache.org/dist/spark/spark-2.4.4/spark-2.4.4４-bin-hadoop2.7.tgz
+sudo tar xvf spark-2.4.4-bin-hadoop2.7.tgz</code></pre>
 <p>最後に、パスを通します。</p>
 <pre><code>
 cd spark-2.4.4-bin-hadoop2.7
-sudo export SPARK_HOME=$(pwd)
-sudo export PATH=$PATH:$SPARK_HOME/bin</code></pre>
+export SPARK_HOME=$(pwd)
+export PATH=$PATH:$SPARK_HOME/bin</code></pre>
 <p><code>spark-shell</code>で起動できれば成功（のはず）です。</p>
 <h2 id="Slack">Slack &amp; Skype</h2>
 <p>Slackを<a href="https://slack.com/intl/ja-jp/downloads/linux">公式サイト</a>からダウンロード&amp;インストールします。</p>
