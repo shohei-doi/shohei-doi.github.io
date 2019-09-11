@@ -26,8 +26,8 @@
 <link rel="canonical" href="https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2019-09-10"/>
-<meta property="article:created" itemprop="dateCreated" content="2019-09-10"/>
+<meta property="article:published" itemprop="datePublished" content="2019-09-11"/>
+<meta property="article:created" itemprop="dateCreated" content="2019-09-11"/>
 <meta name="article:author" content="土井　翔平"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -49,7 +49,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Ubuntuのセットアップ"]},{"type":"character","attributes":{},"value":["Ubuntuをインストールした後に行う環境構築をまとめました。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-09-10"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["Ubuntu","setup"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Ubuntuのセットアップ"]},{"type":"character","attributes":{},"value":["Ubuntuをインストールした後に行う環境構築をまとめました。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-09-11"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["Ubuntu","setup"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1291,7 +1291,7 @@ gtag('config', 'UA-75879658-3');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Ubuntuのセットアップ","description":"Ubuntuをインストールした後に行う環境構築をまとめました。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-09-10T00:00:00.000+09:00","citationText":"翔平, 2019"}
+{"title":"Ubuntuのセットアップ","description":"Ubuntuをインストールした後に行う環境構築をまとめました。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-09-11T00:00:00.000+09:00","citationText":"翔平, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1322,7 +1322,7 @@ gtag('config', 'UA-75879658-3');
 <div class="d-byline">
   土井　翔平  (国立情報学研究所)
   
-<br/>2019-09-10
+<br/>2019-09-11
 </div>
 
 <div class="d-article">
@@ -1476,22 +1476,36 @@ install.packages(&quot;RcppMeCab&quot;)</code></pre>
 <li>CRANにはないので注意。</li>
 </ul>
 <h2 id="Spark">Apache Spark</h2>
-<p>分散コンピューティング用のフレームワークである<a href="https://spark.apache.org/">Apache Spark</a>をインストールします（<a href="https://qiita.com/abetomo/items/a47415d841f05fd329cc">ここ</a>と<a href="https://computingforgeeks.com/how-to-install-apache-spark-on-ubuntu-debian/">ここ</a>を参考にしました）。</p>
+<p>分散コンピューティング用のフレームワークである<a href="https://spark.apache.org/">Apache Spark</a>をインストールします（<a href="https://qiita.com/rockhopper/items/0680a537838233fce323">ここ</a>と<a href="https://computingforgeeks.com/how-to-install-apache-spark-on-ubuntu-debian/">ここ</a>を参考にしました）。</p>
 <p>まず、Javaをインストールします。</p>
 <pre><code>
-sudo apt-get install openjdk-11-jdk
+sudo apt-get install openjdk-8-jdk
 java --version</code></pre>
 <p>続いて、適当なディレクトリに移動して、Apache Sparkのファイルをダウンロード&amp;展開します（バージョンを2.4.4でHadoop付きとします）。</p>
 <pre><code>
 cd /usr/local
 sudo curl -O https://www-us.apache.org/dist/spark/spark-2.4.4/spark-2.4.4４-bin-hadoop2.7.tgz
 sudo tar xvf spark-2.4.4-bin-hadoop2.7.tgz</code></pre>
-<p>最後に、パスを通します。</p>
+<p>最後に、シンボリックリンク作成し、パスを通します。</p>
 <pre><code>
-cd spark-2.4.4-bin-hadoop2.7
-export SPARK_HOME=$(pwd)
+sudo ln -s /usr/local/spark-2.4.4-bin-hadoop2.7 /usr/local/spark
+suto atom ~/.profile</code></pre>
+<p><code>atom</code>では末尾に以下を追加します。</p>
+<pre><code>
+export SPARK_HOME=/usr/local/spark
 export PATH=$PATH:$SPARK_HOME/bin</code></pre>
 <p><code>spark-shell</code>で起動できれば成功（のはず）です。</p>
+<h3 id="r">Rパッケージ</h3>
+<p>RでApache Sparkを使うには<a href="https://spark.apache.org/docs/latest/sparkr.html">SparkR</a>か<a href="https://spark.rstudio.com/">sparklyr</a>を使います。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+install.packages(&quot;SparkR&quot;)
+install.packages(&quot;sparklyr&quot;)</code></pre>
+</div>
+<h3 id="python">Pythonパッケージ</h3>
+<p>PythonでApache Sparkを使うには<a href="https://spark.apache.org/docs/latest/api/python/index.html">pyspark</a>を使います。</p>
+<pre><code>
+sudo pip3 install pyspark</code></pre>
 <h2 id="Slack">Slack &amp; Skype</h2>
 <p>Slackを<a href="https://slack.com/intl/ja-jp/downloads/linux">公式サイト</a>からダウンロード&amp;インストールします。</p>
 <ul>
