@@ -1332,14 +1332,14 @@ gtag('config', 'UA-75879658-3');
 <li><a href="#Intro">はじめに</a></li>
 <li><a href="#NVIDIA">NVIDIAドライバ</a></li>
 <li><a href="#Japanese">日本語入力</a></li>
-<li><a href="#Git">Git</a></li>
 <li><a href="#Gnome">Gnome Tweaks</a></li>
 <li><a href="#Font">フォントのインストール</a></li>
-<li><a href="#R">RとRStudio</a></li>
+<li><a href="#Slack">Slack &amp; Skype</a></li>
+<li><a href="#Git">Git</a></li>
+<li><a href="#R">R/RStudio</a></li>
 <li><a href="#Python">Python</a></li>
 <li><a href="#MeCab">MeCab</a></li>
 <li><a href="#Spark">Apache Spark</a></li>
-<li><a href="#Slack">Slack &amp; Skype</a></li>
 <li><a href="#LaTeX">TeXLive</a></li>
 <li><a href="#Atom">Atom</a></li>
 </ul>
@@ -1375,11 +1375,6 @@ sudo ubuntu-drivers autoinstall</code></pre>
 <p>を実行する。</p>
 <h2 id="Japanese">日本語入力</h2>
 <p>Input Methodで<code>ibus</code>を選択し、Region &amp; Languageで<code>Mozc</code>を追加して最上位に設定する。</p>
-<h2 id="Git">Git</h2>
-<p>UbuntuではGitはデフォルトでインストールされているので、以下の初期設定を行うだけです。</p>
-<pre><code>
-git config --global user.name &quot;shohei doi&quot;
-git config --global user.email &quot;shohei.doi0504@gmail.com&quot;</code></pre>
 <h2 id="Gnome">Gnome Tweaks</h2>
 <p>まず、以下のコマンドでGnome Tweaksをインストールする。</p>
 <pre><code>
@@ -1396,10 +1391,21 @@ sudo apt install chrome-gnome-shell</code></pre>
 <li><a href="https://extensions.gnome.org/extension/8/places-status-indicator/">Places Status Indicator</a></li>
 </ul>
 <h2 id="Font">フォントのインストール</h2>
-<p>font-managerを使ってGoogleからフォントをダウンロードしてインストールします。</p>
+<p>font-managerを使って<a href="https://fonts.google.com/">Google Fonts</a>からフォントをダウンロードしてインストールします。</p>
 <pre><code>
 sudo apt install font-manager</code></pre>
-<h2 id="R">RとRStudio</h2>
+<h2 id="Slack">Slack &amp; Skype</h2>
+<p>Slackを<a href="https://slack.com/intl/ja-jp/downloads/linux">公式サイト</a>からダウンロード&amp;インストールします。</p>
+<ul>
+<li>ソフトウェアセンターでインストールすると日本語入力ができません。</li>
+</ul>
+<p>Skypeも<a href="https://www.skype.com/ja/get-skype/">公式サイト</a>からダウンロード&amp;インストールします。</p>
+<h2 id="Git">Git</h2>
+<p>UbuntuではGitはデフォルトでインストールされているので、以下の初期設定を行うだけです。</p>
+<pre><code>
+git config --global user.name &quot;shohei doi&quot;
+git config --global user.email &quot;shohei.doi0504@gmail.com&quot;</code></pre>
+<h2 id="R">R/RStudio</h2>
 <p>Rを以下のコマンドでインストールします（<a href="https://qiita.com/JeJeNeNo/items/43fc95c4710c668e86a2">参考</a>）。</p>
 <pre><code>
 echo -e &quot;\n## For R package&quot;  | sudo tee -a /etc/apt/sources.list
@@ -1427,12 +1433,14 @@ sudo sudo apt-get install -y libpoppler-cpp-dev</code></pre>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 install.packages(&quot;tidyverse&quot;)
+install.packages(&quot;tidymodels&quot;)
 install.packages(&quot;distill&quot;)
 install.packages(&quot;rstan&quot;)
 install.packages(&quot;brms&quot;)
 install.packages(&quot;quanteda&quot;)
 install.packages(&quot;readtext&quot;)
-install.packages(&quot;devtools&quot;)</code></pre>
+install.packages(&quot;devtools&quot;)
+devtools::install_github(&quot;hoxo-m/pforeach&quot;)</code></pre>
 </div>
 <h2 id="Python">Python</h2>
 <p>UbuntuではPython2とPython3がデフォルトで入っているはずです。 なぜか、Atom上でpython3を使いたくてもpython2系のモジュールをインストールしないとうまく行きません。 正直、pythonの環境構築に関しては未だに分からないことが多いので間違いがあれば教えてください。</p>
@@ -1489,11 +1497,14 @@ sudo tar xvf spark-2.4.4-bin-hadoop2.7.tgz</code></pre>
 <p>最後に、シンボリックリンク作成し、パスを通します。</p>
 <pre><code>
 sudo ln -s /usr/local/spark-2.4.4-bin-hadoop2.7 /usr/local/spark
-suto atom ~/.profile</code></pre>
+sudo atom ~/.profile</code></pre>
 <p><code>atom</code>では末尾に以下を追加します。</p>
 <pre><code>
 export SPARK_HOME=/usr/local/spark
 export PATH=$PATH:$SPARK_HOME/bin</code></pre>
+<p>パスの変更を反映させます。</p>
+<pre><code>
+source ~/.profile</code></pre>
 <p><code>spark-shell</code>で起動できれば成功（のはず）です。</p>
 <h3 id="r">Rパッケージ</h3>
 <p>RでApache Sparkを使うには<a href="https://spark.apache.org/docs/latest/sparkr.html">SparkR</a>か<a href="https://spark.rstudio.com/">sparklyr</a>を使います。</p>
@@ -1506,12 +1517,6 @@ install.packages(&quot;sparklyr&quot;)</code></pre>
 <p>PythonでApache Sparkを使うには<a href="https://spark.apache.org/docs/latest/api/python/index.html">pyspark</a>を使います。</p>
 <pre><code>
 sudo pip3 install pyspark</code></pre>
-<h2 id="Slack">Slack &amp; Skype</h2>
-<p>Slackを<a href="https://slack.com/intl/ja-jp/downloads/linux">公式サイト</a>からダウンロード&amp;インストールします。</p>
-<ul>
-<li>ソフトウェアセンターでインストールすると日本語入力ができません。</li>
-</ul>
-<p>Skypeも<a href="https://www.skype.com/ja/get-skype/">公式サイト</a>からダウンロード&amp;インストールします。</p>
 <h2 id="LaTeX">TeXLive</h2>
 <p>TeXLiveをインストールします（<a href="http://xartaky.hatenablog.jp/entry/2016-12-27-texlive-on-ubuntu">参考サイト</a>）。</p>
 <pre><code>
@@ -1542,7 +1547,7 @@ sudo /usr/local/texlive/YYYY/bin/x86_64-linux/tlmgr path add</code></pre>
 <li><a href="https://atom.io/packages/autocomplete-python">autocomplete-python</a>：オートコンプリート（Kiteが素晴らしい）</li>
 </ul>
 <h3 id="r">R向けパッケージ</h3>
-<p>RStudioで十分ですが、AtomでHydrogen経由でRを使うこともできます（[こちら](<a href="http://can.hatenadiary.com/entry/2016/12/15/000000）を参照" class="uri">http://can.hatenadiary.com/entry/2016/12/15/000000）を参照</a>）。</p>
+<p>RStudioで十分ですが、AtomでHydrogen経由でRを使うこともできます（<a href="http://can.hatenadiary.com/entry/2016/12/15/000000">こちら</a>）を参照）。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 install.packages(c(&#39;repr&#39;, &#39;IRdisplay&#39;, &#39;evaluate&#39;, &#39;crayon&#39;, &#39;pbdZMQ&#39;, &#39;devtools&#39;, &#39;uuid&#39;, &#39;digest&#39;))

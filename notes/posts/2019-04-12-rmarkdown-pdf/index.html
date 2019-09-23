@@ -1342,6 +1342,9 @@ gtag('config', 'UA-75879658-3');
 <hr class="d-toc-separator"/>
 <h2 id="Intro">はじめに</h2>
 <p>R Markdownから<code>.pdf</code>ファイルを作成するにはLaTeXと呼ばれる組版システムを導入する必要があります。 一手間かかりますが、逆にR Markdownによって簡単にLaTeXを使えるとも言えます。</p>
+<ul>
+<li><a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a></li>
+</ul>
 <p>ここではLaTeXの導入から<code>.pdf</code>形式による論文とスライドの作成、そしていくつかのLaTeX記法の紹介を行います。</p>
 <h2 id="Install">LaTeXの導入</h2>
 <p>LaTeXのディストリビューションはいろいろあるのですが、今回は<a href="https://yihui.name/tinytex/">TinyTeX</a>を使って環境構築を行います。 TinyTeXはメジャーなディストリビューションである<a href="https://www.tug.org/texlive/">TeX Live</a>のうち必要最小限の要素だけを含んでいます。</p>
@@ -1402,6 +1405,7 @@ tinytex::install_tinytex()</code></pre>
 output:
   pdf_document: 
     latex_engine: xelatex 
+    number_sections: true
 documentclass: bxjsarticle
 header-includes: 
   - \usepackage{zxjatype} 
