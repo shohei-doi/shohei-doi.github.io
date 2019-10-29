@@ -26,8 +26,8 @@
 <link rel="canonical" href="https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2019-09-11"/>
-<meta property="article:created" itemprop="dateCreated" content="2019-09-11"/>
+<meta property="article:published" itemprop="datePublished" content="2019-10-29"/>
+<meta property="article:created" itemprop="dateCreated" content="2019-10-29"/>
 <meta name="article:author" content="土井　翔平"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -49,7 +49,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Ubuntuのセットアップ"]},{"type":"character","attributes":{},"value":["Ubuntuをインストールした後に行う環境構築をまとめました。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-09-11"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["Ubuntu","setup"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Ubuntuのセットアップ"]},{"type":"character","attributes":{},"value":["Ubuntuをインストールした後に行う環境構築をまとめました。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-10-29"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["Ubuntu","setup"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1291,7 +1291,7 @@ gtag('config', 'UA-75879658-3');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Ubuntuのセットアップ","description":"Ubuntuをインストールした後に行う環境構築をまとめました。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-09-11T00:00:00.000+09:00","citationText":"翔平, 2019"}
+{"title":"Ubuntuのセットアップ","description":"Ubuntuをインストールした後に行う環境構築をまとめました。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-10-29T00:00:00.000+09:00","citationText":"翔平, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1322,7 +1322,7 @@ gtag('config', 'UA-75879658-3');
 <div class="d-byline">
   土井　翔平  (国立情報学研究所)
   
-<br/>2019-09-11
+<br/>2019-10-29
 </div>
 
 <div class="d-article">
@@ -1353,7 +1353,7 @@ gtag('config', 'UA-75879658-3');
 </ul>
 <p>からです。</p>
 <p>以下ではUbuntuをインストールした後の環境構築についてまとめます。</p>
-<h3 id="ubuntu">Ubuntuのインストール</h3>
+<h3 id="ubuntuのインストール">Ubuntuのインストール</h3>
 <p>Ubuntuを使う場合、Windowsと共存させるのが便利かと思います。 その方法としては</p>
 <ol type="1">
 <li>仮想マシン</li>
@@ -1369,7 +1369,7 @@ gtag('config', 'UA-75879658-3');
 </ul>
 <p>仮想マシンでインストールする場合はそれぞれのソフトの使い方を参照してください。 デュアルブートする場合は<a href="https://unetbootin.github.io/">UNetbootin</a>などを使って、USBをインストールメディアを作成します。</p>
 <h2 id="NVIDIA">NVIDIAドライバ</h2>
-<p>インストール時と初回起動時はブート選択画面で<code>e</code>を押して、<code>quiet splash</code>を<code>nomodeset</code>に書き換える。 インストール技に</p>
+<p>インストール時と初回起動時はブート選択画面で<code>e</code>を押して、<code>quiet splash</code>を<code>nomodeset</code>に書き換える。 初回起動後に</p>
 <pre><code>
 sudo ubuntu-drivers autoinstall</code></pre>
 <p>を実行する。</p>
@@ -1382,7 +1382,7 @@ sudo apt install gnome-tweaks</code></pre>
 <p>続いて、Gnome Shellのホストコネクターをインストールする。</p>
 <pre><code>
 sudo apt install chrome-gnome-shell</code></pre>
-<h3 id="gnome-extensions">Gnome Extensionsのインストール</h3>
+<h3 id="gnome-extensionsのインストール">Gnome Extensionsのインストール</h3>
 <ul>
 <li><a href="https://extensions.gnome.org/extension/19/user-themes/">User Themes</a></li>
 <li><a href="https://extensions.gnome.org/extension/15/alternatetab/">AlternateTab</a></li>
@@ -1419,7 +1419,18 @@ sudo apt install r-base</code></pre>
 <ul>
 <li>RStudioの初期設定は<a href="https://shohei-doi.github.io/notes/posts/2019-04-03-install-r/#Setup">こちら</a>を参照。</li>
 </ul>
-<h3>パッケージのインストールの準備</h3>
+<h3 id="microsoft-r-open">Microsoft R Open</h3>
+<p><a href="https://mran.microsoft.com/open">Microsoft R Open</a>はMicrosoftが提供するRディストリビューションです。 メリットとしてはBLASに高速なMKLが使用されている点などが挙げられます。</p>
+<p>まず、<a href="https://docs.microsoft.com/en-us/windows-server/administration/linux-package-repository-for-microsoft-software">ここ</a>からOSに対応するキーを取得します。 Ubuntu 18.04系ならば次の通りです。</p>
+<pre><code>
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+ sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod
+ sudo apt-get update</code></pre>
+<p>そして、R Openのファイルをダウンロードし、解凍したディレクトリでインストールコードを実行します。</p>
+<pre><code>
+cd Downloads/microsoft-r-open
+sudo ./install.sh</code></pre>
+<h3 id="パッケージのインストールの準備">パッケージのインストールの準備</h3>
 <p>いくつかのパッケージをインストールするのに必要なソフトウェアをインストールします。</p>
 <pre><code>
 sudo apt install libcurl4-openssl-dev
@@ -1428,7 +1439,7 @@ sudo apt install libxml2-dev
 sudo add-apt-repository -y ppa:opencpu/poppler
 sudo apt-get update
 sudo sudo apt-get install -y libpoppler-cpp-dev</code></pre>
-<h3>パッケージのインストール</h3>
+<h3 id="パッケージのインストール">パッケージのインストール</h3>
 <p>いくつか代表的なパッケージをインストールします。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
@@ -1454,6 +1465,23 @@ pip3 install numpy pandas scikit-learn matplotlib ipykernel</code></pre>
 <pre><code>
 pip3 install ipykernel --upgrade
 python3 -m ipykernel install --user</code></pre>
+<h3 id="anaconda">Anaconda</h3>
+<p><a href="https://www.anaconda.com/">Anaconda</a>はデータ分析用に特化したPythonディストリビューションです。 Anacondaを使うことには賛否両論ありますが、メリットの一つはBLASとして高速なMKLをデフォルトで使用している点です。</p>
+<p>上記サイトから適当なバージョンのAnacondaをダウンロードして、</p>
+<pre><code>
+bash Anaconda3-2019.10-Linux-x86_64.sh</code></pre>
+<p>を実行します。</p>
+<p>最後に、</p>
+<pre><code>
+source ~/.bashrc</code></pre>
+<p>でパスを通します。</p>
+<p>以下のコマンドが実行できればインストールされています。</p>
+<pre><code>
+conda -V</code></pre>
+<p><code>conda</code>自体のアップデートとパッケージ全体のアップデートは次の通りです。</p>
+<pre><code>
+conda update -n base conda
+conda update --all</code></pre>
 <h2 id="MeCab">MeCab</h2>
 <p>日本語の形態素解析のためにMeCabとNEologdを入れます（<a href="https://qiita.com/ekzemplaro/items/c98c7f6698f130b55d53">参考</a>）。</p>
 <pre><code>
@@ -1481,7 +1509,7 @@ install.packages(&quot;RMeCab&quot;, repos = &quot;http://rmecab.jp/R&quot;, typ
 install.packages(&quot;RcppMeCab&quot;)</code></pre>
 </div>
 <ul>
-<li>CRANにはないので注意。</li>
+<li><code>RMeCab</code>はCRANにはないので注意。</li>
 </ul>
 <h2 id="Spark">Apache Spark</h2>
 <p>分散コンピューティング用のフレームワークである<a href="https://spark.apache.org/">Apache Spark</a>をインストールします（<a href="https://qiita.com/rockhopper/items/0680a537838233fce323">ここ</a>と<a href="https://computingforgeeks.com/how-to-install-apache-spark-on-ubuntu-debian/">ここ</a>を参考にしました）。</p>
@@ -1506,14 +1534,14 @@ export PATH=$PATH:$SPARK_HOME/bin</code></pre>
 <pre><code>
 source ~/.profile</code></pre>
 <p><code>spark-shell</code>で起動できれば成功（のはず）です。</p>
-<h3 id="r">Rパッケージ</h3>
+<h3 id="rパッケージ">Rパッケージ</h3>
 <p>RでApache Sparkを使うには<a href="https://spark.apache.org/docs/latest/sparkr.html">SparkR</a>か<a href="https://spark.rstudio.com/">sparklyr</a>を使います。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 install.packages(&quot;SparkR&quot;)
 install.packages(&quot;sparklyr&quot;)</code></pre>
 </div>
-<h3 id="python">Pythonパッケージ</h3>
+<h3 id="pythonパッケージ">Pythonパッケージ</h3>
 <p>PythonでApache Sparkを使うには<a href="https://spark.apache.org/docs/latest/api/python/index.html">pyspark</a>を使います。</p>
 <pre><code>
 sudo pip3 install pyspark</code></pre>
@@ -1533,20 +1561,20 @@ sudo /usr/local/texlive/YYYY/bin/x86_64-linux/tlmgr path add</code></pre>
 </ul>
 <h2 id="Atom">Atom</h2>
 <p>Atomを<a href="https://atom.io/">公式サイト</a>からダウンロード&amp;インストールします。</p>
-<h3>一般向けパッケージ</h3>
-<h3 id="latex">LaTeX向けパッケージ</h3>
+<h3 id="一般向けパッケージ">一般向けパッケージ</h3>
+<h3 id="latex向けパッケージ">LaTeX向けパッケージ</h3>
 <ul>
 <li><a href="https://atom.io/packages/latex">latex</a>：タイプセット</li>
 <li><a href="https://atom.io/packages/language-latex">language-latex</a>：シンタックス・ハイライト</li>
 <li><a href="https://atom.io/packages/latexer">latexer</a>：オートコンプリート</li>
 </ul>
-<h3 id="python">Python向けパッケージ</h3>
+<h3 id="python向けパッケージ">Python向けパッケージ</h3>
 <ul>
 <li><a href="https://atom.io/packages/hydrogen">Hydrogen</a>：Atom上でjupyterの操作</li>
 <li><a href="https://atom.io/packages/hydrogen-python">hydrogen-python</a>：variable explorer</li>
 <li><a href="https://atom.io/packages/autocomplete-python">autocomplete-python</a>：オートコンプリート（Kiteが素晴らしい）</li>
 </ul>
-<h3 id="r">R向けパッケージ</h3>
+<h3 id="r向けパッケージ">R向けパッケージ</h3>
 <p>RStudioで十分ですが、AtomでHydrogen経由でRを使うこともできます（<a href="http://can.hatenadiary.com/entry/2016/12/15/000000">こちら</a>）を参照）。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
