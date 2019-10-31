@@ -26,8 +26,8 @@
 <link rel="canonical" href="https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2019-10-29"/>
-<meta property="article:created" itemprop="dateCreated" content="2019-10-29"/>
+<meta property="article:published" itemprop="datePublished" content="2019-10-31"/>
+<meta property="article:created" itemprop="dateCreated" content="2019-10-31"/>
 <meta name="article:author" content="土井　翔平"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -49,7 +49,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Ubuntuのセットアップ"]},{"type":"character","attributes":{},"value":["Ubuntuをインストールした後に行う環境構築をまとめました。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-10-29"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["Ubuntu","setup"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Ubuntuのセットアップ"]},{"type":"character","attributes":{},"value":["Ubuntuをインストールした後に行う環境構築をまとめました。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-10-31"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["Ubuntu","setup"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1291,7 +1291,7 @@ gtag('config', 'UA-75879658-3');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Ubuntuのセットアップ","description":"Ubuntuをインストールした後に行う環境構築をまとめました。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-10-29T00:00:00.000+09:00","citationText":"翔平, 2019"}
+{"title":"Ubuntuのセットアップ","description":"Ubuntuをインストールした後に行う環境構築をまとめました。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-10-31T00:00:00.000+09:00","citationText":"翔平, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1322,7 +1322,7 @@ gtag('config', 'UA-75879658-3');
 <div class="d-byline">
   土井　翔平  (国立情報学研究所)
   
-<br/>2019-10-29
+<br/>2019-10-31
 </div>
 
 <div class="d-article">
@@ -1391,9 +1391,9 @@ sudo apt install chrome-gnome-shell</code></pre>
 <li><a href="https://extensions.gnome.org/extension/8/places-status-indicator/">Places Status Indicator</a></li>
 </ul>
 <h2 id="Font">フォントのインストール</h2>
-<p>font-managerを使って<a href="https://fonts.google.com/">Google Fonts</a>からフォントをダウンロードしてインストールします。</p>
+<p>type catcherを使って<a href="https://fonts.google.com/">Google Fonts</a>からフォントをダウンロードしてインストールします。 <del>font-managerを使って<a href="https://fonts.google.com/">Google Fonts</a>からフォントをダウンロードしてインストールします。</del></p>
 <pre><code>
-sudo apt install font-manager</code></pre>
+sudo apt install typecatcher</code></pre>
 <h2 id="Slack">Slack &amp; Skype</h2>
 <p>Slackを<a href="https://slack.com/intl/ja-jp/downloads/linux">公式サイト</a>からダウンロード&amp;インストールします。</p>
 <ul>
@@ -1430,12 +1430,19 @@ curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 <pre><code>
 cd Downloads/microsoft-r-open
 sudo ./install.sh</code></pre>
+<p>R Openでは再現可能性のためにパッケージのリポジトリ(MRAN)の日付が固定されています。 最新のパッケージをインストールしたい場合はリポジトリをCRANに変更します。 具体的には以下の内容を<code>.Rprofile</code>という名前でホームディレクトリに保存します。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+local({
+  r &lt;- getOption(&quot;repos&quot;)
+  r[&quot;CRAN&quot;] &lt;- &quot;https://cran.ism.ac.jp/&quot;
+  options(repos = r)
+})</code></pre>
+</div>
 <h3 id="パッケージのインストールの準備">パッケージのインストールの準備</h3>
 <p>いくつかのパッケージをインストールするのに必要なソフトウェアをインストールします。</p>
 <pre><code>
-sudo apt install libcurl4-openssl-dev
-sudo apt install libssl-dev
-sudo apt install libxml2-dev
+sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev
 sudo add-apt-repository -y ppa:opencpu/poppler
 sudo apt-get update
 sudo sudo apt-get install -y libpoppler-cpp-dev</code></pre>
@@ -1562,6 +1569,11 @@ sudo /usr/local/texlive/YYYY/bin/x86_64-linux/tlmgr path add</code></pre>
 <h2 id="Atom">Atom</h2>
 <p>Atomを<a href="https://atom.io/">公式サイト</a>からダウンロード&amp;インストールします。</p>
 <h3 id="一般向けパッケージ">一般向けパッケージ</h3>
+<ul>
+<li><a href="https://atom.io/packages/minimap">minimap</a>：ミニマップ</li>
+<li><a href="https://atom.io/packages/highlight-column">highlight-column</a>：列のハイライト</li>
+<li><a href="https://atom.io/packages/file-icons">file-icons</a>：色付きアイコン</li>
+</ul>
 <h3 id="latex向けパッケージ">LaTeX向けパッケージ</h3>
 <ul>
 <li><a href="https://atom.io/packages/latex">latex</a>：タイプセット</li>
