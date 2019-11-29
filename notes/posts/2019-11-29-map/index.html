@@ -60,7 +60,7 @@
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["data/airlines.dat","data/airports.dat","data/bst2019.txt","data/routes.dat","map_files/bowser-1.9.3/bowser.min.js","map_files/distill-2.2.21/template.v2.js","map_files/figure-html5/unnamed-chunk-12-1.png","map_files/figure-html5/unnamed-chunk-13-1.png","map_files/figure-html5/unnamed-chunk-14-1.png","map_files/figure-html5/unnamed-chunk-15-1.png","map_files/figure-html5/unnamed-chunk-16-1.png","map_files/figure-html5/unnamed-chunk-17-1.png","map_files/figure-html5/unnamed-chunk-18-1.png","map_files/figure-html5/unnamed-chunk-21-1.png","map_files/figure-html5/unnamed-chunk-4-1.png","map_files/figure-html5/unnamed-chunk-5-1.png","map_files/figure-html5/unnamed-chunk-9-1.png","map_files/jquery-1.11.3/jquery.min.js","map_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["data/airlines.dat","data/airports.dat","data/bst2019.txt","data/routes.dat","map_files/bowser-1.9.3/bowser.min.js","map_files/distill-2.2.21/template.v2.js","map_files/figure-html5/unnamed-chunk-12-1.png","map_files/figure-html5/unnamed-chunk-13-1.png","map_files/figure-html5/unnamed-chunk-14-1.png","map_files/figure-html5/unnamed-chunk-15-1.png","map_files/figure-html5/unnamed-chunk-16-1.png","map_files/figure-html5/unnamed-chunk-17-1.png","map_files/figure-html5/unnamed-chunk-18-1.png","map_files/figure-html5/unnamed-chunk-19-1.png","map_files/figure-html5/unnamed-chunk-20-1.png","map_files/figure-html5/unnamed-chunk-21-1.png","map_files/figure-html5/unnamed-chunk-23-1.png","map_files/figure-html5/unnamed-chunk-4-1.png","map_files/figure-html5/unnamed-chunk-5-1.png","map_files/figure-html5/unnamed-chunk-9-1.png","map_files/jquery-1.11.3/jquery.min.js","map_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 
@@ -1350,14 +1350,14 @@ gtag('config', 'UA-75879658-3');
 <pre class="r"><code>
 library(tidyverse)</code></pre>
 <pre><code>
-── Attaching packages ─────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+── Attaching packages ───────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
 <pre><code>
 ✔ ggplot2 3.2.1     ✔ purrr   0.3.3
 ✔ tibble  2.1.3     ✔ dplyr   0.8.3
 ✔ tidyr   1.0.0     ✔ stringr 1.4.0
 ✔ readr   1.3.1     ✔ forcats 0.4.0</code></pre>
 <pre><code>
-── Conflicts ────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+── Conflicts ──────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>
@@ -1519,9 +1519,9 @@ left_join(world, pop2013, by = &quot;region&quot;) %&gt;%
                colour = &quot;black&quot;, size = 0.1)</code></pre>
 <p><img src="map_files/figure-html5/unnamed-chunk-12-1.png" width="624" /></p>
 </div>
-<ul>
-<li>必ずしも両方のデータセットで国名が一致していないので、いくつか欠損していますが、ご容赦下さい。</li>
-</ul>
+<aside>
+必ずしも両方のデータセットで国名が一致していないので、いくつか欠損していますが、ご容赦下さい。
+</aside>
 <p><code>geom_sf()</code>でも同じです。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
@@ -1545,7 +1545,7 @@ world %&gt;%
 <ul>
 <li>ただし、地図データとは別のデータセットのはずなので、別途指定する必要があります。</li>
 </ul>
-<p><code>geom_sf()</code>の場合も同様です。</p>
+<p><code>geom_sf()</code>の場合も同様にできます。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 kyoto %&gt;% 
@@ -1554,6 +1554,31 @@ kyoto %&gt;%
   geom_point(aes(x = capital_longitude, y = capital_latitude),
              colour = &quot;red&quot;, data = jpnprefs %&gt;% filter(prefecture == &quot;京都府&quot;))</code></pre>
 <p><img src="map_files/figure-html5/unnamed-chunk-15-1.png" width="624" /></p>
+</div>
+<p>また、<code>geom_density_2d()</code>で2次元の分布を描くこともできます。 試しに、都市の分布を示します。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+world %&gt;% 
+  ggplot() + 
+  geom_polygon(aes(x = long, y = lat, group = group),
+               fill = &quot;lightgray&quot;, colour = &quot;black&quot;, size = 0.1) + 
+  geom_density_2d(aes(x = long, y = lat),
+                  data = world.cities)</code></pre>
+<p><img src="map_files/figure-html5/unnamed-chunk-16-1.png" width="624" /></p>
+</div>
+<ul>
+<li>一般的には、<code>geom_contour()</code>で等高線を描くことができます。</li>
+</ul>
+<p>色をつけることもできます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+world %&gt;% 
+  ggplot() + 
+  geom_polygon(aes(x = long, y = lat, group = group),
+               fill = &quot;lightgray&quot;, colour = &quot;black&quot;, size = 0.1) +
+  stat_density2d(aes(x = long, y = lat, fill = stat(level)), 
+                 geom = &quot;polygon&quot;, alpha = 0.5) </code></pre>
+<p><img src="map_files/figure-html5/unnamed-chunk-17-1.png" width="624" /></p>
 </div>
 <h2 id="Path">データの繋がりを見る</h2>
 <h3 id="二点間の繋がりを見る">二点間の繋がりを見る</h3>
@@ -1635,7 +1660,7 @@ world %&gt;%
   geom_segment(aes(x = source_long, y = source_lat, xend = dest_long, yend = dest_lat),
                size = 0.1, alpha = 0.1, 
                data = df_flight)</code></pre>
-<p><img src="map_files/figure-html5/unnamed-chunk-17-1.png" width="624" /></p>
+<p><img src="map_files/figure-html5/unnamed-chunk-19-1.png" width="624" /></p>
 </div>
 <ul>
 <li>太平洋を横断する路線も西回りになってしまうのは課題です……</li>
@@ -1650,7 +1675,7 @@ world %&gt;%
   geom_curve(aes(x = source_long, y = source_lat, xend = dest_long, yend = dest_lat),
                size = 0.1, alpha = 0.1, 
                data = df_flight)</code></pre>
-<p><img src="map_files/figure-html5/unnamed-chunk-18-1.png" width="624" /></p>
+<p><img src="map_files/figure-html5/unnamed-chunk-20-1.png" width="624" /></p>
 </div>
 <h3 id="経路を見る">経路を見る</h3>
 <p>二点間を繋ぐのではなく、一連の経路を描きたい場合は、この方法では非効率的です。 例として、2019年の台風の経路をプロットするために、デジタル台風のサイト（<a href="http://agora.ex.nii.ac.jp/digital-typhoon/summary/wnp/l/201928.html.ja">例</a>）からデータを収集します。</p>
@@ -1706,7 +1731,7 @@ world %&gt;%
                fill = &quot;lightgray&quot;, colour = &quot;black&quot;, size = 0.1) + 
   geom_path(aes(x = long, y = lat, colour = hpa, group = id),
             data = df_typhoon)</code></pre>
-<p><img src="map_files/figure-html5/unnamed-chunk-21-1.png" width="624" /></p>
+<p><img src="map_files/figure-html5/unnamed-chunk-23-1.png" width="624" /></p>
 </div>
 <ul>
 <li>複数の経路がある場合は<code>group</code>で指定するのを忘れずに。</li>
