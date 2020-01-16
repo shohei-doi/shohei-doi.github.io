@@ -7,7 +7,15 @@
     <description>ノート
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 30 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>RとMeCabで分かち書き</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2020-01-16-r-mecab</link>
+      <description>RでMeCabによって分かち書きをしてQuantedaで分析できるようにします。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2020-01-16-r-mecab</guid>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>データの可視化：地図</title>
       <dc:creator>土井　翔平</dc:creator>

@@ -1,5 +1,23 @@
 [
   {
+    "path": "posts/2020-01-16-r-mecab/",
+    "title": "RとMeCabで分かち書き",
+    "description": "RでMeCabによって分かち書きをしてQuantedaで分析できるようにします。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2020-01-16",
+    "categories": [
+      "R",
+      "text analysisて"
+    ],
+    "preview": {},
+    "last_modified": "2020-01-16T16:35:48+09:00"
+  },
+  {
     "path": "posts/2019-11-29-map/",
     "title": "データの可視化：地図",
     "description": "Rで地図や空間データのグラフを作成する方法を紹介します。",
