@@ -1,763 +1,881 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.css">
+    <link href="http://fonts.googleapis.com/earlyaccess/notosansjp.css" rel="stylesheet">
 
-	<title>Shohei Doi | 土井　翔平</title>
+    <script src="https://kit.fontawesome.com/d1945b3e83.js" crossorigin="anonymous"></script>
 
-	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-	<meta name="viewport" content="width=device-width" />
+    <title>Shohei Doi | 土井　翔平</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-primary">
+      <a class="navbar-brand" data-toggle="tab" href="#profile-jp" role="tab" aria-controls="profile-jp" aria-selected="true">
+        Shohei Doi
+      </a>
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <div class="navbar-nav">
+          <ul class="nav flex-column" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#profile-jp" role="tab" aria-controls="profile-jp" aria-selected="true">
+                <i class="fas fa-user-circle"></i>
+                Bio (JP)
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#profile-en" role="tab" aria-controls="profile-en" aria-selected="false">
+                <i class="fas fa-user-circle"></i>
+                Bio (EN)
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#research" role="tab" aria-controls="research" aria-selected="false">
+                <i class="fas fa-graduation-cap"></i>
+                Research
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#teaching" role="tab" aria-controls="teaching" aria-selected="false">
+                <i class="fas fa-chalkboard-teacher"></i>
+                Teaching
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#note" role="tab" aria-controls="note" aria-selected="false">
+                <i class="fas fa-pencil-alt"></i>
+                Note
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#link" role="tab" aria-controls="link" aria-selected="false">
+                <i class="fas fa-thumbs-up"></i>
+                Link
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#calendar" role="tab" aria-controls="calendar" aria-selected="false">
+                <i class="fas fa-calendar-alt"></i>
+                Calendar
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="assets/css/paper-kit.css?v=2.1.0" rel="stylesheet" />
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">
+          Shohei Doi, Ph.D.
+        </h1>
+        <p class="lead text-muted">
+          Project Researcher at National Institute of Informatics
+        </p>
+      </div>
+    </div>
 
-	<!--     Fonts and icons     -->
-	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet'>
-	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjp.css">
-	<link href="assets/css/nucleo-icons.css" rel="stylesheet" />
+    <div class="container">
+      <div class="d-none d-lg-block">
+        <ul class="nav nav-tabs mb-3" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#profile-jp" role="tab" aria-controls="profile-jp" aria-selected="true">
+              <i class="fas fa-user-circle text-primary"></i>
+              Bio (JP)
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#profile-en" role="tab" aria-controls="profile-en" aria-selected="false">
+              <i class="fas fa-user-circle text-primary"></i>
+              Bio (EN)
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#research" role="tab" aria-controls="research" aria-selected="false">
+              <i class="fas fa-graduation-cap text-primary"></i>
+              Research
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#teaching" role="tab" aria-controls="teaching" aria-selected="false">
+              <i class="fas fa-chalkboard-teacher text-primary"></i>
+              Teaching
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#note" role="tab" aria-controls="note" aria-selected="false">
+              <i class="fas fa-pencil-alt text-primary"></i>
+              Note
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#link" role="tab" aria-controls="link" aria-selected="false">
+              <i class="fas fa-thumbs-up text-primary"></i>
+              Link
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#calendar" role="tab" aria-controls="calendar" aria-selected="false">
+              <i class="fas fa-calendar-alt text-primary"></i>
+              Calendar
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-lg-none">
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75879658-3"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+      </div>
+      <div class="tab-content container" id="myTabContent">
+        <div class="tab-pane fade show active" id="profile-jp" role="tabpanel" aria-labelledby="profile-jp-tab">
+          <h4 class="mb-3 text-primary">Bio (JP)</h4>
+          <div class="row">
+            <div class="col-md">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    略歴
+                  </h5>
+                  <table class="table table-responsive-sm table-sm table-borderless">
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="text-muted">
+                          2019-
+                        </th>
+                        <td>
+                          国立情報学研究所<br class="d-block d-sm-none d-md-block d-lg-none">
+                          <strong class="text-primary">
+                            特任研究員
+                          </strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-muted">
+                          2019-2020
+                        </th>
+                        <td>
+                          早稲田大学<br class="d-block d-sm-none d-md-block d-lg-none">
+                          <small>
+                            政治経済学部<br class="d-block d-sm-none d-md-block d-lg-none">
+                          </small>
+                          <strong class="text-primary">
+                            非常勤講師
+                          </strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-muted">
+                          2019
+                        </th>
+                        <td>
+                          京都大学大学院<br class="d-block d-sm-none d-md-block d-lg-none">
+                          <small>
+                            法学研究科<br class="d-block d-sm-none d-md-block d-lg-none">
+                          </small>
+                          <strong class="text-primary">
+                            博士号
+                          </strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-muted">
+                          2016
+                        </th>
+                        <td>
+                          プリンストン大学<br class="d-block d-sm-none d-md-block d-lg-none">
+                          <small>
+                            政治学部<br class="d-block d-sm-none d-md-block d-lg-none">
+                          </small>
+                          <strong class="text-primary">
+                            訪問学生
+                          </strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-muted">
+                          2015-2018
+                        </th>
+                        <td>
+                          日本学術振興会<br class="d-block d-sm-none d-md-block d-lg-none">
+                          <strong class="text-primary">
+                            特別研究員(DC1)
+                          </strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-muted">
+                          2015
+                        </th>
+                        <td>
+                          京都大学大学院<br class="d-block d-sm-none d-md-block d-lg-none">
+                          <small>
+                            法学研究科<br class="d-block d-sm-none d-md-block d-lg-none">
+                          </small>
+                          <strong class="text-primary">
+                            修士号
+                          </strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-muted">
+                          2015
+                        </th>
+                        <td>
+                          京都大学<br class="d-block d-sm-none d-md-block d-lg-none">
+                          <small>
+                            法学部<br class="d-block d-sm-none d-md-block d-lg-none">
+                          </small>
+                          <strong class="text-primary">
+                            学士号
+                          </strong>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="dropdown">
+                    <a href="https://www.dropbox.com/s/eywrk5l0cu2klmz/cv_doi.pdf?dl=0" target="_blank" class="btn btn-primary btn-sm">
+                      CV
+                    </a>
+                    <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      More
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="https://scholar.google.co.jp/citations?user=l9zxa_gAAAAJ&hl=ja" target="_blank">
+                        Google Scholar
+                      </a>
+                      <a class="dropdown-item" href="https://researchmap.jp/doishohei/" target="_blank">
+                        Researchmap
+                      </a>
+                      <a class="dropdown-item" href="https://orcid.org/0000-0003-1647-8511" target="_blank">
+                        ORCID
+                      </a>
+                    </div>
+                    <div class="float-right">
+                      <a href="mailto:shohei.doi0504@gmail.com">
+                        <i class="fas fa-envelope text-primary"></i>
+                      </a>
+                      <a href="https://www.facebook.com/shohei.doi" target="_blank">
+                        <i class="fab fa-facebook-square text-primary"></i>
+                      </a>
+                      <a href="https://twitter.com/sdoi0504" target="_blank">
+                        <i class="fab fa-twitter-square text-primary"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    研究関心
+                  </h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    国際関係をゲーム理論やデータ分析によって理解する。
+                  </h6>
+                  <p class="card-text mb-2">
+                    国際関係、特に国家間の経済関係と政治・安全保障関係がどのように絡まり合っているのか、に関心があります。
+                  </p>
+                  <p class="card-text mb-2">
+                    国家はなぜ敵対国とも経済交流をするのか、経済関係をどのように政治的目的に使うのか、グローバル化はどのような現象であり、どのような政治的影響をもたらしているか、といった問いに取り組んでいます。
+                  </p>
+                  <p class="card-text mb-2">
+                    このような複雑な現象を理解するために、ゲーム理論やデータ分析といった手法を用いています。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="profile-en" role="tabpanel" aria-labelledby="profile-en-tab">
+          <h4 class="mb-3 text-primary">Bio (EN)</h4>
+          <div class="row">
+            <div class="col-lg">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Education and Positions
+                  </h5>
+                  <p class="card-text mb-2">
+                    I am a project researcher at National Institute of Informatics in Tokyo, Japan.
+                    I obtained my Ph.D. in International Relations from Kyoto University in 2019.
+                  </p>
+                  <div class="dropdown">
+                    <a href="https://www.dropbox.com/s/eywrk5l0cu2klmz/cv_doi.pdf?dl=0" target="_blank" class="btn btn-primary btn-sm">
+                      CV
+                    </a>
+                    <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      More
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="https://scholar.google.co.jp/citations?user=l9zxa_gAAAAJ&hl=ja" target="_blank">
+                        Google Scholar
+                      </a>
+                      <a class="dropdown-item" href="https://researchmap.jp/doishohei/" target="_blank">
+                        Researchmap
+                      </a>
+                      <a class="dropdown-item" href="https://orcid.org/0000-0003-1647-8511" target="_blank">
+                        ORCID
+                      </a>
+                    </div>
+                    <div class="float-right">
+                      <a href="mailto:shohei.doi0504@gmail.com">
+                        <i class="fas fa-envelope text-primary"></i>
+                      </a>
+                      <a href="https://www.facebook.com/shohei.doi" target="_blank">
+                        <i class="fab fa-facebook-square text-primary"></i>
+                      </a>
+                      <a href="https://twitter.com/sdoi0504" target="_blank">
+                        <i class="fab fa-twitter-square text-primary"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Research Interests
+                  </h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    International Relations, Game Theory, and Data Analysis
+                  </h6>
+                  <p class="card-text mb-2">
+                    I am interested in international relations, in particular, the interdependence among international economy, politics and security.
+                  </p>
+                  <p class="card-text mb-2">
+                    The research questions include why states build economic relations with their enemies, how states use the economic relations as a statecraft, and what the features and political consequences of globalization.
+                  </p>
+                  <p class="card-text mb-2">
+                    To understand such a complicated world, I primarily employ game theory and data analysis.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="research" role="tabpanel" aria-labelledby="research-tab">
+          <h4 class="mb-3 text-primary">Research</h4>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  Reviewed Article
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="https://link.springer.com/chapter/10.1007/978-3-030-36683-4_49" target="_blank">
+                      Network Shapley-Shubik Power Index: Measuring Indirect Influence in Shareholding Networks
+                    </a>
+                  </h5>
+                  <p class="card-text">
+                    Takayuki Mizuno, Shohei Doi and Shuhei Kurizaki
+                  </p>
+                  <p class="card-text text-muted">
+                    Complex Networks and Their Applications, 2019, pp.611-619
+                  </p>
+                  <small>
+                    We develop the measurement of the influence of shareholders and apply it to global ownership networks.
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  Book Chapter
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="https://link.springer.com/chapter/10.1007/978-4-431-56466-9_10" target="_blank">
+                      Analyzing International Developmental Loan Markets with Rival Lenders
+                    </a>
+                  </h5>
+                  <p class="card-text">
+                    Motoshi Suzuki, Keisuke Iida and Shohei Doi
+                  </p>
+                  <p class="card-text text-muted">
+                    In Motoshi Suzuki and Akira Okada (eds) Games of Conflict and Cooperation in Asia, 2017, pp.227-248
+                  </p>
+                  <small>
+                    We theoretically and empirically show the competition between rival lenders allows a borrower to take a more flexible policy.
+                  </small>
+                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  Professional Blog Post
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="https://blogs.prio.org/2019/08/how-does-the-japan-and-south-korea-feud-intensify-and-is-the-u-s-able-to-help/" target="_blank">
+                      How does the Japan and South Korea feud intensify, and is the U.S. able to help?
+                    </a>
+                  </h5>
+                  <p class="card-text">
+                    Shohei Doi and Atsushi Tago
+                  </p>
+                  <p class="card-text text-muted">
+                    PRIO Blog, August 19, 2019
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  翻訳
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="http://hdl.handle.net/11094/67203" target="_blank">
+                      英語資料5点
+                    </a>
+                  </h5>
+                  <p class="card-text">
+                    土井翔平
+                  </p>
+                  <p class="card-text text-muted">
+                    中内政貴・高澤洋志・中村長史・大庭弘継＝編「資料で読み解く『保護する責任』：関連文書の抄訳と解説」、2017年
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  特許
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    影響力評価システム
+                  </h5>
+                  <p class="card-text">
+                    水野貴之、土井翔平
+                  </p>
+                  <small>
+                    出願日：2019年6月27日（特願2019-119796）
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="teaching" role="tabpanel" aria-labelledby="teaching-tab">
+          <h4 class="mb-3 text-primary">Teaching</h4>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  講義
+                </div>
+                <div class="card-body">
+                  <p class="card-tex">
+                    <strong class="text-primary">
+                      国際政治経済学入門（政治学入門3）<br class="d-md-none">
+                    </strong>
+                    <small>
+                      東京外国語大学国際社会学部、2020年度<br class="d-lg-none">
+                    </small>
+                  </p>
+                  <p class="card-text">
+                    <strong class="text-primary">
+                      国際政治の計量分析<br class="d-md-none">
+                    </strong>
+                    <small>
+                      一橋大学法学部／法学研究科／国際・公共政策大学院、2020年度<br class="d-lg-none">
+                    </small>
+                  </p>
+                  <p class="card-text">
+                    <strong class="text-primary">
+                      国際政治経済学演習<br class="d-md-none">
+                    </strong>
+                    <small>
+                      早稲田大学政治経済学部、2019年度<br class="d-lg-none">
+                    </small>
+                    <a href="https://www.wsl.waseda.jp/syllabus/JAA104.php?pKey=110300Q614012019110300Q61411&pLng=jp" target="_blank" class="badge badge-primary">
+                      シラバス
+                    </a>
+                  </p>
+                  <p class="card-text">
+                    <strong class="text-primary">
+                      国際関係論<br class="d-md-none">
+                    </strong>
+                    <small>
+                      京都外国語専門学校、2018年度<br class="d-lg-none">
+                    </small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  ティーチング・アシスタント
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    <strong class="text-primary">
+                      政策分析の量的方法（基礎）<br class="d-md-none">
+                    </strong>
+                    <small>
+                      京都大学公共政策大学院、2018年度<br class="d-lg-none">
+                    </small>
+                  </p>
+                  <p class="card-text">
+                    <strong class="text-primary">
+                      方法論セミナー（経験）<br class="d-md-none">
+                    </strong>
+                    <small>
+                      早稲田大学大学院政治学研究科、2018年度、2018年度<br class="d-lg-none">
+                    </small>
+                  </p>
+                  <p class="card-text">
+                    <strong class="text-primary">
+                      研究倫理・研究公正<br class="d-md-none">
+                    </strong>
+                    <small>
+                      京都大学国際高等教育院、2018年度<br class="d-lg-none">
+                    </small>
+                  </p>
+                  <p class="card-text">
+                    <strong class="text-primary">
+                      国際政治経済分析（演習）<br class="d-md-none">
+                    </strong>
+                    <small>
+                      京都大学法学部、2015年度<br class="d-lg-none">
+                    </small>
+                  </p>
+                  <p class="card-text">
+                    <strong class="text-primary">
+                      国際政治経済分析（講義）<br class="d-md-none">
+                    </strong>
+                    <small>
+                      京都大学法学部、2014年度<br class="d-lg-none">
+                    </small>
+                  </p>
+                  <p class="card-text">
+                    <strong class="text-primary">
+                      国際政治経済分析（演習）<br class="d-md-none">
+                    </strong>
+                    <small>
+                      京都大学法学部、2014年度<br class="d-lg-none">
+                    </small>
+                  </p>
+                  <p class="card-text">
+                    <strong class="text-primary">
+                      国際政治経済分析（講義）<br class="d-md-none">
+                    </strong>
+                    <small>
+                      京都大学法学部、2013年度<br class="d-lg-none">
+                    </small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  出張講義
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    <strong class="text-primary">
+                      政治学と数理分析<br class="d-md-none">
+                    </strong>
+                    <small>
+                      桃山学院高校／洛南高校、2018年度<br class="d-lg-none">
+                    </small>
+                  </p>
+                  <p class="card-text">
+                    <strong class="text-primary">
+                      政治学と数理分析<br class="d-md-none">
+                    </strong>
+                    <small>
+                      早稲田佐賀高校、2017年度<br class="d-lg-none">
+                    </small>
+                  </p>
+                  <p class="card-text">
+                    <strong class="text-primary">
+                      政治学とデータ分析<br class="d-md-none">
+                    </strong>
+                    <small>
+                      山手学院高校／静岡高校、2017年度<br class="d-lg-none">
+                    </small>
+                  </p>
+                  <p class="card-text">
+                    <strong class="text-primary">
+                      戦争と平和<br class="d-md-none">
+                    </strong>
+                    <small>
+                      須磨学園高校／函館ラサール高校、2017年度<br class="d-lg-none">
+                    </small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="note" role="tabpanel" aria-labelledby="note-tab">
+          <h4 class="mb-3 text-primary">Note</h4>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  ノート
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"><a href="notes" target="_blank">ノート</a></h5>
+                  <small>
+                    学んだことの備忘録や講義ノート代わりに書き残しておきます。
+                    間違いなどがありましたら、<a href="#">ご連絡</a>いただけると幸いです。
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  スライド
+                </div>
+                <div class="card-body">
+                  <h5 class="card-tttle">
+                    <a href="https://www.dropbox.com/s/lknwkoovutetn5b/iv_doi20191225.pdf?dl=0" target="_blank">
+                      Instrumental Variable Estimation
+                    </a>
+                  </h5>
+                  <small>
+                    操作変数法とその政治学における応用に関するスライドです。
+                  </small>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-tttle">
+                    <a href="https://www.dropbox.com/s/ap1yofy1h776rl9/data_science_ir.pdf?dl=0" target="_blank">
+                      国際関係論におけるデータ分析
+                    </a>
+                  </h5>
+                  <small>
+                    国際関係論における統計的因果推論と機械学習に関するいくつかの研究を紹介しています。
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  ツール
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="https://github.com/shohei-doi/wareki2seireki" target="_blank">
+                      <samp>
+                        wareki2seireki
+                      </samp>
+                    </a>
+                  </h5>
+                  <small>
+                    和暦から西暦に変換するRの関数です。
+                  </small>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="https://github.com/shohei-doi/line2df" target="_blank">
+                      <samp>
+                        line2df
+                      </samp>
+                    </a>
+                  </h5>
+                  <small>
+                    LINEのテキストファイルをデータフレームに変換するRの関数です。
+                  </small>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="https://github.com/shohei-doi/lonlat2name" target="_blank">
+                      <samp>
+                        lonlat2name
+                      </samp>
+                    </a>
+                  </h5>
+                  <small>
+                    緯度経度から市区町村や都道府県を求めるRの関数です。
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="link" role="tabpanel" aria-labelledby="link-tab">
+          <h4 class="mb-3 text-primary">Link</h4>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  データセット
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">全般</h5>
+                  <p><a href="https://dataverse.harvard.edu/" target="_blank">Harvard Dataverse</a></p>
+                  <p><a href="https://datasetsearch.research.google.com/" target="_blank">Google Dataset Search</a></p>
+                  <p><a href="https://www.wolframalpha.com/" target="_blank">Wolfrm|Alpha</a></p>
+                  <p><a href="https://ncgg.princeton.edu/wep/dataverse.html" target="_blank">World Economics and Politics Dataverse</a></p>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">国際関係</h5>
+                  <p><a href="https://correlatesofwar.org/data-sets" target="_blank">Correlates of War</a></p>
+                  <p><a href="https://dataverse.harvard.edu/dataverse/isq" target="_blank">International Studies Quarterly Dataverse </a></p>
+                  <p><a href="https://www.prio.org/JPR/Datasets/" target="_blank">Replication Datasets - Journal of Peace Research</a></p>
+                  <p><a href="http://www.newgenesoftware.org/" target="">NewGene</a></p>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">安全保障</h5>
+                  <p><a href="https://ucdp.uu.se/" target="_blank">Uppsala Conflict Data Program</a></p>
+                  <p><a href="https://sites.duke.edu/icbdata/" target="_blank">International Crisis Behavior (ICB)</a></p>
+                  <p><a href="https://www.sipri.org/databases" target="_blank">Stockholm International Peace Research Institute (SIPRI) Database</a></p>
+                  <p><a href="http://www.atopdata.org/" target="_blank">​Alliance Treaty Obligations and Provisions (ATOP)</a></p>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">国際政治経済</h5>
+                  <p><a href="https://databank.worldbank.org/databases/page/1/orderby/alphabetical/direction/databases" target="_blank">World Bank DataBank</a></p>
+                  <p><a href="https://data.oecd.org/" target="_blank">OECD Data</a></p>
+                  <p><a href="https://unctadstat.unctad.org/EN/" target="_blank">UNCTADstat</a></p>
+                  <p><a href="https://www.aiddata.org/" target="_blank">AidData</a></p>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">国際法・国際機関</h5>
+                  <p><a href="https://treaties.un.org/" target="_blank">United Nations Treaty Collection</a></p>
+                  <p><a href="https://digitallibrary.un.org/" target="_blank">United Nations Digital Library</a></p>
+                  <p><a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=hdl:1902.1/12379" target="_blank">United Nations General Assembly Voting Data</a></p>
+                  <p><a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/0TJX8Y" target="_blank">United Nations General Debate Corpus</a></p>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">政治体制</h5>
+                  <p><a href="https://www.systemicpeace.org/polityproject.html" target="_blank">Polity Project</a></p>
+                  <p><a href="https://freedomhouse.org/reports" target="_blank">Freedom House Reports</a></p>
+                  <p><a href="https://www.v-dem.net/en/" target="_blank">Varieties of Democracy (V-Dem)</a></p>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">政党・議員</h5>
+                  <p><a href="https://manifesto-project.wzb.eu/" target="_blank">Manifesto Project</a></p>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">世論</h5>
+                  <p><a href="http://www.worldvaluessurvey.org/wvs.jsp" target="_blank">World Values Survey</a></p>
+                  <p><a href="https://www.afrobarometer.org/" target="_blank">Afrobarometer</a></p>
+                  <p><a href="https://www.arabbarometer.org/" target="_blank">Arab Barometer</a></p>
+                  <p><a href="https://ec.europa.eu/COMMFrontOffice/publicopinion/index.cfm" target="_blank">Eurobarometer</a></p>
+                  <p><a href="#" target="_blank">Latinobarómetro</a></p>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">イベントデータ</h5>
+                  <p><a href="https://www.gdeltproject.org/" target="_blank">Global Database of Events, Language, and Tone (GDELT)</a></p>
+                  <p><a href="https://dataverse.harvard.edu/dataverse/icews" target="_blank">Integrated Crisis Early Warning System (ICEWS)</a></p>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">ネットワークデータ</h5>
+                  <p><a href="https://icon.colorado.edu/#!/networks" target="_blank">Index of Complex Networks</a></p>
+                  <p><a href="hhttp://networkrepository.com/" target="_blank">Network Repository</a></p>
+                  <p><a href="http://snap.stanford.edu/data/index.html" target="_blank">Stanford Large Network Dataset Collection</a></p>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">日本</h5>
+                  <p><a href="https://www.e-stat.go.jp/" target="_blank">e-Stat</a></p>
+                  <p><a href="https://resas.go.jp/#/13/13101" target="_blank">地域経済分析システム (RESAS)</a></p>
+                  <p><a href="https://kokkai.ndl.go.jp/#/" target="_blank">国会会議録検索システム</a><small>（松尾先生が作成した<a href="https://github.com/amatsuo/kaigiroku" target="_blank"><samp>kaigiroku</samp></a>というRパッケージによる取得が可能です）</small></p>
+                  <p><a href="https://survey.gov-online.go.jp/" target="_blank">内閣府世論調査</a></p>
+                  <p><a href="http://www.masaki.j.u-tokyo.ac.jp/utas/utasindex.html" target="_blank">東大朝日共同調査</a></p>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">アメリカ</h5>
+                  <p><a href="http://congressionalbills.org/" target="_blank">Congression Bills Project</a></p>
+                  <p><a href="http://jhfowler.ucsd.edu/cosponsorship.htm" target="_blank">Cosponsorship Network Data</a></p>
+                  <p><a href="http://fowler.ucsd.edu/judicial.htm" target="_blank">Supreme Court Citation Network Data</a></p>
+                  <p><a href="https://www.usaid.gov/reports-and-data" target="_blank">USAID Reports and Data</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  データ分析
+                </div>
+                <div class="card-body">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  奨学金・研究助成
+                </div>
+                <div class="card-body">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  学会・研究会・ワークショップ
+                </div>
+                <div class="card-body">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="calendar" role="tabpanel" aria-labelledby="calendar-tab">
+          <h4 class="mb-3 text-primary">Calendar</h4>
+          <div class="calendar">
+            <iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FTokyo&amp;src=OGZjbGhmb3M3c2RjZTI0cWFmYnQ2Nm1iNGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=azU4NHU5ZG4xaHBlM3FoZjViMWkxZTZpcjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZDhhcjQ3N2VlZ3Qwb204aW5zZm8xajQzbG9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=OWcycXAwYjlsY2p0ZThibmhnbTU3bGNycGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=MHVvZHAwYzY4anNxaG1mNTZ2amVvaG1ocWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%233F51B5&amp;color=%23B39DDB&amp;color=%23F09300&amp;color=%23AD1457&amp;color=%23E67C73&amp;showTitle=0&amp;showDate=0&amp;showPrint=0" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
 
-	  gtag('config', 'UA-75879658-3');
-	</script>
-</head>
+    <footer class="my-5">
+      <div class="container">
 
-<body>
+      </div>
+    </footer>
 
-	<!--    navbar come here          -->
-
-	<nav class="navbar navbar-expand-lg fixed-top bg-primary">
-		<div class="container">
-			<button class="navbar-toggler navbar-toggler-right burger-menu" type="button" data-toggle="collapse" data-target="#navbar-primary" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-bar"></span>
-				<span class="navbar-toggler-bar"></span>
-				<span class="navbar-toggler-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">Shohei Doi</a>
-			<div class="collapse navbar-collapse" id="navbar-primary">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="#research"><i class="nc-icon nc-hat-3" aria-hidden="true"></i>Research</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#teaching"><i class="nc-icon nc-ruler-pencil" aria-hidden="true"></i>Teaching</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#notes"><i class="nc-icon nc-paper" aria-hidden="true"></i>Notes</a>
-					</li>
-					<!--
-					<li class="nav-item">
-						<a class="nav-link" href="#links"><i class="nc-icon nc-world-2" aria-hidden="true"></i>Links</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#calendar"><i class="nc-icon nc-calendar-60" aria-hidden="true"></i>Calender</a>
-					</li>
-				-->
-					<div class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" href="#pk" role="button" aria-haspopup="true" aria-expanded="false"><i class="nc-icon nc-single-02" aria-hidden="true"></i>More</a>
-						<ul class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="dropdownMenuButton">
-							<li class="dropdown-header">Other Profile Sites</li>
-							<a class="dropdown-item" href="https://scholar.google.co.jp/citations?user=l9zxa_gAAAAJ" target="_blank">Google Scholar</a>
-							<a class="dropdown-item" href="https://researchmap.jp/doishohei" target="_blank">Researchmap</a>
-							<a class="dropdown-item" href="https://orcid.org/0000-0003-1647-8511" target="_blank">OCRID</a>
-							<a class="dropdown-item" href="http://www.researcherid.com/rid/Y-4718-2018" target="_blank">ResearcherID</a>
-							<div class="dropdown-divider"></div>
-							<li class="dropdown-header">Social Networks</li>
-							<a class="dropdown-item" href="https://github.com/shohei-doi" target="_blank">GitHub</a>
-							<a class="dropdown-item" href="https://www.facebook.com/shohei.doi" target="_blank">Facebook</a>
-							<a class="dropdown-item" href="https://twitter.com/sdoi0504" target="_blank">Twitter</a>
-							<a class="dropdown-item" href="https://ask.fm/sdoi0504" target="_blank">Ask.fm</a>
-						</ul>
-					</div>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-	<!-- end navbar  -->
-
-	<div class="wrapper">
-
-		<!-- content come here     -->
-
-		<div class="jumbotron jumbotron-fluid">
-			<div class="container">
-				<h1>Shohei Doi, Ph.D.</h1>
-				<p class="lead">Project Researcher at National Institute of Informatics</p>
-				<a type="button" class="btn btn-primary btn-round" href="https://www.dropbox.com/s/eywrk5l0cu2klmz/cv_doi.pdf?dl=0" target="_blank" role="button">CV</a>
-			</div>
-		</div>
-
-		<div class="container">
-			<div class="nav-tabs-navigation">
-				<div class="nav-tabs-wrapper">
-					<ul id="tabs" class="nav nav-tabs" role="tablist">
-						<li class="nav-item">
-							<a class="nav-link active" data-toggle="tab" href="#en" role="tab">EN</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#jp" role="tab">JP</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div id="my-tab-content" class="tab-content">
-				<div class="tab-pane active" id="en" role="tabpanel">
-					<div class="row">
-						<div class="col-md-8">
-							<div class="card">
-							  <div class="card-body">
-									<h5 class="card-title">Education and Positions</h5>
-									<p class="card-text">
-										I am a Project Researcher at Information and Society Research Division, <a href="https://www.nii.ac.jp/en/" target="_blank">National Institute of Informatics</a>.
-										I completed my Ph.D. (2019), M.A. (2015) and LL.B. (2013) at the Department of Law, Kyoto University.
-									</p>
-							  </div>
-							</div>
-							<div class="card">
-							  <div class="card-body">
-									<h5 class="card-title">Research Interests</h5>
-									<p class="card-text">
-										I study international relations, especially the interaction between international politics and economy.
-										My research investigates relations between peace and economy and economic and political features of globalization.
-										I am also interested in empirical analysis of domestic politics and international law.
-										I mainly use formal modeling (game theory) and quantitative methods (including statistical causal inferance, machine learning and text and network analysis).
-									</p>
-							  </div>
-							</div>
-						</div>
-						<div class="col-md-4 d-none d-lg-block">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Contact Info.</h5>
-									<p class="card-text">National Institute of Informatics</p>
-									<p class="card-text">2-1-2 Hitotsubashi, Chiyoda-ku,</p>
-									<p class="card-text">Tokyo, JAPAN, 1018430</p>
-								</div>
-								<div class="card-footer">
-									<a href="mailto:shohei.doi0504@gmail.com" class="btn btn-outline-primary btn-block">e-mail</a>
-									<div class="btn-group d-flex" role="group">
-									  <a href="https://www.facebook.com/shohei.doi" target="_blank" class="btn btn-outline-primary w-100">facebook</a>
-									  <a href="https://twitter.com/sdoi0504" target="_blank" class="btn btn-outline-primary w-100">twitter</a>
-									  <a href="https://ask.fm/sdoi0504" target="_blank" class="btn btn-outline-primary w-100">ask.fm</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 d-block d-lg-none">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Contact Info.</h5>
-									<p class="card-text">National Institute of Informatics</p>
-									<p class="card-text">2-1-2 Hitotsubashi, Chiyoda-ku,</p>
-									<p class="card-text">Tokyo, JAPAN, 1018430</p>
-								</div>
-								<div class="card-footer">
-									<a href="mailto:shohei.doi0504@gmail.com" class="btn btn-outline-primary btn-block">e-mail</a>
-									<div class="btn-group-vertical d-flex" role="group">
-									  <a href="https://www.facebook.com/shohei.doi" target="_blank" class="btn btn-outline-primary w-100">facebook</a>
-									  <a href="https://twitter.com/sdoi0504" target="_blank" class="btn btn-outline-primary w-100">twitter</a>
-									  <a href="https://ask.fm/sdoi0504" target="_blank" class="btn btn-outline-primary w-100">ask.fm</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="tab-pane" id="jp" role="tabpanel">
-					<div class="row">
-						<div class="col-md-8">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">略歴</h5>
-									<div class="row">
-										<div class="col-lg-2">
-											<h6>2019-現在</h6>
-										</div>
-										<div class="col-lg-10">
-											<p>国立情報学研究所情報社会相関研究系　特任研究員</p>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-lg-2">
-											<h6>2019</h6>
-										</div>
-										<div class="col-lg-10">
-											<p>京都大学大学院法学研究科法政理論専攻　博士号（法学）</p>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-lg-2">
-											<h6>2016</h6>
-										</div>
-										<div class="col-lg-10">
-											<p>プリンストン大学大学院政治学部　Visiting Student Research Collaborator</p>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-lg-2">
-											<h6>2015-2018</h6>
-										</div>
-										<div class="col-lg-10">
-											<p>日本学術振興会　特別研究員 (DC1)</p>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-lg-2">
-											<h6>2015</h6>
-										</div>
-										<div class="col-lg-10">
-											<p>京都大学大学院法学研究科法政理論専攻　修士号取得</p>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-lg-2">
-											<h6>2013</h6>
-										</div>
-										<div class="col-lg-10">
-											<p>京都大学法学部　学士号取得</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">研究分野</h5>
-									<p class="card-text">
-										国際関係論、特に国際的な政治と経済の相互作用について研究しています。
-										具体的には平和と経済の相互連関やグローバル化の政治経済的特徴をテーマとしています。
-										また、国内政治や国際法の実証分析にも関心を持っています。
-										主にゲーム理論といった数理的手法や統計的因果推論、機械学習、テキスト分析やネットワーク分析といった定量的手法を用いています。
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 d-none d-lg-block">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">連絡先</h5>
-									<p class="card-text">101-8430</p>
-									<p class="card-text">東京都千代田区一ツ橋2-1-2</p>
-									<p class="card-text">学術総合センター14階</p>
-									<p class="card-text">国立情報学研究所</p>
-								</div>
-								<div class="card-footer">
-									<a href="mailto:shohei.doi0504@gmail.com" class="btn btn-outline-primary btn-block">e-mail</a>
-									<div class="btn-group d-flex" role="group">
-									  <a href="https://www.facebook.com/shohei.doi" target="_blank" class="btn btn-outline-primary w-100">facebook</a>
-									  <a href="https://twitter.com/sdoi0504" target="_blank" class="btn btn-outline-primary w-100">twitter</a>
-									  <a href="https://ask.fm/sdoi0504" target="_blank" class="btn btn-outline-primary w-100">ask.fm</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 d-block d-lg-none">
-							<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">連絡先</h5>
-									<p class="card-text">101-8430</p>
-									<p class="card-text">東京都千代田区</p>
-									<p class="card-text">一ツ橋2-1-2</p>
-									<p class="card-text">学術総合センター14階</p>
-									<p class="card-text">国立情報学研究所</p>
-								</div>
-								<div class="card-footer">
-									<a href="mailto:shohei.doi0504@gmail.com" class="btn btn-outline-primary btn-block">e-mail</a>
-									<div class="btn-group-vertical d-flex" role="group">
-									  <a href="https://www.facebook.com/shohei.doi" target="_blank" class="btn btn-outline-primary w-100">facebook</a>
-									  <a href="https://twitter.com/sdoi0504" target="_blank" class="btn btn-outline-primary w-100">twitter</a>
-									  <a href="https://ask.fm/sdoi0504" target="_blank" class="btn btn-outline-primary w-100">ask.fm</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<h2 id="research" class="target">Research</h2>
-
-			<h3>In English</h3>
-
-			<h4>Reviewed Article</h4>
-
-			<div class="row">
-				<div class="col-md-12">
-					<div class="card">
-						<div class="card-header">
-							2019
-						</div>
-						<div class="card-body">
-							<h5 class="card-title">"Network Shapley-Shubik Power Index: Measuring Indirect Influence in Shareholding Networks"</h5>
-							<p class="card-text">Mizuno, Takayuki, Shohei Doi and Shuhei Kurizaki</p>
-							<p class="card-text">In Complex Networks and Their Applications, pp.611-619</p>
-						</div>
-						<div class="card-footer">
-							<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#NetworkPowerIndex">Abstract</button>
-							<a href="https://link.springer.com/chapter/10.1007/978-3-030-36683-4_49" target="_blank" class="btn btn-outline-primary">Publisher</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<h4>Book Chapter</h4>
-
-			<div class="row">
-				<div class="col-md-12">
-					<div class="card">
-						<div class="card-header">
-							2017
-						</div>
-						<div class="card-body">
-							<h5 class="card-title">"Analyzing International Developmental Loan Markets with Rival Lenders"</h5>
-							<p class="card-text">Suzuki, Motoshi, Keisuke Iida and Shohei Doi</p>
-							<p class="card-text">In Motoshi Suzuki and Akira Okada (eds) <cite>Games of Conflict and Cooperation in Asia</cite>, pp.227-248</p>
-						</div>
-						<div class="card-footer">
-							<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#LoanMarkets">Abstract</button>
-							<a href="https://link.springer.com/chapter/10.1007/978-4-431-56466-9_10" target="_blank" class="btn btn-outline-primary">Publisher</a>
-							<a href="https://www.amazon.com/Conflict-Cooperation-Political-Economy-Pacific-ebook/dp/B01N2BAJ8E" target="_blank" class="btn btn-outline-primary">Amazon</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<h4>Others</h4>
-
-			<div class="row">
-				<div class="col-md-12">
-					<div class="card">
-						<div class="card-header">
-							2019
-						</div>
-						<div class="card-body">
-							<h5 class="card-title">"How does the Japan and South Korea feud intensify, and is the U.S. able to help?"</h5>
-							<p class="card-text">Doi, Shohei and Atsushi Tago</p>
-							<p class="card-text">In <a href="https://blogs.prio.org/" target="_blank">PRIO Blogs</a></p>
-						</div>
-						<div class="card-footer">
-							<a href="https://blogs.prio.org/2019/08/how-does-the-japan-and-south-korea-feud-intensify-and-is-the-u-s-able-to-help/" target="_blank" class="btn btn-outline-primary">Blog</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<h3>日本語</h3>
-
-			<h4>翻訳</h4>
-
-			<div class="row">
-				<div class="col-md-12">
-					<div class="card">
-						<div class="card-header">
-							2017
-						</div>
-						<div class="card-body">
-							<h5 class="card-title">資料5点</h5>
-							<p class="card-text">中内政貴・高澤洋志・中村長史・大庭弘継＝編「資料で読み解く『保護する責任』：関連文書の抄訳と解説」</p>
-							<p class="card-text">(The Responsibility to Protect: Basic Documents and Commentaries, from the end of the Cold War to 2016)</p>
-						</div>
-						<div class="card-footer">
-							<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#R2P">担当箇所</button>
-							<a href="http://hdl.handle.net/11094/67203" target="_blank" class="btn btn-outline-primary">出版社</a>
-							<a href="https://ir.library.osaka-u.ac.jp/repo/ouka/all/67203/9784872596069.pdf" target="_blank" class="btn btn-outline-primary">ダウンロード</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<h4>特許</h4>
-
-			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="card">
-						<div class="card-header">
-							2019
-						</div>
-						<div class="card-body">
-							<h5 class="card-title">影響力評価システム</h5>
-							<p class="card-text">水野貴之、土井翔平</p>
-							<p class="card-text">出願日：2019年6月27日（特願2019-119796）</p>
-						</div>
-						<div class="card-footer">
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<h2 id="teaching" class="target">教育</h2>
-
-			<h3>非常勤講師</h3>
-
-			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="card">
-					  <div class="card-header">
-					    2019年度
-					  </div>
-					  <div class="card-body">
-							<h5 class="card-title">国際政治経済学演習</h5>
-							<p class="card-text">早稲田大学政治経済学部</p>
-					  </div>
-						<div class="card-footer">
-							<a href="https://www.wsl.waseda.jp/syllabus/JAA104.php?pKey=110300Q614012019110300Q61411&pLng=jp" target="_blank" class="btn btn-outline-primary">シラバス</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="card">
-					  <div class="card-header">
-					    2018年度
-					  </div>
-					  <div class="card-body">
-							<h5 class="card-title">国際関係論</h5>
-							<p class="card-text">京都外国語専門学校</p>
-					  </div>
-					</div>
-				</div>
-			</div>
-
-			<h3>ティーチング・アシスタント</h3>
-
-			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="card">
-					  <div class="card-header">
-					    2018年度
-					  </div>
-					  <div class="card-body">
-							<h5 class="card-title">政策分析の量的方法（基礎）</h5>
-							<p class="card-text">京都大学公共政策大学院</p>
-					  </div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="card">
-					  <div class="card-header">
-					    2018年度
-					  </div>
-					  <div class="card-body">
-							<h5 class="card-title">方法論セミナー（経験）</h5>
-							<p class="card-text">早稲田大学大学院政治学研究科</p>
-					  </div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="card">
-					  <div class="card-header">
-					    2018年度
-					  </div>
-					  <div class="card-body">
-							<h5 class="card-title">研究倫理・研究公正</h5>
-							<p class="card-text">京都大学国際高等教育院</p>
-					  </div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="card">
-					  <div class="card-header">
-					    2014, 2015年度
-					  </div>
-					  <div class="card-body">
-							<h5 class="card-title">国際政治経済分析（演習）</h5>
-							<p class="card-text">京都大学法学部</p>
-					  </div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="card">
-					  <div class="card-header">
-					    2013, 2014年度
-					  </div>
-					  <div class="card-body">
-							<h5 class="card-title">国際政治経済分析（講義）</h5>
-							<p class="card-text">京都大学法学部</p>
-					  </div>
-					</div>
-				</div>
-			</div>
-
-			<h3>出前授業</h3>
-
-			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="card">
-					  <div class="card-header">
-					    2018年度
-					  </div>
-					  <div class="card-body">
-							<h5 class="card-title">政治学と数理分析</h5>
-							<p class="card-text">洛南高校</p>
-							<p class="card-text">桃山学院高校</p>
-					  </div>
-						<div class="card-footer">
-							<a href="https://www.dropbox.com/sh/hjchnt4u7nefpu5/AADziZKvBshtd-HDByMmnxZEa?dl=0" target="_blank" class="btn btn-outline-primary">配布資料</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="card">
-					  <div class="card-header">
-					    2017年度
-					  </div>
-					  <div class="card-body">
-							<h5 class="card-title">政治学と数理分析</h5>
-							<p class="card-text">早稲田佐賀高校</p>
-					  </div>
-					  <div class="card-body">
-							<h5 class="card-title">政治学とデータ分析</h5>
-							<p class="card-text">静岡高校</p>
-							<p class="card-text">山手学院高校</p>
-					  </div>
-					  <div class="card-body">
-							<h5 class="card-title">戦争と平和</h5>
-							<p class="card-text">函館ラ・サール高校</p>
-							<p class="card-text">須磨学園高校</p>
-					  </div>
-						<div class="card-footer">
-							<a href="https://www.dropbox.com/sh/cg25gy9rt4tah8j/AABAAzbUuj5lts7AZtJ6c22ca?dl=0" target="_blank" class="btn btn-outline-primary">配布資料</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<h3>その他</h3>
-
-			<div class="row">
-				<div class="col-lg-6 col-md-6">
-					<div class="card">
-					  <div class="card-header">
-					    2019年度
-					  </div>
-					  <div class="card-body">
-							<h5 class="card-title">Instrumental Variable Estimation</h5>
-					  </div>
-						<div class="card-footer">
-							<a href="https://www.dropbox.com/s/lknwkoovutetn5b/iv_doi20191225.pdf?dl=0" target="_blank" class="btn btn-outline-primary">配布資料</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-6 col-md-6">
-					<div class="card">
-					  <div class="card-header">
-					    2019年度
-					  </div>
-					  <div class="card-body">
-							<h5 class="card-title">国際関係論におけるデータ分析</h5>
-					  </div>
-						<div class="card-footer">
-							<a href="https://www.dropbox.com/s/ap1yofy1h776rl9/data_science_ir.pdf?dl=0" target="_blank" class="btn btn-outline-primary">配布資料</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<h2 id="notes" class="target">ノート</h2>
-
-			<div class="row">
-				<div class="col-md-12">
-					<div class="card">
-						<div class="card-body">
-							<p>学んだことについて備忘録がてらまとめています。また、講義ノートを兼ねているものもあります。間違いなどがあれば<a href="mailto:shohei.doi0504@gmail.com">ご指摘</a>頂けると幸いです。</p>
-						</div>
-						<div class="card-footer">
-							<a href="notes" target="_blank" class="btn btn-outline-primary">一覧</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<h3>ツール</h3>
-
-			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="card">
-					  <div class="card-header">
-					    wareki2seireki
-					  </div>
-					  <div class="card-body">
-							<p class="card-text">和暦の日付を西暦の日付に変換するRの関数</p>
-					  </div>
-						<div class="card-footer">
-							<a href="https://github.com/shohei-doi/wareki2seireki" target="_blank" class="btn btn-outline-primary">Github</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6">
-					<div class="card">
-						<div class="card-header">
-							line2df
-						</div>
-						<div class="card-body">
-							<p class="card-text">LINEのトーク履歴をデータフレームに変換するRの関数</p>
-						</div>
-						<div class="card-footer">
-							<a href="https://github.com/shohei-doi/line2df" target="_blank" class="btn btn-outline-primary">Github</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6">
-					<div class="card">
-						<div class="card-header">
-							lonlat2name
-						</div>
-						<div class="card-body">
-							<p class="card-text">緯度経度データから都道府県名や市区町村名を見つけるRの関数</p>
-						</div>
-						<div class="card-footer">
-							<a href="https://github.com/shohei-doi/lonlat2name" target="_blank" class="btn btn-outline-primary">Github</a>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-<!--
-			<h2 id="links" class="target">リンク集</h2>
-
-			<p>役立ちそうなウェブサイトをまとめています。</p>
-
-			<h2 id="calendar" class="target">カレンダー</h2>
-
-			<p>目についたイベントをまとめています。</p>
--->
-			<footer class="footer section-dark">
-				<div class="container">
-					<div class="row">
-						<div class="credits ml-auto">
-							<span class="copyright">
-	            	© <script>document.write(new Date().getFullYear())</script>, Shohei Doi | Kyoto University | Template built for <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> and <a href="http://demos.creative-tim.com/paper-kit-2/index.html" target="_blank">Paper Kit 2</a> by <a href="https://www.creative-tim.com/" target="_blank">Creative Tim</a>
-	            </span>
-						</div>
-					</div>
-				</div>
-			</footer>
-
-		</div>
-
-	</div>
-
-	<!-- Modal Bodies come here -->
-	<div class="modal fade" id="NetworkPowerIndex" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title text-center" id="exampleModalLabel">Network Shapley-Shubik Power Index: Measuring Indirect Influence in Shareholding Networks</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<h6>Abstract</h6>
-					Extending the Shapley-Shubik power index to networks, we propose a new measure and numerical method to calculate the indirect influence of investors on companies: Network power index (NPI).
-					While the original index, reflecting the characteristics of majority vote in a shareholders meeting, measures the direct voting power of a shareholder, NPI captures not only an investor’s direct influence over a company but also indirect influence over this company’s subsidiary.
-					Since Network power index is often incalculable in a large network, we present a new method to numerically compute NPI: label propagation.
-					Applying this method to the global shareholding networks in 2016, we find NPIs and raw vote shares dramatically diverge for some investors and this discrepancy suggests the difference in investment strategies between governmens and private financial institutions.
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="modal fade" id="LoanMarkets" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title text-center" id="exampleModalLabel">Analyzing International Developmental Loan Markets with Rival Lenders</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<h6>Abstract</h6>
-					Despite the deepening of interdependence, international institutions are becoming increasingly fragmentary and unable to coordinate states’ policy choices. Such a coordination failure is serious in the realm of developmental finance, where major states vie against one another in extending loan contracts to developing states through separate institutions. Competitive lending is a double-edged sword: on the one hand, it may satisfy strong credit demands for infrastructure improvement in the developing world, while, on the other, it may also generate excessive lending and borrowing, increasing the risks of repayment difficulty and even sovereign debt default. Using a model of common agency, we analyze (1) how two lenders issue loan contracts with a single borrower to induce the foreign policy behaviors they prefer and (2) how the borrower determines its foreign policy to maximize loans. The analysis hypothesizes that, when the borrower assumes foreign policy neutralism, the lenders issue greater loan contracts than what they believe are optimal and that this excess persists as long as the lenders refuse to delegate the lending tasks to a common international financial institution that can sort out their varying preferences and provide common-agency control. We test this hypothesis against quantitative data pertaining to Cold War experiences and provide qualitative evidence on American and Soviet foreign economic policies. Our analytical results have implications for historical and contemporary Asian political economy.
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="modal fade" id="ClimatePolicyDiffusion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title text-center" id="exampleModalLabel">Climate Policy Diffusion: Interdependence through Economic or Normative Considerations?</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<h6>Abstract</h6>
-					Climate policy implementation under the Paris Agreement seems to rely on reciprocity and the related social norms connecting countries. In contrast, analysts of interdependent climate policy have sought to explain the interdependence of policy implementation based mainly on economic considerations. To fill the gap between the two, we seek to evaluate directions and channels associated with policy influence from other countries in reference to both economic and normative considerations. Analytically, drawing on the policy diffusion literature, we develop an empirical model to comprehend the multiplicity of policy influence: directions and channels. The multiplicity was only partially examined by the previous studies, which focused on positive and negative complement (e.g. race to the top and bottom) related to economic activities. Our empirical results instead uncover a pattern of substitutive behavior, or free riding characterized as policy deterioration in response to improvement by peers as well as altruism characterized as improvement in response to deterioration. The former ensues through income competition driven by economic considerations, while the latter through regional ties embracing normative considerations. These results provide an important implication for innovative global climate policy management.
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="modal fade" id="R2P" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title text-center" id="exampleModalLabel">資料で読み解く『保護する責任』：関連文書の抄訳と解説</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<h6>担当箇所</h6>
-						<p>潘基文国連事務総長報告書「早期警報・評価と保護する責任」(UN Doc. A/64/864)</p>
-						<p>潘基文国連事務総長報告書「R2P実施における地域機構の役割」(UN Doc. A/65/877-S/2011/393)</p>
-						<p>アナン国連事務総長報告書「スレブレニツァの陥落」(UN Doc. A/54/549)</p>
-						<p>安保理第398回会合議事録 (UN Doc. S/PV/3988)</p>
-						<p>コソボ問題独立国際委員会 (IICK) 「コソボ報告書」</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!--   end modal -->
-
-</body>
-<!-- Core JS Files -->
-<script src="assets/js/jquery-3.2.1.js" type="text/javascript"></script>
-<script src="assets/js/jquery-ui-1.12.1.custom.min.js" type="text/javascript"></script>
-<script src="assets/js/popper.js" type="text/javascript"></script>
-<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-
-<!-- Switches -->
-<script src="assets/js/bootstrap-switch.min.js"></script>
-
-<!--  Plugins for Slider -->
-<script src="assets/js/nouislider.js"></script>
-
-<!--  Plugins for DateTimePicker -->
-<script src="assets/js/moment.min.js"></script>
-<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
-
-<!--  Paper Kit Initialization snd functons -->
-<script src="assets/js/paper-kit.js?v=2.1.0"></script>
-
-<!-- Login -->
-<script type="text/javascript">
-function gate(){
-   var UserInput = prompt("パスワードを入力して下さい:","");
-   if( /\W+/g.test(UserInput) ) {
-      alert("半角英数字のみを入力して下さい。");
-   }
-   else if( UserInput != null ) {
-      location.href = UserInput + ".html";
-   }
-}
-</script>
-
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
 </html>
