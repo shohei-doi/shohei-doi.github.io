@@ -1,5 +1,23 @@
 [
   {
+    "path": "posts/2019-04-25-encoding-r/",
+    "title": "Rにおける文字コード",
+    "description": "RとRStudioにおける文字コードの扱い方について説明します。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2020-02-10",
+    "categories": [
+      "R",
+      "coding"
+    ],
+    "preview": {},
+    "last_modified": "2020-02-10T12:51:53+09:00"
+  },
+  {
     "path": "posts/2020-01-16-r-mecab/",
     "title": "RとMeCabで分かち書き",
     "description": "RでMeCabによって分かち書きをしてQuantedaで分析できるようにします。",
@@ -267,24 +285,6 @@
     ],
     "preview": {},
     "last_modified": "2019-04-28T12:05:46+09:00"
-  },
-  {
-    "path": "posts/2019-04-25-encoding-r/",
-    "title": "Rにおける文字コード",
-    "description": "RとRStudioにおける文字コードの扱い方について説明します。",
-    "author": [
-      {
-        "name": "土井　翔平",
-        "url": {}
-      }
-    ],
-    "date": "2019-04-27",
-    "categories": [
-      "R",
-      "coding"
-    ],
-    "preview": {},
-    "last_modified": "2019-04-27T16:59:36+09:00"
   },
   {
     "path": "posts/2019-04-22-crawling-html/",

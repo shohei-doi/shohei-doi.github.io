@@ -7,7 +7,15 @@
     <description>ノート
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 16 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Rにおける文字コード</title>
+      <dc:creator>土井　翔平</dc:creator>
+      <link>https://shohei-doi.github.io/notes/posts/2019-04-25-encoding-r</link>
+      <description>RとRStudioにおける文字コードの扱い方について説明します。</description>
+      <guid>https://shohei-doi.github.io/notes/posts/2019-04-25-encoding-r</guid>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>RとMeCabで分かち書き</title>
       <dc:creator>土井　翔平</dc:creator>
@@ -127,14 +135,6 @@
       <description>RでHTMLファイルのスクレイピングをする方法を説明します。</description>
       <guid>https://shohei-doi.github.io/notes/posts/2019-04-21-scraping-html</guid>
       <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Rにおける文字コード</title>
-      <dc:creator>土井　翔平</dc:creator>
-      <link>https://shohei-doi.github.io/notes/posts/2019-04-25-encoding-r</link>
-      <description>RとRStudioにおける文字コードの扱い方について説明します。</description>
-      <guid>https://shohei-doi.github.io/notes/posts/2019-04-25-encoding-r</guid>
-      <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>クローリング：HTML編</title>

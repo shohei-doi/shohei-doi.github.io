@@ -26,8 +26,8 @@
 <link rel="canonical" href="https://shohei-doi.github.io/notes/posts/2019-04-25-encoding-r/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2019-04-27"/>
-<meta property="article:created" itemprop="dateCreated" content="2019-04-27"/>
+<meta property="article:published" itemprop="datePublished" content="2020-02-10"/>
+<meta property="article:created" itemprop="dateCreated" content="2020-02-10"/>
 <meta name="article:author" content="土井　翔平"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -49,7 +49,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Rにおける文字コード"]},{"type":"character","attributes":{},"value":["RとRStudioにおける文字コードの扱い方について説明します。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2019-04-27"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["R","coding"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-04-25-encoding-r/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Rにおける文字コード"]},{"type":"character","attributes":{},"value":["RとRStudioにおける文字コードの扱い方について説明します。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2020-02-10"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["R","coding"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-04-25-encoding-r/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1291,7 +1291,7 @@ gtag('config', 'UA-75879658-3');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Rにおける文字コード","description":"RとRStudioにおける文字コードの扱い方について説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2019-04-27T00:00:00.000+09:00","citationText":"翔平, 2019"}
+{"title":"Rにおける文字コード","description":"RとRStudioにおける文字コードの扱い方について説明します。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2020-02-10T00:00:00.000+09:00","citationText":"翔平, 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1322,7 +1322,7 @@ gtag('config', 'UA-75879658-3');
 <div class="d-byline">
   土井　翔平  (国立情報学研究所)
   
-<br/>2019-04-27
+<br/>2020-02-10
 </div>
 
 <div class="d-article">
@@ -1338,7 +1338,7 @@ gtag('config', 'UA-75879658-3');
 <hr class="d-toc-separator"/>
 <h2 id="Intro">はじめに</h2>
 <p>Rに限らず文字化けはPCにおいてしばしば起こる問題です。 平たく言ってしまうと、PCでは文字にコードが付与されており、機械がコードを読み取って文字を表示します。 そのコードと文字の対応関係をエンコーディングと呼び、異なるエンコーディングでデータを読み込むと文字化けが起こります。</p>
-<h3>なぜ文字化けが起こるのか</h3>
+<h3 id="なぜ文字化けが起こるのか">なぜ文字化けが起こるのか</h3>
 <p>実用上、日本語で文字化けが起こる問題の大半は</p>
 <ul>
 <li>Windowsでは<code>Shift-JIS</code>あるいは<code>CP932</code>で、</li>
@@ -1346,7 +1346,7 @@ gtag('config', 'UA-75879658-3');
 </ul>
 <p>エンコーディングしていることに起因しています。</p>
 <p><code>UTF-8</code>の<code>U</code>は<code>unicode</code>であることからも分かるように、世界で共通の規格として作られているエンコーディング方式になります。 なので、RおよびRStudioでは日本語独自の<code>Shift-JIS</code>ではなく<code>UTF-8</code>を使うようにしたほうがよいでしょう。</p>
-<h3 id="rrstudio">RとRStudioにおける問題</h3>
+<h3 id="rとrstudioにおける問題">RとRStudioにおける問題</h3>
 <p>RとRStudioで文字化けが起こる問題は大きく2つに分けられます。</p>
 <ol type="1">
 <li>RStudioで日本語を含むRスクリプトを開いたとき</li>
@@ -1355,11 +1355,11 @@ gtag('config', 'UA-75879658-3');
 <p>以下では、それぞれの問題の対処法を紹介します。</p>
 <h2 id="RScript">Rスクリプトの文字化け</h2>
 <p>Rスクリプトが文字化けしている場合はRStudiで対処します。 例として<a href="script/script_utf8.R"><code>UTF-8</code>でエンコードしたRスクリプト</a>と<a href="script/script_sjis.R"><code>Shift-JIS</code>でエンコードしたRスクリプト</a>をRStudioで開いてみてください。 （設定を変更していなければ）Windowsの場合は前者が、Linux/Macの人は後者が文字化けしているはずです。</p>
-<h3>ファイルを開く</h3>
+<h3 id="ファイルを開く">ファイルを開く</h3>
 <p>まず、デフォルトを<code>UTF-8</code>に変更しましょう。 メニューの中の<code>File</code>に<code>Reopen with Encoding...</code>というのがあるので、<code>UTF-8</code>を選択します。 さらに<code>Set as default encoding for source files</code>にチェックを入れることで今後は<code>UTF-8</code>で表示されます。</p>
 <p><code>UTF-8</code>でエンコードされた方は正常に表示され、<code>Shift-JIS</code>でエンコードされた方は文字化けしていることを確認してください。 今後、RStudioで文字化けが起こる場合はデフォルトが<code>UTF-8</code>になっているので、Rスクリプトが他のエンコードのために起こっていることになります。</p>
 <p>そのような場合には<code>Reopen with Encoding...</code>で適当なエンコーディングを選択します。 例えば、<code>Shift-JIS</code>を選択すると正しく表示されるはずです。</p>
-<h3>ファイルを保存する</h3>
+<h3 id="ファイルを保存する">ファイルを保存する</h3>
 <p>自分で作成したRスクリプトを保存する際にはメニューの<code>File</code>の中の<code>Save with Encoding...</code>で<code>UTF-8</code>を選択してください。 ここでも<code>UTF-8</code>がデフォルトになるようにチェックを入れておきましょう。</p>
 <h2 id="Data">データの文字化け</h2>
 <p>データが文字化けしているときはRで対処します。 <a href="data/data_utf8.csv"><code>UTF-8</code>でエンコーディングしたデータ</a>と<a href="data/data_sjis.csv"><code>Shift-JIS</code>でエンコーディングしたデータ</a>をそれぞれ読み込んでみてください。 やはりWindowsでは前者が、Linux/Macでは後者が文字化けをしているはずです。</p>
@@ -1379,7 +1379,7 @@ Error in type.convert.default(data[[i]], as.is = as.is[i], dec = dec, : invalid 
 <ul>
 <li>僕はLinuxを使っているので後者が文字化けを起こしてエラーが出ています。</li>
 </ul>
-<h3>標準関数の場合</h3>
+<h3 id="標準関数の場合">標準関数の場合</h3>
 <p>標準関数の場合、<code>fileEncoding</code>というオプションでエンコーディングを指定します。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
@@ -1397,22 +1397,22 @@ read.csv(&quot;data/data_sjis.csv&quot;, fileEncoding = &quot;shift-jis&quot;)</
 2   サル
 3   キジ</code></pre>
 </div>
-<h3 id="tidyverse">tidyverseの場合</h3>
+<h3 id="tidyverseの場合">tidyverseの場合</h3>
 <p><code>tidyverse</code>の<code>readr</code>の場合は<code>locale</code>で指定します。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 library(tidyverse)</code></pre>
 <pre><code>
-── Attaching packages ───────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+── Attaching packages ───────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
 <pre><code>
-✔ ggplot2 3.1.1       ✔ purrr   0.3.2  
-✔ tibble  2.1.1       ✔ dplyr   0.8.0.1
-✔ tidyr   0.8.3       ✔ stringr 1.4.0  
-✔ readr   1.3.1       ✔ forcats 0.4.0  </code></pre>
+✓ ggplot2 3.2.1     ✓ purrr   0.3.3
+✓ tibble  2.1.3     ✓ dplyr   0.8.4
+✓ tidyr   1.0.2     ✓ stringr 1.4.0
+✓ readr   1.3.1     ✓ forcats 0.4.0</code></pre>
 <pre><code>
-── Conflicts ──────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()</code></pre>
+── Conflicts ──────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>
 read_csv(&quot;data/data_utf8.csv&quot;, locale = locale(encoding = &quot;utf8&quot;))</code></pre>
 <pre><code>
@@ -1442,10 +1442,31 @@ cols(
 2 サル  
 3 キジ  </code></pre>
 </div>
-<h3>もとのデータを見たい場合</h3>
+<h3 id="エンコーディングを確認する方法">エンコーディングを確認する方法</h3>
+<p><em>（2020年2月10日追記）</em><code>{readr}</code>の<code>guess_encoding()</code>という関数を使うと、どのようなエンコーディングがされているかを推測します。</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+guess_encoding(&quot;data/data_utf8.csv&quot;)</code></pre>
+<pre><code>
+# A tibble: 1 x 2
+  encoding confidence
+  &lt;chr&gt;         &lt;dbl&gt;
+1 UTF-8             1</code></pre>
+<pre class="r"><code>
+guess_encoding(&quot;data/data_sjis.csv&quot;)</code></pre>
+<pre><code>
+# A tibble: 1 x 2
+  encoding     confidence
+  &lt;chr&gt;             &lt;dbl&gt;
+1 windows-1252       0.35</code></pre>
+</div>
+<ul>
+<li><code>windows-1215</code>というのはCP1215とも呼ばれるエンコーディングで、Shift-JISの親戚のようなものです（きっと）。</li>
+</ul>
+<h3 id="もとのデータを見たい場合">もとのデータを見たい場合</h3>
 <p>しばしばRではなく直接データを見たいときがあります。 そのような場合は、<a href="https://ja.libreoffice.org/">LibreOffice</a>のCalcというソフトで開くとエンコーディングを指定することができます。</p>
 <h2 id="Others">その他の問題</h2>
-<h3>アカウント名が日本語の場合</h3>
+<h3 id="アカウント名が日本語の場合">アカウント名が日本語の場合</h3>
 <p>Windowsでアカウント名が日本語の場合、パスを通すときにエラーが出てくる場合があります。 そのような場合は、</p>
 <ol type="1">
 <li>新しいアカウントを作成する。</li>
@@ -1458,7 +1479,7 @@ cols(
 </ol></li>
 </ol>
 <p>といった選択肢が考えられます（下に行くほど難易度が高い）。</p>
-<h3>画像で日本語が文字化けする場合</h3>
+<h3 id="画像で日本語が文字化けする場合">画像で日本語が文字化けする場合</h3>
 <p>Macで画像を出力する際に日本語が文字化けすることがあります。 <code>plot()</code>の場合は、</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
@@ -1470,6 +1491,7 @@ par(family = &quot;HiraKakuProN-W3&quot;)</code></pre>
 theme(base_family = &quot;HiraKakuProN-W3&quot;)</code></pre>
 </div>
 <p>とするらしいです（Macは使ったことがないので分かりません）。</p>
+<p><em>(2020年2月10日追記)</em><code>quanteda</code>でプロットする際、うまくフォントが指定できない場合があるので、<a href="https://github.com/quanteda/quanteda/issues/1317">こちら</a>を参考に、<code>extrafont::fonts()</code>でフォント一覧を確認して、適当なものを指定して下さい。</p>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">
