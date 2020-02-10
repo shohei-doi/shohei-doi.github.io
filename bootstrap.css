@@ -7022,6 +7022,6 @@ a.text-dark:hover, a.text-dark:focus {
 
     iframe {
       width: 80vw;
-      height: calc(80vw * 9 / 16);
+      height: calc(80vw);
       min-height: 500px;
     }

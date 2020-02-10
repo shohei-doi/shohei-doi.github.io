@@ -18,63 +18,6 @@
       <a class="navbar-brand" data-toggle="tab" href="#profile-jp" role="tab" aria-controls="profile-jp" aria-selected="true">
         Shohei Doi
       </a>
-      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navmenu">
-        <div class="navbar-nav">
-          <ul class="nav flex-column" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" data-toggle="tab" href="#profile-jp" role="tab" aria-controls="profile-jp" aria-selected="true">
-                <i class="fas fa-user-circle"></i>
-                Bio (JP)
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#profile-en" role="tab" aria-controls="profile-en" aria-selected="false">
-                <i class="fas fa-user-circle"></i>
-                Bio (EN)
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#research" role="tab" aria-controls="research" aria-selected="false">
-                <i class="fas fa-graduation-cap"></i>
-                Research
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#teaching" role="tab" aria-controls="teaching" aria-selected="false">
-                <i class="fas fa-chalkboard-teacher"></i>
-                Teaching
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#note" role="tab" aria-controls="note" aria-selected="false">
-                <i class="fas fa-pencil-alt"></i>
-                Note
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#link" role="tab" aria-controls="link" aria-selected="false">
-                <i class="fas fa-thumbs-up"></i>
-                Link
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#calendar" role="tab" aria-controls="calendar" aria-selected="false">
-                <i class="fas fa-calendar-alt"></i>
-                Calendar
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" data-toggle="tab" href="#photo" role="tab" aria-controls="photo" aria-selected="false">
-                <i class="fas fa-images"></i>
-                Photo
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
     </nav>
 
     <div class="jumbotron jumbotron-fluid">
@@ -137,7 +80,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" data-toggle="tab" href="#photo" role="tab" aria-controls="photo" aria-selected="false">
+            <a class="nav-link" data-toggle="tab" href="#photo" role="tab" aria-controls="photo" aria-selected="false">
               <i class="fas fa-images text-primary"></i>
               Photo
             </a>
@@ -145,11 +88,59 @@
         </ul>
       </div>
       <div class="d-lg-none">
-
+        <ul class="nav nav-pills mb-3" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#profile-jp" role="tab" aria-controls="profile-jp" aria-selected="true">
+              <i class="fas fa-user-circle"></i>
+              Bio (JP)
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#profile-en" role="tab" aria-controls="profile-en" aria-selected="false">
+              <i class="fas fa-user-circle"></i>
+              Bio (EN)
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#research" role="tab" aria-controls="research" aria-selected="false">
+              <i class="fas fa-graduation-cap"></i>
+              Research
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#teaching" role="tab" aria-controls="teaching" aria-selected="false">
+              <i class="fas fa-chalkboard-teacher"></i>
+              Teaching
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#note" role="tab" aria-controls="note" aria-selected="false">
+              <i class="fas fa-pencil-alt"></i>
+              Note
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#link" role="tab" aria-controls="link" aria-selected="false">
+              <i class="fas fa-thumbs-up"></i>
+              Link
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#calendar" role="tab" aria-controls="calendar" aria-selected="false">
+              <i class="fas fa-calendar-alt"></i>
+              Calendar
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#photo" role="tab" aria-controls="photo" aria-selected="false">
+              <i class="fas fa-images"></i>
+              Photo
+            </a>
+          </li>
+        </ul>
       </div>
       <div class="tab-content container" id="myTabContent">
         <div class="tab-pane fade show active" id="profile-jp" role="tabpanel" aria-labelledby="profile-jp-tab">
-          <h4 class="mb-3 text-primary d-lg-none">Bio (JP)</h4>
           <div class="row">
             <div class="col-md">
               <div class="card">
@@ -310,7 +301,6 @@
           </div>
         </div>
         <div class="tab-pane fade" id="profile-en" role="tabpanel" aria-labelledby="profile-en-tab">
-          <h4 class="mb-3 text-primary d-lg-none">Bio (EN)</h4>
           <div class="row">
             <div class="col-lg">
               <div class="card">
@@ -379,7 +369,6 @@
           </div>
         </div>
         <div class="tab-pane fade" id="research" role="tabpanel" aria-labelledby="research-tab">
-          <h4 class="mb-3 text-primary d-lg-none">Research</h4>
           <div class="row">
             <div class="col">
               <div class="card">
@@ -497,7 +486,6 @@
           </div>
         </div>
         <div class="tab-pane fade" id="teaching" role="tabpanel" aria-labelledby="teaching-tab">
-          <h4 class="mb-3 text-primary d-lg-none">Teaching</h4>
           <div class="row">
             <div class="col">
               <div class="card">
@@ -640,7 +628,6 @@
           </div>
         </div>
         <div class="tab-pane fade" id="note" role="tabpanel" aria-labelledby="note-tab">
-          <h4 class="mb-3 text-primary d-lg-none">Note</h4>
           <div class="row">
             <div class="col">
               <div class="card">
@@ -733,7 +720,6 @@
           </div>
         </div>
         <div class="tab-pane fade" id="link" role="tabpanel" aria-labelledby="link-tab">
-          <h4 class="mb-3 text-primary d-lg-none">Link</h4>
           <div class="row">
             <div class="col">
               <div class="card">
@@ -840,6 +826,13 @@
                   奨学金・研究助成
                 </div>
                 <div class="card-body">
+                  <h5 class="card-title">奨学金</h5>
+                  <p><a href="https://www.jsps.go.jp/j-pd/" target="_blank">日本学術振興会　特別研究員</a><small>（募集時期：5月頃）</small></p>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">研究助成</h5>
+                  <p><a href="https://www.suntory.co.jp/sfnd/research/" target="_blank">サントリー財団　研究助成「学問の未来を拓く」</a><small>（募集時期：4月）</small></p>
+                  <p><a href="https://www.suntory.co.jp/sfnd/research/" target="_blank">サントリー財団　若手研究者のためのチャレンジ研究助成</a><small>（募集時期：11月）</small></p>
                 </div>
               </div>
             </div>
@@ -851,19 +844,48 @@
                   学会・研究会・ワークショップ
                 </div>
                 <div class="card-body">
+                  <h5 class="card-title">方法論<small>（国内）</small></h5>
+                  <p><a href="https://www.ism.ac.jp/lectures/kouza.html" target="_blank">統計数理研究所　公開講座・リーディングDAT講座</a></p>
+                  <p><a href="https://tokyor.connpass.com/" target="_blank">Tokyo.R</a></p>
+                  <p><a href="http://www.sigmath.es.osaka-u.ac.jp/~Estat/subprogram.html" target="_blank">大阪大学　数理・データ科学教育研究センター　データ科学特論</a><small>（開催時期：8月）</small></p>
+                  <p><a href="http://bsj.gr.jp/" target="_blank">日本行動計量学会　チュートリアルセミナー</a><small>（開催時期：9月）</small></p>
+                  <p><a href="https://www.jss.gr.jp/act/tutorial/" target="_blank">統計関連学会連合大会　チュートリアルセッション</a><small>（開催時期：9月）</small></p>
+                  <p><a href="http://jna-icpsr.jp/icpsr-lecture.html" target="_blank">ICPSR国内利用協議会　統計セミナー</a><small>（開催時期：9月）</small></p>
+                  <p><a href="http://ccss.kobe-u.ac.jp/event/seminar_all/index.html" target="_blank">神戸大学　計算社会科学研究センター　School on Computational Social Science</a><small>（開催時期：2,6月）</small></p>
+                  <p><a href="http://www.socialpsychology.jp/index.html" target="_blank">日本社会心理学会　春の方法論セミナー</a><small>（開催時期：3月）</small></p>
+                  <p><a href="https://www.anlp.jp/" target="_blank">言語処理学会　チュートリアル</a><small>（開催時期：3月）</small></p>
+                  <p><a href="http://bsj.gr.jp/event/seminar/spring/" target="_blank">日本行動計量学会　春の合宿セミナー</a><small>（開催時期：3月）</small></p>
+                  <p><a href="https://csrda.iss.u-tokyo.ac.jp/seminar/" target="_blank">東京大学　社会科学研究所付属社会調査・データアーカイブ研究センター　計量分析セミナー</a><small>（開催時期：3月）</small></p>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">方法論<small>（海外）</small></h5>
+                  <p><a href="https://www.icpsr.umich.edu/icpsrweb/sumprog/" target="_blank">ICPSR Summer Program</a><small>（開催時期：6-8月）</small></p>
+                  <p><a href="http://methods-school.nus.edu.sg/" target="_blank">IPSA-NUS Summer School</a><small>（開催時期：7月）</small></p>
+                  <p><a href="https://essexsummerschool.com/" target="_blank">Essex Summer School</a><small>（開催時期：7-8月）</small></p>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="tab-pane fade" id="calendar" role="tabpanel" aria-labelledby="calendar-tab">
-          <h4 class="mb-3 text-primary d-lg-none">Calendar</h4>
           <div class="calendar">
-            <iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FTokyo&amp;src=OGZjbGhmb3M3c2RjZTI0cWFmYnQ2Nm1iNGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=azU4NHU5ZG4xaHBlM3FoZjViMWkxZTZpcjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZDhhcjQ3N2VlZ3Qwb204aW5zZm8xajQzbG9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=OWcycXAwYjlsY2p0ZThibmhnbTU3bGNycGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=MHVvZHAwYzY4anNxaG1mNTZ2amVvaG1ocWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%233F51B5&amp;color=%23B39DDB&amp;color=%23F09300&amp;color=%23AD1457&amp;color=%23E67C73&amp;showTitle=0&amp;showDate=0&amp;showPrint=0" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            <iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FTokyo&amp;src=OGZjbGhmb3M3c2RjZTI0cWFmYnQ2Nm1iNGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZDhhcjQ3N2VlZ3Qwb204aW5zZm8xajQzbG9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=OWcycXAwYjlsY2p0ZThibmhnbTU3bGNycGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=MHVvZHAwYzY4anNxaG1mNTZ2amVvaG1ocWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=azU4NHU5ZG4xaHBlM3FoZjViMWkxZTZpcjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%233F51B5&amp;color=%23F09300&amp;color=%23AD1457&amp;color=%23E67C73&amp;color=%23B39DDB&amp;showTitle=0&amp;showPrint=0" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="photo" role="tabpanel" aria-labelledby="photo-tab">
+          <div class="row">
+            <div class="col-md-4 mb-2">
+              <img src="https://lh3.googleusercontent.com/G7n5Myn9-nw_xMvW1MuKtc9WaZedbrPzMFJuk8KlOBXrwsoIb2vnaGPk70JWim2wEXi-7FxVw1Pd66laVL84MNCr-aRDU6NiZOVz97UMxNMvKb0aXyJOum4rT20T3edvyUyHXonCZ3IoEbI1mFNbAXk6wmjfQ1HsrbTb-oJ-TZIseQMTrzqnB_y0-7Mip7ImtIgtCc5kOxP_uONo4AuT750Uyg0NCpNcOu4IeFOwtf_YoVsPt8ntQ4ECMVEyQnq1EoTp9X7peNm1rTgAeTSJTWvWs-mdVMDbjovGS0j9HEjdG6qS4KEXKN85kPYReTw7QZ3bfefSr9WaSCnM9sJPpfKSAaJ2i4lp7ZbIOa7wOyXA1IIJoorjot50bzZQWjqLJFmd3TQw0sqmjeLYqUVL-CV86B1h0TYGUto68qcyV1u-1zU9MQhbieCvGDMKd6uT-U2QV7P6_oUrkRMYicfW6mw4hf6okxLRIMnbgpWC8CjvdkkJumK7aDPij1OxXAlbs8nRiO9UfSbqZUZynYwd6nAObI1g_Vx_CjETT4v9kUKG1OhK0IKKn0m8flUbkSHPRfuDMOPSqS4TIjJMJA3PBCCpMmpSVNp7zOqgDVMJHXbhgg9lDMX8Lk46ho1RTNR9KdGdzHYOLwr6JJla8-cq57Wzm18w0eqMiniaq3TbtgmBo_2NgcjgHfc=w1116-h742-no" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-4 mb-2">
+              <img src="https://lh3.googleusercontent.com/lWGCs7Xk3Cd45rOoPiFw9w0VuZSXCJpNqfjDW2i5yZCt6M0S4wDPxMnxhkYiqRfrmPhhRuZV2mWmkE860NKL0hDOPd0bkh71f5j4FpOVyc4oyutDV3BzY5M0KxdgL46GbNbvCiyo4ZQU-X9FgEnESuuBN8c3bRMwWJ5OhUjEJd9ej1Lt99tpGSlwSL3L8FtbNCZbEJ-PPV_DL7hxCKUUyrs8WgPTDs9DSpgYSr2mN_AXAUjamjuXkTxreaIvww4wymiPGRD5MnrnOV1AiV5nH5jVecSlxC9au3yfvqyYJ9iY6cRgzV_9rpH53j1L79UjBxAZe7YltZMiLVryrnBW94HWammtGkZAZM23e62wpGI4cpSB0vWsziCTt01Sy9GSezDpCLKw7niLaKbRWSzZrO7Qt02KUHOW_99c5gzGRfrXd-l09LkXqw154znVMtNIi7ikhxVk6LGY1miBZnBnmaE2RFkR71-xg-IZLl3_qC-aza6r4JACyf3dbqVNJ7zCOQhiBdFcigyydqaCGDTDm0PHeozxQlqV7vuCPzkwZ-f0EE-VVQuVFFTd-vNRs1HVtSepzEtzVwJN0sBKWhVRyHctkxQIIMIYVmRSmw5s-ojRExk_auf7onAdTfslbrCqwcF6YY1U56-nh0vTcXJKj1mxPDBsONTrhVpN8ZK4Av14ll0RJM_xgnE=w1116-h742-no" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-4 mb-2">
+              <img src="https://lh3.googleusercontent.com/D6nj48Czy1ryd83_8nkCXmn6lqa8FoiLtOJnQLicJ-TKqhwJ2gGI2ceA4q46fROlaqzgOUd8DWxYYhimiH6f24lQrUkpoFfhBj6GGCZZljLIAgPS2vjs9FSiPDJNVvkwe64_rOucNKtTSDrdfwQLIjIL_FBZFgwLqVkZWr9VyQ0rUFoegOozmz0V8Eb8oBfkz3WZDbvf51xfj3ymylpzFZbpeoTmngoPBXRpeKf_daKqKq4zYETBUJ5cJeyoAP587XHF5q8b2TNSYa3ok1blGf2BiMcUqiT4iVc7_-kgn3MGPjKBqa_fTOFdoGNaQPw3rHE5qKUJDDDe9ouvC6gXQXKhWTpnf6gWKH3s7tYsxdveRauul7TF3b0WGhH1TRAjJyfHgqGLPyjT3PneWYQtiqZKsxZsbjNSsvtgDGhK6gPXJESGHhSlDQ3t8BtKJPppiXsYmZTCH0lnFbLtqex-PK1nbiZ8EmksLzYEtNNNqwEgHDVWnRuEUzgF-5hM07x0M0wPv4G7sQZFUKhKI-qvaru383ZolAFScYv3DAaObJal6Y1W8NtrHZ9_LQojX1V_MNjwoFyWupAVj98-AKWQoBb8bdVOHPYa1l8e8YJ2uHvXlYwH_nUy0cGMxxmlIeXGqCEQ-BReABYfAqgA6AfthEO7IX1CaeGHCdPaZp4tbSXZRRhT71N5Tqw=w532-h353-no" alt="" class="img-fluid">
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
     <footer class="my-5">
       <div class="container">
