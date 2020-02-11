@@ -126,7 +126,7 @@ sup {
 
 a {
   color: #53727d;
-  text-decoration: underline dotted;
+  text-decoration: none;
   background-color: transparent; }
   a:hover {
     color: #34484f;
@@ -2866,7 +2866,6 @@ input[type="button"].btn-block {
 
 .nav-link {
   display: block;
-  text-decoration: none;
   padding: 0.5rem 1rem; }
   .nav-link:hover, .nav-link:focus {
     text-decoration: none; }
