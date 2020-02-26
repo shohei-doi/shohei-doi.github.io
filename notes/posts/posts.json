@@ -1,5 +1,23 @@
 [
   {
+    "path": "posts/2019-06-19-ubuntu/",
+    "title": "Ubuntuのセットアップ",
+    "description": "Ubuntuをインストールした後に行う環境構築をまとめました。",
+    "author": [
+      {
+        "name": "土井　翔平",
+        "url": {}
+      }
+    ],
+    "date": "2020-02-26",
+    "categories": [
+      "Ubuntu",
+      "setup"
+    ],
+    "preview": {},
+    "last_modified": "2020-02-26T16:41:14+09:00"
+  },
+  {
     "path": "posts/2019-04-25-encoding-r/",
     "title": "Rにおける文字コード",
     "description": "RとRStudioにおける文字コードの扱い方について説明します。",
@@ -54,24 +72,6 @@
     "last_modified": "2019-11-30T01:11:47+09:00",
     "preview_width": 1248,
     "preview_height": 768
-  },
-  {
-    "path": "posts/2019-06-19-ubuntu/",
-    "title": "Ubuntuのセットアップ",
-    "description": "Ubuntuをインストールした後に行う環境構築をまとめました。",
-    "author": [
-      {
-        "name": "土井　翔平",
-        "url": {}
-      }
-    ],
-    "date": "2019-11-12",
-    "categories": [
-      "Ubuntu",
-      "setup"
-    ],
-    "preview": {},
-    "last_modified": "2019-11-12T17:35:13+09:00"
   },
   {
     "path": "posts/2019-07-25-democratization-ml/",
