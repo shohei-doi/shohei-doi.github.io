@@ -26,8 +26,8 @@
 <link rel="canonical" href="https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2020-02-26"/>
-<meta property="article:created" itemprop="dateCreated" content="2020-02-26"/>
+<meta property="article:published" itemprop="datePublished" content="2020-03-10"/>
+<meta property="article:created" itemprop="dateCreated" content="2020-03-10"/>
 <meta name="article:author" content="土井　翔平"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -49,7 +49,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Ubuntuのセットアップ"]},{"type":"character","attributes":{},"value":["Ubuntuをインストールした後に行う環境構築をまとめました。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2020-02-26"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["Ubuntu","setup"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Ubuntuのセットアップ"]},{"type":"character","attributes":{},"value":["Ubuntuをインストールした後に行う環境構築をまとめました。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2020-03-10"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["Ubuntu","setup"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1291,7 +1291,7 @@ gtag('config', 'UA-75879658-3');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Ubuntuのセットアップ","description":"Ubuntuをインストールした後に行う環境構築をまとめました。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2020-02-26T00:00:00.000+09:00","citationText":"翔平, 2020"}
+{"title":"Ubuntuのセットアップ","description":"Ubuntuをインストールした後に行う環境構築をまとめました。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2020-03-10T00:00:00.000+09:00","citationText":"翔平, 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1322,7 +1322,7 @@ gtag('config', 'UA-75879658-3');
 <div class="d-byline">
   土井　翔平  (国立情報学研究所)
   
-<br/>2020-02-26
+<br/>2020-03-10
 </div>
 
 <div class="d-article">
@@ -1332,6 +1332,7 @@ gtag('config', 'UA-75879658-3');
 <li><a href="#Intro">はじめに</a></li>
 <li><a href="#NVIDIA">NVIDIAドライバ</a></li>
 <li><a href="#Japanese">日本語入力</a></li>
+<li><a href="#Thunderbird">Thunderbird</a></li>
 <li><a href="#Gnome">Gnome Tweaks</a></li>
 <li><a href="#Font">フォントのインストール</a></li>
 <li><a href="#Dropbox">Dropbox</a></li>
@@ -1343,6 +1344,7 @@ gtag('config', 'UA-75879658-3');
 <li><a href="#MeCab">MeCab</a></li>
 <li><a href="#Spark">Apache Spark</a></li>
 <li><a href="#LaTeX">TeXLive</a></li>
+<li><a href="#Vscode">VScode</a></li>
 <li><a href="#Atom">Atom</a></li>
 </ul>
 </nav>
@@ -1359,9 +1361,10 @@ gtag('config', 'UA-75879658-3');
 <p>Ubuntuを使う場合、Windowsと共存させるのが便利かと思います。 その方法としては</p>
 <ol type="1">
 <li>仮想マシン</li>
+<li>Windows Subsystem for Linux (WSL)</li>
 <li>デュアルブート</li>
 </ol>
-<p>があります。 どちらも、Windowsの入っているマシンでUbuntuを使う点で、マシンの選択肢の幅が広いです。</p>
+<p>があります。 いずれも、Windowsの入っているマシンでUbuntuを使う点で、マシンの選択肢の幅が広いです。</p>
 <p>仮想マシンはWindows上で<a href="https://www.vmware.com/jp.html">VMware</a>や<a href="https://www.virtualbox.org/">VirtualBox</a>などを使って構築し、その中にUbuntuをインストールします。 Windows上で動くのでめんどくさい設定はいりませんが、マシンスペックを最大限活用することはできません。</p>
 <p>デュアルブートとは同じマシンの中にWindowsとUbuntuを別々にインストールすることで、マシンの起動時にどちらを使用するかを決めます。 マシンスペックをフル活用できる一方で、ブートローダーを始めパソコンのコアな部分をいじるので危険性を伴います。</p>
 <p>いずれにせよ、好みのLinux OSをダウンロードします。 とりあえず初めは<a href="https://ubuntu.com/">Ubuntu</a>を使うのがいいかと思います。</p>
@@ -1369,7 +1372,7 @@ gtag('config', 'UA-75879658-3');
 <li>LTSとは2年ないし5年の長期保証があるバージョンです。</li>
 <li>それ以外は9ヶ月の保証しかありません。</li>
 </ul>
-<p>仮想マシンでインストールする場合はそれぞれのソフトの使い方を参照してください。 デュアルブートする場合は<a href="https://unetbootin.github.io/">UNetbootin</a>などを使って、USBをインストールメディアを作成します。</p>
+<p>仮想マシンでインストールする場合はそれぞれのソフトの使い方を参照してください。 デュアルブートする場合は<a href="https://unetbootin.github.io/">UNetbootin</a>や<a href="https://rufus.ie/">Rufus</a>などを使って、USBをインストールメディアを作成します。</p>
 <h2 id="NVIDIA">NVIDIAドライバ</h2>
 <p>インストール時と初回起動時はブート選択画面で<code>e</code>を押して、<code>quiet splash</code>を<code>nomodeset</code>に書き換える。 初回起動後に</p>
 <pre><code>
@@ -1377,8 +1380,14 @@ sudo ubuntu-drivers autoinstall</code></pre>
 <p>を実行する。</p>
 <h2 id="Japanese">日本語入力</h2>
 <p>Input Methodで<code>ibus</code>を選択し、Region &amp; Languageで<code>Mozc</code>を追加して最上位に設定する。</p>
+<h2 id="Thunderbird">Thunderbird</h2>
+<p><a href="https://www.thunderbird.net/ja/">Thunderbird</a>がプリインストールされていない場合、以下のコードでインストールします（<a href="https://www.linuxuprising.com/2018/10/install-thunderbird-60-in-ubuntu-or.html">こちら</a>を参考）。</p>
+<pre><code>
+sudo add-apt-repository ppa:mozillateam/ppa
+sudo apt-get update
+sudo apt install thunderbird</code></pre>
 <h2 id="Gnome">Gnome Tweaks</h2>
-<p>まず、以下のコマンドでGnome TweaksとGnome Shellのホストコネクターをインストールする。</p>
+<p>Ubuntuの場合、まず、以下のコマンドでGnome TweaksとGnome Shellのホストコネクターをインストールする。</p>
 <pre><code>
 sudo apt install gnome-tweaks chrome-gnome-shell</code></pre>
 <p>Gnome Tweaksを起動し、</p>
@@ -1400,23 +1409,12 @@ sudo apt install gnome-tweaks chrome-gnome-shell</code></pre>
 <pre><code>
 sudo apt install typecatcher</code></pre>
 <h2 id="Dropbox">Dropbox</h2>
-<p><a href="https://www.linuxbabe.com/ubuntu/install-dropbox-ubuntu-18-04">こちら</a>を参考にしてインストールします。</p>
-<p>まず、ターミナルで</p>
+<p><a href="https://www.dropbox.com">公式サイト</a>からダウンロード&amp;インストールをします。</p>
+<p>Dropboxに保存しているファイル数が膨大な場合、同期できないので、以下のコマンドを実行します。</p>
 <pre><code>
-sudo nano /etc/apt/sources.list.d/dropbox.list</code></pre>
-<p>でファイルを作成して、以下を追記します。</p>
-<pre><code>
-deb [arch=i386,amd64] http://linux.dropbox.com/ubuntu bionic main</code></pre>
-<p>続いて、ターミナルでキーを取得します。</p>
-<pre><code>
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E</code></pre>
-<p>また、以下のパッケージをインストールします。</p>
-<pre><code>
-sudo apt update
-sudo apt install python3-gpg dropbox</code></pre>
-<p>最後に、Dropboxをインストールします。</p>
-<pre><code>
-dropbox start -i</code></pre>
+echo fs.inotify.max_user_watches=100000 | sudo tee -a /etc/sysctl.conf; sudo sysctl -p
+dropbox stop
+dropbox start</code></pre>
 <h2 id="Slack">Slack &amp; Skype</h2>
 <p>Slackを<a href="https://slack.com/intl/ja-jp/downloads/linux">公式サイト</a>からダウンロード&amp;インストールします。</p>
 <ul>
@@ -1425,7 +1423,10 @@ dropbox start -i</code></pre>
 </ul>
 <p>Skypeも<a href="https://www.skype.com/ja/get-skype/">公式サイト</a>からダウンロード&amp;インストールします。</p>
 <h2 id="Git">Git</h2>
-<p>UbuntuではGitはデフォルトでインストールされているので、以下の初期設定を行うだけです。</p>
+<p>Gitがデフォルトでインストールされていない場合はインストールをします。</p>
+<pre><code>
+sudo apt install git</code></pre>
+<p>続いて、以下の初期設定を行います。</p>
 <pre><code>
 git config --global user.name &quot;shohei doi&quot;
 git config --global user.email &quot;shohei.doi0504@gmail.com&quot;</code></pre>
@@ -1491,7 +1492,7 @@ cat(&quot;\nCXX14FLAGS=-O3 -march=native -mtune=native -fPIC&quot;,
     file = M, sep = &quot;\n&quot;, append = TRUE)</code></pre>
 </div>
 <h3 id="パッケージのインストール">パッケージのインストール</h3>
-<p>いくつか代表的なパッケージをインストールします。</p>
+<p>いくつかパッケージをインストールします。</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 install.packages(&quot;tidyverse&quot;)
@@ -1624,7 +1625,23 @@ sudo /usr/local/texlive/YYYY/bin/x86_64-linux/tlmgr path add</code></pre>
 <li><code>YYYY</code>, <code>MM</code>, <code>DD</code>はバージョンにより変わります。</li>
 <li><code>tinytex</code>をRでインストールする方法は<a href="https://shohei-doi.github.io/notes/posts/2019-04-12-rmarkdown-pdf/#Install">こちら</a>を参照。</li>
 </ul>
+<h2 id="Vscode">VScode</h2>
+<p>これまで、<a href="https://atom.io/">Atom</a>をメインのエディタにしていましたが、<a href="#Vscode">VScode</a>((<a href="https://azure.microsoft.com/ja-jp/products/visual-studio-code/)に移りつつあります" class="uri">https://azure.microsoft.com/ja-jp/products/visual-studio-code/)に移りつつあります</a>。</p>
+<p>理由としては、</p>
+<ol type="1">
+<li>LaTeXのオートコンプリートがまあまあよい、</li>
+<li>PythonがRStudioライクに動かせる、</li>
+<li>Atomより軽い（らしい）、</li>
+</ol>
+<p>からです。</p>
+<h3 id="latex向けパッケージ">LaTeX向けパッケージ</h3>
+<h3 id="python向けパッケージ">Python向けパッケージ</h3>
 <h2 id="Atom">Atom</h2>
+<p>VScodeに移りつつありますが、以下の理由でAtomも入れておきます。</p>
+<ol type="1">
+<li>VScodeはroot権限でファイルを開くのがめんどくさい。</li>
+<li>Juliaの統合開発環境として採用されている。</li>
+</ol>
 <p>Atomを<a href="https://atom.io/">公式サイト</a>からダウンロード&amp;インストールします。</p>
 <ul>
 <li>設定で<code>Editor</code>の<code>Soft Wrap</code>を有効にします。</li>
@@ -1635,7 +1652,7 @@ sudo /usr/local/texlive/YYYY/bin/x86_64-linux/tlmgr path add</code></pre>
 <li><a href="https://atom.io/packages/highlight-column">highlight-column</a>：列のハイライト</li>
 <li><a href="https://atom.io/packages/file-icons">file-icons</a>：色付きアイコン</li>
 </ul>
-<h3 id="latex向けパッケージ">LaTeX向けパッケージ</h3>
+<h3 id="latex向けパッケージ-1">LaTeX向けパッケージ</h3>
 <ul>
 <li><a href="https://atom.io/packages/latex">latex</a>：タイプセット
 <ul>
@@ -1643,11 +1660,10 @@ sudo /usr/local/texlive/YYYY/bin/x86_64-linux/tlmgr path add</code></pre>
 <li><code>Clean Patterns</code>で<code>.pdf</code>を<code>.xdv</code>に変更します。</li>
 </ul></li>
 <li><a href="https://atom.io/packages/language-latex">language-latex</a>：シンタックス・ハイライト</li>
-<li><a href="https://atom.io/packages/latexer">latexer</a>：オートコンプリート</li>
 <li><a href="https://atom.io/packages/wordcount">wordcount</a>：ワードカウント</li>
 <li><a href="https://atom.io/packages/ginger">ginger</a>：英文法チェッカー</li>
 </ul>
-<h3 id="python向けパッケージ">Python向けパッケージ</h3>
+<h3 id="python向けパッケージ-1">Python向けパッケージ</h3>
 <ul>
 <li><a href="https://atom.io/packages/hydrogen">Hydrogen</a>：Atom上でjupyterの操作</li>
 <li><a href="https://atom.io/packages/hydrogen-python">hydrogen-python</a>：variable explorer</li>
