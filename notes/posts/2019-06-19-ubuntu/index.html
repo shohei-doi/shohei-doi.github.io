@@ -1331,6 +1331,7 @@ gtag('config', 'UA-75879658-3');
 <ul>
 <li><a href="#Intro">はじめに</a></li>
 <li><a href="#NVIDIA">NVIDIAドライバ</a></li>
+<li><a href="#ZenbookS">Zenbook S</a></li>
 <li><a href="#Japanese">日本語入力</a></li>
 <li><a href="#Thunderbird">Thunderbird</a></li>
 <li><a href="#Gnome">Gnome Tweaks</a></li>
@@ -1378,6 +1379,21 @@ gtag('config', 'UA-75879658-3');
 <pre><code>
 sudo ubuntu-drivers autoinstall</code></pre>
 <p>を実行する。</p>
+<h2 id="ZenbookS">Zenbook S</h2>
+<p>Zenbook Sにおける問題を解決します（<a href="https://sgyatto.hatenablog.com/entry/2019/01/20/135054">こちら</a>を参考）。</p>
+<h3 id="解像度の問題">解像度の問題</h3>
+<p>解像度に1920:1080を追加します。</p>
+<pre><code>
+echo &#39;xrandr --newmode &quot;1920x1080_60.00&quot;  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync&#39; &gt;&gt; .profile
+echo &#39;xrandr --addmode eDP-1 1920x1080_60.00&#39; &gt;&gt; .profile</code></pre>
+<h3 id="スリープの問題">スリープの問題</h3>
+<p>スリープをdeepにします。 以下のファイルを開き、</p>
+<pre><code>
+sudo nano /etc/default/grub</code></pre>
+<p><code>GRUB_CMDLINE_LINUX_DEFAULT</code>に<code>mem_sleep_default=deep</code>を追加します。</p>
+<p>設定を反映させて、再起動させます。</p>
+<pre><code>
+sudo update-grub2</code></pre>
 <h2 id="Japanese">日本語入力</h2>
 <p>Input Methodで<code>ibus</code>を選択し、Region &amp; Languageで<code>Mozc</code>を追加して最上位に設定する。</p>
 <h2 id="Thunderbird">Thunderbird</h2>
@@ -1626,7 +1642,7 @@ sudo /usr/local/texlive/YYYY/bin/x86_64-linux/tlmgr path add</code></pre>
 <li><code>tinytex</code>をRでインストールする方法は<a href="https://shohei-doi.github.io/notes/posts/2019-04-12-rmarkdown-pdf/#Install">こちら</a>を参照。</li>
 </ul>
 <h2 id="Vscode">VScode</h2>
-<p>これまで、<a href="https://atom.io/">Atom</a>をメインのエディタにしていましたが、<a href="#Vscode">VScode</a>((<a href="https://azure.microsoft.com/ja-jp/products/visual-studio-code/)に移りつつあります" class="uri">https://azure.microsoft.com/ja-jp/products/visual-studio-code/)に移りつつあります</a>。</p>
+<p>これまで、<a href="https://atom.io/">Atom</a>をメインのエディタにしていましたが、<a href="https://azure.microsoft.com/ja-jp/products/visual-studio-code/">VScode</a>に移りつつあります。</p>
 <p>理由としては、</p>
 <ol type="1">
 <li>LaTeXのオートコンプリートがまあまあよい、</li>
