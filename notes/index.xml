@@ -7,14 +7,14 @@
     <description>ノート
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 10 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2020 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Ubuntuのセットアップ</title>
       <dc:creator>土井　翔平</dc:creator>
       <link>https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu</link>
       <description>Ubuntuをインストールした後に行う環境構築をまとめました。</description>
       <guid>https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu</guid>
-      <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Rにおける文字コード</title>

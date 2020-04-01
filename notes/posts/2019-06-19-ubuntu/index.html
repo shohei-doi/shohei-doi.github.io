@@ -26,8 +26,8 @@
 <link rel="canonical" href="https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2020-03-10"/>
-<meta property="article:created" itemprop="dateCreated" content="2020-03-10"/>
+<meta property="article:published" itemprop="datePublished" content="2020-03-24"/>
+<meta property="article:created" itemprop="dateCreated" content="2020-03-24"/>
 <meta name="article:author" content="土井　翔平"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -49,7 +49,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Ubuntuのセットアップ"]},{"type":"character","attributes":{},"value":["Ubuntuをインストールした後に行う環境構築をまとめました。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2020-03-10"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["Ubuntu","setup"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Ubuntuのセットアップ"]},{"type":"character","attributes":{},"value":["Ubuntuをインストールした後に行う環境構築をまとめました。"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["国立情報学研究所"]}]}]},{"type":"character","attributes":{},"value":["2020-03-24"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["Ubuntu","setup"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]},{"type":"character","attributes":{},"value":["https://shohei-doi.github.io/notes/posts/2019-06-19-ubuntu/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1291,7 +1291,7 @@ gtag('config', 'UA-75879658-3');
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Ubuntuのセットアップ","description":"Ubuntuをインストールした後に行う環境構築をまとめました。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2020-03-10T00:00:00.000+09:00","citationText":"翔平, 2020"}
+{"title":"Ubuntuのセットアップ","description":"Ubuntuをインストールした後に行う環境構築をまとめました。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"国立情報学研究所","affiliationURL":"#"}],"publishedDate":"2020-03-24T00:00:00.000+09:00","citationText":"翔平, 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1322,7 +1322,7 @@ gtag('config', 'UA-75879658-3');
 <div class="d-byline">
   土井　翔平  (国立情報学研究所)
   
-<br/>2020-03-10
+<br/>2020-03-24
 </div>
 
 <div class="d-article">
@@ -1650,13 +1650,18 @@ sudo /usr/local/texlive/YYYY/bin/x86_64-linux/tlmgr path add</code></pre>
 <li>Atomより軽い（らしい）、</li>
 </ol>
 <p>からです。</p>
+<h3 id="一般向けパッケージ">一般向けパッケージ</h3>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=znck.grammarly">Grammarly</a>：スペルチェック</li>
+</ul>
 <h3 id="python向けパッケージ">Python向けパッケージ</h3>
 <ul>
-<li>Python</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a></li>
 </ul>
 <h3 id="latex向けパッケージ">LaTeX向けパッケージ</h3>
 <ul>
-<li>LaTeX Workshop</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop">LaTeX Workshop</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=tecosaur.latex-utilities">LaTeX Utilities</a></li>
 </ul>
 <p>ただし、このままではコンパイルできないので、<a href="https://qiita.com/popunbom/items/7d02fc75ad23b735d28c">こちら</a>を参考に、環境を整えます。</p>
 <ul>
@@ -1672,7 +1677,7 @@ sudo /usr/local/texlive/YYYY/bin/x86_64-linux/tlmgr path add</code></pre>
 <ul>
 <li>設定で<code>Editor</code>の<code>Soft Wrap</code>を有効にします。</li>
 </ul>
-<h3 id="一般向けパッケージ">一般向けパッケージ</h3>
+<h3 id="一般向けパッケージ-1">一般向けパッケージ</h3>
 <ul>
 <li><a href="https://atom.io/packages/minimap">minimap</a>：ミニマップ</li>
 <li><a href="https://atom.io/packages/highlight-column">highlight-column</a>：列のハイライト</li>
