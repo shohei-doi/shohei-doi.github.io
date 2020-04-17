@@ -1,0 +1,597 @@
+---
+title: "Ubuntuのセットアップ"
+description: |
+  Ubuntuをインストールした後に行う環境構築をまとめました。
+author:
+  - name: 土井　翔平
+    affiliation: 早稲田大学
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    includes:
+      in_header: head.html
+    css: styles.css
+    self_contained: false
+    toc: true
+    toc_depth: 2
+categories:
+  - Ubuntu
+  - setup
+twitter:
+  creator: "@sdoi0504"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  error = TRUE,
+  warning = TRUE,
+  message = TRUE,
+  R.options = list(width = 100)
+)
+```
+
+## はじめに {#Intro}
+
+僕はUbuntuをメインのOSとして使っています。
+その理由としては
+
+- Windowsはデータ分析に向かないし、無駄な機能が多いように思え、
+- Macは高い
+
+からです。
+
+以下ではUbuntuをインストールした後の環境構築についてまとめます。
+
+### Ubuntuのインストール
+
+Ubuntuを使う場合、Windowsと共存させるのが便利かと思います。
+その方法としては
+
+1. 仮想マシン
+1. Windows Subsystem for Linux (WSL)
+1. デュアルブート
+
+があります。
+いずれも、Windowsの入っているマシンでUbuntuを使う点で、マシンの選択肢の幅が広いです。
+
+仮想マシンはWindows上で[VMware](https://www.vmware.com/jp.html)や[VirtualBox](https://www.virtualbox.org/)などを使って構築し、その中にUbuntuをインストールします。
+Windows上で動くのでめんどくさい設定はいりませんが、マシンスペックを最大限活用することはできません。
+
+デュアルブートとは同じマシンの中にWindowsとUbuntuを別々にインストールすることで、マシンの起動時にどちらを使用するかを決めます。
+マシンスペックをフル活用できる一方で、ブートローダーを始めパソコンのコアな部分をいじるので危険性を伴います。
+
+いずれにせよ、好みのLinux OSをダウンロードします。
+とりあえず初めは[Ubuntu](https://ubuntu.com/)を使うのがいいかと思います。
+
+- LTSとは2年ないし5年の長期保証があるバージョンです。
+- それ以外は9ヶ月の保証しかありません。
+
+仮想マシンでインストールする場合はそれぞれのソフトの使い方を参照してください。
+デュアルブートする場合は[UNetbootin](https://unetbootin.github.io/)や[Rufus](https://rufus.ie/)などを使って、USBをインストールメディアを作成します。
+
+## NVIDIAドライバ {#NVIDIA}
+
+インストール時と初回起動時はブート選択画面で`e`を押して、`quiet splash`を`nomodeset`に書き換える。
+初回起動後に
+
+```{bash, eval=FALSE}
+sudo ubuntu-drivers autoinstall
+```
+
+を実行する。
+
+## Zenbook S {#ZenbookS}
+
+Zenbook Sにおける問題を解決します（[こちら](https://sgyatto.hatenablog.com/entry/2019/01/20/135054)を参考）。
+
+### 解像度の問題
+
+解像度に1920:1080を追加します。
+
+```{bash, eval=FALSE}
+echo 'xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync' >> .profile
+echo 'xrandr --addmode eDP-1 1920x1080_60.00' >> .profile
+```
+
+### スリープの問題
+
+スリープをdeepにします。
+以下のファイルを開き、
+
+```{bash, eval=FALSE}
+sudo nano /etc/default/grub
+```
+
+`GRUB_CMDLINE_LINUX_DEFAULT`に`mem_sleep_default=deep`を追加します。
+
+設定を反映させて、再起動させます。
+
+```{bash, eval=FALSE}
+sudo update-grub2
+```
+
+## 日本語入力 {#Japanese}
+
+Input Methodで`ibus`を選択し、Region & Languageで`Mozc`を追加して最上位に設定する。
+
+## Thunderbird {#Thunderbird}
+
+[Thunderbird](https://www.thunderbird.net/ja/)がプリインストールされていない場合、以下のコードでインストールします（[こちら](https://www.linuxuprising.com/2018/10/install-thunderbird-60-in-ubuntu-or.html)を参考）。
+
+```{bash, eval=FALSE}
+sudo add-apt-repository ppa:mozillateam/ppa
+sudo apt-get update
+sudo apt install thunderbird
+```
+
+## Gnome Tweaks {#Gnome}
+
+Ubuntuの場合、まず、以下のコマンドでGnome TweaksとGnome Shellのホストコネクターをインストールする。
+
+```{bash, eval=FALSE}
+sudo apt install gnome-tweaks chrome-gnome-shell
+```
+
+Gnome Tweaksを起動し、
+
+- DesktopのShow IconsをOFFにする。
+- Top BarでApplication MenuをOFFにして、Battery PercentageとDateをONにする。
+
+### Gnome Extensionsのインストール
+
+- [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
+- [AlternateTab](https://extensions.gnome.org/extension/15/alternatetab/)
+- [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/)
+- [Removable Drive Menu](https://extensions.gnome.org/extension/7/removable-drive-menu/)
+- [Caffeine](https://extensions.gnome.org/extension/517/caffeine/)
+- [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
+
+## フォントのインストール {#Font}
+
+type catcherを使って[Google Fonts](https://fonts.google.com/)からフォントをダウンロードしてインストールします。
+~~font-managerを使って[Google Fonts](https://fonts.google.com/)からフォントをダウンロードしてインストールします。~~
+
+```{bash, eval=FALSE}
+sudo apt install typecatcher
+```
+
+## Dropbox {#Dropbox}
+
+[公式サイト](https://www.dropbox.com)からダウンロード&インストールをします。
+
+Dropboxに保存しているファイル数が膨大な場合、同期できないので、以下のコマンドを実行します。
+
+```{bash, eval=FALSE}
+echo fs.inotify.max_user_watches=100000 | sudo tee -a /etc/sysctl.conf; sudo sysctl -p
+dropbox stop
+dropbox start
+```
+
+## Slack & Skype {#Slack}
+
+Slackを[公式サイト](https://slack.com/intl/ja-jp/downloads/linux)からダウンロード&インストールします。
+
+- ソフトウェアセンターでインストールすると日本語入力ができません。
+- [ここ](https://slack.com/get-started#/find)にメールアドレスを入力すると、紐付けられたワークスペースを確認できます。
+
+Skypeも[公式サイト](https://www.skype.com/ja/get-skype/)からダウンロード&インストールします。
+
+## Git {#Git}
+
+Gitがデフォルトでインストールされていない場合はインストールをします。
+
+```{bash, eval=FALSE}
+sudo apt install git
+```
+
+続いて、以下の初期設定を行います。
+
+```{bash, eval=FALSE}
+git config --global user.name "shohei doi"
+git config --global user.email "shohei.doi0504@gmail.com"
+```
+
+## R/RStudio {#R}
+
+### 1つのバージョンの場合
+
+Rを以下のコマンドでインストールします（[参考](https://qiita.com/JeJeNeNo/items/43fc95c4710c668e86a2)）。
+
+```{bash, eval=FALSE}
+echo -e "\n## For R package"  | sudo tee -a /etc/apt/sources.list
+echo "deb https://cran.rstudio.com/bin/linux/ubuntu $(lsb_release -cs)-cran35/" | sudo tee -a /etc/apt/sources.list
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key add -
+sudo apt update
+sudo apt install r-base
+```
+
+### 複数のバージョンの場合
+
+RStudioが公開している[コンパイル済みのR](https://docs.rstudio.com/resources/install-r/)をインストールします。
+
+```{bash, eval=FALSE}
+sudo apt update
+sudo apt install gdebi-core curl
+export R_VERSION=3.6.2
+curl -O https://cdn.rstudio.com/r/ubuntu-1804/pkgs/r-${R_VERSION}_1_amd64.deb
+sudo gdebi r-${R_VERSION}_1_amd64.deb
+sudo ln -s /opt/R/${R_VERSION}/bin/R /usr/local/bin/R
+sudo ln -s /opt/R/${R_VERSION}/bin/Rscript /usr/local/bin/Rscript
+```
+
+### Microsoft R Open
+
+[Microsoft R Open](https://mran.microsoft.com/open)はMicrosoftが提供するRディストリビューションです。
+メリットとしてはBLASに高速なMKLが使用されている点などが挙げられます。
+
+まず、[ここ](https://docs.microsoft.com/en-us/windows-server/administration/linux-package-repository-for-microsoft-software)からOSに対応するキーを取得します。
+Ubuntu 18.04系ならば次の通りです。
+
+```{bash, eval=FALSE}
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+ sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod
+ sudo apt update
+```
+
+そして、R Openのファイルをダウンロードし、解凍したディレクトリでインストールコードを実行します。
+
+```{bash, eval=FALSE}
+cd Downloads/microsoft-r-open
+sudo ./install.sh
+```
+
+R Openでは再現可能性のためにパッケージのリポジトリ(MRAN)の日付が固定されています。
+最新のパッケージをインストールしたい場合はリポジトリをCRANに変更します。
+具体的には以下の内容を`.Rprofile`という名前でホームディレクトリに保存します。
+
+```{r, eval = FALSE}
+local({
+  r <- getOption("repos")
+  r["CRAN"] <- "https://cran.ism.ac.jp/"
+  options(repos = r)
+})
+```
+
+### RStudio
+
+RStudioを[公式サイト](https://www.rstudio.com/products/rstudio/download/#download)からダウンロード&インストールします。
+
+- RStudioの初期設定は[こちら](https://shohei-doi.github.io/notes/posts/2019-04-03-install-r/#Setup)を参照。
+
+### パッケージのインストールの準備
+
+いくつかのパッケージをインストールするのに必要なソフトウェアをインストールします。
+
+```{bash, eval=FALSE}
+sudo apt install build-essential libcurl4-gnutls-dev openjdk-7-* libxml2-dev libssl-dev
+```
+
+`rstan`のインストールのために以下のコードをRで実行します。
+
+```{r, eval = FALSE}
+dotR <- file.path(Sys.getenv("HOME"), ".R")
+if (!file.exists(dotR)) dir.create(dotR)
+M <- file.path(dotR, "Makevars")
+if (!file.exists(M)) file.create(M)
+cat("\nCXX14FLAGS=-O3 -march=native -mtune=native -fPIC",
+    "CXX14=g++", # or clang++ but you may need a version postfix
+    file = M, sep = "\n", append = TRUE)
+```
+
+### パッケージのインストール
+
+いくつかパッケージをインストールします。
+
+```{r, eval = FALSE}
+install.packages("tidyverse")
+install.packages("tidymodels")
+install.packages("distill")
+install.packages("rstan")
+install.packages("brms")
+install.packages("quanteda")
+install.packages("readtext")
+install.packages("devtools")
+devtools::install_github("hoxo-m/pforeach")
+```
+
+## Python {#Python}
+
+UbuntuではPython2とPython3がデフォルトで入っているはずです。
+なぜか、Atom上でpython3を使いたくてもpython2系のモジュールをインストールしないとうまく行きません。
+正直、pythonの環境構築に関しては未だに分からないことが多いので間違いがあれば教えてください。
+
+```{bash, eval=FALSE}
+sudo apt install python-pip
+pip install numpy pandas scikit-learn matplotlib ipykernel
+
+sudo apt install python3-pip
+pip3 install numpy pandas scikit-learn matplotlib ipykernel
+```
+
+これをすればpython2のモジュールを入れなくても大丈夫？（[参考](https://github.com/nteract/hydrogen/issues/1071#issuecomment-342084542)）
+
+```{bash, eval=FALSE}
+pip3 install ipykernel --upgrade
+python3 -m ipykernel install --user
+```
+
+### Anaconda
+
+[Anaconda](https://www.anaconda.com/)はデータ分析用に特化したPythonディストリビューションです。
+Anacondaを使うことには賛否両論ありますが、メリットの一つはBLASとして高速なMKLをデフォルトで使用している点です。
+
+上記サイトから適当なバージョンのAnacondaをダウンロードして、
+
+```{bash, eval=FALSE}
+bash Anaconda3-2019.10-Linux-x86_64.sh
+```
+
+を実行します。
+
+最後に、
+
+```{bash, eval=FALSE}
+source ~/.bashrc
+```
+
+でパスを通します。
+
+以下のコマンドが実行できればインストールされています。
+
+```{bash, eval=FALSE}
+conda -V
+```
+
+`conda`自体のアップデートとパッケージ全体のアップデートは次の通りです。
+
+```{bash, eval=FALSE}
+conda update -n base conda
+conda update --all
+```
+
+## Julia {#Julia}
+
+[Julia](https://julialang.org/)は最近、成長が著しい科学計算用プログラミングで、計算速度の速さとコードの書きやすさで有名です。
+ダウンロードして、適当なフォルダで解凍して、以下のコマンドでシンボリックリンクを貼ります（Julia ver 1.2.0をDownloadsフォルダで解凍した場合）。
+
+```{bash, eval=FALSE}
+sudo ln -s ~/Downloads/julia-1.2.0/bin/julia /usr/local/bin/julia
+```
+
+JuliaからPythonを呼び出すために[PyCall](https://github.com/JuliaPy/PyCall.jl)をインストールしますが、普段使っているPythonを呼び出すためには、以下のコマンドでPythonのパスを確認します。
+
+```{bash, eval=FALSE}
+which python
+```
+
+そして、Juliaで次のようにしてPythonへのパスを通します。
+
+```{bash, eval=FALSE}
+ENV["PYTHON"] = "path/to/your/python"
+```
+
+その上で、package modeにしてPyCallをインストールします。
+
+```{bash, eval=FALSE}
+add PyCall
+```
+
+Rの場合は何もせずにRCallをインストールします。
+
+```{bash, eval=FALSE}
+add RCall
+```
+
+## MeCab {#MeCab}
+
+日本語の形態素解析のためにMeCabとNEologdを入れます（[参考](https://qiita.com/ekzemplaro/items/c98c7f6698f130b55d53)）。
+
+```{bash, eval=FALSE}
+sudo apt install mecab libmecab-dev mecab-ipadic-utf8
+cd ~/Downloads
+git clone https://github.com/neologd/mecab-ipadic-neologd.git
+cd mecab-ipadic-neologd
+sudo bin/install-mecab-ipadic-neologd
+```
+
+`/etc/mecabrc`を編集して`dicdir = /usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd`とします。
+
+```{bash, eval=FALSE}
+sudo atom /etc/mecabrc
+```
+
+Python3で動かすためのモジュールをインストールします。
+
+```{bash, eval=FALSE}
+sudo apt install swig
+sudo pip3 install mecab-python3
+```
+
+- 参考サイトのコードではうまくNEologdにパスが通らなかったので、taggerで`-d /usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd`と直接指定しました。
+
+[RMeCab](http://rmecab.jp/wiki/index.php?RMeCab)をインストールします。
+
+```{r, eval = FALSE}
+install.packages("RMeCab", repos = "http://rmecab.jp/R", type = "source") 
+install.packages("RcppMeCab")
+```
+
+- `RMeCab`はCRANにはないので注意。
+
+## Apache Spark {#Spark}
+
+分散コンピューティング用のフレームワークである[Apache Spark](https://spark.apache.org/)をインストールします（[ここ](https://qiita.com/rockhopper/items/0680a537838233fce323)と[ここ](https://computingforgeeks.com/how-to-install-apache-spark-on-ubuntu-debian/)を参考にしました）。
+
+まず、Javaをインストールします。
+
+```{bash, eval=FALSE}
+sudo apt install openjdk-8-jdk
+java --version
+```
+
+続いて、適当なディレクトリに移動して、Apache Sparkのファイルをダウンロード&展開します（バージョンを2.4.4でHadoop付きとします）。
+
+```{bash, eval=FALSE}
+cd /usr/local
+sudo curl -O https://www-us.apache.org/dist/spark/spark-2.4.4/spark-2.4.4４-bin-hadoop2.7.tgz
+sudo tar xvf spark-2.4.4-bin-hadoop2.7.tgz
+```
+
+最後に、シンボリックリンク作成し、パスを通します。
+
+```{bash, eval=FALSE}
+sudo ln -s /usr/local/spark-2.4.4-bin-hadoop2.7 /usr/local/spark
+sudo atom ~/.profile
+```
+
+`atom`では末尾に以下を追加します。
+
+```{bash, eval=FALSE}
+export SPARK_HOME=/usr/local/spark
+export PATH=$PATH:$SPARK_HOME/bin
+```
+
+パスの変更を反映させます。
+
+```{bash, eval=FALSE}
+source ~/.profile
+```
+
+`spark-shell`で起動できれば成功（のはず）です。
+
+### Rパッケージ
+
+RでApache Sparkを使うには[SparkR](https://spark.apache.org/docs/latest/sparkr.html)か[sparklyr](https://spark.rstudio.com/)を使います。
+
+```{r, eval = FALSE}
+install.packages("SparkR")
+install.packages("sparklyr")
+```
+
+### Pythonパッケージ
+
+PythonでApache Sparkを使うには[pyspark](https://spark.apache.org/docs/latest/api/python/index.html)を使います。
+
+```{bash, eval=FALSE}
+sudo pip3 install pyspark
+```
+
+## TeXLive {#LaTeX}
+
+TeXLiveをインストールします（[参考サイト](http://xartaky.hatenablog.jp/entry/2016-12-27-texlive-on-ubuntu)）。
+
+```{bash, eval=FALSE}
+cd ~/Downloads
+wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+tar xvf install-tl-unx.tar.gz
+ls
+cd install-tl-YYYYMMDD
+sudo ./install-tl --repository http://mirror.ctan.org/systems/texlive/tlnet/
+sudo /usr/local/texlive/YYYY/bin/x86_64-linux/tlmgr path add
+```
+
+- `YYYY`, `MM`, `DD`はバージョンにより変わります。
+- `tinytex`をRでインストールする方法は[こちら](https://shohei-doi.github.io/notes/posts/2019-04-12-rmarkdown-pdf/#Install)を参照。
+
+## VScode {#Vscode}
+
+これまで、[Atom](https://atom.io/)をメインのエディタにしていましたが、[VScode](https://azure.microsoft.com/ja-jp/products/visual-studio-code/)に移りつつあります。
+
+理由としては、
+
+1. LaTeXのオートコンプリートがまあまあよい、
+1. PythonがRStudioライクに動かせる、
+1. Atomより軽い（らしい）、
+
+からです。
+
+### 一般向けパッケージ
+
+- [Grammarly](https://marketplace.visualstudio.com/items?itemName=znck.grammarly)：スペルチェック
+
+### Python向けパッケージ
+
+- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+
+### LaTeX向けパッケージ
+
+- [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+- [LaTeX Utilities](https://marketplace.visualstudio.com/items?itemName=tecosaur.latex-utilities)
+
+ただし、このままではコンパイルできないので、[こちら](https://qiita.com/popunbom/items/7d02fc75ad23b735d28c)を参考に、環境を整えます。
+
+- とりあえず、LaTeX Workshopの設定だけで大丈夫そう。
+
+## Atom {#Atom}
+
+VScodeに移りつつありますが、以下の理由でAtomも入れておきます。
+
+1. VScodeはroot権限でファイルを開くのがめんどくさい。
+1. Juliaの統合開発環境として採用されている。
+
+Atomを[公式サイト](https://atom.io/)からダウンロード&インストールします。
+
+- 設定で`Editor`の`Soft Wrap`を有効にします。
+
+### 一般向けパッケージ
+
+- [minimap](https://atom.io/packages/minimap)：ミニマップ
+- [highlight-column](https://atom.io/packages/highlight-column)：列のハイライト
+- [file-icons](https://atom.io/packages/file-icons)：色付きアイコン
+
+### LaTeX向けパッケージ
+
+- [latex](https://atom.io/packages/latex)：タイプセット
+  - デフォルトのエンジンを`xelatex`にします。
+  - `Clean Patterns`で`.pdf`を`.xdv`に変更します。
+- [language-latex](https://atom.io/packages/language-latex)：シンタックス・ハイライト
+- [wordcount](https://atom.io/packages/wordcount)：ワードカウント
+- [ginger](https://atom.io/packages/ginger)：英文法チェッカー
+
+### Python向けパッケージ
+
+- [Hydrogen](https://atom.io/packages/hydrogen)：Atom上でjupyterの操作
+- [hydrogen-python](https://atom.io/packages/hydrogen-python)：variable explorer
+- [autocomplete-python](https://atom.io/packages/autocomplete-python)：オートコンプリート（Kiteが素晴らしい）
+
+RStudioと同様に`Ctrl + Enter`で実行かつ次の行への移動を行うためにキーバインディングを以下のように追加します。
+
+```{bash, eval=FALSE}
+'.platform-win32 atom-text-editor:not([mini]), .platform-linux atom-text-editor:not([mini])':
+  'ctrl-enter': 'hydrogen:run-and-move-down'
+```
+
+ついでに、`.py`ファイルをAtomを紐づけします。
+
+### Julia向けパッケージ
+
+- [Juno](https://junolab.org/)：統合開発環境
+
+RStudioと同様に`Ctrl + Enter`で実行かつ次の行への移動を行うためにキーバインディングを以下のように追加します。
+
+```{bash, eval=FALSE}
+'.platform-win32 atom-text-editor[data-grammar="source julia"], .platform-linux atom-text-editor[data-grammar="source julia"]':
+  'ctrl-enter': 'julia-client:run-and-move'
+```
+
+ついでに、`.jl`ファイルとAtomを紐づけします。
+
+### R向けパッケージ
+
+RStudioで十分ですが、AtomでHydrogen経由でRを使うこともできます（[こちら](http://can.hatenadiary.com/entry/2016/12/15/000000)）を参照）。
+
+```{r, eval = FALSE}
+install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
+devtools::install_github('IRkernel/IRkernel')
+```
+
+ターミナル上でRを起動して、以下を実行します。
+
+```{r, eval = FALSE}
+IRkernel::installspec()
+```
+
+- [rbox](https://atom.io/packages/rbox)：シンタックス・ハイライト、オートコンプリートなど
