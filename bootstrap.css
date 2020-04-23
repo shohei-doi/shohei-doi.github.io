@@ -98,12 +98,18 @@ ol ul,
 ul ol {
   margin-bottom: 0; }
 
+ul dl {
+  margin-bottom: 0; }
+
 dt {
   font-weight: 700; }
 
 dd {
   margin-bottom: .5rem;
   margin-left: 0; }
+
+ul dd {
+  margin-bottom: 0;}
 
 blockquote {
   margin: 0 0 1rem; }
@@ -3590,7 +3596,8 @@ input[type="button"].btn-block {
   margin-bottom: 0;
 }
 
-.alert ul {
+.alert ul,
+.alert dl {
   margin-bottom: 0;
 }
 
