@@ -3586,6 +3586,14 @@ input[type="button"].btn-block {
   border: 1px solid transparent;
   border-radius: 0rem; }
 
+.alert p {
+  margin-bottom: 0;
+}
+
+.alert ul {
+  margin-bottom: 0;
+}
+
 .alert-heading {
   color: inherit; }
 
