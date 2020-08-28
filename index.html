@@ -34,17 +34,17 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#profile-en" role="tab" aria-controls="profile-en" aria-selected="false">
+        <ul class="nav navbar-nav mr-auto" role="tablist">
+          <li class="nav-item active">
+            <a class="nav-link active" data-toggle="tab" href="#profile-jp" role="tab" aria-controls="profile-jp" aria-selected="false">
               <i class="fas fa-user-circle"></i>
-              Bio (EN)
+              Bio (JP)
             </a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" data-toggle="tab" href="#profile-jp" role="tab" aria-controls="profile-jp" aria-selected="true">
+            <a class="nav-link active" data-toggle="tab" href="#profile-en" role="tab" aria-controls="profile-en" aria-selected="false">
               <i class="fas fa-user-circle"></i>
-              Bio (JP)
+              Bio (EN)
             </a>
           </li>
           <li class="nav-item active">
@@ -106,15 +106,15 @@
       <div class="d-none d-lg-block">
         <ul class="nav nav-tabs nav-fill mb-3" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#profile-en" role="tab" aria-controls="profile-en" aria-selected="false">
+            <a class="nav-link" data-toggle="tab" href="#profile-jp" role="tab" aria-controls="profile-jp" aria-selected="false">
               <i class="fas fa-user-circle text-primary"></i>
-              Bio (EN)
+              Bio (JP)
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#profile-jp" role="tab" aria-controls="profile-jp" aria-selected="true">
+            <a class="nav-link active" data-toggle="tab" href="#profile-en" role="tab" aria-controls="profile-en" aria-selected="false">
               <i class="fas fa-user-circle text-primary"></i>
-              Bio (JP)
+              Bio (EN)
             </a>
           </li>
           <li class="nav-item">
@@ -390,11 +390,26 @@
           <div class="row">
             <div class="col-md-8">
               <div class="alert alert-primary" role="alert">
-                2020年度の前期に、一橋大学で「国際政治の計量分析」の講義を担当します。
-                詳細は<a href="hit-quant-ir-2020.html">こちら</a>をご覧ください。
+                <p>
+                  "<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0237862" target="_blank">The power of corporate control in the global ownership network</a>"（水野貴之、栗崎周平との共著）がPLOS ONEに出版されました。
+                </p>
+              </div>
+              <div class="alert alert-primary" role="alert">
+                <p>
+                  2020年11月7日に政治学若手研究者フォーラムを開催します。
+                  詳細は<a href="https://bit.ly/2QjBjiO">こちら</a>をご覧下さい。
+                </p>
+              </div>
+              <div class="alert alert-primary" role="alert">
+                <p>
+                  2020年度の後期に、東京外国語大学で「国際政治経済学入門」の講義を担当します。
+                  詳細は<a href="tufs-intro-ipe-2020.html">こちら</a>をご覧ください。
+                </p>
               </div>
               <div class="alert alert-danger" role="alert">
-                2020年3月10日に早稲田大学で開かれる予定だった<a href="https://www.dropbox.com/s/59pe3gjb2kc4e05/Tech%20for%20peace_final.pdf?dl=0" target="_blank">Tech for Peace</a>は、新型コロナの流行を受けて延期となりました。
+                <p>
+                  2020年3月10日に早稲田大学で開かれる予定だった<a href="https://www.dropbox.com/s/59pe3gjb2kc4e05/Tech%20for%20peace_final.pdf?dl=0" target="_blank">Tech for Peace</a>は、新型コロナの流行を受けて延期となりました。
+                </p>
               </div>
             </div>
             <div class="col-md-4">
@@ -408,6 +423,49 @@
               <div class="card">
                 <div class="card-header">
                   Reviewed Article
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0237862" target="_blank">
+                      The power of corporate control in the global ownership network
+                    </a>
+                  </h5>
+                  <p class="card-text">
+                    Mizuno Takayuki, Shohei Doi and Shuhei Kurizaki
+                  </p>
+                  <p class="card-text text-muted">
+                    PLOS ONE, 2020, 15(8): e0237862
+                    <i class="fas fa-unlock-alt text-primary"></i>
+                  </p>
+                  <p>
+                    <small>
+                      We uncover the power of shareholders, including governments, to control corporates in global ownership network.
+                    </small>
+                  </p>
+                  <p>
+                    <a class="badge badge-primary" data-toggle="modal" data-target="#PowerToControl" href="#">
+                      Abstract
+                    </a>
+                    <div class="modal fade" id="PowerToControl" tabindex="-1" role="dialog" aria-labelledby="PowerToControlTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-scrollable" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title text-muted">
+                              The power of corporate control in the global ownership network
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body text-justify">
+                            <small>
+                              As passive investment through index funds and Exchange Traded Funds (ETFs) has become pervasive, the structure of corporate control in the global capital market is more complex than before. We propose a new model and calculation algorithm to measure a shareholder’s power to control corporations in the global economy. Our method takes into account how fragmented voting rights attached to dispersed ownership may be consolidated to generate corporate control. Analyzing the ownership holdings in 49 million companies worldwide by 69 million shareholders in 2016, we find that the landscape of global corporate control appears differently if we adequately evaluate indirect influence via dispersed ownership. In particular, a larger portion of corporate control appears to be concentrated in the hands of sovereign governments than has been recognized before. Yet, such governmental capacities are “hidden” if we use the conventional method. Moreover, financial institutions appear to not be as powerful as emphasized before. These results point to important financial and political risks both for scholars and policymakers.
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </p>
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">
@@ -557,48 +615,6 @@
                 <div class="card-body">
                   <h5 class="card-title">
                     <a href="#" target="_blank">
-                      The power of corporate control in the global ownership network
-                    </a>
-                  </h5>
-                  <p class="card-text">
-                    Mizuno Takayuki, Shohei Doi and Shuhei Kurizaki
-                  </p>
-                  <p class="card-text text-muted">
-                    Under review
-                  </p>
-                  <p>
-                    <small>
-                      We uncover the power of shareholders, including governments, to control corporates in global ownership network.
-                    </small>
-                  </p>
-                  <p>
-                    <a class="badge badge-primary" data-toggle="modal" data-target="#PowerToControl" href="#">
-                      Abstract
-                    </a>
-                    <div class="modal fade" id="PowerToControl" tabindex="-1" role="dialog" aria-labelledby="PowerToControlTitle" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-scrollable" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title text-muted">
-                              The power of corporate control in the global ownership network
-                            </h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body text-justify">
-                            <small>
-                              As passive investment through index funds and Exchange Traded Funds (ETFs) has become pervasive, the structure of corporate control in the global capital market is more complex than before.  We propose a new model and calculation algorithm to measure a shareholder's power to control corporations in the global economy.  Our method takes into account how fragmented voting rights attached to dispersed ownership may be consolidated to generate corporate control.  Analyzing the ownership holdings in 49 million companies worldwide by 69 million shareholders in 2016, we find that the landscape of global corporate control appears differently if we adequately evaluate indirect influence via dispersed ownership.  In particular, a larger portion of corporate control appears to be concentrated in the hands of sovereign governments than it has been recognized before.  Yet, such governmental capacities are ``hidden'' if we use the conventional method.  This result points to important financial and political risks both for scholars and policymakers.
-                            </small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </p>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                    <a href="#" target="_blank">
                       Hope and skepticism of peer pressure for climate cooperation: Evidence from the analysis of heterogeneous policy diffusion
                     </a>
                   </h5>
@@ -725,9 +741,9 @@
                     <a href="https://gakumu-web1.tufs.ac.jp/Portal/Public/Syllabus/DetailMain.aspx?lct_year=2020&lct_cd=19223006" target="_blank" class="badge badge-primary">
                       シラバス
                     </a>
-                    <!-- <a href="tufs-intro-ipe-2020.html class="badge badge-primary">
+                    <a href="tufs-intro-ipe-2020.html" class="badge badge-primary">
                       講義ページ
-                    </a> -->
+                    </a>
                   </p>
                   <p class="card-text">
                     <strong class="text-primary">
