@@ -4,7 +4,7 @@ description: |
   Ubuntuをインストールした後に行う環境構築をまとめました。
 author:
   - name: 土井　翔平
-    affiliation: 早稲田大学
+    affiliation: 北海道大学
 date: "`r Sys.Date()`"
 output:
   distill::distill_article:
@@ -219,6 +219,113 @@ sudo apt install git
 git config --global user.name "shohei doi"
 git config --global user.email "shohei.doi0504@gmail.com"
 ```
+
+## SSH {#SSH}
+
+### サーバ側の設定
+
+まず、ファイアーウォールを有効にして特定のポート以外を閉じます。
+
+```{bash, eval=FALSE}
+sudo ufw enable
+sudo ufw status
+sudo ufw default DENY
+sudo ufw allow XXXX
+```
+
+次にSSHサーバをインストールします。
+
+```{bash, eval=FALSE}
+sudo apt install openssh-server
+systemctl status ssh
+```
+
+公開鍵方式でアクセスするため、鍵のペアを生成します。
+
+```{bash, eval=FALSE}
+ssh-keygen
+```
+
+ホームディレクトリに`.ssh`というディレクトリができており、その中に公開鍵`id_rsa.pub`と秘密鍵`id_rsa`があるはずです。
+公開鍵の内容をサーバの`.ssh`ディレクトリの中の`authorized_keys`というファイルに書き込みます。
+
+`~/.ssh`の権限を修正しておきます。
+
+```{bash, eval=FALSE}
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+```
+
+サーバ側のSSHの設定ファイルを開き、
+
+```{bash, eval=FALSE}
+nano sudo /etc/ssh/sshd_config
+```
+
+- `ssh_config`と間違えないように注意する。
+
+必要に応じて以下のコマンドを修正します。
+
+```{}
+Port XXXX
+PubkeyAuthentication yes
+AuthorizedKeysFile  .ssh/authorized_keys
+PasswordAuthentication no
+PermitEmptyPasswords no
+ChallengeResponseAuthentication no
+```
+
+- 使えるポート番号を指定し、パスワード認証を禁止しています。
+
+設定の変更を反映させます。
+
+```{bash, eval=FALSE}
+sudo systemctl restart sshd
+```
+
+最後に、固定IPを割り振ります。
+
+- ゲートウェイの確認：`ip r`
+- ネットマスクの確認：`ifconfig`
+- DNSサーバの確認：ルータのIPアドレス（例えば`192.168.0.1`）
+
+ルーターの設定で固定したIPアドレスとルーターを入力します。
+
+### クライアント側の設定
+
+秘密鍵をクライアント側の`~/.ssh`になんとかして保存します。
+そして権限を修正しておきます。
+
+```{bash, eval=FALSE}
+chmod 700 ~/.ssh
+```
+
+クライアントをインストールします。
+
+```{bash, eval=FALSE}
+sudo apt install openssh-client
+```
+
+クライアント側のSSHの設定ファイルを開き、
+
+```{bash, eval=FALSE}
+nano sudo /etc/ssh/ssh_config
+```
+
+必要に応じて以下のコマンドを修正します。
+
+```{}
+IdentityFile ~/.ssh/id_rsa
+Port XXXX
+```
+
+以下のコマンドでターミナルにSSH接続できるはずです。
+
+```{bash, eval=FALSE}
+ssh <ip.address>
+```
+
+- `<ip.address>`はサーバで`hostname -I`で確認できます。
 
 ## R/RStudio {#R}
 
@@ -543,6 +650,13 @@ sudo /usr/local/texlive/YYYY/bin/x86_64-linux/tlmgr path add
 ### Python向けパッケージ
 
 - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+  - 設定でJupyter: Send Selection To Interactive Windowを有効にする。
+  
+[Kite](https://www.kite.com/)もインストールしておきます。
+
+```{bash, eval=FALSE}
+bash -c "$(wget -q -O - https://linux.kite.com/dls/linux/current)"
+```
 
 ### LaTeX向けパッケージ
 
@@ -553,73 +667,73 @@ sudo /usr/local/texlive/YYYY/bin/x86_64-linux/tlmgr path add
 
 - とりあえず、LaTeX Workshopの設定だけで大丈夫そう。
 
-## Atom {#Atom}
+<!-- ## Atom {#Atom} -->
 
-VScodeに移りつつありますが、以下の理由でAtomも入れておきます。
+<!-- VScodeに移りつつありますが、以下の理由でAtomも入れておきます。 -->
 
-1. VScodeはroot権限でファイルを開くのがめんどくさい。
-1. Juliaの統合開発環境として採用されている。
+<!-- 1. VScodeはroot権限でファイルを開くのがめんどくさい。 -->
+<!-- 1. Juliaの統合開発環境として採用されている。 -->
 
-Atomを[公式サイト](https://atom.io/)からダウンロード&インストールします。
+<!-- Atomを[公式サイト](https://atom.io/)からダウンロード&インストールします。 -->
 
-- 設定で`Editor`の`Soft Wrap`を有効にします。
+<!-- - 設定で`Editor`の`Soft Wrap`を有効にします。 -->
 
-### 一般向けパッケージ
+<!-- ### 一般向けパッケージ -->
 
-- [minimap](https://atom.io/packages/minimap)：ミニマップ
-- [highlight-column](https://atom.io/packages/highlight-column)：列のハイライト
-- [file-icons](https://atom.io/packages/file-icons)：色付きアイコン
+<!-- - [minimap](https://atom.io/packages/minimap)：ミニマップ -->
+<!-- - [highlight-column](https://atom.io/packages/highlight-column)：列のハイライト -->
+<!-- - [file-icons](https://atom.io/packages/file-icons)：色付きアイコン -->
 
-### LaTeX向けパッケージ
+<!-- ### LaTeX向けパッケージ -->
 
-- [latex](https://atom.io/packages/latex)：タイプセット
-  - デフォルトのエンジンを`xelatex`にします。
-  - `Clean Patterns`で`.pdf`を`.xdv`に変更します。
-- [language-latex](https://atom.io/packages/language-latex)：シンタックス・ハイライト
-- [wordcount](https://atom.io/packages/wordcount)：ワードカウント
-- [ginger](https://atom.io/packages/ginger)：英文法チェッカー
+<!-- - [latex](https://atom.io/packages/latex)：タイプセット -->
+<!--   - デフォルトのエンジンを`xelatex`にします。 -->
+<!--   - `Clean Patterns`で`.pdf`を`.xdv`に変更します。 -->
+<!-- - [language-latex](https://atom.io/packages/language-latex)：シンタックス・ハイライト -->
+<!-- - [wordcount](https://atom.io/packages/wordcount)：ワードカウント -->
+<!-- - [ginger](https://atom.io/packages/ginger)：英文法チェッカー -->
 
-### Python向けパッケージ
+<!-- ### Python向けパッケージ -->
 
-- [Hydrogen](https://atom.io/packages/hydrogen)：Atom上でjupyterの操作
-- [hydrogen-python](https://atom.io/packages/hydrogen-python)：variable explorer
-- [autocomplete-python](https://atom.io/packages/autocomplete-python)：オートコンプリート（Kiteが素晴らしい）
+<!-- - [Hydrogen](https://atom.io/packages/hydrogen)：Atom上でjupyterの操作 -->
+<!-- - [hydrogen-python](https://atom.io/packages/hydrogen-python)：variable explorer -->
+<!-- - [autocomplete-python](https://atom.io/packages/autocomplete-python)：オートコンプリート（Kiteが素晴らしい） -->
 
-RStudioと同様に`Ctrl + Enter`で実行かつ次の行への移動を行うためにキーバインディングを以下のように追加します。
+<!-- RStudioと同様に`Ctrl + Enter`で実行かつ次の行への移動を行うためにキーバインディングを以下のように追加します。 -->
 
-```{bash, eval=FALSE}
-'.platform-win32 atom-text-editor:not([mini]), .platform-linux atom-text-editor:not([mini])':
-  'ctrl-enter': 'hydrogen:run-and-move-down'
-```
+<!-- ```{bash, eval=FALSE} -->
+<!-- '.platform-win32 atom-text-editor:not([mini]), .platform-linux atom-text-editor:not([mini])': -->
+<!--   'ctrl-enter': 'hydrogen:run-and-move-down' -->
+<!-- ``` -->
 
-ついでに、`.py`ファイルをAtomを紐づけします。
+<!-- ついでに、`.py`ファイルをAtomを紐づけします。 -->
 
-### Julia向けパッケージ
+<!-- ### Julia向けパッケージ -->
 
-- [Juno](https://junolab.org/)：統合開発環境
+<!-- - [Juno](https://junolab.org/)：統合開発環境 -->
 
-RStudioと同様に`Ctrl + Enter`で実行かつ次の行への移動を行うためにキーバインディングを以下のように追加します。
+<!-- RStudioと同様に`Ctrl + Enter`で実行かつ次の行への移動を行うためにキーバインディングを以下のように追加します。 -->
 
-```{bash, eval=FALSE}
-'.platform-win32 atom-text-editor[data-grammar="source julia"], .platform-linux atom-text-editor[data-grammar="source julia"]':
-  'ctrl-enter': 'julia-client:run-and-move'
-```
+<!-- ```{bash, eval=FALSE} -->
+<!-- '.platform-win32 atom-text-editor[data-grammar="source julia"], .platform-linux atom-text-editor[data-grammar="source julia"]': -->
+<!--   'ctrl-enter': 'julia-client:run-and-move' -->
+<!-- ``` -->
 
-ついでに、`.jl`ファイルとAtomを紐づけします。
+<!-- ついでに、`.jl`ファイルとAtomを紐づけします。 -->
 
-### R向けパッケージ
+<!-- ### R向けパッケージ -->
 
-RStudioで十分ですが、AtomでHydrogen経由でRを使うこともできます（[こちら](http://can.hatenadiary.com/entry/2016/12/15/000000)）を参照）。
+<!-- RStudioで十分ですが、AtomでHydrogen経由でRを使うこともできます（[こちら](http://can.hatenadiary.com/entry/2016/12/15/000000)）を参照）。 -->
 
-```{r, eval = FALSE}
-install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))
-devtools::install_github('IRkernel/IRkernel')
-```
+<!-- ```{r, eval = FALSE} -->
+<!-- install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest')) -->
+<!-- devtools::install_github('IRkernel/IRkernel') -->
+<!-- ``` -->
 
-ターミナル上でRを起動して、以下を実行します。
+<!-- ターミナル上でRを起動して、以下を実行します。 -->
 
-```{r, eval = FALSE}
-IRkernel::installspec()
-```
+<!-- ```{r, eval = FALSE} -->
+<!-- IRkernel::installspec() -->
+<!-- ``` -->
 
-- [rbox](https://atom.io/packages/rbox)：シンタックス・ハイライト、オートコンプリートなど
+<!-- - [rbox](https://atom.io/packages/rbox)：シンタックス・ハイライト、オートコンプリートなど -->

@@ -20,26 +20,28 @@
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -48,9 +50,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
@@ -85,76 +87,76 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   <!--radix_placeholder_meta_tags-->
   <title>Ubuntuのセットアップ</title>
-  
+
   <meta property="description" itemprop="description" content="Ubuntuをインストールした後に行う環境構築をまとめました。"/>
-  
-  
+
+
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2021-03-02"/>
-  <meta property="article:created" itemprop="dateCreated" content="2021-03-02"/>
+  <meta property="article:published" itemprop="datePublished" content="2021-03-30"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-03-30"/>
   <meta name="article:author" content="土井　翔平"/>
-  
+
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="Ubuntuのセットアップ"/>
   <meta property="og:type" content="article"/>
   <meta property="og:description" content="Ubuntuをインストールした後に行う環境構築をまとめました。"/>
   <meta property="og:locale" content="en_US"/>
-  
+
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="Ubuntuのセットアップ"/>
   <meta property="twitter:description" content="Ubuntuをインストールした後に行う環境構築をまとめました。"/>
   <meta property="twitter:creator" content="@sdoi0504"/>
-  
+
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
-  
+
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter"]}},"value":[{"type":"character","attributes":{},"value":["Ubuntuのセットアップ"]},{"type":"character","attributes":{},"value":["Ubuntuをインストールした後に行う環境構築をまとめました。\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["早稲田大学"]}]}]},{"type":"character","attributes":{},"value":["2021-03-02"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["includes","css","self_contained","toc","toc_depth"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["in_header"]}},"value":[{"type":"character","attributes":{},"value":["head.html"]}]},{"type":"character","attributes":{},"value":["styles.css"]},{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["Ubuntu","setup"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter"]}},"value":[{"type":"character","attributes":{},"value":["Ubuntuのセットアップ"]},{"type":"character","attributes":{},"value":["Ubuntuをインストールした後に行う環境構築をまとめました。\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["土井　翔平"]},{"type":"character","attributes":{},"value":["北海道大学"]}]}]},{"type":"character","attributes":{},"value":["2021-03-30"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["includes","css","self_contained","toc","toc_depth"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["in_header"]}},"value":[{"type":"character","attributes":{},"value":["head.html"]}]},{"type":"character","attributes":{},"value":["styles.css"]},{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["Ubuntu","setup"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@sdoi0504"]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["bootstrap.css","head.html","hit-quant-ir-2020.html","index.html","lazysizes.min.js","notes/sitemap.xml","styles.css","tufs-intro-ipe-2020.html","ubuntu_0.html","ubuntu_files/bowser-1.9.3/bowser.min.js","ubuntu_files/distill-2.2.21/template.v2.js","ubuntu_files/jquery-1.11.3/jquery.min.js","ubuntu_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["bootstrap.css","head.html","hit-quant-ir-2020.html","index.html","lazysizes.min.js","notes/sitemap.xml","styles.css","tufs-intro-ipe-2020.html","ubuntu_0.html","ubuntu_files/anchor-4.2.2/anchor.min.js","ubuntu_files/bowser-1.9.3/bowser.min.js","ubuntu_files/distill-2.2.21/template.v2.js","ubuntu_files/header-attrs-2.7/header-attrs.js","ubuntu_files/jquery-1.11.3/jquery.min.js","ubuntu_files/popper-2.6.0/popper.min.js","ubuntu_files/tippy-6.2.7/tippy-bundle.umd.min.js","ubuntu_files/tippy-6.2.7/tippy-light-border.css","ubuntu_files/tippy-6.2.7/tippy.css","ubuntu_files/tippy-6.2.7/tippy.umd.min.js","ubuntu_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
-  
+
   <style type="text/css">
-  
+
   body {
     background-color: white;
   }
-  
+
   .pandoc-table {
     width: 100%;
   }
-  
+
   .pandoc-table>caption {
     margin-bottom: 10px;
   }
-  
+
   .pandoc-table th:not([align]) {
     text-align: left;
   }
-  
+
   .pagedtable-footer {
     font-size: 15px;
   }
-  
+
   d-byline .byline {
     grid-template-columns: 2fr 2fr;
   }
-  
+
   d-byline .byline h3 {
     margin-block-start: 1.5em;
   }
-  
+
   d-byline .byline .authors-affiliations h3 {
     margin-block-start: 0.5em;
   }
-  
+
   .authors-affiliations .orcid-id {
     width: 16px;
     height:16px;
@@ -163,12 +165,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     vertical-align: middle;
     padding-bottom: 2px;
   }
-  
+
   d-title .dt-tags {
     margin-top: 1em;
     grid-column: text;
   }
-  
+
   .dt-tags .dt-tag {
     text-decoration: none;
     display: inline-block;
@@ -182,24 +184,24 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     text-transform: uppercase;
     font-weight: 500;
   }
-  
+
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
   }
-  
+
   .html-widget {
     margin-bottom: 2.0em;
   }
-  
+
   .l-screen-inset {
     padding-right: 16px;
   }
-  
+
   .l-screen .caption {
     margin-left: 10px;
   }
-  
+
   .shaded {
     background: rgb(247, 247, 247);
     padding-top: 20px;
@@ -207,75 +209,75 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
+
   .shaded .html-widget {
     margin-bottom: 0;
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
+
   .shaded .shaded-content {
     background: white;
   }
-  
+
   .text-output {
     margin-top: 0;
     line-height: 1.5em;
   }
-  
+
   .hidden {
     display: none !important;
   }
-  
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
   }
-  
+
   d-appendix {
     padding-top: 30px;
   }
-  
+
   d-article>p>img {
     width: 100%;
   }
-  
+
   d-article h2 {
     margin: 1rem 0 1.5rem 0;
   }
-  
+
   d-article h3 {
     margin-top: 1.5rem;
   }
-  
+
   d-article iframe {
     border: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 2.0em;
     width: 100%;
   }
-  
+
   /* Tweak code blocks */
-  
+
   d-article div.sourceCode code,
   d-article pre code {
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   }
-  
+
   d-article pre,
   d-article div.sourceCode,
   d-article div.sourceCode pre {
     overflow: auto;
   }
-  
+
   d-article div.sourceCode {
     background-color: white;
   }
-  
+
   d-article div.sourceCode pre {
     padding-left: 10px;
     font-size: 12px;
     border-left: 2px solid rgba(0,0,0,0.1);
   }
-  
+
   d-article pre {
     font-size: 12px;
     color: black;
@@ -287,50 +289,50 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     word-break: normal;
     word-wrap: normal;
     line-height: 1.5;
-  
+
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
-  
+
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
   }
-  
+
   d-article pre a {
     border-bottom: none;
   }
-  
+
   d-article pre a:hover {
     border-bottom: none;
     text-decoration: underline;
   }
-  
+
   d-article details {
     grid-column: text;
     margin-bottom: 0.8em;
   }
-  
+
   @media(min-width: 768px) {
-  
+
   d-article pre,
   d-article div.sourceCode,
   d-article div.sourceCode pre {
     overflow: visible !important;
   }
-  
+
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
   }
-  
+
   d-article pre {
     font-size: 14px;
   }
-  
+
   }
-  
+
   figure img.external {
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -338,9 +340,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding: 18px;
     box-sizing: border-box;
   }
-  
+
   /* CSS for d-contents */
-  
+
   .d-contents {
     grid-column: text;
     color: rgba(0,0,0,0.8);
@@ -352,7 +354,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding-left: 0.25em;
     justify-self: start;
   }
-  
+
   @media(min-width: 1000px) {
     .d-contents.d-contents-float {
       height: 0;
@@ -363,82 +365,82 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       padding-left: 2em;
     }
   }
-  
+
   .d-contents nav h3 {
     font-size: 18px;
     margin-top: 0;
     margin-bottom: 1em;
   }
-  
+
   .d-contents li {
     list-style-type: none
   }
-  
+
   .d-contents nav > ul {
     padding-left: 0;
   }
-  
+
   .d-contents ul {
     padding-left: 1em
   }
-  
+
   .d-contents nav ul li {
     margin-top: 0.6em;
     margin-bottom: 0.2em;
   }
-  
+
   .d-contents nav a {
     font-size: 13px;
     border-bottom: none;
     text-decoration: none
     color: rgba(0, 0, 0, 0.8);
   }
-  
+
   .d-contents nav a:hover {
     text-decoration: underline solid rgba(0, 0, 0, 0.6)
   }
-  
+
   .d-contents nav > ul > li > a {
     font-weight: 600;
   }
-  
+
   .d-contents nav > ul > li > ul {
     font-weight: inherit;
   }
-  
+
   .d-contents nav > ul > li > ul > li {
     margin-top: 0.2em;
   }
-  
-  
+
+
   .d-contents nav ul {
     margin-top: 0;
     margin-bottom: 0.25em;
   }
-  
+
   .d-article-with-toc h2:nth-child(2) {
     margin-top: 0;
   }
-  
-  
+
+
   /* Figure */
-  
+
   .figure {
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
   }
-  
+
   .figure img {
     width: 100%;
   }
-  
+
   .figure .caption {
     color: rgba(0, 0, 0, 0.6);
     font-size: 12px;
     line-height: 1.5em;
   }
-  
+
   .figure img.external {
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -446,42 +448,42 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding: 18px;
     box-sizing: border-box;
   }
-  
+
   .figure .caption a {
     color: rgba(0, 0, 0, 0.6);
   }
-  
+
   .figure .caption b,
   .figure .caption strong, {
     font-weight: 600;
     color: rgba(0, 0, 0, 1.0);
   }
-  
+
   /* Citations */
-  
+
   d-article .citation {
     color: inherit;
     cursor: inherit;
   }
-  
+
   div.hanging-indent{
     margin-left: 1em; text-indent: -1em;
   }
-  
+
   /* Citation hover box */
-  
+
   .tippy-box[data-theme~=light-border] {
     background-color: rgba(250, 250, 250, 0.95);
   }
-  
+
   .tippy-content > p {
     margin-bottom: 0;
     padding: 2px;
   }
-  
-  
+
+
   /* Tweak 1000px media break to show more text */
-  
+
   @media(min-width: 1000px) {
     .base-grid,
     distill-header,
@@ -497,11 +499,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
       grid-column-gap: 16px;
     }
-  
+
     .grid {
       grid-column-gap: 16px;
     }
-  
+
     d-article {
       font-size: 1.06rem;
       line-height: 1.7em;
@@ -510,7 +512,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       font-size: 13px;
     }
   }
-  
+
   @media(min-width: 1180px) {
     .base-grid,
     distill-header,
@@ -526,16 +528,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
       grid-column-gap: 32px;
     }
-  
+
     .grid {
       grid-column-gap: 32px;
     }
   }
-  
-  
+
+
   /* Get the citation styles for the appendix (not auto-injected on render since
      we do our own rendering of the citation appendix) */
-  
+
   d-appendix .citation-appendix,
   .d-appendix .citation-appendix {
     font-size: 11px;
@@ -552,9 +554,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     white-space: pre-wrap;
     word-wrap: break-word;
   }
-  
+
   /* Include appendix styles here so they can be overridden */
-  
+
   d-appendix {
     contain: layout style;
     font-size: 0.8em;
@@ -566,7 +568,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding-top: 60px;
     padding-bottom: 48px;
   }
-  
+
   d-appendix h3 {
     grid-column: page-start / text-start;
     font-size: 15px;
@@ -575,59 +577,59 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     margin-bottom: 0;
     color: rgba(0,0,0,0.65);
   }
-  
+
   d-appendix h3 + * {
     margin-top: 1em;
   }
-  
+
   d-appendix ol {
     padding: 0 0 0 15px;
   }
-  
+
   @media (min-width: 768px) {
     d-appendix ol {
       padding: 0 0 0 30px;
       margin-left: -30px;
     }
   }
-  
+
   d-appendix li {
     margin-bottom: 1em;
   }
-  
+
   d-appendix a {
     color: rgba(0, 0, 0, 0.6);
   }
-  
+
   d-appendix > * {
     grid-column: text;
   }
-  
+
   d-appendix > d-footnote-list,
   d-appendix > d-citation-list,
   d-appendix > distill-appendix {
     grid-column: screen;
   }
-  
+
   /* Include footnote styles here so they can be overridden */
-  
+
   d-footnote-list {
     contain: layout style;
   }
-  
+
   d-footnote-list > * {
     grid-column: text;
   }
-  
+
   d-footnote-list a.footnote-backlink {
     color: rgba(0,0,0,0.3);
     padding-left: 0.5em;
   }
-  
-  
-  
+
+
+
   /* Anchor.js */
-  
+
   .anchorjs-link {
     /*transition: all .25s linear; */
     text-decoration: none;
@@ -638,86 +640,86 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     text-decoration: none;
     border-bottom: none;
   }
-  
+
   /* Social footer */
-  
+
   .social_footer {
     margin-top: 30px;
     margin-bottom: 0;
     color: rgba(0,0,0,0.67);
   }
-  
+
   .disqus-comments {
     margin-right: 30px;
   }
-  
+
   .disqus-comment-count {
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     cursor: pointer;
   }
-  
+
   #disqus_thread {
     margin-top: 30px;
   }
-  
+
   .article-sharing a {
     border-bottom: none;
     margin-right: 8px;
   }
-  
+
   .article-sharing a:hover {
     border-bottom: none;
   }
-  
+
   .sidebar-section.subscribe {
     font-size: 12px;
     line-height: 1.6em;
   }
-  
+
   .subscribe p {
     margin-bottom: 0.5em;
   }
-  
-  
+
+
   .article-footer .subscribe {
     font-size: 15px;
     margin-top: 45px;
   }
-  
-  
+
+
   .sidebar-section.custom {
     font-size: 12px;
     line-height: 1.6em;
   }
-  
+
   .custom p {
     margin-bottom: 0.5em;
   }
-  
+
   /* Styles for listing layout (hide title) */
   .layout-listing d-title, .layout-listing .d-title {
     display: none;
   }
-  
+
   /* Styles for posts lists (not auto-injected) */
-  
-  
+
+
   .posts-with-sidebar {
     padding-left: 45px;
     padding-right: 45px;
   }
-  
+
   .posts-list .description h2,
   .posts-list .description p {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
   }
-  
+
   .posts-list .description h2 {
     font-weight: 700;
     border-bottom: none;
     padding-bottom: 0;
   }
-  
+
   .posts-list h2.post-tag {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     padding-bottom: 12px;
@@ -726,7 +728,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     margin-top: 60px;
     margin-bottom: 24px;
   }
-  
+
   .posts-list .post-preview {
     text-decoration: none;
     overflow: hidden;
@@ -734,29 +736,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 24px 0;
   }
-  
+
   .post-preview-last {
     border-bottom: none !important;
   }
-  
+
   .posts-list .posts-list-caption {
     grid-column: screen;
     font-weight: 400;
   }
-  
+
   .posts-list .post-preview h2 {
     margin: 0 0 6px 0;
     line-height: 1.2em;
     font-style: normal;
     font-size: 24px;
   }
-  
+
   .posts-list .post-preview p {
     margin: 0 0 12px 0;
     line-height: 1.4em;
     font-size: 16px;
   }
-  
+
   .posts-list .post-preview .thumbnail {
     box-sizing: border-box;
     margin-bottom: 24px;
@@ -767,32 +769,32 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     width: 100%;
     display: block;
   }
-  
+
   .posts-list .metadata {
     font-size: 12px;
     line-height: 1.4em;
     margin-bottom: 18px;
   }
-  
+
   .posts-list .metadata > * {
     display: inline-block;
   }
-  
+
   .posts-list .metadata .publishedDate {
     margin-right: 2em;
   }
-  
+
   .posts-list .metadata .dt-authors {
     display: block;
     margin-top: 0.3em;
     margin-right: 2em;
   }
-  
+
   .posts-list .dt-tags {
     display: block;
     line-height: 1em;
   }
-  
+
   .posts-list .dt-tags .dt-tag {
     display: inline-block;
     color: rgba(0,0,0,0.6);
@@ -805,24 +807,24 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     text-transform: uppercase;
     font-weight: 500;
   }
-  
+
   .posts-list img {
     opacity: 1;
   }
-  
+
   .posts-list img[data-src] {
     opacity: 0;
   }
-  
+
   .posts-more {
     clear: both;
   }
-  
-  
+
+
   .posts-sidebar {
     font-size: 16px;
   }
-  
+
   .posts-sidebar h3 {
     font-size: 16px;
     margin-top: 0;
@@ -830,39 +832,39 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     font-weight: 400;
     text-transform: uppercase;
   }
-  
+
   .sidebar-section {
     margin-bottom: 30px;
   }
-  
+
   .categories ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  
+
   .categories li {
     color: rgba(0, 0, 0, 0.8);
     margin-bottom: 0;
   }
-  
+
   .categories li>a {
     border-bottom: none;
   }
-  
+
   .categories li>a:hover {
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   }
-  
+
   .categories .active {
     font-weight: 600;
   }
-  
+
   .categories .category-count {
     color: rgba(0, 0, 0, 0.4);
   }
-  
-  
+
+
   @media(min-width: 768px) {
     .posts-list .post-preview h2 {
       font-size: 26px;
@@ -898,55 +900,55 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       padding-bottom: 24px;
     }
   }
-  
-  
+
+
   /* Improve display for browsers without grid (IE/Edge <= 15) */
-  
+
   .downlevel {
     line-height: 1.6em;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
     margin: 0;
   }
-  
+
   .downlevel .d-title {
     padding-top: 6rem;
     padding-bottom: 1.5rem;
   }
-  
+
   .downlevel .d-title h1 {
     font-size: 50px;
     font-weight: 700;
     line-height: 1.1em;
     margin: 0 0 0.5rem;
   }
-  
+
   .downlevel .d-title p {
     font-weight: 300;
     font-size: 1.2rem;
     line-height: 1.55em;
     margin-top: 0;
   }
-  
+
   .downlevel .d-byline {
     padding-top: 0.8em;
     padding-bottom: 0.8em;
     font-size: 0.8rem;
     line-height: 1.8em;
   }
-  
+
   .downlevel .section-separator {
     border: none;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
+
   .downlevel .d-article {
     font-size: 1.06rem;
     line-height: 1.7em;
     padding-top: 1rem;
     padding-bottom: 2rem;
   }
-  
-  
+
+
   .downlevel .d-appendix {
     padding-left: 0;
     padding-right: 0;
@@ -958,11 +960,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding-top: 40px;
     padding-bottom: 48px;
   }
-  
+
   .downlevel .footnotes ol {
     padding-left: 13px;
   }
-  
+
   .downlevel .base-grid,
   .downlevel .distill-header,
   .downlevel .d-title,
@@ -979,7 +981,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding-left: 40px;
     padding-right: 40px;
   }
-  
+
   @media(min-width: 768px) {
     .downlevel .base-grid,
     .downlevel .distill-header,
@@ -999,14 +1001,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     max-width: 900px;
   }
   }
-  
+
   .downlevel pre code {
     display: block;
     border-left: 2px solid rgba(0, 0, 0, .1);
     padding: 0 0 0 20px;
     font-size: 14px;
   }
-  
+
   .downlevel code, .downlevel pre {
     color: black;
     background: none;
@@ -1017,27 +1019,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     word-break: normal;
     word-wrap: normal;
     line-height: 1.5;
-  
+
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
-  
+
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
   }
-  
+
   .downlevel .posts-list .post-preview {
     color: inherit;
   }
-  
-  
-  
+
+
+
   </style>
-  
+
   <script type="application/javascript">
-  
+
   function is_downlevel_browser() {
     if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
                                    window.navigator.userAgent)) {
@@ -1046,20 +1048,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       return window.load_distill_framework === undefined;
     }
   }
-  
+
   // show body when load is complete
   function on_load_complete() {
-  
+
     // add anchors
     if (window.anchors) {
       window.anchors.options.placement = 'left';
       window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
     }
-  
-  
+
+
     // set body to visible
     document.body.style.visibility = 'visible';
-  
+
     // force redraw for leaflet widgets
     if (window.HTMLWidgets) {
       var maps = window.HTMLWidgets.findAll(".leaflet");
@@ -1072,39 +1074,39 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
         });
       });
     }
-  
+
     // trigger 'shown' so htmlwidgets resize
     $('d-article').trigger('shown');
   }
-  
+
   function init_distill() {
-  
+
     init_common();
-  
+
     // create front matter
     var front_matter = $('<d-front-matter></d-front-matter>');
     $('#distill-front-matter').wrap(front_matter);
-  
+
     // create d-title
     $('.d-title').changeElementType('d-title');
-  
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
-  
+
     // create d-article
     var article = $('<d-article></d-article>');
     $('.d-article').wrap(article).children().unwrap();
-  
+
     // move posts container into article
     $('.posts-container').appendTo($('d-article'));
-  
+
     // create d-appendix
     $('.d-appendix').changeElementType('d-appendix');
-  
+
     // flag indicating that we have appendix items
     var appendix = $('.appendix-bottom').children('h3').length > 0;
-  
+
     // replace footnotes with <d-footnote>
     $('.footnote-ref').each(function(i, val) {
       appendix = true;
@@ -1120,10 +1122,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     });
     // remove footnotes
     $('.footnotes').remove();
-  
+
     // move refs into #references-listing
     $('#references-listing').replaceWith($('#refs'));
-  
+
     $('h1.appendix, h2.appendix').each(function(i, val) {
       $(this).changeElementType('h3');
     });
@@ -1133,16 +1135,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       appendix = true;
       $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
     });
-  
+
     // show d-appendix if we have appendix content
     $("d-appendix").css('display', appendix ? 'grid' : 'none');
-  
+
     // localize layout chunks to just output
     $('.layout-chunk').each(function(i, val) {
-  
+
       // capture layout
       var layout = $(this).attr('data-layout');
-  
+
       // apply layout to markdown level block elements
       var elements = $(this).children().not('details, div.sourceCode, pre, script');
       elements.each(function(i, el) {
@@ -1155,40 +1157,40 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           $(this).wrap(layout_div);
         }
       });
-  
-  
+
+
       // unwrap the layout-chunk div
       $(this).children().unwrap();
     });
-  
+
     // remove code block used to force  highlighting css
     $('.distill-force-highlighting-css').parent().remove();
-  
+
     // remove empty line numbers inserted by pandoc when using a
     // custom syntax highlighting theme
     $('code.sourceCode a:empty').remove();
-  
+
     // load distill framework
     load_distill_framework();
-  
+
     // wait for window.distillRunlevel == 4 to do post processing
     function distill_post_process() {
-  
+
       if (!window.distillRunlevel || window.distillRunlevel < 4)
         return;
-  
+
       // hide author/affiliations entirely if we have no authors
       var front_matter = JSON.parse($("#distill-front-matter").html());
       var have_authors = front_matter.authors && front_matter.authors.length > 0;
       if (!have_authors)
         $('d-byline').addClass('hidden');
-  
+
       // article with toc class
       $('.d-contents').parent().addClass('d-article-with-toc');
-  
+
       // strip links that point to #
       $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
-  
+
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
@@ -1203,12 +1205,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           $(this).append(a);
         }
       });
-  
+
       // hide elements of author/affiliations grid that have no value
       function hide_byline_column(caption) {
         $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
       }
-  
+
       // affiliations
       var have_affiliations = false;
       for (var i = 0; i<front_matter.authors.length; ++i) {
@@ -1220,11 +1222,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       }
       if (!have_affiliations)
         $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
-  
+
       // published date
       if (!front_matter.publishedDate)
         hide_byline_column("Published");
-  
+
       // document object identifier
       var doi = $('d-byline').find('h3:contains("DOI")');
       var doi_p = doi.next().empty();
@@ -1244,22 +1246,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
            .html(front_matter.doi)
            .appendTo(doi_p);
       }
-  
+
        // change plural form of authors/affiliations
       if (front_matter.authors.length === 1) {
         var grid = $('.authors-affiliations');
         grid.children('h3:contains("Authors")').text('Author');
         grid.children('h3:contains("Affiliations")').text('Affiliation');
       }
-  
+
       // remove d-appendix and d-footnote-list local styles
       $('d-appendix > style:first-child').remove();
       $('d-footnote-list > style:first-child').remove();
-  
+
       // move appendix-bottom entries to the bottom
       $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
       $('.appendix-bottom').remove();
-  
+
       // hoverable references
       $('span.citation[data-cites]').each(function() {
         var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
@@ -1273,39 +1275,39 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
-  
+
       // clear polling timer
       clearInterval(tid);
-  
+
       // show body now that everything is ready
       on_load_complete();
     }
-  
+
     var tid = setInterval(distill_post_process, 50);
     distill_post_process();
-  
+
   }
-  
+
   function init_downlevel() {
-  
+
     init_common();
-  
+
      // insert hr after d-title
     $('.d-title').after($('<hr class="section-separator"/>'));
-  
+
     // check if we have authors
     var front_matter = JSON.parse($("#distill-front-matter").html());
     var have_authors = front_matter.authors && front_matter.authors.length > 0;
-  
+
     // manage byline/border
     if (!have_authors)
       $('.d-byline').remove();
     $('.d-byline').after($('<hr class="section-separator"/>'));
     $('.d-byline a').remove();
-  
+
     // remove toc
     $('.d-contents').remove();
-  
+
     // move appendix elements
     $('h1.appendix, h2.appendix').each(function(i, val) {
       $(this).changeElementType('h3');
@@ -1313,62 +1315,62 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('h3.appendix').each(function(i, val) {
       $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
     });
-  
-  
+
+
     // inject headers into references and footnotes
     var refs_header = $('<h3></h3>');
     refs_header.text('References');
     $('#refs').prepend(refs_header);
-  
+
     var footnotes_header = $('<h3></h3');
     footnotes_header.text('Footnotes');
     $('.footnotes').children('hr').first().replaceWith(footnotes_header);
-  
+
     // move appendix-bottom entries to the bottom
     $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
     $('.appendix-bottom').remove();
-  
+
     // remove appendix if it's empty
     if ($('.d-appendix').children().length === 0)
       $('.d-appendix').remove();
-  
+
     // prepend separator above appendix
     $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
-  
+
     // trim code
     $('pre>code').each(function(i, val) {
       $(this).html($.trim($(this).html()));
     });
-  
+
     // move posts-container right before article
     $('.posts-container').insertBefore($('.d-article'));
-  
+
     $('body').addClass('downlevel');
-  
+
     on_load_complete();
   }
-  
-  
+
+
   function init_common() {
-  
+
     // jquery plugin to change element types
     (function($) {
       $.fn.changeElementType = function(newType) {
         var attrs = {};
-  
+
         $.each(this[0].attributes, function(idx, attr) {
           attrs[attr.nodeName] = attr.nodeValue;
         });
-  
+
         this.replaceWith(function() {
           return $("<" + newType + "/>", attrs).append($(this).contents());
         });
       };
     })(jQuery);
-  
+
     // prevent underline for linked images
     $('a > img').parent().css({'border-bottom' : 'none'});
-  
+
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
@@ -1380,35 +1382,35 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           var fig = $(this);
           fig.css('width', fig.attr('width') + 'px');
         });
-  
+
       }
     });
-  
+
     // auto-append index.html to post-preview links in file: protocol
     // and in rstudio ide preview
     $('.post-preview').each(function(i, val) {
       if (window.location.protocol === "file:")
         $(this).attr('href', $(this).attr('href') + "index.html");
     });
-  
+
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
         $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
       });
     }
-  
+
     // add class to pandoc style tables
     $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
     $('.kable-table').children('table').addClass('pandoc-table');
-  
+
     // add figcaption style to table captions
     $('caption').parent('table').addClass("figcaption");
-  
+
     // initialize posts list
     if (window.init_posts_list)
       window.init_posts_list();
-  
+
     // implmement disqus comment link
     $('.disqus-comment-count').click(function() {
       window.headroom_prevent_pin = true;
@@ -1422,17 +1424,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       }
     });
   }
-  
+
   document.addEventListener('DOMContentLoaded', function() {
     if (is_downlevel_browser())
       init_downlevel();
     else
       window.addEventListener('WebComponentsReady', init_distill);
   });
-  
+
   </script>
-  
+
   <!--/radix_placeholder_distill-->
+  <script src="ubuntu_files/header-attrs-2.7/header-attrs.js"></script>
   <script src="ubuntu_files/jquery-1.11.3/jquery.min.js"></script>
   <script src="ubuntu_files/popper-2.6.0/popper.min.js"></script>
   <link href="ubuntu_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1449,10 +1452,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-  
+
         gtag('config', 'UA-75879658-3');
       </script>
-  
+
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" type="text/css"/>
@@ -1464,7 +1467,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Ubuntuのセットアップ","description":"Ubuntuをインストールした後に行う環境構築をまとめました。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"早稲田大学","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-03-02T00:00:00.000+09:00","citationText":"翔平, 2021"}
+{"title":"Ubuntuのセットアップ","description":"Ubuntuをインストールした後に行う環境構築をまとめました。","authors":[{"author":"土井　翔平","authorURL":"#","affiliation":"北海道大学","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-03-30T00:00:00.000+09:00","citationText":"翔平, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1481,13 +1484,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="dt=tag">setup</div>
 </div>
 <!--/radix_placeholder_categories-->
-<p>Ubuntuをインストールした後に行う環境構築をまとめました。</p>
+<p><p>Ubuntuをインストールした後に行う環境構築をまとめました。</p></p>
 </div>
 
 <div class="d-byline">
-  土井　翔平  (早稲田大学)
+  土井　翔平  (北海道大学)
   
-<br/>2021-03-02
+<br/>2021-03-30
 </div>
 
 <div class="d-article">
@@ -1506,6 +1509,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="#Dropbox">Dropbox</a></li>
 <li><a href="#Slack">Slack &amp; Skype</a></li>
 <li><a href="#Git">Git</a></li>
+<li><a href="#SSH">SSH</a></li>
 <li><a href="#R">R/RStudio</a></li>
 <li><a href="#Python">Python</a></li>
 <li><a href="#Julia">Julia</a></li>
@@ -1513,7 +1517,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="#Spark">Apache Spark</a></li>
 <li><a href="#LaTeX">TeXLive</a></li>
 <li><a href="#Vscode">VScode</a></li>
-<li><a href="#Atom">Atom</a></li>
 </ul>
 </nav>
 </div>
@@ -1544,49 +1547,49 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h2 id="NVIDIA">NVIDIAドライバ</h2>
 <p>インストール時と初回起動時はブート選択画面で<code>e</code>を押して、<code>quiet splash</code>を<code>nomodeset</code>に書き換える。 初回起動後に</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="fu">sudo</span> ubuntu-drivers install</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ubuntu-drivers install</span></code></pre></div>
 </div>
 <p>を実行する。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="ex">ubuntu-drivers</span> devices</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ubuntu-drivers</span> devices</span></code></pre></div>
 </div>
 <p>で推奨ドライバを探すことができる。</p>
 <p>再起動して、ディスプレイを正しく認識し、解像度もちゃんと設定できれば大丈夫。</p>
 <p>念のため、以下のコマンドでちゃんとドライバが動いているかを確認する。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="ex">nvidia-smi</span></a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nvidia-smi</span></span></code></pre></div>
 </div>
 <h2 id="ZenbookS">Zenbook S</h2>
 <p>Zenbook Sにおける問題を解決します（<a href="https://sgyatto.hatenablog.com/entry/2019/01/20/135054">こちら</a>を参考）。</p>
 <h3 id="解像度の問題">解像度の問題</h3>
 <p>解像度に1920:1080を追加します。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="bu">echo</span> <span class="st">&#39;xrandr --newmode &quot;1920x1080_60.00&quot;  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync&#39;</span> <span class="op">&gt;&gt;</span> .profile</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="bu">echo</span> <span class="st">&#39;xrandr --addmode eDP-1 1920x1080_60.00&#39;</span> <span class="op">&gt;&gt;</span> .profile</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&#39;xrandr --newmode &quot;1920x1080_60.00&quot;  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync&#39;</span> <span class="op">&gt;&gt;</span> .profile</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&#39;xrandr --addmode eDP-1 1920x1080_60.00&#39;</span> <span class="op">&gt;&gt;</span> .profile</span></code></pre></div>
 </div>
 <h3 id="スリープの問題">スリープの問題</h3>
 <p>スリープをdeepにします。 以下のファイルを開き、</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="fu">sudo</span> nano /etc/default/grub</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nano /etc/default/grub</span></code></pre></div>
 </div>
 <p><code>GRUB_CMDLINE_LINUX_DEFAULT</code>に<code>mem_sleep_default=deep</code>を追加します。</p>
 <p>設定を反映させて、再起動させます。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="fu">sudo</span> update-grub2</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> update-grub2</span></code></pre></div>
 </div>
 <h2 id="Japanese">日本語入力</h2>
 <p>Input Methodで<code>ibus</code>を選択し、ログインし直して、タスクバーの<code>JA</code>を右クリックして、<code>Mozc</code>を追加して最上位に設定する。</p>
 <h2 id="Thunderbird">Thunderbird</h2>
 <p><a href="https://www.thunderbird.net/ja/">Thunderbird</a>がプリインストールされていない場合、以下のコードでインストールします（<a href="https://www.linuxuprising.com/2018/10/install-thunderbird-60-in-ubuntu-or.html">こちら</a>を参考）。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="fu">sudo</span> add-apt-repository ppa:mozillateam/ppa</a>
-<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="fu">sudo</span> apt-get update</a>
-<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="fu">sudo</span> apt install thunderbird</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> add-apt-repository ppa:mozillateam/ppa</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get update</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install thunderbird</span></code></pre></div>
 </div>
 <h2 id="Gnome">Gnome Tweaks</h2>
 <p>Ubuntuの場合、まず、以下のコマンドでGnome TweaksとGnome Shellのホストコネクターをインストールする。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="fu">sudo</span> apt install gnome-tweaks chrome-gnome-shell</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install gnome-tweaks chrome-gnome-shell</span></code></pre></div>
 </div>
 <p>Gnome Tweaksを起動し、</p>
 <ul>
@@ -1612,20 +1615,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h2 id="Font">フォントのインストール</h2>
 <p>type catcherを使って<a href="https://fonts.google.com/">Google Fonts</a>からフォントをダウンロードしてインストールします。 <del>font-managerを使って<a href="https://fonts.google.com/">Google Fonts</a>からフォントをダウンロードしてインストールします。</del></p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="fu">sudo</span> apt install typecatcher</a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install typecatcher</span></code></pre></div>
 </div>
 <h2 id="Dropbox">Dropbox</h2>
 <p><a href="https://www.dropbox.com">公式サイト</a>からダウンロード&amp;インストールをします。</p>
 <p><code>Cannot satisfy dependecies</code>と出る場合は、<code>.deb</code>ファイルのあるフォルダで以下のコマンドを実行する。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="fu">sudo</span> apt instal ./dropbox_YYYY.MM.DD_amd64.deb</a>
-<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="fu">sudo</span> apt -f install</a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt instal ./dropbox_YYYY.MM.DD_amd64.deb</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt <span class="at">-f</span> install</span></code></pre></div>
 </div>
 <p>Dropboxに保存しているファイル数が膨大な場合、同期できないので、以下のコマンドを実行します。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="bu">echo</span> fs.inotify.max_user_watches=100000 <span class="kw">|</span> <span class="fu">sudo</span> tee -a /etc/sysctl.conf<span class="kw">;</span> <span class="fu">sudo</span> sysctl -p</a>
-<a class="sourceLine" id="cb11-2" data-line-number="2"><span class="ex">dropbox</span> stop</a>
-<a class="sourceLine" id="cb11-3" data-line-number="3"><span class="ex">dropbox</span> start</a></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> fs.inotify.max_user_watches=100000 <span class="kw">|</span> <span class="fu">sudo</span> tee <span class="at">-a</span> /etc/sysctl.conf<span class="kw">;</span> <span class="fu">sudo</span> sysctl <span class="at">-p</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">dropbox</span> stop</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ex">dropbox</span> start</span></code></pre></div>
 </div>
 <h2 id="Slack">Slack &amp; Skype</h2>
 <p>Slackを<a href="https://slack.com/intl/ja-jp/downloads/linux">公式サイト</a>からダウンロード&amp;インストールします。</p>
@@ -1637,48 +1640,127 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h2 id="Git">Git</h2>
 <p>Gitがデフォルトでインストールされていない場合はインストールをします。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="fu">sudo</span> apt install git</a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install git</span></code></pre></div>
 </div>
 <p>続いて、以下の初期設定を行います。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="fu">git</span> config --global user.name <span class="st">&quot;shohei doi&quot;</span></a>
-<a class="sourceLine" id="cb13-2" data-line-number="2"><span class="fu">git</span> config --global user.email <span class="st">&quot;shohei.doi0504@gmail.com&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">&quot;shohei doi&quot;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">&quot;shohei.doi0504@gmail.com&quot;</span></span></code></pre></div>
 </div>
+<h2 id="SSH">SSH</h2>
+<h3 id="サーバ側の設定">サーバ側の設定</h3>
+<p>まず、ファイアーウォールを有効にして特定のポート以外を閉じます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw enable</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw status</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw default DENY</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ufw allow XXXX</span></code></pre></div>
+</div>
+<p>次にSSHサーバをインストールします。</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install openssh-server</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> status ssh</span></code></pre></div>
+</div>
+<p>公開鍵方式でアクセスするため、鍵のペアを生成します。</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span></span></code></pre></div>
+</div>
+<p>ホームディレクトリに<code>.ssh</code>というディレクトリができており、その中に公開鍵<code>id_rsa.pub</code>と秘密鍵<code>id_rsa</code>があるはずです。 公開鍵の内容をサーバの<code>.ssh</code>ディレクトリの中の<code>authorized_keys</code>というファイルに書き込みます。</p>
+<p><code>~/.ssh</code>の権限を修正しておきます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> 700 ~/.ssh</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> 600 ~/.ssh/authorized_keys</span></code></pre></div>
+</div>
+<p>サーバ側のSSHの設定ファイルを開き、</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> sudo /etc/ssh/sshd_config</span></code></pre></div>
+</div>
+<ul>
+<li><code>ssh_config</code>と間違えないように注意する。</li>
+</ul>
+<p>必要に応じて以下のコマンドを修正します。</p>
+<pre><code>Port XXXX
+PubkeyAuthentication yes
+AuthorizedKeysFile  .ssh/authorized_keys
+PasswordAuthentication no
+PermitEmptyPasswords no
+ChallengeResponseAuthentication no</code></pre>
+<ul>
+<li>使えるポート番号を指定し、パスワード認証を禁止しています。</li>
+</ul>
+<p>設定の変更を反映させます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl restart sshd</span></code></pre></div>
+</div>
+<p>最後に、固定IPを割り振ります。</p>
+<ul>
+<li>ゲートウェイの確認：<code>ip r</code></li>
+<li>ネットマスクの確認：<code>ifconfig</code></li>
+<li>DNSサーバの確認：ルータのIPアドレス（例えば<code>192.168.0.1</code>）</li>
+</ul>
+<p>ルーターの設定で固定したIPアドレスとルーターを入力します。</p>
+<h3 id="クライアント側の設定">クライアント側の設定</h3>
+<p>秘密鍵をクライアント側の<code>~/.ssh</code>になんとかして保存します。 そして権限を修正しておきます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> 700 ~/.ssh</span></code></pre></div>
+</div>
+<p>クライアントをインストールします。</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install openssh-client</span></code></pre></div>
+</div>
+<p>クライアント側のSSHの設定ファイルを開き、</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb23"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> sudo /etc/ssh/ssh_config</span></code></pre></div>
+</div>
+<p>必要に応じて以下のコマンドを修正します。</p>
+<pre><code>IdentityFile ~/.ssh/id_rsa
+Port XXXX</code></pre>
+<p>設定の変更を反映させます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl restart ssh</span></code></pre></div>
+</div>
+<p>以下のコマンドでターミナルにSSH接続できるはずです。</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="op">&lt;</span>ip.address<span class="op">&gt;</span></span></code></pre></div>
+</div>
+<ul>
+<li><code>&lt;ip.address&gt;</code>はサーバで<code>hostname -I</code>で確認できます。</li>
+</ul>
 <h2 id="R">R/RStudio</h2>
 <h3 id="つのバージョンの場合">1つのバージョンの場合</h3>
 <p>Rを以下のコマンドでインストールします（<a href="https://qiita.com/JeJeNeNo/items/43fc95c4710c668e86a2">参考</a>）。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="bu">echo</span> -e <span class="st">&quot;\n## For R package&quot;</span>  <span class="kw">|</span> <span class="fu">sudo</span> tee -a /etc/apt/sources.list</a>
-<a class="sourceLine" id="cb14-2" data-line-number="2"><span class="bu">echo</span> <span class="st">&quot;deb https://cran.rstudio.com/bin/linux/ubuntu </span><span class="va">$(</span><span class="ex">lsb_release</span> -cs<span class="va">)</span><span class="st">-cran40/&quot;</span> <span class="kw">|</span> <span class="fu">sudo</span> tee -a /etc/apt/sources.list</a>
-<a class="sourceLine" id="cb14-3" data-line-number="3"><span class="fu">sudo</span> apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9</a>
-<a class="sourceLine" id="cb14-4" data-line-number="4"><span class="ex">gpg</span> --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9</a>
-<a class="sourceLine" id="cb14-5" data-line-number="5"><span class="ex">gpg</span> -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 <span class="kw">|</span> <span class="fu">sudo</span> apt-key add -</a>
-<a class="sourceLine" id="cb14-6" data-line-number="6"><span class="fu">sudo</span> apt update</a>
-<a class="sourceLine" id="cb14-7" data-line-number="7"><span class="fu">sudo</span> apt install r-base</a></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span> <span class="st">&quot;\n## For R package&quot;</span>  <span class="kw">|</span> <span class="fu">sudo</span> tee <span class="at">-a</span> /etc/apt/sources.list</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;deb https://cran.rstudio.com/bin/linux/ubuntu </span><span class="va">$(</span><span class="ex">lsb_release</span> <span class="at">-cs</span><span class="va">)</span><span class="st">-cran40/&quot;</span> <span class="kw">|</span> <span class="fu">sudo</span> tee <span class="at">-a</span> /etc/apt/sources.list</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-key adv <span class="at">--keyserver</span> keyserver.ubuntu.com <span class="at">--recv-keys</span> E298A3A825C0D65DFD57CBB651716619E084DAB9</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg</span> <span class="at">--keyserver</span> hkp://keyserver.ubuntu.com:80 <span class="at">--recv-keys</span> E298A3A825C0D65DFD57CBB651716619E084DAB9</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="ex">gpg</span> <span class="at">-a</span> <span class="at">--export</span> E298A3A825C0D65DFD57CBB651716619E084DAB9 <span class="kw">|</span> <span class="fu">sudo</span> apt-key add <span class="at">-</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install r-base</span></code></pre></div>
 </div>
 <h3 id="複数のバージョンの場合">複数のバージョンの場合</h3>
 <p>RStudioが公開している<a href="https://docs.rstudio.com/resources/install-r/">コンパイル済みのR</a>をインストールします。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb15-1" data-line-number="1"><span class="fu">sudo</span> apt update</a>
-<a class="sourceLine" id="cb15-2" data-line-number="2"><span class="fu">sudo</span> apt install gdebi-core curl</a>
-<a class="sourceLine" id="cb15-3" data-line-number="3"><span class="bu">export</span> <span class="va">R_VERSION=</span>3.6.2</a>
-<a class="sourceLine" id="cb15-4" data-line-number="4"><span class="ex">curl</span> -O https://cdn.rstudio.com/r/ubuntu-1804/pkgs/r-<span class="va">${R_VERSION}</span>_1_amd64.deb</a>
-<a class="sourceLine" id="cb15-5" data-line-number="5"><span class="fu">sudo</span> gdebi r-<span class="va">${R_VERSION}</span>_1_amd64.deb</a>
-<a class="sourceLine" id="cb15-6" data-line-number="6"><span class="fu">sudo</span> ln -s /opt/R/<span class="va">${R_VERSION}</span>/bin/R /usr/local/bin/R</a>
-<a class="sourceLine" id="cb15-7" data-line-number="7"><span class="fu">sudo</span> ln -s /opt/R/<span class="va">${R_VERSION}</span>/bin/Rscript /usr/local/bin/Rscript</a></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install gdebi-core curl</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">R_VERSION=</span>3.6.2</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-O</span> https://cdn.rstudio.com/r/ubuntu-1804/pkgs/r-<span class="va">${R_VERSION}</span>_1_amd64.deb</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> gdebi r-<span class="va">${R_VERSION}</span>_1_amd64.deb</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ln <span class="at">-s</span> /opt/R/<span class="va">${R_VERSION}</span>/bin/R /usr/local/bin/R</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ln <span class="at">-s</span> /opt/R/<span class="va">${R_VERSION}</span>/bin/Rscript /usr/local/bin/Rscript</span></code></pre></div>
 </div>
 <h3 id="microsoft-r-open">Microsoft R Open</h3>
 <p><a href="https://mran.microsoft.com/open">Microsoft R Open</a>はMicrosoftが提供するRディストリビューションです。 メリットとしてはBLASに高速なMKLが使用されている点などが挙げられます。</p>
 <p>まず、<a href="https://docs.microsoft.com/en-us/windows-server/administration/linux-package-repository-for-microsoft-software">ここ</a>からOSに対応するキーを取得します。 Ubuntu 18.04系ならば次の通りです。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="ex">curl</span> https://packages.microsoft.com/keys/microsoft.asc <span class="kw">|</span> <span class="fu">sudo</span> apt-key add -</a>
-<a class="sourceLine" id="cb16-2" data-line-number="2"> <span class="fu">sudo</span> apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod</a>
-<a class="sourceLine" id="cb16-3" data-line-number="3"> <span class="fu">sudo</span> apt update</a></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> https://packages.microsoft.com/keys/microsoft.asc <span class="kw">|</span> <span class="fu">sudo</span> apt-key add <span class="at">-</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">sudo</span> apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a> <span class="fu">sudo</span> apt update</span></code></pre></div>
 </div>
 <p>そして、R Openのファイルをダウンロードし、解凍したディレクトリでインストールコードを実行します。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb17-1" data-line-number="1"><span class="bu">cd</span> Downloads/microsoft-r-open</a>
-<a class="sourceLine" id="cb17-2" data-line-number="2"><span class="fu">sudo</span> ./install.sh</a></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Downloads/microsoft-r-open</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ./install.sh</span></code></pre></div>
 </div>
 <p>R Openでは再現可能性のためにパッケージのリポジトリ(MRAN)の日付が固定されています。 最新のパッケージをインストールしたい場合はリポジトリをCRANに変更します。 具体的には以下の内容を<code>.Rprofile</code>という名前でホームディレクトリに保存します。</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1699,7 +1781,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h3 id="パッケージのインストールの準備">パッケージのインストールの準備</h3>
 <p>いくつかのパッケージをインストールするのに必要なソフトウェアをインストールします。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="fu">sudo</span> apt install build-essential libcurl4-gnutls-dev openjdk-7-* libxml2-dev libssl-dev</a></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install build-essential libcurl4-gnutls-dev openjdk-7-<span class="pp">*</span> libxml2-dev libssl-dev</span></code></pre></div>
 </div>
 <p><code>rstan</code>のインストールのために以下のコードをRで実行します。</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1726,83 +1808,83 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"quanteda"</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"readtext"</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"devtools"</span><span class='op'>)</span>
-<span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'>install_github</span><span class='op'>(</span><span class='st'>"hoxo-m/pforeach"</span><span class='op'>)</span>
+<span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"hoxo-m/pforeach"</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
 <h2 id="Python">Python</h2>
 <p>UbuntuではPython2とPython3がデフォルトで入っているはずです。 なぜか、Atom上でpython3を使いたくてもpython2系のモジュールをインストールしないとうまく行きません。 正直、pythonの環境構築に関しては未だに分からないことが多いので間違いがあれば教えてください。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb19"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb19-1" data-line-number="1"><span class="fu">sudo</span> apt install python-pip</a>
-<a class="sourceLine" id="cb19-2" data-line-number="2"><span class="ex">pip</span> install numpy pandas scikit-learn matplotlib ipykernel</a>
-<a class="sourceLine" id="cb19-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb19-4" data-line-number="4"><span class="fu">sudo</span> apt install python3-pip</a>
-<a class="sourceLine" id="cb19-5" data-line-number="5"><span class="ex">pip3</span> install numpy pandas scikit-learn matplotlib ipykernel</a></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install python-pip</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install numpy pandas scikit-learn matplotlib ipykernel</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install python3-pip</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pip3</span> install numpy pandas scikit-learn matplotlib ipykernel</span></code></pre></div>
 </div>
 <p>これをすればpython2のモジュールを入れなくても大丈夫？（<a href="https://github.com/nteract/hydrogen/issues/1071#issuecomment-342084542">参考</a>）</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb20"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="ex">pip3</span> install ipykernel --upgrade</a>
-<a class="sourceLine" id="cb20-2" data-line-number="2"><span class="ex">python3</span> -m ipykernel install --user</a></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip3</span> install ipykernel <span class="at">--upgrade</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> ipykernel install <span class="at">--user</span></span></code></pre></div>
 </div>
 <h3 id="anaconda">Anaconda</h3>
 <p><a href="https://www.anaconda.com/">Anaconda</a>はデータ分析用に特化したPythonディストリビューションです。 Anacondaを使うことには賛否両論ありますが、メリットの一つはBLASとして高速なMKLをデフォルトで使用している点です。</p>
 <p>上記サイトから適当なバージョンのAnacondaをダウンロードして、</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb21"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb21-1" data-line-number="1"><span class="fu">bash</span> Anaconda3-2019.10-Linux-x86_64.sh</a></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> Anaconda3-2019.10-Linux-x86_64.sh</span></code></pre></div>
 </div>
 <p>を実行します。</p>
 <p>最後に、</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb22"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb22-1" data-line-number="1"><span class="bu">source</span> ~/.bashrc</a></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.bashrc</span></code></pre></div>
 </div>
 <p>でパスを通します。</p>
 <p>以下のコマンドが実行できればインストールされています。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb23"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb23-1" data-line-number="1"><span class="ex">conda</span> -V</a></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> <span class="at">-V</span></span></code></pre></div>
 </div>
 <p><code>conda</code>自体のアップデートとパッケージ全体のアップデートは次の通りです。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb24"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb24-1" data-line-number="1"><span class="ex">conda</span> update -n base conda</a>
-<a class="sourceLine" id="cb24-2" data-line-number="2"><span class="ex">conda</span> update --all</a></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> update <span class="at">-n</span> base conda</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> update <span class="at">--all</span></span></code></pre></div>
 </div>
 <h2 id="Julia">Julia</h2>
 <p><a href="https://julialang.org/">Julia</a>は最近、成長が著しい科学計算用プログラミングで、計算速度の速さとコードの書きやすさで有名です。 ダウンロードして、適当なフォルダで解凍して、以下のコマンドでシンボリックリンクを貼ります（Julia ver 1.2.0をDownloadsフォルダで解凍した場合）。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb25-1" data-line-number="1"><span class="fu">sudo</span> ln -s ~/Downloads/julia-1.2.0/bin/julia /usr/local/bin/julia</a></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ln <span class="at">-s</span> ~/Downloads/julia-1.2.0/bin/julia /usr/local/bin/julia</span></code></pre></div>
 </div>
 <p>JuliaからPythonを呼び出すために<a href="https://github.com/JuliaPy/PyCall.jl">PyCall</a>をインストールしますが、普段使っているPythonを呼び出すためには、以下のコマンドでPythonのパスを確認します。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb26-1" data-line-number="1"><span class="fu">which</span> python</a></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span> python</span></code></pre></div>
 </div>
 <p>そして、Juliaで次のようにしてPythonへのパスを通します。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb27-1" data-line-number="1"><span class="ex">ENV</span>[<span class="st">&quot;PYTHON&quot;</span>] = <span class="st">&quot;path/to/your/python&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="va">ENV</span><span class="op">[</span><span class="st">&quot;PYTHON&quot;</span><span class="op">]</span> <span class="ex">=</span> <span class="st">&quot;path/to/your/python&quot;</span></span></code></pre></div>
 </div>
 <p>その上で、package modeにしてPyCallをインストールします。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb28"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="ex">add</span> PyCall</a></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="ex">add</span> PyCall</span></code></pre></div>
 </div>
 <p>Rの場合は何もせずにRCallをインストールします。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb29"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb29-1" data-line-number="1"><span class="ex">add</span> RCall</a></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="ex">add</span> RCall</span></code></pre></div>
 </div>
 <h2 id="MeCab">MeCab</h2>
 <p>日本語の形態素解析のためにMeCabとNEologdを入れます（<a href="https://qiita.com/ekzemplaro/items/c98c7f6698f130b55d53">参考</a>）。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb30"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb30-1" data-line-number="1"><span class="fu">sudo</span> apt install mecab libmecab-dev mecab-ipadic-utf8</a>
-<a class="sourceLine" id="cb30-2" data-line-number="2"><span class="bu">cd</span> ~/Downloads</a>
-<a class="sourceLine" id="cb30-3" data-line-number="3"><span class="fu">git</span> clone https://github.com/neologd/mecab-ipadic-neologd.git</a>
-<a class="sourceLine" id="cb30-4" data-line-number="4"><span class="bu">cd</span> mecab-ipadic-neologd</a>
-<a class="sourceLine" id="cb30-5" data-line-number="5"><span class="fu">sudo</span> bin/install-mecab-ipadic-neologd</a></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install mecab libmecab-dev mecab-ipadic-utf8</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Downloads</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/neologd/mecab-ipadic-neologd.git</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> mecab-ipadic-neologd</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> bin/install-mecab-ipadic-neologd</span></code></pre></div>
 </div>
 <p><code>/etc/mecabrc</code>を編集して<code>dicdir = /usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd</code>とします。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb31"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb31-1" data-line-number="1"><span class="fu">sudo</span> atom /etc/mecabrc</a></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> atom /etc/mecabrc</span></code></pre></div>
 </div>
 <p>Python3で動かすためのモジュールをインストールします。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb32"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb32-1" data-line-number="1"><span class="fu">sudo</span> apt install swig</a>
-<a class="sourceLine" id="cb32-2" data-line-number="2"><span class="fu">sudo</span> pip3 install mecab-python3</a></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install swig</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pip3 install mecab-python3</span></code></pre></div>
 </div>
 <ul>
 <li>参考サイトのコードではうまくNEologdにパスが通らなかったので、taggerで<code>-d /usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd</code>と直接指定しました。</li>
@@ -1822,28 +1904,28 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>分散コンピューティング用のフレームワークである<a href="https://spark.apache.org/">Apache Spark</a>をインストールします（<a href="https://qiita.com/rockhopper/items/0680a537838233fce323">ここ</a>と<a href="https://computingforgeeks.com/how-to-install-apache-spark-on-ubuntu-debian/">ここ</a>を参考にしました）。</p>
 <p>まず、Javaをインストールします。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb33"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb33-1" data-line-number="1"><span class="fu">sudo</span> apt install openjdk-8-jdk</a>
-<a class="sourceLine" id="cb33-2" data-line-number="2"><span class="ex">java</span> --version</a></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install openjdk-8-jdk</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="ex">java</span> <span class="at">--version</span></span></code></pre></div>
 </div>
 <p>続いて、適当なディレクトリに移動して、Apache Sparkのファイルをダウンロード&amp;展開します（バージョンを2.4.4でHadoop付きとします）。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb34"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb34-1" data-line-number="1"><span class="bu">cd</span> /usr/local</a>
-<a class="sourceLine" id="cb34-2" data-line-number="2"><span class="fu">sudo</span> curl -O https://www-us.apache.org/dist/spark/spark-2.4.4/spark-2.4.4４-bin-hadoop2.7.tgz</a>
-<a class="sourceLine" id="cb34-3" data-line-number="3"><span class="fu">sudo</span> tar xvf spark-2.4.4-bin-hadoop2.7.tgz</a></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /usr/local</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> curl <span class="at">-O</span> https://www-us.apache.org/dist/spark/spark-2.4.4/spark-2.4.4４-bin-hadoop2.7.tgz</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> tar xvf spark-2.4.4-bin-hadoop2.7.tgz</span></code></pre></div>
 </div>
 <p>最後に、シンボリックリンク作成し、パスを通します。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb35"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb35-1" data-line-number="1"><span class="fu">sudo</span> ln -s /usr/local/spark-2.4.4-bin-hadoop2.7 /usr/local/spark</a>
-<a class="sourceLine" id="cb35-2" data-line-number="2"><span class="fu">sudo</span> atom ~/.profile</a></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ln <span class="at">-s</span> /usr/local/spark-2.4.4-bin-hadoop2.7 /usr/local/spark</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> atom ~/.profile</span></code></pre></div>
 </div>
 <p><code>atom</code>では末尾に以下を追加します。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb36"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb36-1" data-line-number="1"><span class="bu">export</span> <span class="va">SPARK_HOME=</span>/usr/local/spark</a>
-<a class="sourceLine" id="cb36-2" data-line-number="2"><span class="bu">export</span> <span class="va">PATH=$PATH</span>:<span class="va">$SPARK_HOME</span>/bin</a></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">SPARK_HOME=</span>/usr/local/spark</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH=$PATH</span>:<span class="va">$SPARK_HOME</span>/bin</span></code></pre></div>
 </div>
 <p>パスの変更を反映させます。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb37"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb37-1" data-line-number="1"><span class="bu">source</span> ~/.profile</a></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.profile</span></code></pre></div>
 </div>
 <p><code>spark-shell</code>で起動できれば成功（のはず）です。</p>
 <h3 id="rパッケージ">Rパッケージ</h3>
@@ -1858,18 +1940,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h3 id="pythonパッケージ">Pythonパッケージ</h3>
 <p>PythonでApache Sparkを使うには<a href="https://spark.apache.org/docs/latest/api/python/index.html">pyspark</a>を使います。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb38"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb38-1" data-line-number="1"><span class="fu">sudo</span> pip3 install pyspark</a></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pip3 install pyspark</span></code></pre></div>
 </div>
 <h2 id="LaTeX">TeXLive</h2>
 <p>TeXLiveをインストールします（<a href="http://xartaky.hatenablog.jp/entry/2016-12-27-texlive-on-ubuntu">参考サイト</a>）。</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb39"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb39-1" data-line-number="1"><span class="bu">cd</span> ~/Downloads</a>
-<a class="sourceLine" id="cb39-2" data-line-number="2"><span class="fu">wget</span> http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz</a>
-<a class="sourceLine" id="cb39-3" data-line-number="3"><span class="fu">tar</span> xvf install-tl-unx.tar.gz</a>
-<a class="sourceLine" id="cb39-4" data-line-number="4"><span class="fu">ls</span></a>
-<a class="sourceLine" id="cb39-5" data-line-number="5"><span class="bu">cd</span> install-tl-YYYYMMDD</a>
-<a class="sourceLine" id="cb39-6" data-line-number="6"><span class="fu">sudo</span> ./install-tl --repository http://mirror.ctan.org/systems/texlive/tlnet/</a>
-<a class="sourceLine" id="cb39-7" data-line-number="7"><span class="fu">sudo</span> /usr/local/texlive/YYYY/bin/x86_64-linux/tlmgr path add</a></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Downloads</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> xvf install-tl-unx.tar.gz</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> install-tl-YYYYMMDD</span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ./install-tl <span class="at">--repository</span> http://mirror.ctan.org/systems/texlive/tlnet/</span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> /usr/local/texlive/YYYY/bin/x86_64-linux/tlmgr path add</span></code></pre></div>
 </div>
 <ul>
 <li><code>YYYY</code>, <code>MM</code>, <code>DD</code>はバージョンにより変わります。</li>
@@ -1890,8 +1972,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </ul>
 <h3 id="python向けパッケージ">Python向けパッケージ</h3>
 <ul>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a>
+<ul>
+<li>設定でJupyter: Send Selection To Interactive Windowを有効にする。</li>
+</ul></li>
 </ul>
+<p><a href="https://www.kite.com/">Kite</a>もインストールしておきます。</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb53"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> <span class="at">-c</span> <span class="st">&quot;</span><span class="va">$(</span><span class="fu">wget</span> <span class="at">-q</span> <span class="at">-O</span> <span class="at">-</span> https://linux.kite.com/dls/linux/current<span class="va">)</span><span class="st">&quot;</span></span></code></pre></div>
+</div>
 <h3 id="latex向けパッケージ">LaTeX向けパッケージ</h3>
 <ul>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop">LaTeX Workshop</a></li>
@@ -1901,75 +1990,53 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <ul>
 <li>とりあえず、LaTeX Workshopの設定だけで大丈夫そう。</li>
 </ul>
-<h2 id="Atom">Atom</h2>
-<p>VScodeに移りつつありますが、以下の理由でAtomも入れておきます。</p>
-<ol type="1">
-<li>VScodeはroot権限でファイルを開くのがめんどくさい。</li>
-<li>Juliaの統合開発環境として採用されている。</li>
-</ol>
-<p>Atomを<a href="https://atom.io/">公式サイト</a>からダウンロード&amp;インストールします。</p>
-<ul>
-<li>設定で<code>Editor</code>の<code>Soft Wrap</code>を有効にします。</li>
-</ul>
-<h3 id="一般向けパッケージ-1">一般向けパッケージ</h3>
-<ul>
-<li><a href="https://atom.io/packages/minimap">minimap</a>：ミニマップ</li>
-<li><a href="https://atom.io/packages/highlight-column">highlight-column</a>：列のハイライト</li>
-<li><a href="https://atom.io/packages/file-icons">file-icons</a>：色付きアイコン</li>
-</ul>
-<h3 id="latex向けパッケージ-1">LaTeX向けパッケージ</h3>
-<ul>
-<li><a href="https://atom.io/packages/latex">latex</a>：タイプセット
-<ul>
-<li>デフォルトのエンジンを<code>xelatex</code>にします。</li>
-<li><code>Clean Patterns</code>で<code>.pdf</code>を<code>.xdv</code>に変更します。</li>
-</ul></li>
-<li><a href="https://atom.io/packages/language-latex">language-latex</a>：シンタックス・ハイライト</li>
-<li><a href="https://atom.io/packages/wordcount">wordcount</a>：ワードカウント</li>
-<li><a href="https://atom.io/packages/ginger">ginger</a>：英文法チェッカー</li>
-</ul>
-<h3 id="python向けパッケージ-1">Python向けパッケージ</h3>
-<ul>
-<li><a href="https://atom.io/packages/hydrogen">Hydrogen</a>：Atom上でjupyterの操作</li>
-<li><a href="https://atom.io/packages/hydrogen-python">hydrogen-python</a>：variable explorer</li>
-<li><a href="https://atom.io/packages/autocomplete-python">autocomplete-python</a>：オートコンプリート（Kiteが素晴らしい）</li>
-</ul>
-<p>RStudioと同様に<code>Ctrl + Enter</code>で実行かつ次の行への移動を行うためにキーバインディングを以下のように追加します。</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb40"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb40-1" data-line-number="1"><span class="st">&#39;.platform-win32 atom-text-editor:not([mini]), .platform-linux atom-text-editor:not([mini])&#39;</span>:</a>
-<a class="sourceLine" id="cb40-2" data-line-number="2">  <span class="st">&#39;ctrl-enter&#39;</span>: <span class="st">&#39;hydrogen:run-and-move-down&#39;</span></a></code></pre></div>
-</div>
-<p>ついでに、<code>.py</code>ファイルをAtomを紐づけします。</p>
-<h3 id="julia向けパッケージ">Julia向けパッケージ</h3>
-<ul>
-<li><a href="https://junolab.org/">Juno</a>：統合開発環境</li>
-</ul>
-<p>RStudioと同様に<code>Ctrl + Enter</code>で実行かつ次の行への移動を行うためにキーバインディングを以下のように追加します。</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode" id="cb41"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb41-1" data-line-number="1"><span class="st">&#39;.platform-win32 atom-text-editor[data-grammar=&quot;source julia&quot;], .platform-linux atom-text-editor[data-grammar=&quot;source julia&quot;]&#39;</span>:</a>
-<a class="sourceLine" id="cb41-2" data-line-number="2">  <span class="st">&#39;ctrl-enter&#39;</span>: <span class="st">&#39;julia-client:run-and-move&#39;</span></a></code></pre></div>
-</div>
-<p>ついでに、<code>.jl</code>ファイルとAtomを紐づけします。</p>
-<h3 id="r向けパッケージ">R向けパッケージ</h3>
-<p>RStudioで十分ですが、AtomでHydrogen経由でRを使うこともできます（<a href="http://can.hatenadiary.com/entry/2016/12/15/000000">こちら</a>）を参照）。</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'repr'</span>, <span class='st'>'IRdisplay'</span>, <span class='st'>'evaluate'</span>, <span class='st'>'crayon'</span>, <span class='st'>'pbdZMQ'</span>, <span class='st'>'devtools'</span>, <span class='st'>'uuid'</span>, <span class='st'>'digest'</span><span class='op'>)</span><span class='op'>)</span>
-<span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'>install_github</span><span class='op'>(</span><span class='st'>'IRkernel/IRkernel'</span><span class='op'>)</span>
-</code></pre>
-</div>
-</div>
-<p>ターミナル上でRを起動して、以下を実行します。</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>IRkernel</span><span class='fu'>::</span><span class='fu'>installspec</span><span class='op'>(</span><span class='op'>)</span>
-</code></pre>
-</div>
-</div>
-<ul>
-<li><a href="https://atom.io/packages/rbox">rbox</a>：シンタックス・ハイライト、オートコンプリートなど</li>
-</ul>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!-- ## Atom {#Atom} -->
+<!-- VScodeに移りつつありますが、以下の理由でAtomも入れておきます。 -->
+<!-- 1. VScodeはroot権限でファイルを開くのがめんどくさい。 -->
+<!-- 1. Juliaの統合開発環境として採用されている。 -->
+<!-- Atomを[公式サイト](https://atom.io/)からダウンロード&インストールします。 -->
+<!-- - 設定で`Editor`の`Soft Wrap`を有効にします。 -->
+<!-- ### 一般向けパッケージ -->
+<!-- - [minimap](https://atom.io/packages/minimap)：ミニマップ -->
+<!-- - [highlight-column](https://atom.io/packages/highlight-column)：列のハイライト -->
+<!-- - [file-icons](https://atom.io/packages/file-icons)：色付きアイコン -->
+<!-- ### LaTeX向けパッケージ -->
+<!-- - [latex](https://atom.io/packages/latex)：タイプセット -->
+<!--   - デフォルトのエンジンを`xelatex`にします。 -->
+<!--   - `Clean Patterns`で`.pdf`を`.xdv`に変更します。 -->
+<!-- - [language-latex](https://atom.io/packages/language-latex)：シンタックス・ハイライト -->
+<!-- - [wordcount](https://atom.io/packages/wordcount)：ワードカウント -->
+<!-- - [ginger](https://atom.io/packages/ginger)：英文法チェッカー -->
+<!-- ### Python向けパッケージ -->
+<!-- - [Hydrogen](https://atom.io/packages/hydrogen)：Atom上でjupyterの操作 -->
+<!-- - [hydrogen-python](https://atom.io/packages/hydrogen-python)：variable explorer -->
+<!-- - [autocomplete-python](https://atom.io/packages/autocomplete-python)：オートコンプリート（Kiteが素晴らしい） -->
+<!-- RStudioと同様に`Ctrl + Enter`で実行かつ次の行への移動を行うためにキーバインディングを以下のように追加します。 -->
+<!-- ```{bash, eval=FALSE} -->
+<!-- '.platform-win32 atom-text-editor:not([mini]), .platform-linux atom-text-editor:not([mini])': -->
+<!--   'ctrl-enter': 'hydrogen:run-and-move-down' -->
+<!-- ``` -->
+<!-- ついでに、`.py`ファイルをAtomを紐づけします。 -->
+<!-- ### Julia向けパッケージ -->
+<!-- - [Juno](https://junolab.org/)：統合開発環境 -->
+<!-- RStudioと同様に`Ctrl + Enter`で実行かつ次の行への移動を行うためにキーバインディングを以下のように追加します。 -->
+<!-- ```{bash, eval=FALSE} -->
+<!-- '.platform-win32 atom-text-editor[data-grammar="source julia"], .platform-linux atom-text-editor[data-grammar="source julia"]': -->
+<!--   'ctrl-enter': 'julia-client:run-and-move' -->
+<!-- ``` -->
+<!-- ついでに、`.jl`ファイルとAtomを紐づけします。 -->
+<!-- ### R向けパッケージ -->
+<!-- RStudioで十分ですが、AtomでHydrogen経由でRを使うこともできます（[こちら](http://can.hatenadiary.com/entry/2016/12/15/000000)）を参照）。 -->
+<!-- ```{r, eval = FALSE} -->
+<!-- install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest')) -->
+<!-- devtools::install_github('IRkernel/IRkernel') -->
+<!-- ``` -->
+<!-- ターミナル上でRを起動して、以下を実行します。 -->
+<!-- ```{r, eval = FALSE} -->
+<!-- IRkernel::installspec() -->
+<!-- ``` -->
+<!-- - [rbox](https://atom.io/packages/rbox)：シンタックス・ハイライト、オートコンプリートなど -->
+<div class="sourceCode" id="cb54"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
