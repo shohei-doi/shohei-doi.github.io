@@ -1,15 +1,11 @@
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
-
-body {
-  font-family: 'Noto Sans JP', sans-serif;
-  }
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 
 h1, h2, h3, h4, h5, h6, p {
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .uk-list li {
-    font-weight: 200;
+    font-weight: 300;
 }
 
 h2 {
