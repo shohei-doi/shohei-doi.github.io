@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Shohei Doi | 土井翔平"
+  google-analytics: "G-LLFB8XFPX5"
+  navbar:
+    search: false
+    left:
+      - href: index.qmd
+        text: " "
+
+format:
+  html:
+    theme:
+      - materia
+      - custom.scss
+    mainfont: Noto Sans CJK JP Light, Helvetica Neue, Arial, Hiragino Kaku Gothic ProN, Hiragino Sans, BIZ UDPGothic, Meiryo, sans-serif
+    link-external-newwindow: true
+    toc: true
+    toc-title: " "
+    callout-appearance: simple
+
+lang: ja
