@@ -81,21 +81,21 @@ International Relations, Game Theory, Data Science
 
 ## Publication
 
-## Articles (reviewed)
+### Articles (reviewed)
 
 1. Mizuno, Takayuki, Shohei Doi, and Shuhei Kurizaki. ["The flow of corporate control in the global ownership network."](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290229) *Plos one* 18.8 (2023): e0290229.
 1. Mizuno, Takayuki, Shohei Doi, Takahiro Tsuchiya, and Shuhei Kurizaki. ["Socially responsible investing through the equity funds in the global ownership network."](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0256160) *Plos one* 16.8 (2021): e0256160.
 1. Doi, Shohei, Takayuki Mizuno, and Naoya Fujiwara. ["Estimation of socioeconomic attributes from location information."](https://link.springer.com/article/10.1007/s42001-020-00073-w) *Journal of Computational Social Science* 4 (2021): 187-205.
 1. Mizuno, Takayuki, Shohei Doi, and Shuhei Kurizaki. ["The power of corporate control in the global ownership network."](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0237862) *Plos one* 15.8 (2020): e0237862.
 
-## Articles (not reviewed)
+### Articles (not reviewed)
 
 1. Ono, Jumpei, and Shohei Doi. "Women, Peace and Security: Literature Review of Women and Intrastate Conflict" *Annals, Public Policy Studies* 17 (2023): 79-100.
     - [女性と平和, 安全保障: 女性と内戦に関する研究動向](https://eprints.lib.hokudai.ac.jp/dspace/handle/2115/89011)
 1. Tsuchiya, Takahiro, Shohei Doi, Takayuki Mizuno, Shuhei Kurizaki. "Difficulty and Possibility of Global Governance for SDGs through ESG investing: Big Data Analysis of Ownership Network" *The Faculty of Economics and Business Administration Journal,Kyoto University of Advanced Science* 5 (2023): 1-17. (in Japanese)
     - [SDGsをめぐるESG投資を通じたグローバル・ガバナンスの可能性―ビッグデータを用いた株保有ネットワークの分析―](https://kyotogakuen.repo.nii.ac.jp/records/1511)
 1. Doi, Shohei, et al. ["South Korea–Japan FCR crisis and public opinion: Gathering survey data in real-time crisis development."](https://www.taylorfrancis.com/chapters/edit/10.4324/9781003143536-2/south-korea%E2%80%93japan-fcr-crisis-public-opinion-shohei-doi-kazunori-inamasu-shoko-kohama-atsushi-tago) *Japanese Public Sentiment on South Korea* (2021): 18-31.
-1. Nakayama, Yumi, and Shohei Doi. "Text Analysis of International Immigration Institution: Speech by Nordic Countries in UNHCR " *Methods of International Relations Research: Principles and Practices* (2021):  213-236. (in Japnese)
+1. Nakayama, Yumi, and Shohei Doi. "Text Analysis of International Immigration Institution: Speech by Nordic Countries in UNHCR " *Methods of International Relations Research: Principles and Practices* (2021):  213-236.
     - [国際難民制度のテキスト分析：UNHCRにおける北欧諸国の発言を事例に](https://www.utp.or.jp/book/b587759.html)
 1. Suzuki, Motoshi, Keisuke Iida, and Shohei Doi. ["Analyzing International Developmental Loan Markets with Rival Lenders."](https://link.springer.com/chapter/10.1007/978-4-431-56466-9_10) *Games of Conflict and Cooperation in Asia* (2017): 227-248.
 

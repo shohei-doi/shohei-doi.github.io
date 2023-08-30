@@ -2,7 +2,7 @@
 title: "Shohei Doi"
 about: 
     id: heading
-    template: solana
+    template: trestles
     image: figures/profile.jpg
     image-width: 200px
     image-shape: round
@@ -21,16 +21,16 @@ Ph.D in International Relations (2019, Kyoto University)
 
 Associate Professor of International Relations at Hokkaido University
 
-For more information, see [my CV](https://www.dropbox.com/scl/fi/ooo5l5gklwqp0wvhf97uq/cv-doi.pdf?rlkey=8h88zv20zl7k89uhjzusa6xru&dl=0).
+For more information, see [my CV](cv-doi.pdf).
 
 2020年より、北海道大学[公共政策大学院](https://www.hops.hokudai.ac.jp/)・[法学部・大学院法学研究科](https://www.juris.hokudai.ac.jp/)准教授（国際関係論）
 
 - 国立情報学研究所客員准教授（2021年より）
-- 財務省財務総合政策研究所特別研究感（2023年より）
+- 財務省財務総合政策研究所特別研究官（2023年より）
 
 2019年に京都大学大学院法学研究科を修了し、博士（法学）を取得。
 
-詳細は[CV](https://www.dropbox.com/scl/fi/ooo5l5gklwqp0wvhf97uq/cv-doi.pdf?rlkey=8h88zv20zl7k89uhjzusa6xru&dl=0)もしくは[researchmap](https://researchmap.jp/doishohei)をご覧ください。
+詳細は[CV](cv-doi.pdf)もしくは[researchmap](https://researchmap.jp/doishohei)をご覧ください。
 
 :::
 
@@ -69,7 +69,7 @@ I am interested in the intersection between international politics/security and 
 1. Tsuchiya, Takahiro, Shohei Doi, Takayuki Mizuno, Shuhei Kurizaki. "Difficulty and Possibility of Global Governance for SDGs through ESG investing: Big Data Analysis of Ownership Network" *The Faculty of Economics and Business Administration Journal,Kyoto University of Advanced Science* 5 (2023): 1-17. (in Japanese)
     - [SDGsをめぐるESG投資を通じたグローバル・ガバナンスの可能性―ビッグデータを用いた株保有ネットワークの分析―](https://kyotogakuen.repo.nii.ac.jp/records/1511)
 1. Doi, Shohei, et al. ["South Korea–Japan FCR crisis and public opinion: Gathering survey data in real-time crisis development."](https://www.taylorfrancis.com/chapters/edit/10.4324/9781003143536-2/south-korea%E2%80%93japan-fcr-crisis-public-opinion-shohei-doi-kazunori-inamasu-shoko-kohama-atsushi-tago) *Japanese Public Sentiment on South Korea* (2021): 18-31.
-1. Nakayama, Yumi, and Shohei Doi. "Text Analysis of International Immigration Institution: Speech by Nordic Countries in UNHCR " *Methods of International Relations Research: Principles and Practices* (2021):  213-236. (in Japnese)
+1. Nakayama, Yumi, and Shohei Doi. "Text Analysis of International Immigration Institution: Speech by Nordic Countries in UNHCR " *Methods of International Relations Research: Principles and Practices* (2021):  213-236.
     - [国際難民制度のテキスト分析：UNHCRにおける北欧諸国の発言を事例に](https://www.utp.or.jp/book/b587759.html)
 1. Suzuki, Motoshi, Keisuke Iida, and Shohei Doi. ["Analyzing International Developmental Loan Markets with Rival Lenders."](https://link.springer.com/chapter/10.1007/978-4-431-56466-9_10) *Games of Conflict and Cooperation in Asia* (2017): 227-248.
 
