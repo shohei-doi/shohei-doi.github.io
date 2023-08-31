@@ -8,7 +8,7 @@ about:
     image-shape: round
     links:
       - icon: envelope
-        href: ailto:sdoi@juris.hokudai.ac.jp
+        href: mailto:sdoi@juris.hokudai.ac.jp
       - icon: github
         href: https://github.com/shohei-doi
       - icon: twitter
