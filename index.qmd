@@ -6,16 +6,20 @@ about:
     image: figures/profile.jpg
     image-width: 200px
     image-shape: round
+    links:
+      - icon: envelope
+        href: ailto:sdoi@juris.hokudai.ac.jp
+      - icon: github
+        href: https://github.com/shohei-doi
+      - icon: twitter
+        href: https://twitter.com/sdoi0504
+      - icon: facebook
+        href: https://www.facebook.com/shohei.doi/
+      - icon: instagram
+        href: https://www.instagram.com/sdoi0504
 ---
 
 :::{#heading}
-
-<div class="d-flex justify-content-end">
-  [<i class="bi bi-envelope"></i>](mailto:sdoi@juris.hokudai.ac.jp)
-  [<i class="bi bi-twitter"></i>](https://twitter.com/sdoi0504)
-  [<i class="bi bi-facebook"></i>](https://www.facebook.com/shohei.doi/)
-  [<i class="bi bi-instagram"></i>](https://www.instagram.com/sdoi0504/)
-</div>
 
 Ph.D in International Relations (2019, Kyoto University)
 

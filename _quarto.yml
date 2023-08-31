@@ -5,11 +5,8 @@ project:
 website:
   title: "Shohei Doi | 土井翔平"
   google-analytics: "G-LLFB8XFPX5"
-  navbar:
-    search: false
-    left:
-      - href: index.qmd
-        text: " "
+  navbar: 
+    search: false    
 
 format:
   html:
