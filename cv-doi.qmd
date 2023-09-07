@@ -63,7 +63,7 @@ Website: <https://shohei-doi.github.io/>
 
 ## Research Interests
 
-International Relations, Game Theory, Data Science
+International Relations, Game Theory, and Data Science
 
 ## Education
 
@@ -111,15 +111,15 @@ Conflict Management and Peace Science, International Relations of the Asia‑Pac
 
 Japan Association of International Relations, Japan Association for International Security, Information Processing Society of Japan, Japanese Society for Artificial Intel‑ligence
 
-## teaching Experience
+## Teaching Experience
 
-See [researchmap](https://researchmap.jp/doishohei) and [my syllabi and course materials](https://sdoi.notion.site/sdoi/8c0646a64bb343f7bb9c235143510e03).
+See [researchmap](https://researchmap.jp/doishohei) or [my syllabi and course materials](https://sdoi.notion.site/sdoi/8c0646a64bb343f7bb9c235143510e03).
 
 ## Miscellaneous
 
 ### Languages
 
-Japanese (native), English (intermediate)
+Japanese (native), and English (intermediate)
 
 ### PC skills
 
