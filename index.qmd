@@ -105,6 +105,8 @@ See also [Google Scholar](https://scholar.google.co.jp/citations?user=43lQ5k8AAA
 
 [Rで計量政治学入門](https://shohei-doi.github.io/quant_polisci/)
 
+[気軽にウェブサイト](https://shohei-doi.github.io/academic-website/)
+
 [Ubuntuのセットアップ](https://sdoi.notion.site/Ubuntu-edd16720a5c34a968246d64af9b10ef2)
 
 - 新しくUbuntuのマシンを導入する際の初期設定
