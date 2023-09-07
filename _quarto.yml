@@ -6,7 +6,7 @@ website:
   title: "Shohei Doi | 土井翔平"
   google-analytics: "G-LLFB8XFPX5"
   navbar: 
-    search: false    
+    search: false
 
 format:
   html:
