@@ -1,24 +1,24 @@
 ---
 title: "Shohei Doi"
 about: 
-    id: heading
-    template: trestles
-    image: figures/profile.jpg
-    image-width: 200px
-    image-shape: round
-    links:
-      - icon: envelope
-        text: e-mail
-        href: mailto:sdoi@juris.hokudai.ac.jp
-      # - icon: github
-      #   href: https://github.com/shohei-doi
-      - icon: twitter
-        text: twitter
-        href: https://twitter.com/sdoi0504
-      # - icon: facebook
-      #   href: https://www.facebook.com/shohei.doi/
-      # - icon: instagram
-      #   href: https://www.instagram.com/sdoi0504
+  id: heading
+  template: trestles
+  image: figures/profile.jpg
+  image-width: 200px
+  image-shape: round
+  links:
+    - icon: envelope
+      text: e-mail
+      href: mailto:sdoi@juris.hokudai.ac.jp
+    # - icon: github
+    #   href: https://github.com/shohei-doi
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/sdoi0504
+    # - icon: facebook
+    #   href: https://www.facebook.com/shohei.doi/
+    # - icon: instagram
+    #   href: https://www.instagram.com/sdoi0504
 ---
 
 :::{#heading}
@@ -105,7 +105,7 @@ See also [Google Scholar](https://scholar.google.co.jp/citations?user=43lQ5k8AAA
 
 [Rで計量政治学入門](https://shohei-doi.github.io/quant_polisci/)
 
-[気軽にウェブサイト](https://shohei-doi.github.io/academic-website/)
+[気楽にウェブサイト](https://shohei-doi.github.io/academic-website/)
 
 [Ubuntuのセットアップ](https://sdoi.notion.site/Ubuntu-edd16720a5c34a968246d64af9b10ef2)
 
