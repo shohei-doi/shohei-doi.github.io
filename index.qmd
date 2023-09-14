@@ -103,13 +103,11 @@ See also [Google Scholar](https://scholar.google.co.jp/citations?user=43lQ5k8AAA
 
 - 国際関係の研究やデータ分析の学習に役立つと考えるウェブサイト
 
-[Rで計量政治学入門](https://shohei-doi.github.io/quant_polisci/)
+[Ubuntuのセットアップ](https://sdoi.notion.site/Ubuntu-edd16720a5c34a968246d64af9b10ef2) (2023)
 
-[気楽にウェブサイト](https://shohei-doi.github.io/academic-website/)
+[気楽にウェブサイト](https://shohei-doi.github.io/academic-website/) (2023)
 
-[Ubuntuのセットアップ](https://sdoi.notion.site/Ubuntu-edd16720a5c34a968246d64af9b10ef2)
-
-- 新しくUbuntuのマシンを導入する際の初期設定
+[Rで計量政治学入門](https://shohei-doi.github.io/quant_polisci/) (2019?)
 
 [国際関係論におけるデータ分析](https://www.dropbox.com/s/md1a4wjlsaufxnn/data_science_ir.pdf?dl=0) (2021)
 
