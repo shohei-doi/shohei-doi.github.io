@@ -45,7 +45,6 @@ For more information, see [my CV](cv-doi.pdf).
 ## お知らせ
 
 - 論文["The flow of corporate control in the global ownership network"](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290229)がPlos Oneで出版されました。
-- [政治学若手研究者フォーラム](https://sites.google.com/view/jecps/home)の2023年度秋季研究会を開催します。
 - [日本国際政治学会2023年度研究大会](https://jair.or.jp/event/2023index.html)の分科会「D-5 理論と方法II 武力紛争・危機の理論と方法」で討論者を務めます。
 - 人工知能学会で研究報告「ネットワーク・パワー・フローによる経済安全保障リスクの見える化」が[全国大会優秀賞](https://www.ai-gakkai.or.jp/about/award/jsai_award-conf/)を受賞しました。
 
