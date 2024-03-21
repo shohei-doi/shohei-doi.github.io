@@ -107,17 +107,21 @@ See also [Google Scholar](https://scholar.google.co.jp/citations?user=43lQ5k8AAA
 
 [気楽にウェブサイト](https://shohei-doi.github.io/academic-website/) (2023)
 
-[Rで計量政治学入門](https://shohei-doi.github.io/quant_polisci/) (2019?)
+[国際政治の計量分析Iの講義スライド](https://www.dropbox.com/scl/fo/cuk42mywlb90pos40094v/h?rlkey=53dbol8pb76v06gfcveihqfeu&dl=0) (2020-2022)
 
 [国際関係論におけるデータ分析](https://www.dropbox.com/s/md1a4wjlsaufxnn/data_science_ir.pdf?dl=0) (2021)
 
 [Statistical Causal Inference: Instrumental Variable Estimation](https://www.dropbox.com/s/lknwkoovutetn5b/iv_doi20191225.pdf?dl=0) (2020)
+
+[Rで計量政治学入門](https://shohei-doi.github.io/quant_polisci/) (2019?)
 
 ## Calendar
 
 <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FTokyo&amp;src=OGZjbGhmb3M3c2RjZTI0cWFmYnQ2Nm1iNGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZDhhcjQ3N2VlZ3Qwb204aW5zZm8xajQzbG9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=dnJtaHZ1b2R0OHE4bjdpdnF1Y2Q3M2RybHNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=OWcycXAwYjlsY2p0ZThibmhnbTU3bGNycGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=MHVvZHAwYzY4anNxaG1mNTZ2amVvaG1ocWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=azU4NHU5ZG4xaHBlM3FoZjViMWkxZTZpcjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%233F51B5&amp;color=%23F09300&amp;color=%234285F4&amp;color=%23AD1457&amp;color=%23E67C73&amp;color=%23B39DDB&amp;showTitle=0&amp;showPrint=0" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
 
 ## Maps
+
+研究室：080-0809　北海道札幌市北区北9条西7丁目　法学部609号室
 
 ::: {.column-screen}
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.547160620993!2d141.34114461207176!3d43.07199078970664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b292b3f74d0df%3A0x558704e495e959b3!2z5YyX5rW36YGT5aSn5a2mIOazleWtpumDqC_ms5XlrabnoJTnqbbnp5Ev5rOV56eR5aSn5a2m6Zmi!5e0!3m2!1sja!2sus!4v1709701177978!5m2!1sja!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
