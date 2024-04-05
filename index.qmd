@@ -15,6 +15,9 @@ about:
     - icon: twitter
       text: twitter
       href: https://twitter.com/sdoi0504
+    - icon: mailbox
+      text: 質問箱
+      href: https://marshmallow-qa.com/sdoi0504
     # - icon: facebook
     #   href: https://www.facebook.com/shohei.doi/
     # - icon: instagram
