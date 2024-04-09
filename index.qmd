@@ -106,6 +106,10 @@ See also [Google Scholar](https://scholar.google.co.jp/citations?user=43lQ5k8AAA
 
 - 国際関係の研究やデータ分析の学習に役立つと考えるウェブサイト
 
+[R/Pythonで計量政治学入門](https://shohei-doi.github.io/quant_polisci/) (2024)
+
+- [旧バージョン](https://shohei-doi.github.io/quant_polisci/archive/)からアップデートしました。
+
 [Ubuntuのセットアップ](https://sdoi.notion.site/Ubuntu-edd16720a5c34a968246d64af9b10ef2) (2023)
 
 [気楽にウェブサイト](https://shohei-doi.github.io/academic-website/) (2023)
