@@ -110,6 +110,8 @@ See also [Google Scholar](https://scholar.google.co.jp/citations?user=43lQ5k8AAA
 
 - [旧バージョン](https://shohei-doi.github.io/quant_polisci/archive/)からアップデートしました。
 
+[国際公共政策学の講義レジュメ](https://shohei-doi.github.io/intro_ir/) (2021-2023)
+
 [Ubuntuのセットアップ](https://sdoi.notion.site/Ubuntu-edd16720a5c34a968246d64af9b10ef2) (2023)
 
 [気楽にウェブサイト](https://shohei-doi.github.io/academic-website/) (2023)
