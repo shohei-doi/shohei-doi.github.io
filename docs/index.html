@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Shohei Doi | 土井翔平 - Shohei Doi</title>
+<title>Shohei Doi – Shohei Doi | 土井翔平</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -121,7 +121,7 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 
 
 
-<div class="quarto-about-trestles content">
+<div class="quarto-about-trestles">
   <div class="about-entity">
     <img src="figures/profile.jpg" class="about-image
   round " style="height: 200px; width: 200px;">
@@ -172,10 +172,8 @@ gtag('config', 'G-LLFB8XFPX5', { 'anonymize_ip': true});
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><a href="https://www.kansai-u.ac.jp/ILS/news/2024/01/-632024210.html">関西大学法学研究所の第63回公開講座「戦争とデータを考える」</a>で討論者を努めます。</li>
-<li>論文<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290229">“The flow of corporate control in the global ownership network”</a>がPlos Oneで出版されました。</li>
-<li><a href="https://jair.or.jp/event/2023index.html">日本国際政治学会2023年度研究大会</a>の分科会「D-5 理論と方法II 武力紛争・危機の理論と方法」で討論者を務めます。</li>
-<li>人工知能学会で研究報告「ネットワーク・パワー・フローによる経済安全保障リスクの見える化」が<a href="https://www.ai-gakkai.or.jp/about/award/jsai_award-conf/">全国大会優秀賞</a>を受賞しました。</li>
+<li>2024年<a href="https://www.ipsa.org/events/75-anniversary-Lisbon">International Political Science Association</a>の大会で討論者を努めます。</li>
+<li>2024年<a href="https://www.jpsa-web.org/conf/2024/">日本政治学会</a>の大会で「ほとんど無害な武力行使」を報告します。</li>
 </ul>
 </div>
 </div>
@@ -304,18 +302,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -347,7 +334,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -355,7 +364,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
