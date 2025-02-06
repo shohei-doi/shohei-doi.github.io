@@ -1,34 +1,28 @@
 ---
-title: "Shohei Doi"
+title: "Shohei Doi/土井翔平"
 about: 
   id: heading
-  template: trestles
+  template: solana
   image: figures/profile.jpg
-  image-width: 200px
+  image-width: 300px
   image-shape: round
   links:
     - icon: envelope
-      text: e-mail
+      text: E-mail
       href: mailto:sdoi@juris.hokudai.ac.jp
-    # - icon: github
-    #   href: https://github.com/shohei-doi
     - icon: twitter
-      text: twitter
+      text: Twitter
       href: https://twitter.com/sdoi0504
     - icon: mailbox
       text: 質問箱
       href: https://marshmallow-qa.com/sdoi0504
-    # - icon: facebook
-    #   href: https://www.facebook.com/shohei.doi/
-    # - icon: instagram
-    #   href: https://www.instagram.com/sdoi0504
 ---
 
 :::{#heading}
 
 Ph.D in International Relations (2019, Kyoto University)
 
-Associate Professor of International Relations at Hokkaido University
+Associate Professor of International Relations at Hokkaido University (from 2020)
 
 For more information, see [my CV](cv-doi.pdf).
 
@@ -47,8 +41,7 @@ For more information, see [my CV](cv-doi.pdf).
 
 ## お知らせ
 
-- 2024年[International Political Science Association](https://www.ipsa.org/events/75-anniversary-Lisbon)の大会で討論者を努めます。
-- 2024年[日本政治学会](https://www.jpsa-web.org/conf/2024/)の大会で「ほとんど無害な武力行使」を報告します。
+- ウェブサイトを少しリニューアルしました。
 
 :::
 
@@ -72,7 +65,7 @@ I am interested in the intersection between international politics/security and 
 ## Articles (not reviewed)
 
 1. Ono, Jumpei, and Shohei Doi. "Women, Peace and Security: Literature Review of Women and Intrastate Conflict" *Annals, Public Policy Studies* 17 (2023): 79-100.
-    - [女性と平和, 安全保障: 女性と内戦に関する研究動向](https://eprints.lib.hokudai.ac.jp/dspace/handle/2115/89011)
+    - [女性と平和、安全保障: 女性と内戦に関する研究動向](https://eprints.lib.hokudai.ac.jp/dspace/handle/2115/89011)
 1. Tsuchiya, Takahiro, Shohei Doi, Takayuki Mizuno, Shuhei Kurizaki. "Difficulty and Possibility of Global Governance for SDGs through ESG investing: Big Data Analysis of Ownership Network" *The Faculty of Economics and Business Administration Journal,Kyoto University of Advanced Science* 5 (2023): 1-17.
     - [SDGsをめぐるESG投資を通じたグローバル・ガバナンスの可能性―ビッグデータを用いた株保有ネットワークの分析―](https://kyotogakuen.repo.nii.ac.jp/records/1511)
 1. Doi, Shohei, et al. ["South Korea–Japan FCR crisis and public opinion: Gathering survey data in real-time crisis development."](https://www.taylorfrancis.com/chapters/edit/10.4324/9781003143536-2/south-korea%E2%80%93japan-fcr-crisis-public-opinion-shohei-doi-kazunori-inamasu-shoko-kohama-atsushi-tago) *Japanese Public Sentiment on South Korea* (2021): 18-31.
@@ -80,17 +73,43 @@ I am interested in the intersection between international politics/security and 
     - [国際難民制度のテキスト分析：UNHCRにおける北欧諸国の発言を事例に](https://www.utp.or.jp/book/b587759.html)
 1. Suzuki, Motoshi, Keisuke Iida, and Shohei Doi. ["Analyzing International Developmental Loan Markets with Rival Lenders."](https://link.springer.com/chapter/10.1007/978-4-431-56466-9_10) *Games of Conflict and Cooperation in Asia* (2017): 227-248.
 
+## In progresss
+
+- Endogeneous Theory of Commercial Peace
+- ほとんど無害な武力行使：抑止と安心供与のシグナリング
+- グローバルな株式ネットワークの分析（[水野貴之](http://research.nii.ac.jp/~mizuno/)、[栗崎周平](https://skurizaki.github.io/)）
+- 大規模言語モデルを用いた規範や因果観の抽出（[久野遼平](https://www.rhisano.com/)ほか）
+- エルドアンの言説における安全保障化（[今井宏平](https://www.ide.go.jp/Japanese/Researchers/imai_kohei.html)）
+- Democratic support for autocratic security organization? Evidence from Türkiye（[今井宏平](https://www.ide.go.jp/Japanese/Researchers/imai_kohei.html)、[浜中新吾](http://www.law.ryukoku.ac.jp/~oshiro/)）
+- 外交のどこに⼥性はいるのか？：外務省本省幹部のジェンダー分析（[小浜祥子](https://lex.juris.hokudai.ac.jp/~skohama/)ほか）
+
 :::
 
 See also [Google Scholar](https://scholar.google.co.jp/citations?user=43lQ5k8AAAAJ) and [researchmap](https://researchmap.jp/doishohei).
 
-受賞歴、研究報告、競争的資金、特許などその他の研究成果については[researchmap](https://researchmap.jp/doishohei)をご覧ください。
+研究報告、競争的資金、受賞歴、特許、メディア活動などその他の研究成果については[researchmap](https://researchmap.jp/doishohei)をご覧ください。
 
 ## Teaching
 
-主に国際関係論、ゲーム理論、データ分析を教えています。[講義内容や資料](https://sdoi.notion.site/sdoi/8c0646a64bb343f7bb9c235143510e03)を公開しています。
+主に国際関係論、ゲーム理論、データ分析を教えています。[講義計画など](https://sdoi.notion.site/sdoi/8c0646a64bb343f7bb9c235143510e03)を公開しています。
 
 - 開講日時はカレンダーをご覧ください。
+
+::: {.callout-note collapse=true}
+## 指導学生
+
+学位論文の執筆に関して実質的な指導を行った学生は次の通りです（敬称略）。
+
+|名前|修了年|課程|論文題目|
+|---|---|---|---|
+|小野純平|2026|法学研究科修士|　|
+|石部雅虎|2025|法学研究科修士|現代日本における新興政党の選挙戦略|
+|小野純平|2024|法学部学士|国連平和維持ミッションの兵力の質と民主化|
+|服部弘明|2023|公共政策大学院修士|ドローンの非国家主体への拡散－商用ドローンの拡散を中心に－|
+: {tbl-colwidths="[12.5,10,22.5,55]"}
+:::
+
+
 
 過去に非常勤講師として、一橋大学や東京外国語大学、京都外国語専門学校で講義を行いました。
 
@@ -108,29 +127,23 @@ See also [Google Scholar](https://scholar.google.co.jp/citations?user=43lQ5k8AAA
 
 - [旧バージョン](http://web.archive.org/web/20210117052842/https://shohei-doi.github.io/quant_polisci/)からアップデートしつつあります。
 
-[国際公共政策学の講義レジュメ](https://shohei-doi.github.io/intro_ir/) (2021-2023)
-
 [Ubuntuのセットアップ](https://sdoi.notion.site/Ubuntu-edd16720a5c34a968246d64af9b10ef2) (2023)
 
-[気楽にウェブサイト](https://shohei-doi.github.io/academic-website/) (2023)
+講義資料
 
-[国際政治の計量分析Iの講義スライド](https://www.dropbox.com/scl/fo/cuk42mywlb90pos40094v/h?rlkey=53dbol8pb76v06gfcveihqfeu&dl=0) (2020-2022)
-
-[国際関係論におけるデータ分析](https://www.dropbox.com/s/md1a4wjlsaufxnn/data_science_ir.pdf?dl=0) (2021)
-
-[Statistical Causal Inference: Instrumental Variable Estimation](https://www.dropbox.com/s/lknwkoovutetn5b/iv_doi20191225.pdf?dl=0) (2020)
-
-[Rで計量政治学入門](https://shohei-doi.github.io/quant_polisci/) (2019?)
+- [政治学入門の講義レジュメ](https://shohei-doi.github.io/intro_polisci/) (2022-)
+- [技術政策学の講義レジュメ](https://shohei-doi.github.io/tech_policy/) (2021-2023)
+- [国際公共政策学の講義レジュメ](https://shohei-doi.github.io/intro_ir/) (2021-2023)
+- [気楽にウェブサイト](https://shohei-doi.github.io/academic-website/) (2023)
+- [国際政治の計量分析Iの講義スライド](https://www.dropbox.com/scl/fo/cuk42mywlb90pos40094v/h?rlkey=53dbol8pb76v06gfcveihqfeu&dl=0) (2020-2022)
+- [国際関係論におけるデータ分析](https://www.dropbox.com/s/md1a4wjlsaufxnn/data_science_ir.pdf?dl=0) (2021)
+- [Statistical Causal Inference: Instrumental Variable Estimation](https://www.dropbox.com/s/lknwkoovutetn5b/iv_doi20191225.pdf?dl=0) (2020)
 
 ## Calendar
 
 <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FTokyo&amp;src=OGZjbGhmb3M3c2RjZTI0cWFmYnQ2Nm1iNGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZDhhcjQ3N2VlZ3Qwb204aW5zZm8xajQzbG9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=dnJtaHZ1b2R0OHE4bjdpdnF1Y2Q3M2RybHNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=OWcycXAwYjlsY2p0ZThibmhnbTU3bGNycGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=MHVvZHAwYzY4anNxaG1mNTZ2amVvaG1ocWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=azU4NHU5ZG4xaHBlM3FoZjViMWkxZTZpcjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%233F51B5&amp;color=%23F09300&amp;color=%234285F4&amp;color=%23AD1457&amp;color=%23E67C73&amp;color=%23B39DDB&amp;showTitle=0&amp;showPrint=0" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
 
 ## Map
-
-住所：080-0809　北海道札幌市北区北9条西7丁目　法学部609号室
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.547160620993!2d141.34114461207176!3d43.07199078970664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b292b3f74d0df%3A0x558704e495e959b3!2z5YyX5rW36YGT5aSn5a2mIOazleWtpumDqC_ms5XlrabnoJTnqbbnp5Ev5rOV56eR5aSn5a2m6Zmi!5e0!3m2!1sja!2sus!4v1709701177978!5m2!1sja!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 ::: {.grid}
 
