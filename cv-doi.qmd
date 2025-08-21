@@ -1,14 +1,18 @@
 ---
 format:
   pdf:
-    documentclass: bxjsarticle
-    classoption: xelatex,ja=standard
-    papersize: a4paper
-    fontfamily: noto
+    pdf-engine: lualatex
+    documentclass: ltjsarticle
+    classoption:
+      - a4paper
+      - 10pt
     mainfont: Noto Serif CJK JP Light
+    sansfont: Noto Sans CJK JP
     linkcolor: NavyBlue
     citecolor: NavyBlue
     urlcolor: NavyBlue
+
+lang: en
 ---
 
 # Shohei Doi | 土井翔平
