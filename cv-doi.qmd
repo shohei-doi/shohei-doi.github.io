@@ -8,9 +8,9 @@ format:
       - 10pt
     mainfont: Noto Serif CJK JP Light
     sansfont: Noto Sans CJK JP
-    linkcolor: NavyBlue
-    citecolor: NavyBlue
-    urlcolor: NavyBlue
+    linkcolor: OliveGreen
+    citecolor: OliveGreen
+    urlcolor: OliveGreen
 
 lang: en
 ---
@@ -21,13 +21,13 @@ lang: en
 
 ## Contact Information
 
-Graduate School of Law and Public Policy School, Hokkaido University\vspace{-4mm}
+Graduate School of Law and Public Policy School, Hokkaido University
 
-North 9, West 7, Kita-ku, Sapporo-shi\vspace{-4mm}
+North 9, West 7, Kita-ku, Sapporo-shi
 
 Hokkaido, 0600809, Japan
 
-E-mail: <sdoi@juris.hokudai.ac.jp>\vspace{-4mm}
+E-mail: <sdoi@juris.hokudai.ac.jp>
 
 Website: <https://shohei-doi.github.io/>
 
@@ -87,6 +87,7 @@ International Relations, Game Theory, and Data Science
 
 ### Articles (reviewed)
 
+1. Chen, Jinghui, Takayuki Mizuno, and Shohei Doi. ["Analyzing political party positions through multi-language twitter text embeddings"](https://www.frontiersin.org/journals/big-data/articles/10.3389/fdata.2024.1330392/full) *Frontiers in Big Data* 7 (2024)
 1. Mizuno, Takayuki, Shohei Doi, and Shuhei Kurizaki. ["The flow of corporate control in the global ownership network."](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290229) *Plos one* 18.8 (2023): e0290229.
 1. Mizuno, Takayuki, Shohei Doi, Takahiro Tsuchiya, and Shuhei Kurizaki. ["Socially responsible investing through the equity funds in the global ownership network."](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0256160) *Plos one* 16.8 (2021): e0256160.
 1. Doi, Shohei, Takayuki Mizuno, and Naoya Fujiwara. ["Estimation of socioeconomic attributes from location information."](https://link.springer.com/article/10.1007/s42001-020-00073-w) *Journal of Computational Social Science* 4 (2021): 187-205.
@@ -109,11 +110,15 @@ See [researchmap](https://researchmap.jp/doishohei) for other research activitie
 
 ### Reviewer
 
-Conflict Management and Peace Science, International Relations of the Asia‑Pacific, Japanese Journal of Political Science
+Conflict Management and Peace Science, International Relations of the Asia-Pacific, Japanese Journal of Political Science, 国際安全保障
 
 ### Membership
 
-Japan Association of International Relations, Japan Association for International Security, Information Processing Society of Japan, Japanese Society for Artificial Intel‑ligence
+日本国際政治学会、日本安全保障学会、情報処理学会、日本人工知能学会
+
+### Organizer
+
+Japan Society for Quantitative Political Science (2026-2028)
 
 ## Teaching Experience
 

@@ -3,9 +3,9 @@ title: "Shohei Doi/土井翔平"
 about: 
   id: heading
   template: solana
-  image: figures/profile.jpg
-  image-width: 300px
-  image-shape: round
+  # image: figures/profile.jpg
+  # image-width: 300px
+  # image-shape: round
   links:
     - icon: envelope
       text: E-mail
@@ -20,18 +20,11 @@ about:
 
 :::{#heading}
 
-Ph.D in International Relations (2019, Kyoto University)
-
 Associate Professor of International Relations at Hokkaido University (from 2020)
 
 For more information, see [my CV](cv-doi.pdf).
 
 2020年より、北海道大学[公共政策大学院](https://www.hops.hokudai.ac.jp/)および[法学部・大学院法学研究科](https://www.juris.hokudai.ac.jp/)准教授（国際関係論）
-
-- 国立情報学研究所客員准教授（2021年より）
-- 財務省財務総合政策研究所特別研究官（2023年より）
-
-2019年に京都大学大学院法学研究科を修了し、博士（法学）を取得。
 
 詳細は[CV](cv-doi.pdf)もしくは[researchmap](https://researchmap.jp/doishohei)をご覧ください。
 
@@ -47,9 +40,9 @@ For more information, see [my CV](cv-doi.pdf).
 
 ## Research Interests
 
-I am interested in the intersection between international politics/security and economy. I primarily employ formal modeling and data science. 
+I am interested in the tension between politics/security and economy at international levels. I primarily employ formal modeling and data science. 
 
-国際政治（特に安全保障）と国際経済の相互作用や緊張関係に関心があります。 主にゲーム理論やデータ分析を研究手法として用いています。 
+国際政治（特に安全保障）と国際経済の相互作用や緊張関係に関心があります。主にゲーム理論やデータ分析を研究手法として用いています。 
 
 ## Publications
 
@@ -57,6 +50,7 @@ I am interested in the intersection between international politics/security and 
 
 ## Articles (reviewed)
 
+1. Chen, Jinghui, Takayuki Mizuno, and Shohei Doi. ["Analyzing political party positions through multi-language twitter text embeddings"](https://www.frontiersin.org/journals/big-data/articles/10.3389/fdata.2024.1330392/full) *Frontiers in Big Data* 7 (2024)
 1. Mizuno, Takayuki, Shohei Doi, and Shuhei Kurizaki. ["The flow of corporate control in the global ownership network."](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290229) *Plos one* 18.8 (2023): e0290229.
 1. Mizuno, Takayuki, Shohei Doi, Takahiro Tsuchiya, and Shuhei Kurizaki. ["Socially responsible investing through the equity funds in the global ownership network."](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0256160) *Plos one* 16.8 (2021): e0256160.
 1. Doi, Shohei, Takayuki Mizuno, and Naoya Fujiwara. ["Estimation of socioeconomic attributes from location information."](https://link.springer.com/article/10.1007/s42001-020-00073-w) *Journal of Computational Social Science* 4 (2021): 187-205.
@@ -78,10 +72,7 @@ I am interested in the intersection between international politics/security and 
 - Endogeneous Theory of Commercial Peace
 - ほとんど無害な武力行使：抑止と安心供与のシグナリング
 - グローバルな株式ネットワークの分析（[水野貴之](http://research.nii.ac.jp/~mizuno/)、[栗崎周平](https://skurizaki.github.io/)）
-- 大規模言語モデルを用いた規範や因果観の抽出（[久野遼平](https://www.rhisano.com/)ほか）
-- エルドアンの言説における安全保障化（[今井宏平](https://www.ide.go.jp/Japanese/Researchers/imai_kohei.html)）
-- Democratic support for autocratic security organization? Evidence from Türkiye（[今井宏平](https://www.ide.go.jp/Japanese/Researchers/imai_kohei.html)、[浜中新吾](http://www.law.ryukoku.ac.jp/~oshiro/)）
-- 外交のどこに⼥性はいるのか？：外務省本省幹部のジェンダー分析（[小浜祥子](https://lex.juris.hokudai.ac.jp/~skohama/)ほか）
+- Do Diplomats Matter in Diplomacy? Examining the Role of Female Officials in Japan's Ministry of Foreign Affairs（[小浜祥子](https://lex.juris.hokudai.ac.jp/~skohama/)ほか）
 
 :::
 
@@ -96,20 +87,19 @@ See also [Google Scholar](https://scholar.google.co.jp/citations?user=43lQ5k8AAA
 - 開講日時はカレンダーをご覧ください。
 
 ::: {.callout-note collapse=true}
-## 指導学生
+## 指導学生とテーマ
 
 学位論文の執筆に関して実質的な指導を行った学生は次の通りです（敬称略）。
 
 |名前|修了年|課程|論文題目|
 |---|---|---|---|
-|小野純平|2026|法学研究科修士|　|
+|辻川哲平||法学研究科修士||
+|小野純平||法学研究科修士||
 |石部雅虎|2025|法学研究科修士|現代日本における新興政党の選挙戦略|
 |小野純平|2024|法学部学士|国連平和維持ミッションの兵力の質と民主化|
 |服部弘明|2023|公共政策大学院修士|ドローンの非国家主体への拡散－商用ドローンの拡散を中心に－|
 : {tbl-colwidths="[12.5,10,22.5,55]"}
 :::
-
-
 
 過去に非常勤講師として、一橋大学や東京外国語大学、京都外国語専門学校で講義を行いました。
 

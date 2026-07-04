@@ -2,3 +2,5 @@
 /.git/
 /figures/
 .Rproj.user
+
+**/*.quarto_ipynb
