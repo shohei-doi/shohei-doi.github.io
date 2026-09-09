@@ -1,11 +1,11 @@
 ---
-title: "Shohei Doi/土井翔平"
+title: "Shohei Doi<br>土井翔平"
 about: 
   id: heading
-  template: solana
-  # image: figures/profile.jpg
-  # image-width: 300px
-  # image-shape: round
+  template: trestles
+  image: figures/profile.jpg
+  image-width: 200px
+  image-shape: rounded
   links:
     - icon: envelope
       text: E-mail
@@ -34,6 +34,7 @@ For more information, see [my CV](cv-doi.pdf).
 
 ## お知らせ
 
+- [2026年度日本政治学会研究大会](https://www.jpsa-web.org/conf/2026/index.html)A3で討論者を務めます。
 - ウェブサイトを少しリニューアルしました。
 
 :::
@@ -70,9 +71,9 @@ I am interested in the tension between politics/security and economy at internat
 ## In progresss
 
 - Endogeneous Theory of Commercial Peace
-- ほとんど無害な武力行使：抑止と安心供与のシグナリング
-- グローバルな株式ネットワークの分析（[水野貴之](http://research.nii.ac.jp/~mizuno/)、[栗崎周平](https://skurizaki.github.io/)）
+- Mostly Harmless Use of Force: Simultaneous Signaling of Deterrence and Assurance
 - Do Diplomats Matter in Diplomacy? Examining the Role of Female Officials in Japan's Ministry of Foreign Affairs（[小浜祥子](https://lex.juris.hokudai.ac.jp/~skohama/)ほか）
+- グローバルな株式ネットワークの分析（[水野貴之](http://research.nii.ac.jp/~mizuno/)、[栗崎周平](https://skurizaki.github.io/)）
 
 :::
 
@@ -117,7 +118,7 @@ See also [Google Scholar](https://scholar.google.co.jp/citations?user=43lQ5k8AAA
 
 - [旧バージョン](http://web.archive.org/web/20210117052842/https://shohei-doi.github.io/quant_polisci/)からアップデートしつつあります。
 
-[Ubuntuのセットアップ](https://sdoi.notion.site/Ubuntu-edd16720a5c34a968246d64af9b10ef2) (2023)
+[Ubuntuのセットアップ](https://sdoi.notion.site/Ubuntu-edd16720a5c34a968246d64af9b10ef2) (2026)
 
 講義資料
 

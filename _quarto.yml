@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Shohei Doi | 土井翔平"
+  title: "Shohei Doi"
   google-analytics: "G-LLFB8XFPX5"
   navbar: 
     search: false
