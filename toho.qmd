@@ -1,0 +1,49 @@
+---
+title: "桐朋在卒懇"
+include-in-header: noindex.html
+---
+
+## 連絡先
+
+メールや質問箱経由で質問してもらっても構いません。
+
+- [sdoi@juris.hokudai.ac.jp](mailto:sdoi@juris.hokudai.ac.jp)
+- [質問箱](https://marshmallow-qa.com/sdoi0504)
+
+## データの紹介
+
+- [Uppsala Conflict Data Program](https://ucdp.uu.se/)
+- [Varieties of Democracy](https://www.v-dem.net/)
+- [World Values Survey](https://www.worldvaluessurvey.org/wvs.jsp)
+
+## 政治学の教科書
+
+- 砂原ほか「[政治学の第一歩](https://www.yuhikaku.co.jp/books/detail/9784641150782)」
+- 坂本・石橋編「[ポリティカルサイエンス入門](https://www.hou-bun.com/cgi-bin/search/detail.cgi?c=ISBN978-4-589-04100-5)」
+- 羅・前田「[権力を読み解く政治学](https://www.yuhikaku.co.jp/books/detail/9784641200081)」
+- 街鳥・山岡「[政治学入門](https://ua-book.shop-pro.jp/?pid=167017681)」
+- 犬塚ほか「[政治学入門](https://www.yuhikaku.co.jp/books/detail/9784641151086)」
+- 田村ほか「[政治学](https://www.keisoshobo.co.jp/book/b497001.html)」
+- 新川ほか「[政治学](https://www.yuhikaku.co.jp/books/detail/9784641149229)」
+- 川出・谷口「[政治学](https://www.utp.or.jp/book/b606377.html)」
+- 参考：[日本政治学会による専門分野の分類](https://www.jpsa-web.org/mypage/field/)
+
+## 統計的因果推論の入門書
+
+- 松林「[政治学と因果推論](https://www.iwanami.co.jp/book/b593231.html)」
+- 中室・津川「[原因と結果の経済学](https://www.diamond.co.jp/book/9784478039472.html)」
+- 田中「[データ分析の力](https://books.kobunsha.com/book/b10124787.html)」
+- 井上「[「もしも」で命は救えるか？](https://books.kobunsha.com/book/b10169640.html)」
+
+## 学問や大学を知るための情報源
+
+- [大学教育の分野別質保証委員会](https://www.scj.go.jp/ja/member/iinkai/daigakuhosyo/daigakuhosyo.html)
+- 大学のシラバス（非常勤講師であるか注意）
+  - [北海道大学シラバス](https://gakumu.academic.hokudai.ac.jp/Portal/Public/Syllabus/SearchMain.aspx)
+- 大学の教員（誰がいるかよりも、どのような分野があるか）
+  - [北海道大学法学部政治講座教員](https://www.juris.hokudai.ac.jp/general/staff/ugrs.html)
+- [リサーチマップ](https://researchmap.jp/)や個人ウェブサイト
+  - [土井のリサーチマップ](https://researchmap.jp/doishohei)
+- [科研費データベース](https://kaken.nii.ac.jp/ja/)
+- 学会の論文誌
+  - 多くの日本の学会は出版後数年経ったものは[J-STAGE](https://www.jstage.jst.go.jp/browse/-char/ja/)で公開している。

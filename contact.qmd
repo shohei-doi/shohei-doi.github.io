@@ -1,11 +1,11 @@
 ---
-title: "Shohei Doi/土井翔平"
+title: "Contact Info."
 about: 
   id: heading
-  template: solana
+  template: trestles
   image: figures/profile.jpg
-  image-width: 300px
-  image-shape: round
+  image-width: 200px
+  image-shape: rounded
 include-in-header: noindex.html
 ---
 
